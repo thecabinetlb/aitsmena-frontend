@@ -14,27 +14,27 @@
     <!-- animation elements -->
     <div class="absolute inset-0 w-full h-full">
       <!-- middle layor -->
-      <img src="../assets/images/hero/elements/centermiddle.svg" alt="AITS" width="1068" height="1583" responsive
+      <img src="../assets/images/hero/elements/centermiddle.svg" alt="AITS" width="1068" height="1583" responsive loading="eager"
       class="absolute z-1 left-1/2 top-0 transform -translate-x-1/2 centermiddle scale-125"/>    
       
       <!-- left layer -->
-      <img src="../assets/images/hero/elements/lefttop.svg" alt="AITS" width="846" height="1078" responsive
+      <img src="../assets/images/hero/elements/lefttop.svg" alt="AITS" width="846" height="1078" responsive loading="eager"
       class="absolute z-3 left-0 top-0 transform -translate-y-0"/>
-      <img src="../assets/images/hero/elements/leftmiddle.svg" alt="AITS" width="2765" height="2473" responsive
+      <img src="../assets/images/hero/elements/leftmiddle.svg" alt="AITS" width="2765" height="2473" responsive loading="eager"
       class="absolute z-2 left-0 top-1/3 transform -translate-y-1/3"/>    
-      <img src="../assets/images/hero/elements/leftmiddleoposite.svg" alt="AITS" width="1232" height="233" responsive
+      <img src="../assets/images/hero/elements/leftmiddleoposite.svg" alt="AITS" width="1232" height="233" responsive loading="eager"
       class="absolute z-2 left-0 top-1/3 transform -translate-y-1/3"/>    
-      <img src="../assets/images/hero/elements/leftbottom.svg" alt="AITS" width="339" height="1416" responsive
+      <img src="../assets/images/hero/elements/leftbottom.svg" alt="AITS" width="339" height="1416" responsive loading="eager"
       class="absolute z-3 left-0 top-[100%] transform -translate-y-[100%]"/>
       
       <!-- right layer -->
-      <img src="../assets/images/hero/elements/righttop.svg" alt="AITS" width="1745" height="572" responsive
+      <img src="../assets/images/hero/elements/righttop.svg" alt="AITS" width="1745" height="572" responsive loading="eager"
       class="absolute z-3 right-0 top-0 transform -translate-y-0"/>
-      <img src="../assets/images/hero/elements/rightbottom.svg" alt="AITS" width="832" height="764" responsive
+      <img src="../assets/images/hero/elements/rightbottom.svg" alt="AITS" width="832" height="764" responsive loading="eager"
       class="absolute z-3 right-0 top-[100%] transform -translate-y-[100%]"/>
 
       <!-- pattern -->
-      <img src="../assets/images/hero/patterns/pattern (2).svg" alt="AITS" width="832" height="1771" responsive
+      <img src="../assets/images/hero/patterns/pattern (2).svg" alt="AITS" width="832" height="1771" responsive loading="eager"
       class="absolute z-4 right-0 top-[100%] transform -translate-y-[100%] opacity-75"/>       
     </div>
 
