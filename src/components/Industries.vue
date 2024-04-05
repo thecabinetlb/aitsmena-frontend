@@ -20,11 +20,10 @@ const industries = [
 ];
 </script>
 <template>
-    <section class="xl:w-8/12 sm:10/12 w-11/12  mx-auto space-y-4 min-h-screen h-full flex flex-col">
+    <section class="xl:w-8/12 sm:10/12 w-11/12  mx-auto space-y-4 min-h-screen h-full flex flex-col  mt-20">
         <h1 class="text-accent1 font-[700] text-lg uppercase">Industries we serve</h1>
         <hr class="w-full h-4 text-accent2"/>
-        
-        <div class="w-full grid grid-cols-4 flex-wrap items-center gap-4 text-center">
+        <div class="w-full grid grid-cols-4 flex-wrap items-center gap-4 text-center mt-4">
             <div v-for="(item, key) in industries" :key="key" class="relative group col-sapn-1 aspect-square">
                 <div class="w-full h-full absolute -inset-1.5 bg-gradient-to-br group-hover:from-bg2/50 group-hover:to-bg2 border border-bg2 bg-accent1/10 rounded-[16px] backdrop-blur-sm opacity-50 group-hover:opacity-75 transition group-hover:duration-1000"></div>
                 <div class="w-full h-full relative flex flex-col justify-center items-center gap-4 rounded-[16px] text-accent1">

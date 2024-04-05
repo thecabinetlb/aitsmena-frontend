@@ -1,8 +1,5 @@
 <script setup>
-import { onMounted } from 'vue';
-onMounted(() => {
 
-})
 </script>
 
 <template>
@@ -46,7 +43,7 @@ onMounted(() => {
     <section class="xl:w-8/12 sm:10/12 w-11/12 mx-auto space-y-2 mt-20">
       <h1 class="text-accent1 font-[700] text-lg uppercase">Mission and Vision</h1>
       <hr class="w-full h-4 text-accent2"/>
-      <div class="relative z-5 space-y-10 mt-4">
+      <div class="relative space-y-20 z-5 mt-4">
         <div class="flex flex-wrap justify-between items-center gap-4"
         v-motion
           :initial="{
@@ -62,7 +59,7 @@ onMounted(() => {
               delay: 100,
             },
           }">
-          <div class="space-y-2 md:w-1/2 w-full">
+          <div class="space-y-2 sm:w-1/2 w-full">
             <h2 class="text-accent1 font-[400] text-[30px] lg:text-4xl 2xl:text-5xl uppercase">Mission and vision</h2>
             <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">Explore how AITS combines production with sustainability and preservation. By providing users with unique and easily accessible software solutions, AITS utilizes manufacturing plants’ various faculties and divisions under a common software that can be operated anywhere. With this approach, AITS  is one step closer to becoming the leading software innovator in the Gulf region.</p>
           </div>
@@ -84,7 +81,7 @@ onMounted(() => {
             },
           }">
           <img src="../assets/images/hero/values/values.webp" alt="AITS" width="391" height="290"/>    
-          <div class="space-y-2 md:w-1/2 w-full">
+          <div class="space-y-2 sm:w-1/2 w-full">
             <h2 class="text-accent1 font-[400] text-[30px] lg:text-4xl 2xl:text-5xl uppercase">Values and Commitments</h2>
             <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">At AITS, we value change, and that is just what we are committed to doing. AITS is devoted to reshaping the production industry into a more cordial environment, allowing employees to thrive and offer the best customer service experience. With AITS’s amicable approach and customer-friendly attitude, a brighter future dawns on the automation industry.</p>
           </div>
