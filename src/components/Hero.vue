@@ -7,7 +7,7 @@
     <!-- headline + cta -->
     <div class="sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto space-y-2 gap-4 h-[90vh] pt-10">
       <h1 class="text-accent1 uppercase text-[30px] lg:text-7xl xl:text-8xl text-center font-[700]">Lorem Ipsum <br/><span class="font-[100]">Dolor Sit</span></h1>
-      <p class="font-[200] text-center text-accent2 md:w-3/4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure.</p>
+      <p class="font-[200] text-center text-accent2 md:w-1/2">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim Exercitation veniam consequat velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
       <button class="px-4 py-3 text-center bg-accent1 text-bg2 rounded-full shadow-lg hover:bg-opacity-95 cursor-pointer">See our Solutions</button>
       <img src="../assets/images/hero/arrow.webp" alt="AITS" width="178" height="145" responsive class="pt-10"/>    
     </div>
