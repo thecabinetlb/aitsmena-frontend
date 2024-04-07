@@ -20,10 +20,10 @@ const industries = [
 ];
 </script>
 <template>
-    <section class="xl:w-8/12 sm:10/12 w-11/12  mx-auto space-y-4 min-h-screen h-full flex flex-col mt-20">
+    <section class="flex flex-col w-11/12 h-full min-h-screen mx-auto mt-20 space-y-4 xl:w-8/12 sm:10/12">
         <h1 class="text-accent1 font-[700] text-lg uppercase">Industries we serve</h1>
         <hr class="w-full h-4 text-accent2"/>
-        <div class="w-full grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center gap-4 text-center mt-4">
+        <div class="grid items-center w-full grid-cols-1 gap-4 mt-4 text-center lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
             <div v-for="(item, key) in industries" :key="key" class="relative group col-sapn-1 aspect-square">
                 <div class="w-full h-full absolute -inset-1.5 bg-gradient-to-br group-hover:from-bg2/50 group-hover:to-bg2 border border-bg2 bg-accent1/10 rounded-[16px] backdrop-blur-sm opacity-50 group-hover:opacity-75 transition group-hover:duration-1000"></div>
                 <div class="w-full h-full relative flex flex-col justify-center items-center gap-4 rounded-[16px] text-accent1">
@@ -37,7 +37,7 @@ const industries = [
                     </defs>
                     </svg>
                     <img :src="item.icon" :alt="item.title" width="94" height="94" responsive class="rounded-full"/>
-                    <h2 class="xl:text-2xl text-xl text-accent1">{{ item.title }}</h2>
+                    <h2 class="text-xl xl:text-2xl text-accent1">{{ item.title }}</h2>
                 </div>
             </div>
         </div>
