@@ -20,7 +20,7 @@ const industries = [
 ];
 </script>
 <template>
-    <section class="flex flex-col w-11/12 h-full min-h-screen mx-auto mt-40 space-y-4 xl:w-8/12 sm:10/12">
+    <section class="flex flex-col w-11/12 h-full mx-auto mt-40 space-y-4 xl:w-8/12 sm:10/12">
         <h1 class="text-accent1 font-[700] text-lg uppercase">Industries we serve</h1>
         <hr class="w-full h-4 text-accent2"/>
         <div class="grid items-center w-full grid-cols-1 gap-4 mt-4 text-center lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">

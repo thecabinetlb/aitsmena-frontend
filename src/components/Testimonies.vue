@@ -29,34 +29,35 @@ const showDes = (id) => {
 </style>
 
 <template>
-  <section class="my-20">
+  <section class="mt-40">
     
     <!-- Partners -->    
-    <section class="mb-20 sm:w-9/12 w-10/12 mx-auto">
-      <h1 class="w-full space-y-2 text-accent1 font-[400] text-[30px] lg:text-4xl 2xl:text-5xl uppercase mb-4">Our Sub-Companies</h1>
+    <section class="w-11/12 mx-auto mb-20 sm:w-10/12">
+      <h1 class="w-full text-accent1 font-[400] 2xl:text-5xl lg:text-4xl text-2xl uppercase mb-4">Our Sub-Companies</h1>
       <div class="relative">
-        <div v-for="item in partners" :key="key" class="sm:-absolute top-8 left-0 sm:w-1/2 w-full h-full">
+        <div v-for="item in partners" :key="key" class="left-0 w-full h-full sm:absolute top-8 sm:w-1/2">
           <p v-if="isClicked === item.id" class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">{{ item.description }}</p>
         </div>
         <div v-for="item in partners" :key="key" role="button" :aria-label="'click on' + item.title + 'to read the description'" 
-        class="sm:ms-[50%] sm:w-1/2 w-full -pb-10">
-          <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] mx-auto" @mouseenter="showDes(item.id)"
-          :class="{'border-2 border-bg2 transform duration-1000' : isClicked === item.id, 'ms-[45%] me-auto' : item.id === 1, 'me-[45%] ms-auto mt-10' : item.id === 2}"/>
-        </div>
+        class="sm:ms-[60%] sm:w-1/2 w-full">
+          <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] mx-auto border-bg2/10 hover:border-2 hover:border-bg2 transition hover:duration-1000"
+          @mouseenter="showDes(item.id)"
+          :class="{'ms-[45%] me-auto mb-20' : item.id === 1, 'me-[45%] ms-auto' : item.id === 2}"/>
+        </div>          
       </div>
     </section>
 
     <!-- Testimonies -->
-   <section class="relative">
+   <section class="relative mb-20">
     <carousel 
     ref="myCarousel"
     :wrap-around="true"
     :items-to-show="1" 
     :autoplay="6000" 
     :transition="2000"
-    class="sm:w-9/12 mx-auto py-10">
-        <slide v-for="slide in testimoniesslides" :key="slide.id" class="space-y-10 px-5">
-            <h1 class="text-accent1 font-[400] 2xl:text-5xl lg:text-4xl text-[30px]">
+    class="w-11/12 py-10 mx-auto sm:w-10/12">
+        <slide v-for="slide in testimoniesslides" :key="slide.id" class="px-5 space-y-10">
+            <h1 class="text-accent1 font-[400] 2xl:text-5xl lg:text-4xl text-2xl">
                 {{ slide.title }}
             </h1>
             <p class="text-accent2 font-[200] 2xl:text-3xl lg:text-2xl text-lg text-justify italic" style="text-align-last: center;">{{ slide.content }}</p>
@@ -71,7 +72,7 @@ const showDes = (id) => {
         </template>
     </carousel>   
     <!-- Navigation arrows -->
-    <div class="absolute top-1/2 left-[8em] transform -translate-y-1/2 z-10">
+    <div class="absolute sm:top-1/2 -bottom-18 sm:left-[8em] left-1/4 transform -translate-y-1/2 z-10">
       <button aria-label="go to the next testimony" @click="myCarousel.next()">
         <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0ZM35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069Z" fill="url(#paint0_linear_274_875)"/>
@@ -91,7 +92,7 @@ const showDes = (id) => {
         </svg>
       </button>
     </div>
-    <div class="absolute top-1/2 right-[8em] transform -translate-y-1/2 z-10">
+    <div class="absolute sm:top-1/2 -bottom-18 sm:right-[8em] right-1/4 transform -translate-y-1/2 z-10">
       <button aria-label="go to the previous testimony"@click="myCarousel.prev()">
         <svg width="70" height="70" viewBox="0 0 70 70"  fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 6.25948e-06 35 4.5696e-06C15.67 2.87972e-06 -2.87972e-06 15.67 -4.5696e-06 35C-6.25948e-06 54.33 15.67 70 35 70ZM35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931Z" fill="url(#paint0_linear_274_876)"/>
@@ -113,8 +114,15 @@ const showDes = (id) => {
     </div>
    </section>  
 
-    <!-- Highlights -->
+   <!-- Contact -->
+   <section class="relative w-11/12 mx-auto mb-20 space-y-10 text-center sm:w-10/12">
+      <h1 class="text-accent1 text-2xl lg:text-4xl 2xl:text-5xl uppercase text-center font-[700]">Contact Us</h1>
+      <p class="font-[200] text-justify text-accent2 md:w-1/2 mx-auto" style="text-align-last: center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+      <button aria-label="go to contact form page" class="px-4 py-3 mt-4 text-center rounded-full shadow-lg text-accent1 bg-bg2 hover:bg-opacity-95">Get in Touch</button>
+   </section>
+  <!-- Highlights -->
     
+
   </section>  
 
 </template>

@@ -8,6 +8,6 @@ import Testimonies from './components/Testimonies.vue'
   <main class="bg-black">
   <Hero/>
   <Industries/>
-  <!-- <Testimonies/> -->
+  <Testimonies/>
   </main>
 </template>
