@@ -5,7 +5,7 @@
 <template>
   <section id="AITSHero" class="relative flex flex-col flex-wrap items-center h-full mx-auto">
     <!-- headline + cta -->
-    <div class="sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto space-y-4 gap-4 h-[90vh] pt-10">
+    <div class="sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto space-y-4 gap-4 h-[90vh] pt-40">
       <h1 class="text-accent1 uppercase 2xl:text-9xl xl:text-8xl lg:text-7xl text-2xl text-center font-[700]">Lorem Ipsum <br/><span class="font-[100]">Dolor Sit</span></h1>
       <p class="font-[200] text-justify text-accent2 xl:w-1/3 lg:w-1/2" style="text-align-last: center;">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim Exercitation veniam consequat velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
       <button class="px-4 py-3 text-center rounded-full shadow-lg cursor-pointer bg-accent1 text-bg2 hover:bg-opacity-95">See our Solutions</button>
