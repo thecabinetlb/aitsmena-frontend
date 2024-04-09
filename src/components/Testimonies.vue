@@ -13,10 +13,10 @@ const testimoniesslides = [
     { id: 2, title: 'We are in a good company', ceo:'Malak H.', content: '"Our company witnessed tangible growth in profit after collaborating with AITS. Their services were just perfect and precisely what we needed."', icon: client1 },
 ];
 const partners = [
-    { id: 1, title: 'IC2', description: 'The Integrated Competency Center (IC2) is AITS’s newest subsidiary in the market. As a consulting agency, IC2 offers businesses realistic, tangible solutions in the food and beverage and smart city solutions industries. With a gap in professional experience in the Gulf region in these sectors and a need for innovative solutions and progression, IC2 provides customers with the best applicable approaches and solutions in these two industries. At IC2, the future is one step closer. Visit the website and be part of the change.', logo: ic2 },
-    { id: 2, title: 'AVEVA Select Gulf', description: 'With more than 10 years of market presence and experience diversified across different industrial fields, AVEVA Select Gulf offers customers a uniquely tailored experience of facilitating industrial operations across all manufacturing plants. Specialized in reducing the time needed for a plant’s monitoring and controlling activities, AVEVA Select Gulf’s solutions provide real-time data acquisition and merge industrial knowledge with innovative technology and AI. AVEVA Select Gulf also provides customers with personal training and follow-up to guarantee the best outcome for sustainable industrial production. From energy to chemicals, mining to water and wastewater management, AVEVA Select Gulf’s solutions offer businesses unique, cost-friendly solutions for better handling industrial operations and leveraging production and profit sustainably and continuously. Visit the website to learn more.', logo: aveva },
+    { id: 1, title: 'AVEVA Select Gulf', description: 'With more than 10 years of market presence and experience diversified across different industrial fields, AVEVA Select Gulf offers customers a uniquely tailored experience of facilitating industrial operations across all manufacturing plants. Specialized in reducing the time needed for a plant’s monitoring and controlling activities, AVEVA Select Gulf’s solutions provide real-time data acquisition and merge industrial knowledge with innovative technology and AI. AVEVA Select Gulf also provides customers with personal training and follow-up to guarantee the best outcome for sustainable industrial production. From energy to chemicals, mining to water and wastewater management, AVEVA Select Gulf’s solutions offer businesses unique, cost-friendly solutions for better handling industrial operations and leveraging production and profit sustainably and continuously. Visit the website to learn more.', logo: aveva },
+    { id: 2, title: 'IC2', description: 'The Integrated Competency Center (IC2) is AITS’s newest subsidiary in the market. As a consulting agency, IC2 offers businesses realistic, tangible solutions in the food and beverage and smart city solutions industries. With a gap in professional experience in the Gulf region in these sectors and a need for innovative solutions and progression, IC2 provides customers with the best applicable approaches and solutions in these two industries. At IC2, the future is one step closer. Visit the website and be part of the change.', logo: ic2 },
 ];
-const isClicked = ref(1);
+const isClicked = ref(2);
 const showDes = (id) => {
   isClicked.value = id
 };
@@ -29,26 +29,27 @@ const showDes = (id) => {
 </style>
 
 <template>
-  <section class="mt-40">
+  <section class="w-full h-full relative mt-40">
     
     <!-- Partners -->    
     <section class="w-11/12 mx-auto mb-20 xl:w-8/12 sm:w-10/12">
       <h1 class="w-full text-accent1 font-[400] 2xl:text-5xl lg:text-4xl text-2xl uppercase mb-4">Our Sub-Companies</h1>
-      <div class="relative">
-        <div v-for="item in partners" :key="key" class="left-0 w-full h-full sm:absolute top-8 sm:w-1/2">
+      <div class="relative z-10 min-h-[400px]">
+        <div v-for="item in partners" :key="key" class="inset-0 w-full h-full sm:absolute sm:w-2/3">
           <p v-if="isClicked === item.id" class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">{{ item.description }}</p>
         </div>
-        <div v-for="item in partners" :key="key" role="button" :aria-label="'click on' + item.title + 'to read the description'" 
-        class="sm:ms-[60%] sm:w-1/2 w-full">
-          <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] mx-auto border-bg2/10 hover:border-2 hover:border-bg2 transition hover:duration-1000"
-          @mouseenter="showDes(item.id)"
-          :class="{'ms-[45%] me-auto mb-20' : item.id === 1, 'me-[45%] ms-auto' : item.id === 2}"/>
-        </div>          
+        <div class="sm:ms-[50%] sm:w-1/2 w-full h-full flex sm:justify-end justify-center items-center gap-6">
+        <div v-for="item in partners" :key="key" role="button" :aria-label="'click on' + item.title + 'to read the description'">
+          <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] border-bg2/10 hover:border-2 hover:border-bg2 transition hover:duration-600"
+          @mouseenter="showDes(item.id)" :class="{'-mb-10' : item.id === 1, '-mt-10' : item.id === 2}"/>
+        </div>
+        </div>
+
       </div>
     </section>
 
     <!-- Testimonies -->
-   <section class="relative mb-20">
+   <section class="relative z-[10] mb-20">
     <carousel 
     ref="myCarousel"
     :wrap-around="true"
@@ -68,7 +69,7 @@ const showDes = (id) => {
         </slide>
 
         <template #addons>
-          <Pagination/>
+          <!-- <Pagination/> -->
         </template>
     </carousel>   
     <!-- Navigation arrows -->
@@ -115,15 +116,53 @@ const showDes = (id) => {
    </section>  
 
    <!-- Contact -->
-   <section class="relative w-11/12 mx-auto mb-20 space-y-10 text-center xl:w-8/12 sm:w-10/12">
+   <section class="bg-gradient-to-r from-accent1/10 to-accent1/20 h-[50vh] flex flex-col items-center justify-center">
+   <div class="relative w-11/12 mx-auto space-y-10 text-center xl:w-8/12 sm:w-10/12">
       <h1 class="text-accent1 text-2xl lg:text-4xl 2xl:text-5xl uppercase text-center font-[700]">Contact Us</h1>
       <p class="font-[200] text-justify text-accent2 md:w-1/2 mx-auto" style="text-align-last: center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
       <button aria-label="go to contact form page" class="px-4 py-3 mt-4 text-center rounded-full shadow-lg text-accent1 bg-bg2 hover:bg-opacity-95">Get in Touch</button>
+    
+      <!-- Highlights -->
+      <!-- left -->
+      <img src="../assets/images/testimonies/contact/elements/leftmiddle.svg" alt="AITS" width="513" height="631" responsive loading="eager"
+      class="absolute left-0 top-1/2 transform -translate-y-1/2"/>
+      <!-- center middle -->
+      <img src="../assets/images/testimonies/contact/elements/centermiddle.svg" alt="AITS" width="345" height="338" responsive loading="eager"
+      class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2"/>
+      <!-- right -->
+      <img src="../assets/images/testimonies/contact/elements/rightmiddle.svg" alt="AITS" width="767" height="699" responsive loading="eager"
+      class="absolute left-2/3 top-1/2 transform -translate-y-1/2 -translate-x-1/3"/>
+      <img src="../assets/images/testimonies/contact/elements/rightbottom.svg" alt="AITS"  width="287" height="315" responsive loading="eager"
+      class="absolute right-0 top-[100%] transform -translate-y-[100%]"/>
+   </div>    
    </section>
+
    
   <!-- Highlights -->
-    
+  <!-- right top -->
+  <img src="../assets/images/testimonies/elements/righttop.svg" alt="AITS" width="1098" height="1431" responsive loading="eager"
+  class="absolute right-0 top-0"/>
 
-  </section>  
+  <!-- left middle -->
+  <img src="../assets/images/testimonies/elements/leftmiddle.svg" alt="AITS" width="895" height="1444" responsive loading="eager"
+  class="absolute left-0 top-1/2 transform -translate-y-1/2"/> 
+  <img src="../assets/images/testimonies/elements/leftmiddlebig.svg" alt="AITS" width="860" height="1563" responsive loading="eager"
+  class="absolute left-0 top-1/2 transform -translate-y-1/2"/>
+
+  <!-- left bottom -->
+  <img src="../assets/images/testimonies/elements/leftbottom.svg" alt="AITS" width="943" height="1635" responsive loading="eager"
+  class="absolute left-0 top-[100%] transform -translate-y-[100%]"/>
+
+  <!-- right middle -->
+  <img src="../assets/images/testimonies/elements/rightmiddle.svg" alt="AITS" width="1251" height="1710"  responsive loading="eager"
+  class="absolute right-0 top-1/2 transform -translate-y-1/2"/>
+
+  <!-- center middle -->
+  <img src="../assets/images/testimonies/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" responsive loading="eager"
+  class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2"/>
+  <img src="../assets/images/testimonies/elements/centermiddlebig.svg" alt="AITS" width="860" height="1563" responsive loading="eager"
+  class="absolute right-0 top-1/2 transform -translate-y-1/2"/>
+
+</section>  
 
 </template>

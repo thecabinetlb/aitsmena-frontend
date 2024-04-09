@@ -11,10 +11,9 @@
       <button class="px-4 py-3 text-center rounded-full shadow-lg cursor-pointer bg-accent1 text-bg2 hover:bg-opacity-95">See our Solutions</button>
       <img src="../assets/images/hero/arrow.webp" alt="AITS" width="178" height="145" responsive class="pt-10"/>    
     </div>
-    <!-- animation elements -->
-    <div class="absolute inset-0 w-full h-full overflow-hidden">
+      <!-- animation elements -->
       <!-- middle layor -->
-      <img src="../assets/images/hero/elements/centermiddle.svg" alt="AITS" width="1068" height="1583" responsive loading="eager"
+      <img src="../assets/images/hero/elements/centermiddle.svg" alt="AITS" width="1275" height="1585" responsive loading="eager"
       v-motion  
         :initial="{
           opacity: 1,
@@ -67,8 +66,8 @@
       class="absolute left-0 transform -translate-y-1/2 z-2 top-1/2"/>
       <img src="../assets/images/hero/elements/leftmiddleoposite.svg" alt="AITS" width="1232" height="233" responsive loading="eager"
       class="absolute left-0 transform -translate-y-1/2 z-2 top-1/2"/>    
-      <img src="../assets/images/hero/elements/leftbottom.svg" alt="AITS" width="339" height="1416" responsive loading="eager"
-      class="absolute left-0 transform z-3 top-1/3 -translate-y-1/3"/>
+      <!-- <img src="../assets/images/hero/elements/leftbottom.svg" alt="AITS" width="339" height="1416" responsive loading="eager"
+      class="absolute left-0 transform z-3 top-1/3 -translate-y-1/3"/> -->
  
       <!-- right layer -->
       <img src="../assets/images/hero/elements/righttop.svg" alt="AITS" width="1745" height="572" responsive loading="eager"
@@ -98,13 +97,12 @@
       class="absolute z-3 right-0 top-[100%] transform -translate-y-[100%]"/>
 
       <!-- pattern -->
-      <img src="../assets/images/hero/patterns/pattern (2).svg" alt="AITS" width="832" height="1771" responsive loading="eager"
+      <img src="../assets/images/patterns/pattern (2).svg" alt="AITS" width="832" height="1771" responsive loading="eager"
       class="absolute z-4 right-0 top-[100%] transform -translate-y-[100%] opacity-75"/>       
-    </div>
 
 
     <!-- Mission and Values  -->
-    <section class="w-11/12 pb-20 mx-auto mt-40 space-y-2 xl:w-8/12 sm:10/12">
+    <section class="w-11/12 mx-auto mt-40 space-y-2 xl:w-8/12 sm:10/12">
       <h1 class="text-accent1 font-[700] text-lg uppercase">Mission and Vision</h1>
       <hr class="w-full h-4 text-accent2"/>
       <div class="relative mt-4 space-y-20 z-5">

@@ -2,15 +2,23 @@
 import { RouterLink } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
 import logo from '../../assets/AITS.webp'
-import logowhite from '../../assets/AITSwhite.webp'
 const navlinks = [
   { id: 1, name: 'Home', to: '/' },
   { id: 2, name: 'About', to: '/about' },
-  { 
-    id: 3, 
-    name: 'Industries', 
-    to: '/industries',
-  },
+  {
+  id: 3,
+  name: "Industries",
+  to: '/industries',
+  submenu: [
+    { id: 1, name: "Food & Beverage" },
+    { id: 2, name: "Water & Wastewater" },
+    { id: 3, name: "Smart Cities" },
+    { id: 4, name: "Oil & Gas" },
+    { id: 5, name: "Chemicals" },
+    { id: 6, name: "Power & Utilities" },
+    { id: 7, name: "Life Science" },
+    { id: 8, name: "Metals, Mining, & Minerals" }
+  ]},
   { 
     id: 4, 
     name: 'Resources', 
@@ -63,7 +71,7 @@ onUnmounted(() => {
     <!-- Desktop -->
     <nav class="items-center justify-end hidden md:flex ps-4">
       <div v-for="(item, key) in navlinks" :key="key" class="relative w-full">
-      <RouterLink :to="item.to" class="cursor-pointer text-lg font-[400] text-accent1 px-[14px] py-[10px] hover:rounded-full hover:bg-accent1/10"
+      <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="cursor-pointer text-lg font-[400] text-accent1 px-[14px] py-[10px] hover:rounded-full hover:bg-accent1/10"
         @mouseenter="openSubMenu = item.id"
         @mouseleave="openSubMenu = null">
         {{ item.name }}
