@@ -37,7 +37,7 @@ const industries = [
                 <div class="w-full h-full absolute -inset-1.5 bg-gradient-to-br group-hover:from-bg2/50 group-hover:to-bg2 border border-bg2 bg-accent1/10 rounded-[16px] backdrop-blur-sm opacity-50 group-hover:opacity-75 transition group-hover:duration-600"></div>
                 <div class="w-full h-full relative flex flex-col justify-center items-center gap-4 rounded-[16px] text-accent1">
                     <img :src="item.icon" :alt="item.title" width="94" height="94" responsive class="rounded-full"/>
-                    <h2 class="text-xl xl:text-2xl text-accent1">{{ item.title }}</h2>
+                    <h2 class="text-xl xl:text-2xl text-accent1 font-[400]">{{ item.title }}</h2>
                 </div>
             </div>
         </div>

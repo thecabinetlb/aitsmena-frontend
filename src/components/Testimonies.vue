@@ -26,17 +26,29 @@ const showDes = (id) => {
 .carousel__slide{
   display: block !important;
 } 
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 </style>
 
 <template>
-  <section class="w-full h-full relative mt-40">
+  <section class="relative w-full h-full mt-40">
     
     <!-- Partners -->    
     <section class="w-11/12 mx-auto mb-20 xl:w-8/12 sm:w-10/12">
       <h1 class="w-full text-accent1 font-[400] 2xl:text-5xl lg:text-4xl text-2xl uppercase mb-4">Our Sub-Companies</h1>
       <div class="relative z-10 min-h-[400px]">
         <div v-for="item in partners" :key="key" class="inset-0 w-full h-full sm:absolute sm:w-2/3">
-          <p v-if="isClicked === item.id" class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">{{ item.description }}</p>
+          <Transition>
+            <p v-if="isClicked === item.id" class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">{{ item.description }}</p>
+          </Transition>
         </div>
         <div class="sm:ms-[50%] sm:w-1/2 w-full h-full flex sm:justify-end justify-center items-center gap-6">
         <div v-for="item in partners" :key="key" role="button" :aria-label="'click on' + item.title + 'to read the description'">
@@ -120,18 +132,18 @@ const showDes = (id) => {
    <div class="relative w-11/12 mx-auto space-y-10 text-center xl:w-8/12 sm:w-10/12">
       <h1 class="text-accent1 text-2xl lg:text-4xl 2xl:text-5xl uppercase text-center font-[700]">Contact Us</h1>
       <p class="font-[200] text-justify text-accent2 md:w-1/2 mx-auto" style="text-align-last: center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-      <button aria-label="go to contact form page" class="px-4 py-3 mt-4 text-center rounded-full shadow-lg text-accent1 bg-bg2 hover:bg-opacity-95">Get in Touch</button>
+      <button aria-label="go to contact form page" class="px-4 py-3 mt-4 font-[200] text-center rounded-full shadow-lg text-accent1 bg-bg2 hover:bg-opacity-95">Get in Touch</button>
     
       <!-- Highlights -->
       <!-- left -->
       <img src="../assets/images/testimonies/contact/elements/leftmiddle.svg" alt="AITS" width="513" height="631" responsive loading="eager"
-      class="absolute left-0 top-1/2 transform -translate-y-1/2"/>
+      class="absolute left-0 transform -translate-y-1/2 top-1/2"/>
       <!-- center middle -->
       <img src="../assets/images/testimonies/contact/elements/centermiddle.svg" alt="AITS" width="345" height="338" responsive loading="eager"
-      class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2"/>
+      class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"/>
       <!-- right -->
       <img src="../assets/images/testimonies/contact/elements/rightmiddle.svg" alt="AITS" width="767" height="699" responsive loading="eager"
-      class="absolute left-2/3 top-1/2 transform -translate-y-1/2 -translate-x-1/3"/>
+      class="absolute transform -translate-y-1/2 left-2/3 top-1/2 -translate-x-1/3"/>
       <img src="../assets/images/testimonies/contact/elements/rightbottom.svg" alt="AITS"  width="287" height="315" responsive loading="eager"
       class="absolute right-0 top-[100%] transform -translate-y-[100%]"/>
    </div>    
@@ -141,13 +153,13 @@ const showDes = (id) => {
   <!-- Highlights -->
   <!-- right top -->
   <img src="../assets/images/testimonies/elements/righttop.svg" alt="AITS" width="1098" height="1431" responsive loading="eager"
-  class="absolute right-0 top-0"/>
+  class="absolute top-0 right-0"/>
 
   <!-- left middle -->
   <img src="../assets/images/testimonies/elements/leftmiddle.svg" alt="AITS" width="895" height="1444" responsive loading="eager"
-  class="absolute left-0 top-1/2 transform -translate-y-1/2"/> 
+  class="absolute left-0 transform -translate-y-1/2 top-1/2"/> 
   <img src="../assets/images/testimonies/elements/leftmiddlebig.svg" alt="AITS" width="860" height="1563" responsive loading="eager"
-  class="absolute left-0 top-1/2 transform -translate-y-1/2"/>
+  class="absolute left-0 transform -translate-y-1/2 top-1/2"/>
 
   <!-- left bottom -->
   <img src="../assets/images/testimonies/elements/leftbottom.svg" alt="AITS" width="943" height="1635" responsive loading="eager"
@@ -155,13 +167,13 @@ const showDes = (id) => {
 
   <!-- right middle -->
   <img src="../assets/images/testimonies/elements/rightmiddle.svg" alt="AITS" width="1251" height="1710"  responsive loading="eager"
-  class="absolute right-0 top-1/2 transform -translate-y-1/2"/>
+  class="absolute right-0 transform -translate-y-1/2 top-1/2"/>
 
   <!-- center middle -->
   <img src="../assets/images/testimonies/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" responsive loading="eager"
-  class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2"/>
+  class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"/>
   <img src="../assets/images/testimonies/elements/centermiddlebig.svg" alt="AITS" width="860" height="1563" responsive loading="eager"
-  class="absolute right-0 top-1/2 transform -translate-y-1/2"/>
+  class="absolute right-0 transform -translate-y-1/2 top-1/2"/>
 
 </section>  
 
