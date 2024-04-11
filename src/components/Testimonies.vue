@@ -128,26 +128,25 @@ const showDes = (id) => {
    </section>  
 
    <!-- Contact -->
-   <section class="bg-gradient-to-r from-accent1/10 to-accent1/20 h-[50vh] flex flex-col items-center justify-center">
-   <div class="relative w-11/12 mx-auto space-y-10 text-center xl:w-8/12 sm:w-10/12">
+   <section class="relative bg-gradient-to-r from-accent1/10 to-accent1/20 min-h-[50vh] flex flex-col items-center justify-center sm:py-0 py-4">
+    <div class="relative w-11/12 mx-auto space-y-10 text-center xl:w-8/12 sm:w-10/12">
       <h1 class="text-accent1 text-2xl lg:text-4xl 2xl:text-5xl uppercase text-center font-[700]">Contact Us</h1>
       <p class="font-[200] text-justify text-accent2 md:w-1/2 mx-auto" style="text-align-last: center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
       <button aria-label="go to contact form page" class="px-4 py-3 mt-4 font-[200] text-center rounded-full shadow-lg text-accent1 bg-bg2 hover:bg-opacity-95">Get in Touch</button>
-    
       <!-- Highlights -->
       <!-- left -->
-      <img src="../assets/images/testimonies/contact/elements/leftmiddle.svg" alt="AITS" width="513" height="631" responsive loading="eager"
-      class="absolute left-0 transform -translate-y-1/2 top-1/2"/>
-      <!-- center middle -->
-      <img src="../assets/images/testimonies/contact/elements/centermiddle.svg" alt="AITS" width="345" height="338" responsive loading="eager"
-      class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"/>
-      <!-- right -->
-      <img src="../assets/images/testimonies/contact/elements/rightmiddle.svg" alt="AITS" width="767" height="699" responsive loading="eager"
-      class="absolute transform -translate-y-1/2 left-2/3 top-1/2 -translate-x-1/3"/>
-      <img src="../assets/images/testimonies/contact/elements/rightbottom.svg" alt="AITS"  width="287" height="315" responsive loading="eager"
-      class="absolute right-0 top-[100%] transform -translate-y-[100%]"/>
-   </div>    
-   </section>
+        <img src="../assets/images/testimonies/contact/elements/leftmiddle.svg" alt="AITS" width="513" height="631" responsive loading="eager"
+        class="absolute left-0 transform -translate-y-1/2 top-1/2"/>
+        <!-- center middle -->
+        <img src="../assets/images/testimonies/contact/elements/centermiddle.svg" alt="AITS" width="345" height="338" responsive loading="eager"
+        class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"/>
+        <!-- right -->
+        <img src="../assets/images/testimonies/contact/elements/rightmiddle.svg" alt="AITS" width="767" height="699" responsive loading="eager"
+        class="absolute transform -translate-y-1/2 left-2/3 top-1/2 -translate-x-2/3"/>
+        <img src="../assets/images/testimonies/contact/elements/rightbottom.svg" alt="AITS"  width="287" height="315" responsive loading="eager"
+        class="absolute right-0 top-[100%] transform -translate-y-[100%]"/>
+    </div>    
+    </section>
 
    
   <!-- Highlights -->
@@ -174,7 +173,6 @@ const showDes = (id) => {
   class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"/>
   <img src="../assets/images/testimonies/elements/centermiddlebig.svg" alt="AITS" width="860" height="1563" responsive loading="eager"
   class="absolute right-0 transform -translate-y-1/2 top-1/2"/>
-
 </section>  
 
 </template>

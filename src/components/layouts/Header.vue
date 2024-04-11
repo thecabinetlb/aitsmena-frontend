@@ -65,7 +65,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-   <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 flex md:justify-around justify-between items-center mx-auto gap-2 px-6 rounded-full md:shadow-sm" 
+   <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 flex md:justify-around justify-between items-center mx-auto gap-2 px-6 rounded-full md:shadow-sm" 
    :class="{'bg-accent1/10' : changecolor}">
     <img :src="logo" alt="AITS logo" class="h-8" responsive/>
     <!-- Desktop -->

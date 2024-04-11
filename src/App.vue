@@ -9,11 +9,11 @@ import Footer from './components/layouts/Footer.vue';
 
 <template>
   <main class="bg-black">
-  <FloatingMenu/>
   <Header/>
   <Hero/>
   <Industries/>
   <Testimonies/>
   <Footer/>
+  <FloatingMenu/>
   </main>
 </template>
