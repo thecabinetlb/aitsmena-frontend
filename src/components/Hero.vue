@@ -125,7 +125,7 @@
             },
           }">
           <div class="w-full space-y-2 2xl:w-2/3 sm:w-1/2">
-            <h2 class="text-accent1 font-[400] 2xl:text-7xl lg:text-6xl sm:text-5xl text-4xl uppercase">Mission and vision</h2>
+            <h2 class="text-accent1 font-[400] 2xl:text-7xl xl:text-6xl lg:text-5xlsm:text-5xl text-4xl uppercase">Mission and vision</h2>
             <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">Explore how AITS combines production with sustainability and preservation. By providing users with unique and easily accessible software solutions, AITS utilizes manufacturing plants’ various faculties and divisions under a common software that can be operated anywhere. With this approach, AITS  is one step closer to becoming the leading software innovator in the Gulf region.</p>
           </div>
           <img src="../assets/images/hero/missionandvision/vision.webp" alt="AITS" width="391" height="290" responsive/>    
@@ -147,7 +147,7 @@
           }">
           <img src="../assets/images/hero/values/values.webp" alt="AITS" width="391" height="290"/>    
           <div class="w-full space-y-2 2xl:w-2/3 sm:w-1/2">
-            <h2 class="text-accent1 font-[400] 2xl:text-7xl lg:text-6xl sm:text-5xl text-4xl uppercase">Values and Commitments</h2>
+            <h2 class="text-accent1 font-[400] 2xl:text-7xl xl:text-6xl lg:text-5xlsm:text-5xl text-4xl uppercase">Values and Commitments</h2>
             <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">At AITS, we value change, and that is just what we are committed to doing. AITS is devoted to reshaping the production industry into a more cordial environment, allowing employees to thrive and offer the best customer service experience. With AITS’s amicable approach and customer-friendly attitude, a brighter future dawns on the automation industry.</p>
           </div>
         </div>      
