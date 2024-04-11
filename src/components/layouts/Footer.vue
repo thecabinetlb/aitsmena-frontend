@@ -50,14 +50,14 @@ const footerlinks = [
 </script>
 
 <template>
-    <footer class="relative flex flex-col items-center justify-center gap-2 pt-5 pb-20 mt-20 bg-bg">
+    <footer class="relative flex flex-col items-center justify-center gap-2 py-20 bg-bg">
         <div class="flex flex-wrap justify-between w-full gap-2">
-            <div class="w-full sm:w-1/3">
+            <div class="w-full lg:w-[30%] lg:mb-0 mb-4">
             <img :src="logo" alt="AITS logo" width="100" height="33" class="mx-auto" responsive/>
             </div>
-            <nav class="flex flex-wrap justify-center w-full mx-auto sm:w-2/3">
+            <nav class="flex flex-wrap justify-center w-full px-4 gap-y-4 md:px-2 lg:w-2/3">
                 <div v-for="(item, key) in footerlinks" :key="key" class="w-1/2 sm:w-1/4">
-                <h1 class="text-lg font-[400] text-accent1 sm:mb-4">
+                <h1 class="text-lg font-[400] text-accent1 lg:mb-4 mb-2">
                     {{ item.name }}
                 </h1>            
                 <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="text-sm font-[200] text-accent1 hover:brightness-95">

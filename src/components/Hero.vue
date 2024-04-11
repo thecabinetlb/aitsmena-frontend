@@ -6,7 +6,7 @@
   <section id="AITSHero" class="relative flex flex-col flex-wrap items-center h-full mx-auto">
     <!-- headline + cta -->
     <div class="sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto space-y-4 gap-4 h-[90vh] pt-40">
-      <h1 class="text-accent1 uppercase 2xl:text-9xl xl:text-8xl lg:text-7xl text-2xl text-center font-[700]">Lorem Ipsum <br/><span class="font-[100]">Dolor Sit</span></h1>
+      <h1 class="text-accent1 uppercase 2xl:text-9xl xl:text-8xl lg:text-7xl sm:text-6xl text-5xl text-center font-[700]">Lorem Ipsum <br/><span class="font-[100]">Dolor Sit</span></h1>
       <p class="font-[200] text-justify text-accent2 xl:w-1/3 lg:w-1/2" style="text-align-last: center;">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim Exercitation veniam consequat velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
       <button class="px-4 py-3 text-center rounded-full shadow-lg cursor-pointer bg-accent1 text-bg2 hover:bg-opacity-95">See our Solutions</button>
       <img src="../assets/images/hero/arrow.webp" alt="AITS" width="178" height="145" responsive class="pt-10 sm:w-50 w-[70px]"/>    
@@ -125,7 +125,7 @@
             },
           }">
           <div class="w-full space-y-2 2xl:w-2/3 sm:w-1/2">
-            <h2 class="text-accent1 font-[400] text-2xl lg:text-4xl 2xl:text-5xl uppercase">Mission and vision</h2>
+            <h2 class="text-accent1 font-[400] 2xl:text-7xl lg:text-6xl sm:text-5xl text-4xl uppercase">Mission and vision</h2>
             <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">Explore how AITS combines production with sustainability and preservation. By providing users with unique and easily accessible software solutions, AITS utilizes manufacturing plants’ various faculties and divisions under a common software that can be operated anywhere. With this approach, AITS  is one step closer to becoming the leading software innovator in the Gulf region.</p>
           </div>
           <img src="../assets/images/hero/missionandvision/vision.webp" alt="AITS" width="391" height="290" responsive/>    
@@ -147,7 +147,7 @@
           }">
           <img src="../assets/images/hero/values/values.webp" alt="AITS" width="391" height="290"/>    
           <div class="w-full space-y-2 2xl:w-2/3 sm:w-1/2">
-            <h2 class="text-accent1 font-[400] text-2xl lg:text-4xl 2xl:text-5xl uppercase">Values and Commitments</h2>
+            <h2 class="text-accent1 font-[400] 2xl:text-7xl lg:text-6xl sm:text-5xl text-4xl uppercase">Values and Commitments</h2>
             <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">At AITS, we value change, and that is just what we are committed to doing. AITS is devoted to reshaping the production industry into a more cordial environment, allowing employees to thrive and offer the best customer service experience. With AITS’s amicable approach and customer-friendly attitude, a brighter future dawns on the automation industry.</p>
           </div>
         </div>      

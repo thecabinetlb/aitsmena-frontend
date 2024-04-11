@@ -1,10 +1,11 @@
 <script setup>
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { Carousel, Slide } from 'vue3-carousel'
 import client1 from '../assets/images/testimonies/client1.svg'
 import ic2 from '../assets/images/testimonies/partners/ic2.webp'
 import aveva from '../assets/images/testimonies/partners/aveva.webp'
 import { ref } from 'vue'
+import Contact from './Contact.vue'
 
 const myCarousel = ref(null)
 
@@ -43,11 +44,11 @@ const showDes = (id) => {
   <section class="relative w-full h-full mt-40">
     
     <!-- Partners -->    
-    <section class="w-11/12 mx-auto mb-20 xl:w-8/12 sm:w-10/12">
-      <h1 class="w-full text-accent1 font-[400] 2xl:text-5xl lg:text-4xl text-2xl uppercase mb-4">Our Sub-Companies</h1>
+    <section class="w-11/12 mx-auto xl:w-8/12 sm:w-10/12">
+      <h1 class="w-full text-accent1 font-[400] 2xl:text-7xl lg:text-6xl sm:text-5xl text-4xl uppercase mb-4">Our Sub-Companies</h1>
       <!-- Desktop -->
-      <div class="sm:block relative hidden z-10 min-h-[400px]">
-        <div v-for="item in partners" :key="key" class="absolute inset-0 w-2/3">
+      <div class="lg:block relative hidden z-10 min-h-[400px]">
+        <div v-for="item in partners" :key="key" class="absolute inset-0 w-1/2 2xl:w-2/3">
           <Transition>
             <p v-if="isHovered === item.id" class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">{{ item.description }}</p>
           </Transition>
@@ -60,7 +61,7 @@ const showDes = (id) => {
         </div>
       </div>
       <!-- Mobile -->
-      <div class="relative z-10 flex flex-col items-center h-[90vh] gap-y-4 sm:hidden">
+      <div class="relative z-10 flex flex-col items-center md:h-[70vh] h-[90vh] gap-y-4 lg:hidden">
         <div v-for="item in partners" :key="key" class="flex items-center justify-center w-full h-[40vh] gap-2">
         <button :aria-label="'click on' + item.title + 'to read the description'"class="w-1/2">
           <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] border-bg2/10 hover:border-2 hover:border-bg2 transition hover:duration-600"
@@ -83,7 +84,7 @@ const showDes = (id) => {
     :transition="2000"
     class="w-11/12 py-10 mx-auto xl:w-8/12 sm:w-10/12">
         <slide v-for="slide in testimoniesslides" :key="slide.id" class="px-5 space-y-10">
-            <h1 class="text-accent1 font-[400] 2xl:text-5xl lg:text-4xl text-2xl">
+            <h1 class="text-accent1 font-[400] 2xl:text-7xl lg:text-6xl sm:text-5xl text-4xl uppercase">
                 {{ slide.title }}
             </h1>
             <p class="text-accent2 font-[200] 2xl:text-3xl lg:text-2xl text-lg text-justify italic" style="text-align-last: center;">{{ slide.content }}</p>
@@ -93,12 +94,9 @@ const showDes = (id) => {
             </figcaption>
         </slide>
 
-        <template #addons>
-          <!-- <Pagination/> -->
-        </template>
     </carousel>   
     <!-- Navigation arrows -->
-    <div class="absolute z-10 transform -translate-y-1/2 sm:top-1/2 -bottom-18 sm:left-[10em] left-1/4">
+    <div class="absolute z-10 transform -translate-y-1/2 lg:top-1/2 -bottom-18 lg:left-[10em] left-1/4">
       <button aria-label="go to the next testimony" @click="myCarousel.next()">
         <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0ZM35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069Z" fill="url(#paint0_linear_274_875)"/>
@@ -118,7 +116,7 @@ const showDes = (id) => {
         </svg>
       </button>
     </div>
-    <div class="absolute z-10 transform -translate-y-1/2 sm:top-1/2 -bottom-18 sm:right-[10em] right-1/4">
+    <div class="absolute z-10 transform -translate-y-1/2 lg:top-1/2 -bottom-18 lg:right-[10em] right-1/4">
       <button aria-label="go to the previous testimony"@click="myCarousel.prev()">
         <svg width="70" height="70" viewBox="0 0 70 70"  fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 6.25948e-06 35 4.5696e-06C15.67 2.87972e-06 -2.87972e-06 15.67 -4.5696e-06 35C-6.25948e-06 54.33 15.67 70 35 70ZM35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931Z" fill="url(#paint0_linear_274_876)"/>
@@ -141,27 +139,7 @@ const showDes = (id) => {
    </section>  
 
    <!-- Contact -->
-   <section class="bg-gradient-to-r from-accent1/10 to-accent1/20 lg:min-h-[50vh] flex flex-col items-center justify-center lg:py-0 py-4">
-    <div class="relative mx-auto space-y-10 text-center xl:w-8/12 sm:w-10/12">
-      <h1 class="text-accent1 text-2xl lg:text-4xl 2xl:text-5xl uppercase text-center font-[700]">Contact Us</h1>
-      <p class="font-[200] text-justify text-accent2 md:w-1/2 mx-auto" style="text-align-last: center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-      <button aria-label="go to contact form page" class="px-4 py-3 mt-4 font-[200] text-center rounded-full shadow-lg text-accent1 bg-bg2 hover:bg-opacity-95">Get in Touch</button>
-      <!-- Highlights -->
-      <div class="overflow-hidden">
-      <!-- left -->
-        <img src="../assets/images/testimonies/contact/elements/leftmiddle.svg" alt="AITS" width="513" height="631" responsive loading="lazy"
-        class="absolute left-0 transform -translate-y-1/2 top-1/2"/>
-        <!-- center middle -->
-        <img src="../assets/images/testimonies/contact/elements/centermiddle.svg" alt="AITS" width="345" height="338" responsive loading="lazy"
-        class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"/>
-        <!-- right -->
-        <img src="../assets/images/testimonies/contact/elements/rightmiddle.svg" alt="AITS" width="767" height="699" responsive loading="lazy"
-        class="absolute right-0 transform -translate-y-1/2 top-1/2"/>
-        <img src="../assets/images/testimonies/contact/elements/rightbottom.svg" alt="AITS"  width="287" height="315" responsive loading="lazy"
-        class="absolute right-0 top-[100%] transform -translate-y-[100%]"/>
-      </div>    
-    </div>    
-   </section>
+   <Contact/>
 
    
   <!-- Highlights -->
