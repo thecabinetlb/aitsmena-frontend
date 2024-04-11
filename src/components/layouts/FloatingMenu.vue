@@ -19,13 +19,12 @@ const sociallinks = [
 /* we will explain what these classes do next! */
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.10s ease, transform 0.6s ease; /* Added transform */
+  transition: opacity 0.10s ease;
 }
 
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-  transform: translateX(100%); /* Initial position outside of viewport */
 }
 </style>
 <template>
