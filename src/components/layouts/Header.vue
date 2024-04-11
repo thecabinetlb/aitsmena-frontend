@@ -62,11 +62,14 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("scroll", changeColor);
 });
+const toggleOpen = () => {
+  isOpen.value = !isOpen.value
+}
 </script>
 
 <template>
-   <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 flex md:justify-around justify-between items-center mx-auto gap-2 px-6 rounded-full md:shadow-sm" 
-   :class="{'bg-accent1/10' : changecolor}">
+   <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 flex md:justify-around justify-between items-center mx-auto gap-2 px-6 md:rounded-full rounded-t-[16px] md:shadow-sm" 
+   :class="{'bg-accent1/10' : changecolor, 'bg-accent1/10 backdrop-blur-sm' : isOpen, 'rounded-b-[16px]' : !isOpen}">
     <img :src="logo" alt="AITS logo" class="h-8" responsive/>
     <!-- Desktop -->
     <nav class="items-center justify-end hidden lg:flex ps-4">
@@ -86,6 +89,27 @@ onUnmounted(() => {
       </nav>
       </div>
     </nav>
-
-  </header>
+    <!-- Mobile -->
+    <button aria-label="open menu" class="flex items-center justify-center w-6 h-6 md:hidden" @click="toggleOpen">
+      <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" fill="white" viewBox="0 0 50 50">
+      <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"></path>
+      </svg>   
+      <Transition>
+      <h1 v-if="isOpen" class="text-2xl text-accent1">&#10005;</h1>
+      </Transition> 
+    </button>
+    <nav v-show="isOpen" class="p-4 space-y-4 w-full h-fit md:hidden absolute top-[70px] left-0 bg-accent1/10 backdrop-blur-sm shadow-sm rounded-b-[16px]">
+      <div v-for="(item, key) in navlinks" :key="key" class="space-y-4">
+      <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="hover:text-accent1/85 cursor-pointer text-lg font-[400] text-accent1"
+        @click="openSubMenu = item.id">
+        {{ item.name }}
+      </RouterLink>
+      <nav v-if="item.submenu && openSubMenu === item.id">
+        <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/85 cursor-pointer font-[400] text-accent1 text-lg ps-4 pb-4">
+          {{ subitem.name }}
+        </div>
+      </nav>
+      </div>
+    </nav>
+    </header>
 </template>
