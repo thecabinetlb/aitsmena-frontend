@@ -75,8 +75,7 @@ const toggleOpen = () => {
     <nav class="items-center justify-end hidden lg:flex ps-4">
       <div v-for="(item, key) in navlinks" :key="key" class="relative w-full">
       <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="cursor-pointer text-lg font-[400] text-accent1 px-[14px] py-[10px] hover:rounded-full hover:bg-accent1/10"
-        @mouseenter="openSubMenu = item.id"
-        @mouseleave="openSubMenu = null">
+        @mouseenter="openSubMenu = item.id">
         {{ item.name }}
       </RouterLink>
       <nav v-if="item.submenu && openSubMenu === item.id"

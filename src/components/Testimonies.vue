@@ -45,7 +45,7 @@ const showDes = (id) => {
     
     <!-- Partners -->    
     <section class="w-11/12 mx-auto xl:w-8/12 sm:w-10/12">
-      <h1 class="w-full text-accent1 font-[400] 2xl:text-7xl xl:text-6xl lg:text-5xlsm:text-5xl text-4xl uppercase mb-4">Our Sub-Companies</h1>
+      <h1 class="w-full text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercase mb-4">Our Sub-Companies</h1>
       <!-- Desktop -->
       <div class="lg:block relative hidden z-10 min-h-[400px]">
         <div v-for="item in partners" :key="key" class="absolute inset-0 w-1/2 2xl:w-2/3">
@@ -84,7 +84,7 @@ const showDes = (id) => {
     :transition="2000"
     class="w-11/12 py-10 mx-auto xl:w-8/12 sm:w-10/12">
         <slide v-for="slide in testimoniesslides" :key="slide.id" class="px-5 space-y-10">
-            <h1 class="text-accent1 font-[400] 2xl:text-7xl xl:text-6xl lg:text-5xlsm:text-5xl text-4xl uppercase">
+            <h1 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercase">
                 {{ slide.title }}
             </h1>
             <p class="text-accent2 font-[200] 2xl:text-3xl lg:text-2xl text-lg text-justify italic" style="text-align-last: center;">{{ slide.content }}</p>
