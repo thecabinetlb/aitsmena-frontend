@@ -29,7 +29,7 @@ const sociallinks = [
 </style>
 <template>
     <button aria-label="open conntact info modal" 
-    class="fixed right-0 z-10 flex flex-col items-center justify-center w-12 h-10 transform -translate-y-1/2 border border-r-0 rounded-l-full top-1/2 border-accent1/30 bg-accent1/30 text-accent1"
+    class="fixed right-0 flex flex-col items-center justify-center w-12 h-10 transform -translate-y-1/2 border border-r-0 rounded-l-full z-9 top-1/2 border-accent1/30 bg-accent1/30 text-accent1"
     @click="toggleModal">
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 mx-auto">
         <path d="M7.67917 13.1666L30 13.1666L30 16.8333L7.67917 16.8333L17.9458 27.1L15.3333 29.6666L0.666667 15L15.3333 0.333291L17.9458 2.89996L7.67917 13.1666Z" fill="white"/>
@@ -37,7 +37,7 @@ const sociallinks = [
     </button>
     <Teleport to="#portals">
         <Transition>
-        <div v-if="isOpen" class="w-80 aspect-square py-2 px-6 fixed z-10 right-0 transform top-1/2 -translate-y-1/2 rounded-[16px]">
+        <div v-if="isOpen" class="w-80 aspect-square py-2 px-6 fixed z-9 right-0 transform top-1/2 -translate-y-1/2 rounded-[16px]">
             <img src="../../assets/noise/noisy-gradients.svg" alt="AITS" width="418" height="512" class="absolute inset-0 z-[-1] rounded-[16px] w-full" loading="eager" responsive/>
             <div class="flex items-center justify-between mb-4 h-1/4">
                 <h1 class="text-xl xl:text-2xl text-accent1 font-[400]">Contact Info</h1>
