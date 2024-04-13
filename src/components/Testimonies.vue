@@ -1,6 +1,6 @@
 <script setup>
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide } from 'vue3-carousel'
+import { Carousel, Slide, Pagination } from 'vue3-carousel'
 import client1 from '../assets/images/testimonies/client1.svg'
 import ic2 from '../assets/images/testimonies/partners/ic2.webp'
 import aveva from '../assets/images/testimonies/partners/aveva.webp'
@@ -38,22 +38,25 @@ const showDes = (id) => {
 .v-leave-to {
   opacity: 0;
 }
+.carousel__pagination-button--active::after {
+  background-color: white !important;
+}
 </style>
 
 <template>
-  <section class="relative w-full h-full mt-40">
+  <section class="relative w-full h-full mt-40 space-y-4">
     
     <!-- Partners -->    
     <section class="w-11/12 mx-auto xl:w-8/12 sm:w-10/12">
-      <h1 class="w-full text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercase mb-4">Our Sub-Companies</h1>
+      <h1 class="w-full text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercase">Our Sub-Companies</h1>
       <!-- Desktop -->
-      <div class="lg:block relative hidden z-10 min-h-[400px]">
-        <div v-for="item in partners" :key="key" class="absolute inset-0 w-1/2 2xl:w-2/3">
+      <div class="lg:block relative hidden z-[1] min-h-[400px] mt-4">
+        <div v-for="item in partners" :key="key" class="absolute inset-0 2xl:w-2/3 lg:w-1/2">
           <Transition>
-            <p v-if="isHovered === item.id" class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">{{ item.description }}</p>
+            <p v-if="isHovered === item.id" class="text-accent2 font-[200] 2xl:text-lg text-justify">{{ item.description }}</p>
           </Transition>
         </div>
-        <div class="ms-[50%] sm:w-1/2 w-full h-full flex justify-end items-center gap-6">
+        <div class="ms-[50%] 2xl:w-1/3 lg:w-1/2 h-full flex justify-end items-center gap-6">
           <div v-for="item in partners" :key="key" role="button" :aria-label="'click on' + item.title + 'to read the description'">
             <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] border-bg2/10 hover:border-2 hover:border-bg2 transition hover:duration-600"
             @mouseenter="showDes(item.id)" :class="{'-mb-10' : item.id === 1, '-mt-10' : item.id === 2}"/>
@@ -61,22 +64,22 @@ const showDes = (id) => {
         </div>
       </div>
       <!-- Mobile -->
-      <div class="relative z-10 flex flex-col items-center md:h-[70vh] h-[90vh] gap-y-4 lg:hidden">
-        <div v-for="item in partners" :key="key" class="flex items-center justify-center w-full h-[40vh] gap-2">
+      <div class="relative z-[1] flex flex-col items-center space-y-4 lg:hidden">
+        <div v-for="item in partners" :key="key" class="flex items-center justify-center w-full min-h-[20vh] gap-2">
         <button :aria-label="'click on' + item.title + 'to read the description'"class="w-1/2">
           <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] border-bg2/10 hover:border-2 hover:border-bg2 transition hover:duration-600"
           @mouseenter="showDes(item.id)" :class="{'-ms-10' : item.id === 1, 'ms-10' : item.id === 2}"/>
         </button>             
         </div>
         <div  v-for="item in partners" :key="key" class="relative w-full">
-          <p v-if="isHovered === item.id" class="h-[60vh] text-accent2 font-[200] text-justify" style="text-align-last: center;">{{ item.description }}</p>
+          <p v-if="isHovered === item.id" class="sm:min-h-[200px] min-h-[60vh] text-accent2 font-[200] text-justify" style="text-align-last: center;">{{ item.description }}</p>
         </div>
       </div>
     </section>
 
     <!-- Testimonies -->
-   <section class="relative z-[10] mb-20">
-    <carousel 
+   <section class="relative mb-20 z-[1]">
+    <carousel
     ref="myCarousel"
     :wrap-around="true"
     :items-to-show="1" 
@@ -87,16 +90,18 @@ const showDes = (id) => {
             <h1 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercase">
                 {{ slide.title }}
             </h1>
-            <p class="text-accent2 font-[200] 2xl:text-3xl lg:text-2xl text-lg text-justify italic" style="text-align-last: center;">{{ slide.content }}</p>
+            <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify" style="text-align-last: center;">{{ slide.content }}</p>
             <figcaption class="flex items-center justify-center gap-2 mt-4">
                 <cite class="text-accent2 font-[400]">{{ slide.ceo }}</cite>
                 <img :src="slide.icon" :alt="slide.title" width="40" height="40" responsive class="rounded-full"/>
             </figcaption>
         </slide>
-
-    </carousel>   
+        <template #addons>
+          <Pagination class="sm:hidden"/>
+        </template>
+      </carousel>   
     <!-- Navigation arrows -->
-    <div class="absolute z-10 transform -translate-y-1/2 lg:top-1/2 -bottom-18 lg:left-[10em] left-1/4">
+    <div class="sm:absolute hidden z-1 transform -translate-y-1/2 xl:top-1/2 -bottom-18 xl:left-[10em] left-1/4">
       <button aria-label="go to the next testimony" @click="myCarousel.next()">
         <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0ZM35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069Z" fill="url(#paint0_linear_274_875)"/>
@@ -116,7 +121,7 @@ const showDes = (id) => {
         </svg>
       </button>
     </div>
-    <div class="absolute z-10 transform -translate-y-1/2 lg:top-1/2 -bottom-18 lg:right-[10em] right-1/4">
+    <div class="sm:absolute hidden z-1 transform -translate-y-1/2 xl:top-1/2 -bottom-18 xl:right-[10em] right-1/4">
       <button aria-label="go to the previous testimony"@click="myCarousel.prev()">
         <svg width="70" height="70" viewBox="0 0 70 70"  fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 6.25948e-06 35 4.5696e-06C15.67 2.87972e-06 -2.87972e-06 15.67 -4.5696e-06 35C-6.25948e-06 54.33 15.67 70 35 70ZM35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931Z" fill="url(#paint0_linear_274_876)"/>

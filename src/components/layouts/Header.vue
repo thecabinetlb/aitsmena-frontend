@@ -65,24 +65,27 @@ onUnmounted(() => {
 const toggleOpen = () => {
   isOpen.value = !isOpen.value
 }
+const toggleSubMenu = (id) => {
+  openSubMenu.value = openSubMenu.value !== id ? id : null;
+}
 </script>
 
 <template>
-   <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 flex justify-between items-center mx-auto gap-4 px-5 rounded-[16px]" 
-   :class="{'bg-accent1/10' : changecolor || openSubMenu != null || isOpen, 'rounded-b-none' : openSubMenu != null || isOpen}">
+  <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 flex justify-between items-center mx-auto gap-4 px-5 rounded-[16px] " 
+   :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20' : changecolor || openSubMenu != null || isOpen, 'rounded-b-none' : openSubMenu != null || isOpen}">
     <img :src="logo" alt="AITS logo" class="h-8" responsive/>
     <!-- Desktop -->
     <nav class="items-center justify-end hidden w-full gap-4 lg:flex">
       <div v-for="(item, key) in navlinks" :key="key">
         <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" 
         class="py-3 px-4 cursor-pointer text-lg font-[400] text-accent1"
-        :class="{'bg-accent1/10 rounded-full transform duration-600' : openSubMenu === item.id }"
-          @click="openSubMenu = item.id">
+        :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-full transform duration-600' : openSubMenu === item.id }"
+          @click="toggleSubMenu(item.id)">
           {{ item.name }}
         </RouterLink>
-        <nav v-if="item.submenu && openSubMenu === item.id" 
-        class="w-full absolute left-0 top-[70px] p-5 bg-accent1/10 rounded-b-[16px]">
-          <div class="flex flex-col w-full space-y-3 p-4 rounded-[16px] backdrop-blur-sm bg-accent1/10">
+        <nav v-show="item.submenu && openSubMenu === item.id" 
+        class="w-full min-h-full absolute left-0 top-[70px] p-5 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-b-[16px] ">
+          <div class="flex flex-col w-full space-y-3 p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 ">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey"  class="hover:brightness-75 cursor-pointer font-[400] text-accent1 text-lg pb-4">
               {{ subitem.name }}
             </div>
@@ -91,7 +94,7 @@ const toggleOpen = () => {
       </div>
     </nav>
     <!-- Mobile -->
-    <button aria-label="open menu" class="flex items-center justify-center w-6 h-6 md:hidden" @click="toggleOpen">
+    <button aria-label="open menu" class="flex items-center justify-center w-6 h-6 lg:hidden" @click="toggleOpen">
       <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" fill="white" viewBox="0 0 50 50">
       <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"></path>
       </svg>   
@@ -99,19 +102,19 @@ const toggleOpen = () => {
       <h1 v-if="isOpen" class="text-2xl text-accent1">&#10005;</h1>
       </Transition> 
     </button>
-    <nav v-show="isOpen" class="p-5 space-y-4 w-full h-fit md:hidden absolute top-[70px] left-0 bg-accent1/10 rounded-b-[16px]">
+    <nav v-show="isOpen" class="p-5 space-y-4 w-full lg:hidden absolute top-[70px] left-0 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-b-[16px] ">
       <div v-for="(item, key) in navlinks" :key="key">
         <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="cursor-pointer font-[400] text-accent1"
         :class="{'brightness-75' : openSubMenu === item.id }"
-          @click="openSubMenu = item.id">
+        @click="toggleSubMenu(item.id)">
           {{ item.name }}
         </RouterLink>
-        <nav v-if="item.submenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] backdrop-blur-sm bg-accent1/10">
+        <nav v-if="item.submenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px]  bg-gradient-to-r from-accent1/10 to-accent1/20">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-75 cursor-pointer font-[400] text-accent1 pb-4">
               {{ subitem.name }}
             </div>
         </nav>
       </div>
     </nav>
-    </header>
+  </header>
 </template>
