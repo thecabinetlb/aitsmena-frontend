@@ -66,12 +66,12 @@ const showDes = (id) => {
       <!-- Mobile -->
       <div class="relative z-[1] flex flex-col items-center space-y-4 lg:hidden">
         <div v-for="item in partners" :key="key" class="flex items-center justify-center w-full min-h-[20vh] gap-2">
-        <button :aria-label="'click on' + item.title + 'to read the description'"class="w-1/2">
-          <img :src="item.logo" :alt="item.title" width="168" height="168" center cover responsive class="rounded-[16px] border-bg2/10"
+        <button :aria-label="'click on' + item.title + 'to read the description'" class="w-1/2">
+          <img :src="item.logo" :alt="item.title" width="168" height="168" center cover responsive class="rounded-[16px] border-2 border-bg2/10"
           @mouseenter="showDes(item.id)" :class="{'-ms-10' : item.id === 1, 'ms-10' : item.id === 2, 'border-bg2 transform duration-600' : isHovered === item.id}"/>
         </button>             
         </div>
-        <div  v-for="item in partners" :key="key" class="relative w-full">
+        <div v-for="item in partners" :key="key" class="relative w-full">
           <p v-if="isHovered === item.id" class="sm:min-h-[200px] min-h-[60vh] text-accent2 font-[200] text-justify" style="text-align-last: center;">{{ item.description }}</p>
         </div>
       </div>
