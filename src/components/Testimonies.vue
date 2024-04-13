@@ -58,7 +58,7 @@ const showDes = (id) => {
         </div>
         <div class="2xl:ms-auto 2xl:me-0 ms-[50%] 2xl:w-1/3 lg:w-1/2 h-full flex justify-end items-center gap-6">
           <div v-for="item in partners" :key="key" role="button" :aria-label="'click on' + item.title + 'to read the description'">
-            <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] border-2 border-bg2/10"
+            <img :src="item.logo" :alt="item.title" width="168" height="168" center cover responsive class="rounded-[16px] border-2 border-bg2/10"
             @mouseenter="showDes(item.id)" :class="{'-mb-10' : item.id === 1, '-mt-10' : item.id === 2, 'border-bg2 transform duration-600' : isHovered === item.id}"/>
           </div>
         </div>
@@ -67,7 +67,7 @@ const showDes = (id) => {
       <div class="relative z-[1] flex flex-col items-center space-y-4 lg:hidden">
         <div v-for="item in partners" :key="key" class="flex items-center justify-center w-full min-h-[20vh] gap-2">
         <button :aria-label="'click on' + item.title + 'to read the description'"class="w-1/2">
-          <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] border-bg2/10"
+          <img :src="item.logo" :alt="item.title" width="168" height="168" center cover responsive class="rounded-[16px] border-bg2/10"
           @mouseenter="showDes(item.id)" :class="{'-ms-10' : item.id === 1, 'ms-10' : item.id === 2, 'border-bg2 transform duration-600' : isHovered === item.id}"/>
         </button>             
         </div>
@@ -93,7 +93,7 @@ const showDes = (id) => {
             <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify" style="text-align-last: center;">{{ slide.content }}</p>
             <figcaption class="flex items-center justify-center gap-2 mt-4">
                 <cite class="text-accent2 font-[400]">{{ slide.ceo }}</cite>
-                <img :src="slide.icon" :alt="slide.title" width="40" height="40" responsive class="rounded-full"/>
+                <img :src="slide.icon" :alt="slide.title" width="40" height="40" center cover responsive class="rounded-full"/>
             </figcaption>
         </slide>
         <template #addons>
@@ -149,27 +149,27 @@ const showDes = (id) => {
    
   <!-- Highlights -->
     <!-- right top -->
-    <img src="../assets/images/testimonies/elements/righttop.svg" alt="AITS" width="1098" height="1431" responsive loading="lazy"
+    <img src="../assets/images/testimonies/elements/righttop.svg" alt="AITS" width="1098" height="1431" center cover responsive loading="lazy"
     class="absolute top-0 right-0"/>
 
     <!-- left middle -->
-    <img src="../assets/images/testimonies/elements/leftmiddle.svg" alt="AITS" width="895" height="1444" responsive loading="lazy"
+    <img src="../assets/images/testimonies/elements/leftmiddle.svg" alt="AITS" width="895" height="1444" center cover responsive loading="lazy"
     class="absolute left-0 transform -translate-y-1/2 top-1/2"/> 
-    <img src="../assets/images/testimonies/elements/leftmiddlebig.svg" alt="AITS" width="860" height="1563" responsive loading="lazy"
+    <img src="../assets/images/testimonies/elements/leftmiddlebig.svg" alt="AITS" width="860" height="1563" center cover responsive loading="lazy"
     class="absolute left-0 transform -translate-y-1/2 top-1/2"/>
 
     <!-- left bottom -->
-    <img src="../assets/images/testimonies/elements/leftbottom.svg" alt="AITS" width="943" height="1635" responsive loading="lazy"
+    <img src="../assets/images/testimonies/elements/leftbottom.svg" alt="AITS" width="943" height="1635" center cover responsive loading="lazy"
     class="absolute left-0 top-[100%] transform -translate-y-[100%]"/>
 
     <!-- right middle -->
-    <img src="../assets/images/testimonies/elements/rightmiddle.svg" alt="AITS" width="1251" height="1710"  responsive loading="lazy"
+    <img src="../assets/images/testimonies/elements/rightmiddle.svg" alt="AITS" width="1251" height="1710"  center cover responsive loading="lazy"
     class="absolute right-0 transform -translate-y-1/2 top-1/2"/>
 
     <!-- center middle -->
-    <img src="../assets/images/testimonies/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" responsive loading="lazy"
+    <img src="../assets/images/testimonies/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" center cover responsive loading="lazy"
     class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"/>
-    <img src="../assets/images/testimonies/elements/centermiddlebig.svg" alt="AITS" width="860" height="1563" responsive loading="lazy"
+    <img src="../assets/images/testimonies/elements/centermiddlebig.svg" alt="AITS" width="860" height="1563" center cover responsive loading="lazy"
     class="absolute right-0 transform -translate-y-1/2 top-1/2"/>
 </section>  
 

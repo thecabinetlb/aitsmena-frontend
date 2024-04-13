@@ -9,11 +9,11 @@
       <h1 class="text-accent1 uppercase xl:text-8xl lg:text-7xl sm:text-6xl text-4xl text-center font-[700] ">Welcome to AITS<br/><span class="font-[100]"> The Future of Industrialization</span></h1>
       <p class="font-[200] text-justify text-accent2 2xl:w-1/3 md:w-2/3 mt-4" style="text-align-last: center;">AITS is not a generic company; we offer innovative software solutions tailored to your needs. Merging technology with excellence and vitality, AITS allows industrial plants to experience unprecedented production efficiency and a simpler means for monitoring, controlling, and acquiring real-time data.</p>
       <button class="px-4 py-3 mt-5 text-center rounded-full shadow-lg cursor-pointer bg-accent1 text-bg2 hover:bg-opacity-95">Contact Us</button>
-      <img src="../assets/images/hero/arrow.webp" alt="AITS" width="178" height="145" responsive class="pt-10 sm:w-50 w-[70px]"/>    
+      <img src="../assets/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive class="pt-10 sm:w-50 w-[70px]"/>    
     </div>
     <!-- animation elements -->
       <!-- middle layor -->
-     <img src="../assets/images/hero/elements/centermiddle.svg" alt="AITS" width="1275" height="1585" responsive loading="eager"
+     <img src="../assets/images/hero/elements/centermiddle.svg" alt="AITS" width="1275" height="1585" center cover responsive loading="eager"
       v-motion  
         :initial="{
           opacity: 1,
@@ -38,7 +38,7 @@
         }"/>
       
       <!-- left layer -->
-      <img src="../assets/images/hero/elements/lefttop.svg" alt="AITS" width="846" height="1078" responsive loading="eager"
+      <img src="../assets/images/hero/elements/lefttop.svg" alt="AITS" width="846" height="1078" center cover responsive loading="eager"
       v-motion  
         :initial="{
           opacity: 1,
@@ -62,15 +62,15 @@
           },
         }"/>
 
-      <img src="../assets/images/hero/elements/leftmiddle.svg" alt="AITS" width="2765" height="2473" responsive loading="eager"
+      <img src="../assets/images/hero/elements/leftmiddle.svg" alt="AITS" width="2765" height="2473" center cover responsive loading="eager"
       class="absolute left-0 transform -translate-y-1/2 z-2 top-1/2"/>
-      <img src="../assets/images/hero/elements/leftmiddleoposite.svg" alt="AITS" width="1232" height="233" responsive loading="eager"
+      <img src="../assets/images/hero/elements/leftmiddleoposite.svg" alt="AITS" width="1232" height="233" center cover responsive loading="eager"
       class="absolute left-0 transform -translate-y-1/2 z-2 top-1/2"/>    
-      <!-- <img src="../assets/images/hero/elements/leftbottom.svg" alt="AITS" width="339" height="1416" responsive loading="eager"
+      <!-- <img src="../assets/images/hero/elements/leftbottom.svg" alt="AITS" width="339" height="1416" center cover responsive loading="eager"
       class="absolute left-0 transform z-3 top-1/3 -translate-y-1/3"/> -->
  
       <!-- right layer -->
-      <img src="../assets/images/hero/elements/righttop.svg" alt="AITS" width="1745" height="572" responsive loading="eager"
+      <img src="../assets/images/hero/elements/righttop.svg" alt="AITS" width="1745" height="572" center cover responsive loading="eager"
       v-motion  
         :initial="{
           opacity: 1,
@@ -93,11 +93,11 @@
             duration: 4000
           },
         }"/>
-      <img src="../assets/images/hero/elements/rightbottom.svg" alt="AITS" width="832" height="764" responsive loading="eager"
+      <img src="../assets/images/hero/elements/rightbottom.svg" alt="AITS" width="832" height="764" center cover responsive loading="eager"
       class="absolute z-3 right-0 top-[100%] transform -translate-y-[100%]"/>
 
       <!-- pattern -->
-      <img src="../assets/images/patterns/pattern (2).svg" alt="AITS" width="832" height="1771" responsive loading="eager"
+      <img src="../assets/images/patterns/pattern (2).svg" alt="AITS" width="832" height="1771" center cover responsive loading="eager"
       class="absolute z-4 right-0 top-[100%] transform -translate-y-[100%] opacity-75"/>                
 
 
@@ -125,7 +125,7 @@
             <h2 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercase">Mission and vision</h2>
             <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">Explore how AITS combines production with sustainability and preservation. By providing users with unique and easily accessible software solutions, AITS utilizes manufacturing plants’ various faculties and divisions under a common software that can be operated anywhere. With this approach, AITS  is one step closer to becoming the leading software innovator in the Gulf region.</p>
           </div>
-          <img src="../assets/images/hero/missionandvision/vision.webp" alt="AITS" width="391" height="290" responsive/>    
+          <img src="../assets/images/hero/missionandvision/vision.webp" alt="AITS" width="391" height="290" center cover responsive/>    
         </div>
         <div class="flex flex-wrap items-center justify-center w-full gap-3 lg:justify-between"
         v-motion
@@ -142,7 +142,7 @@
               delay: 200,
             },
           }">
-          <img src="../assets/images/hero/values/values.webp" alt="AITS" width="391" height="290" responsive/>    
+          <img src="../assets/images/hero/values/values.webp" alt="AITS" width="391" height="290" center cover responsive/>    
           <div class="w-full space-y-3 2xl:w-2/3 lg:w-1/2">
             <h2 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercase">Values and Commitments</h2>
             <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify">At AITS, we value change, and that is just what we are committed to doing. AITS is devoted to reshaping the production industry into a more cordial environment, allowing employees to thrive and offer the best customer service experience. With AITS’s amicable approach and customer-friendly attitude, a brighter future dawns on the automation industry.</p>

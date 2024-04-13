@@ -11,15 +11,15 @@
     </div>    
     <!-- Highlights -->
     <!-- left -->
-    <img src="../assets/images/testimonies/contact/elements/leftmiddle.svg" alt="AITS" width="513" height="631" responsive loading="lazy"
+    <img src="../assets/images/testimonies/contact/elements/leftmiddle.svg" alt="AITS" width="513" height="631" center cover responsive loading="lazy"
     class="absolute left-0 transform -translate-y-1/2 top-1/2"/>
     <!-- center middle -->
-    <img src="../assets/images/testimonies/contact/elements/centermiddle.svg" alt="AITS" width="345" height="338" responsive loading="lazy"
+    <img src="../assets/images/testimonies/contact/elements/centermiddle.svg" alt="AITS" width="345" height="338" center cover responsive loading="lazy"
     class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"/>
     <!-- right -->
-    <img src="../assets/images/testimonies/contact/elements/rightmiddle.svg" alt="AITS" width="767" height="699" responsive loading="lazy"
+    <img src="../assets/images/testimonies/contact/elements/rightmiddle.svg" alt="AITS" width="767" height="699" center cover responsive loading="lazy"
     class="absolute right-0 transform -translate-y-1/2 top-1/2"/>
-    <img src="../assets/images/testimonies/contact/elements/rightbottom.svg" alt="AITS"  width="287" height="315" responsive loading="lazy"
+    <img src="../assets/images/testimonies/contact/elements/rightbottom.svg" alt="AITS"  width="287" height="315" center cover responsive loading="lazy"
     class="absolute right-0 top-[100%] transform -translate-y-[100%]"/>
    </section>
 </template>

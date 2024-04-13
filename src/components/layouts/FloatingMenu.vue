@@ -65,7 +65,7 @@ const sociallinks = [
             <div class="flex flex-wrap items-center justify-between gap-2 place-content-end h-1/4">
                 <div class="flex items-center justify-between gap-2">
                 <a v-for="(item, key) in sociallinks" :key="key" :id="'go-to-' +item.name" :href="item.to" :target="item.target" class="w-10 aspect-square font-[200] bg-bg2 text-accent1 hover:text-bg2 hover:bg-accent1 rounded-full p-1 flex items-center justify-center">
-                    <img :src="item.icon" :alt="'AITS' + item.name" responsive/>
+                    <img :src="item.icon" :alt="'AITS' + item.name" center cover responsive/>
                 </a>                    
                 </div>
                 <button aria-label="go to contact form page" class="px-3 py-2 text-center rounded-full shadow-lg text-accent1 bg-bg2 font-[200] hover:bg-opacity-95">Get in Touch</button>
