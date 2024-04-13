@@ -72,7 +72,7 @@ const toggleSubMenu = (id) => {
 
 <template>
   <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 flex justify-between items-center mx-auto gap-4 px-5 rounded-[16px]" 
-   :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20' : changecolor || openSubMenu != null || isOpen, 'rounded-b-none' : openSubMenu != null || isOpen}">
+   :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-lg' : changecolor || openSubMenu != null || isOpen, 'rounded-b-none' : openSubMenu != null || isOpen}">
     <img :src="logo" alt="AITS logo" class="h-8" responsive/>
     <!-- Desktop -->
     <nav class="items-center justify-end hidden w-full gap-4 lg:flex">
@@ -102,7 +102,7 @@ const toggleSubMenu = (id) => {
       <h1 v-if="isOpen" class="text-2xl text-accent1">&#10005;</h1>
       </Transition> 
     </button>
-    <nav v-show="isOpen" class="p-5 space-y-4 w-full lg:hidden absolute top-[70px] left-0 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-b-[16px] transform translate-z-0">
+    <nav v-show="isOpen" class="p-5 space-y-4 w-full lg:hidden absolute top-[70px] left-0 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-b-[16px] backdrop-blur-lg">
       <div v-for="(item, key) in navlinks" :key="key">
         <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="cursor-pointer font-[400] text-accent1"
         :class="{'brightness-75' : openSubMenu === item.id }"

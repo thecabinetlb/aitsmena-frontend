@@ -70,9 +70,9 @@ const footerlinks = [
       <!-- pattern -->
       <img src="../../assets/images/patterns/patternfooter.svg" alt="AITS" width="446" height="643" responsive loading="eager"
       class="absolute left-0 top-[100%] transform -translate-y-[100%] opacity-75"/>       
-      <div class="relative text-center min-h-[50px] w-full mt-20 mb-10 flex flex-col items-center justify-center bg-noise bg-cover bg-center">
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-accent1/10 to-accent1/20"></div>
-        <p class="text-accent1">Copyright @ AITS All Rights Reserved.</p>
+     
+      <div class="text-center min-h-[50px] w-full mt-20 mb-10 flex flex-col items-center justify-center bg-footer-noise bg-cover bg-center ">
+      <p class="text-accent1">Copyright @ AITS All Rights Reserved.</p>
       </div>
     </footer>
 </template>

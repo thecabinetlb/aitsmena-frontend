@@ -56,10 +56,10 @@ const showDes = (id) => {
             <p v-if="isHovered === item.id" class="text-accent2 font-[200] 2xl:text-lg text-justify">{{ item.description }}</p>
           </Transition>
         </div>
-        <div class="ms-[50%] 2xl:w-1/3 lg:w-1/2 h-full flex justify-end items-center gap-6">
+        <div class="2xl:ms-auto 2xl:me-0 ms-[50%] 2xl:w-1/3 lg:w-1/2 h-full flex justify-end items-center gap-6">
           <div v-for="item in partners" :key="key" role="button" :aria-label="'click on' + item.title + 'to read the description'">
-            <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] border-bg2/10 hover:border-2 hover:border-bg2 transition hover:duration-600"
-            @mouseenter="showDes(item.id)" :class="{'-mb-10' : item.id === 1, '-mt-10' : item.id === 2}"/>
+            <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] border-2 border-bg2/10"
+            @mouseenter="showDes(item.id)" :class="{'-mb-10' : item.id === 1, '-mt-10' : item.id === 2, 'border-bg2 transform duration-600' : isHovered === item.id}"/>
           </div>
         </div>
       </div>
@@ -67,8 +67,8 @@ const showDes = (id) => {
       <div class="relative z-[1] flex flex-col items-center space-y-4 lg:hidden">
         <div v-for="item in partners" :key="key" class="flex items-center justify-center w-full min-h-[20vh] gap-2">
         <button :aria-label="'click on' + item.title + 'to read the description'"class="w-1/2">
-          <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] border-bg2/10 hover:border-2 hover:border-bg2 transition hover:duration-600"
-          @mouseenter="showDes(item.id)" :class="{'-ms-10' : item.id === 1, 'ms-10' : item.id === 2}"/>
+          <img :src="item.logo" :alt="item.title" width="168" height="168" responsive class="rounded-[16px] border-bg2/10"
+          @mouseenter="showDes(item.id)" :class="{'-ms-10' : item.id === 1, 'ms-10' : item.id === 2, 'border-bg2 transform duration-600' : isHovered === item.id}"/>
         </button>             
         </div>
         <div  v-for="item in partners" :key="key" class="relative w-full">
