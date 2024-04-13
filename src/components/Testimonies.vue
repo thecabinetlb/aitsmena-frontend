@@ -143,7 +143,6 @@ const showDes = (id) => {
 
    
   <!-- Highlights -->
-  <div class="overflow-hidden">
     <!-- right top -->
     <img src="../assets/images/testimonies/elements/righttop.svg" alt="AITS" width="1098" height="1431" responsive loading="lazy"
     class="absolute top-0 right-0"/>
@@ -167,7 +166,6 @@ const showDes = (id) => {
     class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"/>
     <img src="../assets/images/testimonies/elements/centermiddlebig.svg" alt="AITS" width="860" height="1563" responsive loading="lazy"
     class="absolute right-0 transform -translate-y-1/2 top-1/2"/>
-  </div>
 </section>  
 
 </template>
