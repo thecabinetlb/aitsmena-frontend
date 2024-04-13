@@ -14,6 +14,10 @@ export default {
       },
       backgroundOpacity: {
         '10': '0.1',
+      },
+      backgroundImage: {
+        'noise':'url(./src/assets/noise/noise.svg)',
+        'blue-noise':'url(./src/assets/noise/blue-noise.svg)',
       }
   }
 },

@@ -37,8 +37,7 @@ const sociallinks = [
     </button>
     <Teleport to="#portals">
         <Transition>
-        <div v-if="isOpen" class="w-80 aspect-square py-2 px-6 fixed z-9 right-0 transform top-1/2 -translate-y-1/2 rounded-[16px]">
-            <img src="../../assets/noise/noisy-gradients.svg" alt="AITS" width="418" height="512" class="absolute inset-0 z-[-1] rounded-[16px] w-full" loading="eager" responsive/>
+        <div v-if="isOpen" class="w-80 aspect-square py-2 px-6 fixed z-9 right-0 transform top-1/2 -translate-y-1/2 rounded-[16px] bg-blue-noise bg-cover bg-center">
             <div class="flex items-center justify-between mb-4 h-1/4">
                 <h1 class="text-xl xl:text-2xl text-accent1 font-[400]">Contact Info</h1>
                 <button class="text-lg text-accent1 font-[400]" @click="isOpen = false">X</button>
