@@ -4,9 +4,9 @@
 
 <template>
    <section class="relative bg-gradient-to-r from-accent1/10 to-accent1/20 lg:min-h-[50vh] space-y-4 flex flex-col items-center justify-center lg:py-5 md:py-10 py-[40px]">
-    <div class="relative mx-auto text-center xl:w-8/12 sm:w-10/12 z-[1]">
+    <div class="relative mx-auto text-center xl:w-8/12 sm:w-10/12 w-11/12 z-[1]">
       <h1 class="text-accent1 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercase text-center font-[400]">Contact Us</h1>
-      <p class="mt-4 font-[200] text-justify text-accent2 lg:w-1/2 mx-auto" style="text-align-last: center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+      <p class="mt-4 font-[200] text-justify text-accent2 2xl:w-1/2 md:w-2/3 mx-auto" style="text-align-last: center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
       <button aria-label="go to contact form page" class="cursor-pointer px-4 py-3 mt-5 font-[200] text-center rounded-full shadow-lg text-accent1 bg-bg2 hover:brightness-85">Get in Touch</button>
     </div>    
     <!-- Highlights -->
