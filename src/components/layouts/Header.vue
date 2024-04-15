@@ -72,9 +72,11 @@ const toggleSubMenu = (id) => {
 
 <template>
   <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 flex justify-between items-center mx-auto gap-4 px-5 rounded-[16px]"
-   :class="{'before:absolute before:backdrop-blur-[16px] before:rounded-[16px] before:z-[-1] before:inset-0 before:w-full before:h-full bg-gradient-to-r from-accent1/10 to-accent1/20' 
-   : changecolor || openSubMenu != null || isOpen, 
-   'rounded-b-none before:rounded-b-none' : openSubMenu != null || isOpen}">
+  :class="{
+    'before:absolute before:backdrop-blur-[16px] before:rounded-[16px] before:z-[-1] before:inset-0 before:w-full before:h-full bg-gradient-to-r from-accent1/10 to-accent1/20' : changecolor || openSubMenu != null || isOpen, 
+    'rounded-b-none before:rounded-b-none' : openSubMenu != null || isOpen
+  }"
+>
     <img :src="logo" alt="AITS logo" class="h-8" center cover responsive />
     <!-- Desktop -->
     <nav class="items-center justify-end hidden w-full gap-4 lg:flex">
@@ -86,7 +88,7 @@ const toggleSubMenu = (id) => {
           {{ item.name }}
         </RouterLink>      
         <nav v-if="item.submenu && openSubMenu === item.id" 
-        class="w-full h-fit absolute left-0 top-[70.5px] p-5 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-b-[16px] backdrop-blur-[16px]">
+        class="w-full h-fit absolute left-0 top-[70px] p-5 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-b-[16px] backdrop-blur-[16px]">
           <div class="w-full space-y-3 p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-85 cursor-pointer font-[400] text-accent1 text-lg pb-4">
               {{ subitem.name }}
