@@ -37,7 +37,7 @@ const sociallinks = [
     </button>
     <Teleport to="#portals">
         <Transition>
-        <div v-if="isOpen" class="w-80 aspect-square py-2 px-6 fixed z-9 right-0 transform top-1/2 -translate-y-1/2 rounded-[16px] bg-blue-noise bg-cover bg-center">
+        <div v-if="isOpen" class="sm:w-80 w-[200px] sm:aspect-square sm:py-3 py-4 px-5 fixed z-9 right-0 transform top-1/2 -translate-y-1/2 rounded-[16px] bg-blue-noise bg-cover bg-center">
             <div class="flex items-center justify-between mb-4 h-1/4">
                 <h1 class="text-xl xl:text-2xl text-accent1 font-[400]">Contact Info</h1>
                 <button class="text-lg text-accent1 font-[400]" @click="isOpen = false">X</button>
@@ -68,7 +68,7 @@ const sociallinks = [
                     <img :src="item.icon" :alt="'AITS' + item.name" center cover responsive/>
                 </a>                    
                 </div>
-                <button aria-label="go to contact form page" class="px-3 py-2 text-center rounded-full shadow-lg text-accent1 bg-bg2 font-[200] hover:bg-opacity-95">Get in Touch</button>
+                <button aria-label="go to contact form page" class="px-4 py-3 text-center rounded-full shadow-lg text-accent1 bg-bg2 font-[200] hover:brightness-95">Get in Touch</button>
             </div>
         </div>
         </Transition>

@@ -26,7 +26,7 @@ const industries = [
         <div class="grid items-center w-full gap-6 mt-4 text-center sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3">
             <div v-for="(item, key) in industries" :key="key" class="relative group col-sapn-1 aspect-square">
             <div class="w-full h-full absolute -inset-0 bg-gradient-to-br group-hover:from-bg2/50 group-hover:to-bg2 bg-accent1/10 rounded-[16px] opacity-35 group-hover:opacity-50 transform duration-400 group-hover:duration-600"></div>
-                <div class="w-full h-full relative flex flex-col justify-center items-center gap-4 rounded-[16px] bg-noise bg-cover bg-center shadow-[4px_-4px_25px_-12px_rgba(50,82,123)]">
+                <div class="w-full h-full relative flex flex-col justify-center items-center gap-4 rounded-[16px] bg-noise bg-cover bg-center border border-bg2/30">
                     <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive class="rounded-full"/>
                     <h2 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[400]">{{ item.title }}</h2>
                 </div>
@@ -34,4 +34,4 @@ const industries = [
         </div>
     </section>
 </template>
-<!-- shadow-[4px_-4px_25px_-12px_rgba(50,82,123)] -->
+<!-- shadow-[4px_-4px_25px_-12px_rgba(50,82,123)]  shadow-[4px_-4px_25px_-12px_rgba(50,82,123)]-->
