@@ -5,11 +5,11 @@
 <template>
   <section id="AITSHero" class="relative flex flex-col flex-wrap items-center h-full mx-auto"> 
     <!-- headline + cta -->
-    <div class="sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto gap-4 min-h-[90vh] md:pt-40 pt-20">
-      <h1 class="text-accent1 uppercase xl:text-8xl lg:text-7xl sm:text-6xl text-4xl text-center font-[700]">Lorem ipsum<br/><span class="font-[100]"> dolor sit</span></h1>
+    <div class="text-accent1 sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto gap-4 min-h-[90vh] h-screen md:pt-40 pt-20">
+      <h1 class="uppercase xl:text-8xl lg:text-7xl sm:text-6xl text-4xl text-center font-[700]">Lorem ipsum<br/><span class="font-[100]"> dolor sit</span></h1>
       <p class="font-[200] text-justify text-accent2 2xl:w-1/3 md:w-2/3 mt-4" style="text-align-last: center;">AITS is not a generic company; we offer innovative software solutions tailored to your needs. Merging technology with excellence and vitality, AITS allows industrial plants to experience unprecedented production efficiency and a simpler means for monitoring, controlling, and acquiring real-time data.</p>
-      <button class="px-4 py-3 mt-5 text-center rounded-full shadow-lg cursor-pointer bg-accent1 text-bg2 hover:bg-brightness-85">Contact Us</button>
-      <img src="../assets/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive class="md:pt-10 sm:w-50 w-[70px]"/>    
+      <button class="cursor-pointer px-4 py-3 mt-5 font-[200] text-center rounded-full shadow-lg text-accent1 bg-bg2   hover:brightness-125 relative z-[5]">Contact Us</button>
+      <img src="../assets/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive class="sm:w-50 w-[70px]"/>
     </div>
     <!-- animation elements -->
       <!-- middle layor -->

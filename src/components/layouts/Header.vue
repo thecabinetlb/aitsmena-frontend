@@ -71,30 +71,24 @@ const toggleSubMenu = (id) => {
 </script>
 
 <template>
-  <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 flex justify-between items-center mx-auto gap-4 px-5 rounded-[16px]"
-  :class="{
-    'before:absolute before:backdrop-blur-[16px] before:rounded-[16px] before:z-[-1] before:inset-0 before:w-full before:h-full bg-gradient-to-r from-accent1/10 to-accent1/20' : changecolor || openSubMenu != null || isOpen, 
-    'rounded-b-none before:rounded-b-none' : openSubMenu != null || isOpen
-  }"
->
-    <img :src="logo" alt="AITS logo" class="h-8" center cover responsive />
+ <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 flex md:justify-around justify-between items-center mx-auto gap-2 px-6 md:rounded-full rounded-t-[16px]" 
+    :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || openSubMenu != null, 'rounded-b-[16px]' : !isOpen}">
+    <img :src="logo" alt="AITS logo" class="h-8" responsive/>
     <!-- Desktop -->
-    <nav class="items-center justify-end hidden w-full gap-4 lg:flex">
-      <div v-for="(item, key) in navlinks" :key="key">
-        <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" 
-        class="py-3 px-4 cursor-pointer text-lg font-[400] text-accent1"
-        :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-full transform duration-600' : openSubMenu === item.id }"
-          @click="toggleSubMenu(item.id)">
+    <nav class="items-center justify-end hidden lg:flex ps-4">
+      <div v-for="(item, key) in navlinks" :key="key" class="relative w-full h-full">
+        <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="cursor-pointer text-lg font-[400] text-accent1 py-4 px-3 hover:rounded-full hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20"
+          @mouseenter="openSubMenu = item.id">
           {{ item.name }}
-        </RouterLink>      
-        <nav v-if="item.submenu && openSubMenu === item.id" 
-        class="w-full h-fit absolute left-0 top-[70px] p-5 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-b-[16px] backdrop-blur-[16px]">
-          <div class="w-full space-y-3 p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
-            <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-85 cursor-pointer font-[400] text-accent1 text-lg pb-4">
-              {{ subitem.name }}
-            </div>
+        </RouterLink>
+        <nav v-if="item.submenu && openSubMenu === item.id"
+          @mouseenter="openSubMenu = item.id"
+          @mouseleave="openSubMenu = null"
+          class="w-[300px] h-fit absolute left-0 top-[50px] p-5 flex flex-col space-y-3 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] backdrop-blur-[16px]">
+          <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="cursor-pointer font-[400] text-accent1 text-lg py-4 px-3 hover:rounded-full hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20">
+            {{ subitem.name }}
           </div>
-        </nav>      
+        </nav>
       </div>
     </nav>
     <!-- Mobile -->
