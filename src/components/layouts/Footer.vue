@@ -50,7 +50,7 @@ const footerlinks = [
 </script>
 
 <template>
-    <footer class="relative flex flex-col items-center justify-center gap-2 py-20 bg-bg">
+    <footer class="relative flex flex-col items-center justify-center gap-2 py-20 px-6 bg-bg">
         <div class="flex flex-wrap justify-between w-full gap-2">
             <div class="w-full lg:w-[30%] lg:mb-0 mb-4">
             <img :src="logo" alt="AITS logo" width="100" height="33" class="mx-auto" center cover responsive/>

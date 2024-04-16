@@ -69,28 +69,29 @@ const toggleSubMenu = (id) => {
   openSubMenu.value = openSubMenu.value !== id ? id : null;
 }
 </script>
-
 <template>
- <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[70px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-around items-center mx-auto gap-2 px-6 rounded-[16px]" 
-    :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || openSubMenu != null, 'h-fit' : isOpen}">
-    <img :src="logo" alt="AITS logo" class="h-8 lg:block relative left-0 top-5" responsive/>
+ <header @mouseleave="openSubMenu = null"
+    class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[67px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-around items-center mx-auto gap-2 px-6 rounded-[16px]" 
+    :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || openSubMenu !== null , 'h-fit' : isOpen, 'rounded-b-none' : openSubMenu != null}">
+    <img :src="logo" alt="AITS logo" class="h-8 relative left-0 lg:top-0 top-5" responsive/>
     <!-- Desktop -->
-    <nav class="items-center justify-end hidden lg:flex">
-      <div v-for="(item, key) in navlinks" :key="key" class="relative w-full h-full">
-        <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="cursor-pointer text-lg font-[400] text-accent1 py-4 px-3 hover:rounded-full hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20"
-          @mouseenter="openSubMenu = item.id">
+    <nav class="items-center justify-end hidden w-full gap-4 lg:flex">
+      <div v-for="(item, key) in navlinks" :key="key">
+        <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" 
+        class="py-2 px-3 cursor-pointer text-lg font-[400] text-accent1 hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20 hover:rounded-[8px] transform duration-600"
+        @mouseenter="toggleSubMenu(item.id)">
           {{ item.name }}
-        </RouterLink>
-        <nav v-if="item.submenu && openSubMenu === item.id"
-          @mouseenter="openSubMenu = item.id"
-          @mouseleave="openSubMenu = null"
-          class="w-[300px] h-fit absolute left-0 top-[50px] p-5 flex flex-col space-y-3 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] backdrop-blur-[16px]">
-          <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="cursor-pointer font-[400] text-accent1 text-lg py-4 px-3 hover:rounded-full hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20">
-            {{ subitem.name }}
+        </RouterLink>      
+        <nav v-if="item.submenu != null && openSubMenu === item.id"
+        class="w-full h-fit absolute left-0 top-[67px] p-5 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-b-[16px] backdrop-blur-[16px]">
+          <div class="w-full space-y-3 p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
+            <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-75 cursor-pointer font-[400] text-accent1 text-lg pb-4">
+              {{ subitem.name }}
+            </div>
           </div>
         </nav>
-      </div>
-    </nav>
+      </div> 
+    </nav>   
     <!-- Mobile -->
     <button aria-label="open menu" class="flex items-center justify-center w-6 h-6 lg:hidden absolute right-6 top-5" @click="toggleOpen">
       <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" fill="white" viewBox="0 0 50 50">
@@ -108,7 +109,7 @@ const toggleSubMenu = (id) => {
           {{ item.name }}
         </RouterLink>
         <nav v-if="item.submenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
-            <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-85 cursor-pointer font-[400] text-accent1 pb-4">
+            <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-75 cursor-pointer font-[400] text-accent1 pb-4">
               {{ subitem.name }}
             </div>
         </nav>
