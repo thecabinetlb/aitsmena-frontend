@@ -75,10 +75,17 @@ const toggleOpen = () => {
 
 </script>
 
+<style scoped>
+.name {
+    backdrop-filter: blur(16px) !important;
+}
+</style>
 <template>
  <header @mouseleave="openSubMenu = null"
     class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[67px] z-[10] xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-around items-center mx-auto gap-2 px-6 rounded-[16px]" 
-    :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || hasSubMenu, 'h-fit' : isOpen}">
+    :class="{'h-fit' : isOpen}">
+    <div class="absolute inset-0 w-full h-full z-[-1] rounded-[16px]"
+    :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || hasSubMenu}"/>
     <img :src="logo" alt="AITS logo" class="relative left-0 h-8 lg:top-0 top-5" cover center responsive/>
     <!-- Desktop -->
     <nav class="items-center justify-end hidden w-full h-full gap-4 lg:flex">
@@ -88,9 +95,8 @@ const toggleOpen = () => {
         @mouseenter="toggleSubMenu(item)">
           {{ item.name }}
         </RouterLink>
-        <nav v-if="hasSubMenu && openSubMenu === item.id"
-        class="w-full h-fit absolute left-0 top-[67px] p-5">
-          <div class="relative w-full h-full space-y-3 p-4 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px]">
+        <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-full h-fit absolute left-0 top-[67px] p-5">
+          <div class="relative inset-0 w-full h-full space-y-3 p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-75 cursor-pointer font-[400] text-accent1 text-lg pb-4">
               {{ subitem.name }}
             </div>
