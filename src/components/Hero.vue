@@ -108,12 +108,13 @@ import VisionandValues from './VisionandValues.vue';
             duration: 4000
           },
         }"/>
-      <img src="../assets/images/hero/elements/rightbottom.svg" alt="AITS" width="832" height="764" center cover responsive loading="eager"
+
+      <img src="../assets/images/hero/elements/rightbottom.svg" alt="AITS" width="1440" height="2301" center cover responsive loading="eager"
       class="absolute z-3 right-0 top-[100%] transform -translate-y-[100%]"/>
 
       <!-- pattern -->
       <img src="../assets/images/patterns/pattern (2).svg" alt="AITS" width="832" height="1771" center cover responsive loading="eager"
-      class="absolute z-4 right-0 top-[100%] transform -translate-y-[100%] opacity-75"/>                
+      class="absolute z-[-1] right-0 top-[100%] transform -translate-y-[100%] opacity-75"/>                
 
 
     <!-- Mission and Values  -->
