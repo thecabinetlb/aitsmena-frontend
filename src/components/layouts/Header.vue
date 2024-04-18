@@ -78,8 +78,8 @@ const toggleOpen = () => {
 <template>
  <header @mouseleave="openSubMenu = null"
     class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[67px] z-[10] xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-around items-center mx-auto gap-2 px-6 rounded-[16px]" 
-    :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 hover:backdrop-blur-[16px]' : changecolor || isOpen || hasSubMenu, 'h-fit' : isOpen}">
-    <img :src="logo" alt="AITS logo" class="h-8 relative left-0 lg:top-0 top-5" cover center responsive/>
+    :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || hasSubMenu, 'h-fit' : isOpen}">
+    <img :src="logo" alt="AITS logo" class="relative left-0 h-8 lg:top-0 top-5" cover center responsive/>
     <!-- Desktop -->
     <nav class="items-center justify-end hidden w-full h-full gap-4 lg:flex">
       <div v-for="(item, key) in navlinks" :key="key">
@@ -89,8 +89,8 @@ const toggleOpen = () => {
           {{ item.name }}
         </RouterLink>
         <nav v-if="hasSubMenu && openSubMenu === item.id"
-        class="w-full h-fit absolute left-0 top-[67px] p-5 rounded-b-[16px]">
-          <div class="w-full h-full space-y-3 p-4 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px]">
+        class="w-full h-fit absolute left-0 top-[67px] p-5">
+          <div class="relative w-full h-full space-y-3 p-4 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px]">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-75 cursor-pointer font-[400] text-accent1 text-lg pb-4">
               {{ subitem.name }}
             </div>
@@ -99,7 +99,7 @@ const toggleOpen = () => {
       </div> 
     </nav>   
     <!-- Mobile -->
-    <button aria-label="open menu" class="flex items-center justify-center w-6 h-6 lg:hidden absolute right-6 top-5" @click="toggleOpen">
+    <button aria-label="open menu" class="absolute flex items-center justify-center w-6 h-6 lg:hidden right-6 top-5" @click="toggleOpen">
       <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" fill="white" viewBox="0 0 50 50">
       <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"></path>
       </svg>   
@@ -107,7 +107,7 @@ const toggleOpen = () => {
       <h1 v-if="isOpen" class="text-2xl text-accent1">&#10005;</h1>
       </Transition> 
     </button>
-    <nav v-if="isOpen" class="py-5 mt-5 space-y-4 w-full lg:hidden">
+    <nav v-if="isOpen" class="w-full py-5 mt-5 space-y-4 lg:hidden">
       <div v-for="(item, key) in navlinks" :key="key">
         <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="cursor-pointer font-[400] text-accent1"
         :class="{'brightness-85' : openSubMenu === item.id }"
