@@ -50,7 +50,7 @@ const footerlinks = [
 </script>
 
 <template>
-    <footer class="relative flex flex-col items-center justify-center gap-2 py-20 px-6 bg-bg">
+    <footer class="relative flex flex-col items-center justify-center gap-2 px-6 py-20 bg-bg">
         <div class="flex flex-wrap justify-between w-full gap-2">
             <div class="w-full lg:w-[30%] lg:mb-0 mb-4">
             <img :src="logo" alt="AITS logo" width="100" height="33" class="mx-auto" center cover responsive/>
@@ -71,7 +71,7 @@ const footerlinks = [
       <img src="../../assets/images/patterns/patternfooter.svg" alt="AITS" width="446" height="643" center cover responsive loading="eager"
       class="absolute left-0 top-[100%] transform -translate-y-[100%] opacity-75"/>       
      
-      <div class="text-center min-h-[50px] w-full mt-20 mb-10 flex flex-col items-center justify-center bg-footer-noise bg-cover bg-center ">
+      <div class="text-center min-h-[50px] w-full mt-20 mb-10 flex flex-col items-center justify-center bg-footer-noise bg-cover bg-center">
       <p class="text-accent1">Copyright @ AITS All Rights Reserved.</p>
       </div>
     </footer>
