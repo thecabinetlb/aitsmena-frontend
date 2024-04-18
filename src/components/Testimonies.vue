@@ -22,33 +22,33 @@ const testimoniesslides = [
 </style>
 
 <template>
-  <section class="relative w-full h-full mt-40 space-y-4">
+  <section class="relative">
     
     <!-- Partners -->    
     <Partners/>
 
     <!-- Testimonies -->
-   <section class="relative mb-20 z-[1]">
+   <section class="relative z-[1] mt-40">
     <carousel
     ref="myCarousel"
     :wrap-around="true"
     :items-to-show="1" 
     :autoplay="6000" 
     :transition="2000"
-    class="w-11/12 py-10 mx-auto xl:w-8/12 sm:w-10/12">
-        <slide v-for="slide in testimoniesslides" :key="slide.id" class="px-5 space-y-10">
+    class="w-11/12 py-10 mx-auto 2xl:w-8/12 sm:w-10/12">
+        <slide v-for="slide in testimoniesslides" :key="slide.id" class="px-6 space-y-10 lg:w-3/4">
             <h1 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercase">
                 {{ slide.title }}
             </h1>
-            <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-justify" style="text-align-last: center;">{{ slide.content }}</p>
+            <p class="text-accent2 font-[200] 2xl:text-lg lg:text-md text-center">{{ slide.content }}</p>
             <figcaption class="flex items-center justify-center gap-2 mt-4">
                 <cite class="text-accent2 font-[400]">{{ slide.ceo }}</cite>
-                <img :src="slide.icon" :alt="slide.title" width="40" height="40" center cover responsive class="rounded-[8px]"/>
+                <img :src="slide.icon" :alt="slide.title" width="40" height="40" center cover responsive  loading="lazy" class="rounded-[8px]"/>
             </figcaption>
         </slide>
-      </carousel>   
+      </carousel>
     <!-- Navigation arrows -->
-    <div class="lg:block absolute hidden z-1 transform -translate-y-1/2 xl:top-1/2 -bottom-18 xl:left-[10em] left-1/4">
+    <div class="inset-0 flex items-center justify-center gap-4 px-6 mx-auto transform -translate-y-1/2 lg:w-full sm:w-10/12 lg:justify-between lg:absolute top-1/2 z-1">
       <button aria-label="go to the next testimony" @click="myCarousel.next()">
         <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0ZM35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069Z" fill="url(#paint0_linear_274_875)"/>
@@ -67,8 +67,6 @@ const testimoniesslides = [
               </defs>
         </svg>
       </button>
-    </div>
-    <div class="lg:block absolute hidden z-1 transform -translate-y-1/2 xl:top-1/2 -bottom-18 xl:right-[10em] right-1/4">
       <button aria-label="go to the previous testimony"@click="myCarousel.prev()">
         <svg width="70" height="70" viewBox="0 0 70 70"  fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 6.25948e-06 35 4.5696e-06C15.67 2.87972e-06 -2.87972e-06 15.67 -4.5696e-06 35C-6.25948e-06 54.33 15.67 70 35 70ZM35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931Z" fill="url(#paint0_linear_274_876)"/>
@@ -88,6 +86,7 @@ const testimoniesslides = [
         </svg>  
       </button>
     </div>
+
    </section>  
 
    <!-- Contact -->

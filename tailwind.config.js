@@ -16,9 +16,9 @@ export default {
         '10': '0.1',
       },
       backgroundImage: {
-        'noise':'url(./public/images/noise/noise.svg)',
-        'blue-noise':'url(./public/images/noise/blue-noise.svg)',
-        'footer-noise':'url(./public/images/noise/footer-noise.svg)',
+        'noise':'url(/images/noise/noise.svg)',
+        'blue-noise':'url(/images/noise/blue-noise.svg)',
+        'footer-noise':'url(/images/noise/footer-noise.svg)',
       }
   }
 },

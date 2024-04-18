@@ -50,10 +50,10 @@ const footerlinks = [
 </script>
 
 <template>
-    <footer class="relative flex flex-col items-center justify-center gap-2 px-6 py-20 bg-bg">
-        <div class="flex flex-wrap justify-between w-full gap-2">
-            <div class="w-full lg:w-[30%] lg:mb-0 mb-4">
-            <img :src="logo" alt="AITS logo" width="100" height="33" class="mx-auto" center cover responsive/>
+    <footer class="relative flex flex-col items-center justify-center gap-10 py-20 bg-bg">
+        <div class="flex flex-wrap justify-between w-full gap-6 px-6">
+            <div class="w-full lg:w-[30%] lg:mb-0 mb-10">
+            <img :src="logo" alt="AITS logo" width="100" height="33" class="mx-auto" center cover responsive loading="lazy"/>
             </div>
             <nav class="flex flex-wrap justify-center w-full px-4 gap-y-4 md:px-2 lg:w-2/3">
                 <div v-for="(item, key) in footerlinks" :key="key" class="w-1/2 sm:w-1/4">
@@ -68,7 +68,7 @@ const footerlinks = [
         </div>
 
       <!-- pattern -->
-      <img src="../../assets/images/patterns/patternfooter.svg" alt="AITS" width="446" height="643" center cover responsive loading="eager"
+      <img src="../../assets/images/patterns/patternfooter.svg" alt="AITS" width="446" height="643" center cover responsive loading="lazy"
       class="absolute left-0 top-[100%] transform -translate-y-[100%] opacity-75"/>       
      
       <div class="text-center min-h-[50px] w-full mt-20 mb-10 flex flex-col items-center justify-center bg-footer-noise bg-cover bg-center">
