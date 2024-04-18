@@ -28,20 +28,23 @@ const sociallinks = [
 }
 </style>
 <template>
-    <button aria-label="open conntact info modal" 
-    class="fixed right-0 flex flex-col items-center justify-center w-12 h-10 transform -translate-y-1/2 border border-r-0 rounded-l-full z-9 top-1/2 border-accent1/30 bg-accent1/30 text-accent1"
+    <button :aria-label="{'open contact info menu' : !isOpen, 'close contact info menu' : isOpen}" 
+    class="cursor-pointer fixed z-10 right-0 md:top-1/2 top-3/4 transform -translate-y-1/2 flex flex-col items-center justify-center w-12 h-10 border border-r-0 rounded-l-full border-accent1/30 bg-accent1/30 text-accent1"
+    :class="{ 'sm:-translate-x-80 -translate-x-64' : isOpen }"
     @click="toggleModal">
-        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 mx-auto">
+        <svg v-if="!isOpen" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 mx-auto">
         <path d="M7.67917 13.1666L30 13.1666L30 16.8333L7.67917 16.8333L17.9458 27.1L15.3333 29.6666L0.666667 15L15.3333 0.333291L17.9458 2.89996L7.67917 13.1666Z" fill="white"/>
         </svg>
+        <Transition>
+            <h1 v-if="isOpen" class="text-xl text-accent1">&#10005;</h1>
+        </Transition>     
     </button>
     <Teleport to="#portals">
+        <div v-if="isOpen" class="absolute inset-0 h-screen w-full bg-bg/30 backdrop-blur-[16px]" @click="isOpen = false"></div>
         <Transition>
-        <div v-if="isOpen" class="sm:w-80 w-[200px] sm:aspect-square sm:py-3 py-4 px-5 fixed z-9 right-0 transform top-1/2 -translate-y-1/2 rounded-[16px] bg-blue-noise bg-cover bg-center">
-            <div class="flex items-center justify-between mb-4 h-1/4">
-                <h1 class="text-xl xl:text-2xl text-accent1 font-[400]">Contact Info</h1>
-                <button class="text-lg text-accent1 font-[400]" @click="isOpen = false">X</button>
-            </div>
+        <div v-if="isOpen" class="sm:w-80 w-64 sm:aspect-square p-4 fixed z-[9] right-0 md:top-1/2 top-3/4 transform -translate-y-1/2 bg-gradient-to-br from-bg2 to-bg2/90 rounded-[16px]">
+            <div class="absolute inset-0 w-full h-full bg-noise bg-cover bg-center z-[-1] rounded-[16px]"></div>
+            <h1 class="text-xl xl:text-2xl text-accent1 font-[400] h-1/4">Contact Info</h1>
             <ul role="list" class="space-y-4 list-style-none h-2/4">
                 <li class="text-accent1 font-[200] flex gap-2">
                     <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,11 +67,11 @@ const sociallinks = [
             </ul>
             <div class="flex flex-wrap items-center justify-between gap-2 place-content-end h-1/4">
                 <div class="flex items-center justify-between gap-2">
-                <a v-for="(item, key) in sociallinks" :key="key" :id="'go-to-' +item.name" :href="item.to" :target="item.target" class="w-10 aspect-square font-[200] bg-bg2 text-accent1 hover:text-bg2 hover:bg-accent1 rounded-[8px] p-1 flex items-center justify-center">
+                <a v-for="(item, key) in sociallinks" :key="key" :id="'go-to-' +item.name" :href="item.to" :target="item.target" class="w-10 aspect-square font-[200] bg-bg2 text-accent1 hover:brightness-95 rounded-[8px] p-1 flex items-center justify-center">
                     <img :src="item.icon" :alt="'AITS' + item.name" center cover responsive/>
                 </a>                    
                 </div>
-                <button aria-label="go to contact form page" class="px-4 py-3 text-center rounded-[8px] shadow-lg text-accent1 bg-bg2 font-[200] hover:brightness-95">Get in Touch</button>
+                <button aria-label="go to contact form page" class="cursor-pointer p-2 text-center rounded-[8px] text-accent1 bg-bg2 font-[200] hover:brightness-95">Get in Touch</button>
             </div>
         </div>
         </Transition>

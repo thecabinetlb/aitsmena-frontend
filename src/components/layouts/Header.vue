@@ -43,9 +43,10 @@ const navlinks = [
   { id: 6, name: 'Contact', to: '/contact' },
 ]
 
-const isOpen = ref(false)
-const openSubMenu = ref(null)
 const changecolor = ref(false)
+const hasSubMenu = ref(false)
+const openSubMenu = ref(null)
+const isOpen = ref(false)
 
 const changeColor = () => {
   if (window.scrollY > 10) {
@@ -53,38 +54,43 @@ const changeColor = () => {
   } else {
     changecolor.value = false;
   }
-};
+}
 
 onMounted(() => {
   window.addEventListener("scroll", changeColor);
-});
+})
 
 onUnmounted(() => {
   window.removeEventListener("scroll", changeColor);
-});
+})
+
+const toggleSubMenu = (item) => {
+  hasSubMenu.value = item.submenu ? true : false
+  openSubMenu.value = openSubMenu.value !== item.id ? item.id : null
+}
+
 const toggleOpen = () => {
   isOpen.value = !isOpen.value
 }
-const toggleSubMenu = (id) => {
-  openSubMenu.value = openSubMenu.value !== id ? id : null;
-}
+
 </script>
+
 <template>
  <header @mouseleave="openSubMenu = null"
-    class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[67px] z-10 xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-around items-center mx-auto gap-2 px-6 rounded-[16px]" 
-    :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || openSubMenu !== null , 'h-fit' : isOpen, 'rounded-b-none' : openSubMenu != null}">
-    <img :src="logo" alt="AITS logo" class="h-8 relative left-0 lg:top-0 top-5" responsive/>
+    class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[67px] z-[10] xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-around items-center mx-auto gap-2 px-6 rounded-[16px]" 
+    :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || hasSubMenu, 'h-fit' : isOpen}">
+    <img :src="logo" alt="AITS logo" class="h-8 relative left-0 lg:top-0 top-5" cover center responsive/>
     <!-- Desktop -->
-    <nav class="items-center justify-end hidden w-full gap-4 lg:flex">
+    <nav class="items-center justify-end hidden w-full h-full gap-4 lg:flex">
       <div v-for="(item, key) in navlinks" :key="key">
         <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" 
         class="py-2 px-3 cursor-pointer text-lg font-[400] text-accent1 hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20 hover:rounded-[8px] transform duration-600"
-        @mouseenter="toggleSubMenu(item.id)">
+        @mouseenter="toggleSubMenu(item)">
           {{ item.name }}
-        </RouterLink>      
-        <nav v-if="item.submenu != null && openSubMenu === item.id"
-        class="w-full h-fit absolute left-0 top-[67px] p-5 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-b-[16px] backdrop-blur-[16px]">
-          <div class="w-full space-y-3 p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
+        </RouterLink>
+        <nav v-if="hasSubMenu && openSubMenu === item.id"
+        class="w-full h-fit absolute left-0 top-[67px] p-5 rounded-b-[16px]">
+          <div class="w-full h-full space-y-3 p-4 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] backdrop-blur-[16px]">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-75 cursor-pointer font-[400] text-accent1 text-lg pb-4">
               {{ subitem.name }}
             </div>
@@ -105,10 +111,10 @@ const toggleSubMenu = (id) => {
       <div v-for="(item, key) in navlinks" :key="key">
         <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="cursor-pointer font-[400] text-accent1"
         :class="{'brightness-85' : openSubMenu === item.id }"
-        @click="toggleSubMenu(item.id)">
+        @click="toggleSubMenu(item)">
           {{ item.name }}
         </RouterLink>
-        <nav v-if="item.submenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
+        <nav v-if="hasSubMenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-75 cursor-pointer font-[400] text-accent1 pb-4">
               {{ subitem.name }}
             </div>

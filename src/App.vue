@@ -8,7 +8,7 @@ import Footer from './components/layouts/Footer.vue';
 </script>
 
 <template>
-  <main class="bg-black">
+  <main>
   <Header/>
   <Hero/>
   <Industries/>
