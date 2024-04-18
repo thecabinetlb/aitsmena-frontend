@@ -108,10 +108,30 @@ import VisionandValues from './VisionandValues.vue';
             duration: 4000
           },
         }"/>
-
-      <img src="../assets/images/hero/elements/rightbottom.svg" alt="AITS" width="1440" height="2301" center cover responsive loading="eager"
-      class="absolute z-3 right-0 top-[100%] transform -translate-y-[100%]"/>
-
+      <img src="../assets/images/hero/elements/rightmiddle.svg" alt="AITS" width="2499" height="1501"  center cover responsive loading="eager"
+      v-motion  
+        :initial="{
+          position: 'absolute',
+          top: '35%',
+          right: '0',
+          transform: 'translate(0%)',
+          zIndex: -1,
+          x:0,
+          y:0,
+        }"
+        :visibleOnce="{
+          transform: 'translate(50%)',
+          x:0,
+          y:0,
+          transition: {
+            type: 'spring',
+            delay: 1100,
+            duration: 4000
+          },
+        }"/>
+      <!-- <img src="../assets/images/hero/elements/rightbottom.svg" alt="AITS" width="943" height="925" center cover responsive loading="eager"
+      class="absolute right-0 transform -translate-y-[100%] z-1 top-[100%]"/>          -->
+      
       <!-- pattern -->
       <img src="../assets/images/patterns/pattern (2).svg" alt="AITS" width="832" height="1771" center cover responsive loading="eager"
       class="absolute z-[-1] right-0 top-[100%] transform -translate-y-[100%] opacity-75"/>                
