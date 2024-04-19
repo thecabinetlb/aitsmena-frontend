@@ -35,7 +35,7 @@ import VisionandValues from './VisionandValues.vue';
           position: 'absolute',
           top: '0',
           left: '50%',
-          zIndex: 3,
+          zIndex: 1,
           transform: 'translate(-50%, 0%)',
           x:0,
           y:0,
@@ -84,7 +84,7 @@ import VisionandValues from './VisionandValues.vue';
  
       <!-- right layer -->
       <img src="../assets/images/hero/elements/righttop.svg" alt="AITS" width="1467" height="1474" 
-      class="min-h-[400px] absolute right-0 z-1 top-0" center cover responsive loading="eager"/> 
+      class="min-h-[400px] absolute right-0 md:top-1/4 md:-translate-y-1/4 top-0 z-[-1]" center cover responsive loading="eager" />
       <!-- v-motion  
         :initial="{
           position: 'absolute',
@@ -104,7 +104,7 @@ import VisionandValues from './VisionandValues.vue';
             delay: 1100,
             duration: 4000
           },
-        }"-->
+        }" -->
       <img src="../assets/images/hero/elements/rightmiddle.svg" alt="AITS" width="2499" height="1501" center cover responsive loading="eager"
       v-motion  
         :initial="{
@@ -112,7 +112,7 @@ import VisionandValues from './VisionandValues.vue';
           top: '35%',
           right: '0',
           transform: 'translate(0%)',
-          zIndex: -1,
+          zIndex: 2,
           x:0,
           y:0,
         }"
