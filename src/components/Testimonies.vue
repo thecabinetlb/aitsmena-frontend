@@ -35,8 +35,8 @@ const testimoniesslides = [
     :items-to-show="1" 
     :autoplay="6000" 
     :transition="2000"
-    class="w-11/12 py-10 mx-auto 2xl:w-8/12 sm:w-10/12">
-        <slide v-for="slide in testimoniesslides" :key="slide.id" class="px-6 space-y-10 lg:w-3/4">
+    class="py-10 mx-auto sm:w-10/12 2xl:w-8/12">
+        <slide v-for="slide in testimoniesslides" :key="slide.id" class="space-y-10">
             <h1 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercase">
                 {{ slide.title }}
             </h1>
@@ -48,7 +48,7 @@ const testimoniesslides = [
         </slide>
       </carousel>
     <!-- Navigation arrows -->
-    <div class="inset-0 flex items-center justify-center gap-4 px-6 mx-auto transform -translate-y-1/2 lg:w-full sm:w-10/12 lg:justify-between lg:absolute top-1/2 z-1">
+    <div class="inset-0 flex items-center justify-center gap-4 px-6 mx-auto transform -translate-y-1/2 2xl:w-10/12 lg:w-full sm:w-10/12 lg:justify-between lg:absolute top-1/2 z-1">
       <button aria-label="go to the next testimony" @click="myCarousel.next()">
         <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0ZM35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069Z" fill="url(#paint0_linear_274_875)"/>
@@ -96,27 +96,27 @@ const testimoniesslides = [
   <!-- Highlights -->
     <!-- right top -->
     <img src="../assets/images/testimonies/elements/righttop.svg" alt="AITS" width="1098" height="1431" center cover responsive loading="lazy"
-    class="absolute top-0 right-0"/>
+    class="absolute top-0 right-0 z-[-1]"/>
 
     <!-- left middle -->
     <img src="../assets/images/testimonies/elements/leftmiddle.svg" alt="AITS" width="895" height="1444" center cover responsive loading="lazy"
-    class="absolute left-0 transform -translate-y-1/2 top-1/2"/> 
-    <img src="../assets/images/testimonies/elements/leftmiddlebig.svg" alt="AITS" width="860" height="1563" center cover responsive loading="lazy"
-    class="absolute left-0 transform -translate-y-1/2 top-1/2"/>
+    class="absolute top-0 left-0 transform md:-translate-y-1/2 md:top-1/2 z-[-1]"/> 
+    <img src="../assets/images/testimonies/elements/leftmiddlebig.svg" alt="AITS" width="943" height="1635" center cover responsive loading="lazy"
+    class="absolute top-0 left-0 transform md:-translate-y-1/2 md:top-1/2 z-[-1]"/>
 
     <!-- left bottom -->
     <img src="../assets/images/testimonies/elements/leftbottom.svg" alt="AITS" width="943" height="1635" center cover responsive loading="lazy"
-    class="absolute left-0 top-[100%] transform -translate-y-[100%]"/>
+    class="absolute left-0 md:top-[100%] transform md:-translate-y-[100%] -translate-y-1/2 top-1/2 z-[-1]"/>
 
     <!-- right middle -->
     <img src="../assets/images/testimonies/elements/rightmiddle.svg" alt="AITS" width="1251" height="1710"  center cover responsive loading="lazy"
-    class="absolute right-0 transform -translate-y-1/2 top-1/2"/>
+    class="absolute top-0 right-0 transform md:-translate-y-1/2 md:top-1/2 z-[-1]"/>
 
     <!-- center middle -->
     <img src="../assets/images/testimonies/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" center cover responsive loading="lazy"
-    class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"/>
+    class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 z-[-1]"/>
     <img src="../assets/images/testimonies/elements/centermiddlebig.svg" alt="AITS" width="860" height="1563" center cover responsive loading="lazy"
-    class="absolute right-0 transform -translate-y-1/2 top-1/2"/>
+    class="absolute right-0 transform -translate-y-1/2 top-1/2 z-[-1]"/>
 </section>  
 
 </template>

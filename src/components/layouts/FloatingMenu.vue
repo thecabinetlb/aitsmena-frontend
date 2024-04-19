@@ -30,7 +30,7 @@ const sociallinks = [
 <template>
     <button :aria-label="{'open contact info menu' : !isOpen, 'close contact info menu' : isOpen}" 
     class="cursor-pointer fixed z-[10] right-0 md:top-1/2 top-3/4 transform -translate-y-1/2 flex flex-col items-center justify-center w-12 h-10 border border-r-0 rounded-l-full border-accent1/30 bg-accent1/30 text-accent1"
-    :class="{ 'sm:right-[3.3%] -translate-x-64' : isOpen }"
+    :class="{ '-translate-x-80' : isOpen }"
     @click="toggleModal">
         <svg v-if="!isOpen" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 mx-auto">
         <path d="M7.67917 13.1666L30 13.1666L30 16.8333L7.67917 16.8333L17.9458 27.1L15.3333 29.6666L0.666667 15L15.3333 0.333291L17.9458 2.89996L7.67917 13.1666Z" fill="white"/>
@@ -42,7 +42,7 @@ const sociallinks = [
     <Teleport to="#portals">
         <div v-if="isOpen" class="absolute inset-0 w-full h-full bg-bg/30 backdrop-blur-[16px]" @click="isOpen = false"></div>
         <Transition>
-        <div v-if="isOpen" class="sm:w-2/12 w-64 sm:aspect-square p-6 fixed z-[9] right-0 md:top-1/2 top-3/4 transform -translate-y-1/2 bg-gradient-to-br from-bg2 to-bg2/90 rounded-[16px]">
+        <div v-if="isOpen" class="w-80 aspect-square p-6 fixed z-[9] right-0 md:top-1/2 top-3/4 transform -translate-y-1/2 bg-gradient-to-br from-bg2 to-bg2/90 rounded-[16px]">
             <div class="absolute inset-0 w-full h-full bg-noise bg-cover bg-center z-[-1] rounded-[16px]"></div>
             <h1 class="text-xl xl:text-2xl text-accent1 font-[400] h-1/4">Contact Info</h1>
             <ul role="list" class="space-y-6 list-style-none h-2/4">
