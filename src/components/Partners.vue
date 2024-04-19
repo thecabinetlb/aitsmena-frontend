@@ -53,7 +53,7 @@ const showDes = (id) => {
             </button>            
         </div>
         <div v-for="item in partners" :key="key" class="relative w-full">
-            <p v-if="isHovered === item.id" class="text-accent2 font-[200] text-justify sm:h-[200px] h-[60vh]" style="text-align-last: center;">{{ item.description }}</p>
+            <p v-if="isHovered === item.id" class="text-accent2 font-[200] text-justify" style="text-align-last: center;">{{ item.description }}</p>
         </div>
     </div>
     </section>

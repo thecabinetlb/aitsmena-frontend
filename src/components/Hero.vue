@@ -10,7 +10,7 @@ import VisionandValues from './VisionandValues.vue';
       <h1 class="text-accent1 uppercase xl:text-9xl lg:text-8xl sm:text-6xl text-4xl text-center font-[700]">Lorem ipsum<br/><span class="font-[100]"> dolor sit</span></h1>
       <p class="font-[200] text-justify text-accent2 2xl:w-1/3 w-2/3" style="text-align-last: center;">AITS is not a generic company; we offer innovative software solutions tailored to your needs. Merging technology with excellence and vitality, AITS allows industrial plants to experience unprecedented production efficiency and a simpler means for monitoring, controlling, and acquiring real-time data.</p>
       <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="cursor-pointer px-4 py-3 font-[200] text-center rounded-[8px] shadow-lg text-accent1 bg-bg2 hover:brightness-125">Contact Us</RouterLink>
-      <img src="../assets/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive  loading="eager" class="sm:w-50 w-[70px] mt-10"
+      <img src="../assets/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive  loading="eager" class="sm:w-50 w-[70px]"
       v-motion  
         :initial="{
           x:0,
