@@ -28,21 +28,21 @@ import VisionandValues from './VisionandValues.vue';
     </div>
     <!-- animation elements -->
       <!-- middle layor -->
-     <img src="../assets/images/hero/elements/centermiddle.svg" alt="AITS" width="1275" height="1585" class="min-h-[400px]" center cover responsive loading="eager"
+     <img src="../assets/images/hero/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" class="min-h-[400px]" center cover responsive loading="eager"
       v-motion  
         :initial="{
           opacity: 1,
           position: 'absolute',
           top: '0',
           left: '50%',
-          zIndex: 1,
+          zIndex: 3,
           transform: 'translate(-50%, 0%)',
           x:0,
           y:0,
         }"
         :visibleOnce="{
           opacity: 0,
-          transform: 'translate(100%, 100%)',
+          transform: 'translate(100%, -100%)',
           x:0,
           y:0,
           transition: {
@@ -83,8 +83,9 @@ import VisionandValues from './VisionandValues.vue';
       class="absolute left-0 transform z-3 top-1/3 -translate-y-1/3"/> -->
  
       <!-- right layer -->
-      <img src="../assets/images/hero/elements/righttop.svg" alt="AITS" width="1098" height="1431" center cover responsive loading="eager"
-      v-motion  
+      <img src="../assets/images/hero/elements/righttop.svg" alt="AITS" width="1467" height="1474" 
+      class="min-h-[400px] absolute right-0 z-1 top-0" center cover responsive loading="eager"/> 
+      <!-- v-motion  
         :initial="{
           position: 'absolute',
           top: '0',
@@ -95,7 +96,7 @@ import VisionandValues from './VisionandValues.vue';
           y:0,
         }"
         :visibleOnce="{
-          transform: 'translate(50%, -70%)',
+          transform: 'translate(50%, -50%)',
           x:0,
           y:0,
           transition: {
@@ -103,7 +104,7 @@ import VisionandValues from './VisionandValues.vue';
             delay: 1100,
             duration: 4000
           },
-        }"/>
+        }"-->
       <img src="../assets/images/hero/elements/rightmiddle.svg" alt="AITS" width="2499" height="1501" center cover responsive loading="eager"
       v-motion  
         :initial="{

@@ -48,7 +48,7 @@ const testimoniesslides = [
         </slide>
       </carousel>
     <!-- Navigation arrows -->
-    <div class="inset-0 flex items-center justify-center gap-4 px-6 mx-auto transform -translate-y-1/2 2xl:w-10/12 lg:w-full sm:w-10/12 lg:justify-between lg:absolute top-1/2 z-1">
+    <div class="inset-0 flex items-center justify-center gap-4 px-6 mx-auto mt-10 transform -translate-y-1/2 lg:mt-0 2xl:w-10/12 lg:w-full sm:w-10/12 lg:justify-between lg:absolute top-1/2 z-1">
       <button aria-label="go to the next testimony" @click="myCarousel.next()">
         <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0ZM35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069Z" fill="url(#paint0_linear_274_875)"/>
