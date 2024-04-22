@@ -37,7 +37,7 @@ const testimoniesslides = [
     :transition="2000"
     class="w-10/12 py-10 mx-auto 2xl:w-8/12">
         <slide v-for="slide in testimoniesslides" :key="slide.id" class="space-y-10">
-            <h1 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-3xl text-[30px] uppercase">
+            <h1 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase">
                 {{ slide.title }}
             </h1>
             <p class="text-accent2 font-[200] max-sm:text-[14px] text-jusify" style="text-align-last: center">{{ slide.content }}</p>

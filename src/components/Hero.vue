@@ -6,7 +6,7 @@ import VisionandValues from './VisionandValues.vue';
 <template>
   <section id="AITSHero" class="relative flex flex-col flex-wrap items-center h-full px-6 mx-auto"> 
     <!-- headline + cta -->
-    <div class="sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto gap-6 lg:h-[90vh] h-screen lg:pt-40 pt-20">
+    <div class="sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto gap-6 md:h-[90vh] h-screen lg:pt-40 pt-20">
       <h1 class="text-accent1 uppercase 2xl:text-9xl lg:text-8xl md:text-6xl sm:text-4xl text-[30px] text-center font-[700]">Lorem ipsum<br/><span class="font-[100]"> dolor sit</span></h1>
       <p class="font-[200] max-sm:text-[14px] text-justify text-accent2 2xl:w-1/3 sm:w-2/3" style="text-align-last: center;">AITS is not a generic company; we offer innovative software solutions tailored to your needs. Merging technology with excellence and vitality, AITS allows industrial plants to experience unprecedented production efficiency and a simpler means for monitoring, controlling, and acquiring real-time data.</p>
       <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] shadow-lg text-accent1 bg-bg2 hover:brightness-125">Contact Us</RouterLink>
@@ -28,7 +28,7 @@ import VisionandValues from './VisionandValues.vue';
     </div>
     <!-- animation elements -->
       <!-- middle layor -->
-     <img src="/images/hero/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" class="min-h-[400px]" center cover responsive loading="eager"
+     <img src="/images/hero/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" class="min-h-screen" center cover responsive loading="eager"
       v-motion  
         :initial="{
           opacity: 1,
@@ -53,7 +53,7 @@ import VisionandValues from './VisionandValues.vue';
         }"/>
       
       <!-- left layer -->
-      <img src="/images/hero/elements/lefttop.svg" alt="AITS" width="846" height="1078" class="min-h-[400px]" center cover responsive loading="eager"
+      <img src="/images/hero/elements/lefttop.svg" alt="AITS" width="846" height="1078" class="min-h-screen" center cover responsive loading="eager"
       v-motion  
         :initial="{
           position: 'absolute',
@@ -76,7 +76,7 @@ import VisionandValues from './VisionandValues.vue';
         }"/>
 
       <img src="/images/hero/elements/leftmiddle.svg" alt="AITS" width="2765" height="2473" center cover responsive loading="eager"
-      class="absolute left-0 transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3 min-h-[400px]"/>
+      class="absolute left-0 min-h-screen transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3"/>
       <img src="/images/hero/elements/leftmiddleoposite.svg" alt="AITS" width="1232" height="233" center cover responsive loading="eager"
       class="absolute left-0 transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3 min-h-[233px]"/>    
       <!-- <img src="/images/hero/elements/leftbottom.svg" alt="AITS" width="339" height="1416" center cover responsive loading="eager"
@@ -84,7 +84,7 @@ import VisionandValues from './VisionandValues.vue';
  
       <!-- right layer -->
       <img src="/images/hero/elements/righttop.svg" alt="AITS" width="1467" height="1474" 
-      class="min-h-[400px] absolute right-0 md:top-1/4 md:-translate-y-1/4 top-0 z-[-1]" center cover responsive loading="eager" />
+      class="min-h-screen absolute right-0 lg:top-1/4 lg:-translate-y-1/4 top-0 z-[-1]" center cover responsive loading="eager" />
       <!-- v-motion  
         :initial="{
           position: 'absolute',
