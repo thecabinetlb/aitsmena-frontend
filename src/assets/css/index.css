@@ -19,3 +19,10 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+:root {
+    --vc-clr-secondary: #bfbfbf !important;
+    --vc-clr-primary: #ffffff !important;
+    --vc-pgn-width: 12px !important;
+    --vc-pgn-height: 12px !important;
+    --vc-pgn-border-radius: 16px !important;
+}

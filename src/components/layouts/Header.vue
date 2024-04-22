@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
-import logo from '../../assets/AITSwhite.webp'
+import logo from '/AITSwhite.webp'
 const navlinks = [
   { id: 1, name: 'Home', to: '/' },
   { id: 2, name: 'About', to: '/about' },
@@ -74,12 +74,6 @@ const toggleOpen = () => {
 }
 
 </script>
-
-<style scoped>
-.name {
-    backdrop-filter: blur(16px) !important;
-}
-</style>
 <template>
  <header @mouseleave="hasSubMenu = false"
     class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[67px] z-[9] 2xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-around items-center mx-auto gap-2 px-6 rounded-[16px]" 
@@ -97,7 +91,7 @@ const toggleOpen = () => {
         </RouterLink>
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-full h-fit absolute left-0 top-[67px] p-5">
           <div class="relative inset-0 w-full h-full space-y-3 p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
-            <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-75 cursor-pointer font-[400] text-accent1 text-lg pb-4 drop-shadow-md">
+            <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-115 cursor-pointer font-[400] text-accent1 text-lg pb-4 drop-shadow-md">
               {{ subitem.name }}
             </div>
           </div>
@@ -121,7 +115,7 @@ const toggleOpen = () => {
           {{ item.name }}
         </RouterLink>
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
-            <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-75 cursor-pointer font-[400] text-accent1 pb-4 drop-shadow-md">
+            <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:brightness-115 cursor-pointer font-[400] text-accent1 pb-4 drop-shadow-md">
               {{ subitem.name }}
             </div>
         </nav>

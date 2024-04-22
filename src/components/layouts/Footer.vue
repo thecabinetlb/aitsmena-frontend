@@ -1,5 +1,5 @@
 <script setup>
-import logo from '../../assets/AITSwhite.webp'
+import logo from '/AITSwhite.webp'
 import { RouterLink } from 'vue-router'
 const footerlinks = [
   {
@@ -50,17 +50,17 @@ const footerlinks = [
 </script>
 
 <template>
-    <footer class="relative flex flex-col items-center justify-center gap-10 py-20 bg-bg">
-        <div class="flex flex-wrap justify-between w-full gap-6 px-6">
+    <footer class="relative flex flex-col items-center justify-center gap-10 pt-20 bg-bg">
+        <div class="flex flex-wrap justify-between w-full px-6 gap-y-6">
             <div class="w-full lg:w-[30%] lg:mb-0 mb-10">
             <img :src="logo" alt="AITS logo" width="100" height="33" class="mx-auto" center cover responsive loading="lazy"/>
             </div>
-            <nav class="flex flex-wrap justify-center w-full px-4 gap-y-4 md:px-2 lg:w-2/3">
+            <nav class="flex flex-wrap justify-center w-full px-4 gap-y-3 md:px-2 lg:w-2/3">
                 <div v-for="(item, key) in footerlinks" :key="key" class="w-1/2 sm:w-1/4">
                 <h1 class="text-lg font-[400] text-accent1 lg:mb-4 mb-2">
                     {{ item.name }}
                 </h1>            
-                <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="text-sm font-[200] text-accent1 hover:brightness-95">
+                <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="text-md font-[200] text-accent1 hover:brightness-85">
                     {{ subitem.name }}
                 </div>                
                 </div>
@@ -68,10 +68,10 @@ const footerlinks = [
         </div>
 
       <!-- pattern -->
-      <img src="../../assets/images/patterns/patternfooter.svg" alt="AITS" width="446" height="643" center cover responsive loading="lazy"
+      <img src="/images/patterns/patternfooter.svg" alt="AITS" width="446" height="643" center cover responsive loading="lazy"
       class="absolute left-0 top-[100%] transform -translate-y-[100%] opacity-75"/>       
      
-      <div class="text-center min-h-[50px] w-full mt-20 mb-10 flex flex-col items-center justify-center bg-footer-noise bg-cover bg-center">
+      <div class="text-center min-h-[50px] w-full mt-20 flex flex-col items-center justify-center bg-footer-noise bg-cover bg-center">
       <p class="text-accent1">Copyright @ AITS All Rights Reserved.</p>
       </div>
     </footer>

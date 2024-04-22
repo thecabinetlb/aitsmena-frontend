@@ -1,6 +1,6 @@
 <script setup>
-import ic2 from '../assets/images/testimonies/partners/ic2.webp'
-import aveva from '../assets/images/testimonies/partners/aveva.webp'
+import ic2 from '/images/testimonies/partners/ic2.webp'
+import aveva from '/images/testimonies/partners/aveva.webp'
 import { ref } from 'vue'
 const partners = [
     { id: 1, title: 'AVEVA Select Gulf', description: 'With more than 10 years of market presence and experience diversified across different industrial fields, AVEVA Select Gulf offers customers a uniquely tailored experience of facilitating industrial operations across all manufacturing plants. Specialized in reducing the time needed for a plant’s monitoring and controlling activities, AVEVA Select Gulf’s solutions provide real-time data acquisition and merge industrial knowledge with innovative technology and AI. AVEVA Select Gulf also provides customers with personal training and follow-up to guarantee the best outcome for sustainable industrial production. From energy to chemicals, mining to water and wastewater management, AVEVA Select Gulf’s solutions offer businesses unique, cost-friendly solutions for better handling industrial operations and leveraging production and profit sustainably and continuously. Visit the website to learn more.', logo: aveva },
@@ -29,12 +29,12 @@ const showDes = (id) => {
 
 <template>
     <section class="w-11/12 px-6 mx-auto mt-40 2xl:w-8/12 sm:w-10/12">
-    <h1 class="w-full text-accent1 font-[400] 2xl:text-6xl lg:text-5xl sm:text-5xl text-4xl uppercas lg:mb-10 mb-20">Our Sub-Companies</h1>
+    <h1 class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl sm:text-3xl text-[30px] uppercas lg:mb-10 mb-20">Our Sub-Companies</h1>
     <!-- Desktop -->
-    <div class="relative hidden lg:block xl:min-h-[400px] xl:h-full lg:h-[400px]">
+    <div class="relative hidden lg:block 2xl:min-h-[200px] xl:h-full lg:h-[400px]">
         <div v-for="item in partners" :key="key" class="absolute inset-0 lg:w-[60%]">
         <Transition>
-            <p v-if="isHovered === item.id" class="text-accent2 font-[200] 2xl:text-lg text-justify">{{ item.description }}</p>
+            <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
         </Transition>
         </div>
         <div class="2xl:ms-auto 2xl:me-0 ms-[60%] 2xl:w-1/3 h-full flex 2xl:flex-row flex-col justify-center items-center gap-6">
@@ -45,15 +45,15 @@ const showDes = (id) => {
         </div>
     </div>
     <!-- Mobile -->
-    <div class="flex flex-col items-center gap-10 lg:hidden">
-        <div class="flex items-center justify-center w-full min-h-[20vh] gap-6">
+    <div class="relative lg:hidden">
+        <div class="flex items-center justify-center w-full gap-6 pb-6">
             <button v-for="item in partners" :key="key" :aria-label="'click on' + item.title + 'to read the description'">
                 <img :src="item.logo" :alt="item.title" width="168" height="168" center cover responsive class="rounded-[16px]" 
                 @mouseenter="showDes(item.id)" :class="{'-mb-10' : item.id === 1, '-mt-10' : item.id === 2, 'border-2 border-bg2 transform duration-600' : isHovered === item.id}"/>
             </button>            
         </div>
-        <div v-for="item in partners" :key="key" class="relative w-full">
-            <p v-if="isHovered === item.id" class="text-accent2 font-[200] text-justify" style="text-align-last: center;">{{ item.description }}</p>
+        <div v-for="item in partners" :key="key" class="mt-10">
+            <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
         </div>
     </div>
     </section>
