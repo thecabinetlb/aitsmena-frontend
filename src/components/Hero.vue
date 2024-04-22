@@ -6,11 +6,11 @@ import VisionandValues from './VisionandValues.vue';
 <template>
   <section id="AITSHero" class="relative flex flex-col flex-wrap items-center h-full px-6 mx-auto"> 
     <!-- headline + cta -->
-    <div class="sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto gap-6 md:h-[90vh] h-screen lg:pt-40 pt-20">
+    <div class="sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto gap-6 h-[90vh] lg:pt-40 pt-20">
       <h1 class="text-accent1 uppercase 2xl:text-9xl lg:text-8xl md:text-6xl sm:text-4xl text-[30px] text-center font-[700]">Lorem ipsum<br/><span class="font-[100]"> dolor sit</span></h1>
       <p class="font-[200] max-sm:text-[14px] text-justify text-accent2 2xl:w-1/3 sm:w-2/3" style="text-align-last: center;">AITS is not a generic company; we offer innovative software solutions tailored to your needs. Merging technology with excellence and vitality, AITS allows industrial plants to experience unprecedented production efficiency and a simpler means for monitoring, controlling, and acquiring real-time data.</p>
       <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] shadow-lg text-accent1 bg-bg2 hover:brightness-125">Contact Us</RouterLink>
-      <img src="/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive  loading="eager" class="sm:w-50 w-[70px]"
+      <img src="/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive  loading="eager" class="sm:w-50 w-[50px]"
       v-motion  
         :initial="{
           x:0,
@@ -28,7 +28,7 @@ import VisionandValues from './VisionandValues.vue';
     </div>
     <!-- animation elements -->
       <!-- middle layor -->
-     <img src="/images/hero/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" class="min-h-screen" center cover responsive loading="eager"
+     <img src="/images/hero/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" class="min-h-[90vh]" center cover responsive loading="eager"
       v-motion  
         :initial="{
           opacity: 1,

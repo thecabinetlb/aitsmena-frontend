@@ -24,7 +24,7 @@
           </div>
           <img src="/images/hero/missionandvision/vision.webp" alt="AITS" width="391" height="290" center cover responsive loading="lazy"/>    
         </div>
-        <div class="flex flex-wrap items-center justify-center w-full gap-6 lg:gap-0 lg:justify-between"
+        <div class="flex flex-wrap items-center justify-center w-full gap-6 lg:gap-0 lg:justify-between max-lg:flex-col-reverse"
         v-motion
           :initial="{
             opacity: 0,

@@ -80,7 +80,8 @@ const toggleOpen = () => {
     :class="{'h-fit' : isOpen}">
     <div class="absolute inset-0 w-full h-full z-[-1] rounded-[16px]"
     :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || hasSubMenu}"/>
-    <img :src="logo" alt="AITS logo" class="relative left-0 h-8 lg:top-0 top-5" cover center responsive/>
+    <img :src="logo" alt="AITS logo" class="relative left-0 h-8 lg:top-0 top-5" cover center responsive loading="eager"
+    :class="{'scale-125' : changecolor}"/>
     <!-- Desktop -->
     <nav class="items-center justify-end hidden w-full h-full gap-4 lg:flex">
       <div v-for="(item, key) in navlinks" :key="key">
