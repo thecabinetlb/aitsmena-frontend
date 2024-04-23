@@ -18,7 +18,7 @@ import VisionandValues from './VisionandValues.vue';
         }"
         :visibleOnce="{
           x:0,
-          y:100,
+          y:90,
           transition: {
             type: 'spring',
             delay: 1000,
