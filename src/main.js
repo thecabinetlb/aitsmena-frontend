@@ -13,6 +13,6 @@ app.use(head)
 app.use(MotionPlugin)
 app.use(router)
 app.use(VueRecaptchaPlugin, {
-  v2SiteKey: '6Ld4AMYpAAAAAEHy1RBcaHKU9T4bMG1OfQyRYajN',
+  v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
 })
 app.mount('#app')
