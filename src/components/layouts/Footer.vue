@@ -13,9 +13,12 @@ const footerlinks = [
   id: 2,
   name: "Industries",
   submenu: [
-    { id: 1, name: "Food & Beverage" },
+  { id: 1, name: "Overview" },
+  { id: 2, name: "Case Studies" },
+  { id: 3, name: "Succes Stories" },    
+    // { id: 1, name: "Food & Beverage" },
     // { id: 2, name: "Water & Wastewater" },
-    { id: 2, name: "Smart Cities" },
+    // { id: 3, name: "Smart Cities" },
     // { id: 4, name: "Oil & Gas" },
     // { id: 5, name: "Chemicals" },
     // { id: 6, name: "Power & Utilities" },
@@ -29,9 +32,9 @@ const footerlinks = [
     to: '/resources',
     submenu: [
       { id: 1, name: 'Blog' },
-      // { id: 2, name: 'Whitepapers' },
-      // { id: 3, name: 'Webinars' },
-      { id: 2, name: 'Industry Insights' }
+      { id: 2, name: 'Whitepapers' },
+      { id: 3, name: 'Webinars' },
+      { id: 4, name: 'Industry Insights' }
     ]
   },
   { 

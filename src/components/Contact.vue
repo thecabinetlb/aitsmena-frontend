@@ -1,9 +1,12 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>
 <template>
    <section id="contact" class="relative mt-40 bg-gradient-to-r from-accent1/10 to-accent1/20 md:h-[50vh] flex flex-col items-center justify-center overflow-hidden max-md:py-20">
-    <div class="relative  text-center 2xl:w-8/12 sm:w-10/12 w-11/12 z-[1] px-6 space-y-10">
+    <div class="relative text-center 2xl:w-8/12 sm:w-10/12 w-11/12 z-[1] px-6 space-y-10">
       <h1 class="text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase text-center font-[400]">Contact Us</h1>
       <p class="font-[200] max-sm:text-[14px] text-justify text-accent2 2xl:w-1/2 sm:w-2/3 mx-auto" style="text-align-last: center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-      <button aria-label="go to contact form page" class="cursor-pointer px-4 py-3 font-[200] text-center rounded-[8px] shadow-lg text-accent1 bg-bg2 hover:brightness-125">Get in Touch</button>
+      <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="/contact" class="relative z-[2] cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] shadow-lg text-accent1 bg-bg2 hover:brightness-125">Contact Us</RouterLink>
     </div>    
     <!-- Highlights -->
     <!-- left -->

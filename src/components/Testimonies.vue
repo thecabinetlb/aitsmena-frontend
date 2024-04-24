@@ -3,7 +3,7 @@ import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination } from 'vue3-carousel'
 import client1 from '/images/testimonies/client1.svg'
 import Contact from './Contact.vue'
-import Partners from './Partners.vue'
+// import Partners from './Partners.vue'
 import { ref } from 'vue'
 
 const myCarousel = ref(null)
@@ -25,7 +25,7 @@ const testimoniesslides = [
   <section class="relative">
     
     <!-- Partners -->    
-    <Partners/>
+    <!-- <Partners/> -->
 
     <!-- Testimonies -->
    <section class="relative z-[1] mt-40">
