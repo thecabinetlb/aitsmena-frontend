@@ -3,10 +3,9 @@ import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/ContactView.vue'
 
 const router = createRouter({
-  history: createWebHistory('https://aitsmena-test.netlify.app'),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      path: '/', component: HomeView},
+    { path: '/', component: HomeView},
     { path: '/contact', component: ContactView },
   ]
 })
