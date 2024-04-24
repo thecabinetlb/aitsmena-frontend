@@ -33,14 +33,12 @@ const showDes = (id) => {
     <!-- Desktop -->
     <div class="relative hidden lg:block 2xl:min-h-[200px] xl:h-full lg:h-[400px]">
         <div v-for="item in partners" :key="key" class="absolute inset-0 lg:w-[60%]">
-        <Transition>
             <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
-        </Transition>
         </div>
         <div class="2xl:ms-auto 2xl:me-0 ms-[60%] 2xl:w-1/3 h-full flex 2xl:flex-row flex-col justify-center items-center gap-6">
             <button v-for="item in partners" :key="key" :aria-label="'click on' + item.title + 'to read the description'">
                 <img :src="item.logo" :alt="item.title" width="168" height="168" center cover responsive class="rounded-[16px]" 
-                @mouseenter="showDes(item.id)" :class="{'2xl:-mb-10 2xl:me-0 lg:me-20' : item.id === 1, '2xl:-mt-10 2xl:ms-0 lg:ms-20' : item.id === 2, 'border-2 border-bg2 transform duration-600' : isHovered === item.id}"/>
+                @mouseenter="showDes(item.id)" :class="{ 'border-2 border-bg2 transform duration-600 shadow-sm shadow-bg2' : isHovered === item.id}"/>
             </button>
         </div>
     </div>
@@ -49,7 +47,7 @@ const showDes = (id) => {
         <div class="flex items-center justify-center w-full gap-6 pb-6">
             <button v-for="item in partners" :key="key" :aria-label="'click on' + item.title + 'to read the description'">
                 <img :src="item.logo" :alt="item.title" width="168" height="168" center cover responsive class="rounded-[16px]" 
-                @mouseenter="showDes(item.id)" :class="{'-mb-10' : item.id === 1, '-mt-10' : item.id === 2, 'border-2 border-bg2 transform duration-600' : isHovered === item.id}"/>
+                @mouseenter="showDes(item.id)" :class="{'border-2 border-bg2 transform duration-600 shadow-sm shadow-bg2' : isHovered === item.id}"/>
             </button>            
         </div>
         <div v-for="item in partners" :key="key" class="mt-10">
@@ -58,4 +56,4 @@ const showDes = (id) => {
     </div>
     </section>
 </template>
-<!--  sm:min-h-[200px] min-h-[60vh] -->
+<!--  sm:min-h-[200px] min-h-[60vh] '2xl:-mb-10 2xl:me-0 lg:me-20' : item.id === 1, '2xl:-mt-10 2xl:ms-0 lg:ms-20' : item.id === 2, '-mb-10' : item.id === 1, '-mt-10' : item.id === 2, -->
