@@ -1,199 +1,227 @@
 <script setup>
-import { ref } from 'vue'
+import axios from 'axios';
+import { ref, reactive, watch } from 'vue'
 import { Checkbox } from 'vue-recaptcha';
 import { useRecaptchaProvider } from 'vue-recaptcha'
 
 useRecaptchaProvider()
-const formData = ref({
+const ReCaptchaValid = ref(false)
+const hasErrorMessages = ref(false)
+console.log('hasErrorMessages', hasErrorMessages)
+
+const errors = {
+  NameRequired: 'Name is required.',
+  EmailRequired: 'Email is required.',
+  EmailInvalid: 'Please specify a real email.',
+  CompanyNameRequired: 'Company Name is required.',
+  PhoneRequired: 'Phone Number is required.',
+  SubjectRequired: 'Subject is required.',
+  SubjectInvalid: 'Invalid subject. Please select either General Inquiries or Sales and Support.',
+  MessageRequired: 'Please enter your message.'
+};
+
+const ErrorMessages = ref({
     name: '',
     email: '',
     phone: '',
+    company_name: '',
     subject: '',
-    company: '',
-    message: '',
-  });
-  const response = ref()
+    message: ''
+})
+console.log('ErrorMessages',ErrorMessages)
+
+const formData = reactive({ 
+    data: { 
+        Name : {
+            name: 'Name',
+            value : '',
+            isValid: null,
+            validationMessage: "",
+            required: true,            
+        },
+        Phone : {
+            name: 'Phone',
+            value : '',
+            isValid: null,
+            validationMessage: "",
+            required: true,            
+        },            
+        Email : {
+            name: 'Email',
+            value : '',
+            isValid: null,
+            validationMessage: "",
+            required: true,            
+        },            
+        CompanyName : {
+            name: 'CompanyName',
+            value : '',
+            isValid: null,
+            validationMessage: "",
+            required: true,            
+        },
+        Subject : {
+            name: 'Subject',
+            value : 'General Inquiries',
+            isValid: true,
+            validationMessage: "",
+            required: false,            
+        },
+        Message : {
+            name: 'Message',
+            value : '',
+            isValid: null,
+            validationMessage: "",
+            required: true,            
+        }
+    },
+    isValid: false
+});
+console.log('formData',formData)
+console.log('formData.isValid',formData.isValid)
+
+
+const validateField = (field) => {
+    if (field.required && !field.value) {
+        field.isValid = false;
+        field.validationMessage = errors[`${field.name}Required`];
+    } else if (field.name === 'Email' && field.value && !isEmailValid(field.value)) {
+        field.isValid = false;
+        field.validationMessage = errors.EmailInvalid;
+    } else {
+        field.isValid = true;
+        field.validationMessage = '';
+    }
+};
+
+const isEmailValid = (email) => {
+    // Add your email validation logic here
+    return /\S+@\S+\.\S+/.test(email);
+};
+// Watch for changes in form data
+watch(formData, (newFormData) => {
+    let allFieldsValid = true;
+    for (const key in newFormData.data) {
+        validateField(newFormData.data[key])
+        if (!newFormData.data[key].isValid) {
+            allFieldsValid = false;
+        }
+    }
+    formData.isValid = allFieldsValid;
+    formData.value = newFormData.value
+    console.log('watcher data',formData)
+}, { deep: true });
+
+const handleSubmit = () => {
+    if (!ReCaptchaValid.value) {
+        console.log('ReCaptcha is invalid');
+        return; // Don't proceed with form submission
+    }
+
+    if (formData.isValid) {
+        // Create a new data object with the data to be sent
+        const data = {
+            name: formData.data.Name.value,
+            email: formData.data.Email.value,
+            phone: formData.data.Phone.value,
+            company_name: formData.data.CompanyName.value,
+            subject: formData.data.Subject.value,
+            message: formData.data.Message.value
+        };
+
+        // Submit the data
+        axios.post('http://localhost:8000/api/v1/contact_submissions', data, {
+            headers: {
+                'Access-Control-Allow-Origin': '*', // Replace * with the specific origin if needed
+            }
+        }).then(response => {
+            console.log('Data submitted:', response.data);
+            // Clear form inputs
+            formData.data.value = {
+                Name: '',
+                Email: '',
+                Phone: '',
+                CompanyName: '',
+                Subject: '',
+                Message: ''
+            };
+        }).catch(error => {
+            console.error('Errors:', error.response.data.errors);
+            hasErrorMessages.value = true;
+            ErrorMessages.value = error.response.data.errors;
+        });
+    } else {
+        console.log('Form is not valid');
+    }
+};
+
 </script>
 
 <template>
     <main class="flex flex-col items-center justify-center 2xl:w-8/12 sm:w-10/12 w-11/12 z-[1] px-6 mx-auto my-40">
         <h1 class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-10">Contact Us</h1>
-        <form class="grid w-full grid-cols-2 gap-6 mx-auto">
+        <form class="grid w-full grid-cols-2 gap-6 mx-auto" @submit.prevent="handleSubmit">
             <div class="w-full col-span-2 sm:col-span-1">
-                <input type="text" id="name" placeholder="Your Name" v-model="formData.name" required class="w-full px-4 py-3 text-accent1 border border-accent1 focus:border-b-bg2 rounded-[20px]">
-            </div>    
+                <input type="text" id="Name" name="Name"
+                placeholder="Your Name" 
+                v-model="formData.data.Name.value"
+                :required="formData.data.Name.required" 
+                class="w-full px-4 py-3 border border-accent1 focus:border-b-bg2 rounded-[20px]">
+                <p v-show="!formData.data.Name.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Name.validationMessage}}</p>
+            </div>
             <div class="w-full col-span-2 sm:col-span-1">
-                <input type="text" id="email" placeholder="example@gmail.com" v-model="formData.email" required class="w-full px-4 py-3 text-accent1 border border-accent1 focus:border-b-bg2 rounded-[20px]">
+                <input type="text" id="Email" name="Email"
+                placeholder="example@gmail.com" 
+                v-model="formData.data.Email.value" 
+                :required="formData.data.Email.required" 
+                class="w-full px-4 py-3 border border-accent1 focus:border-b-bg2 rounded-[20px]">
+                <p v-show="!formData.data.Email.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Email.validationMessage}}</p>
             </div>      
             <div class="w-full col-span-2 sm:col-span-1">
-                <input type="phone" id="phone" placeholder="+008 654 231" v-model="formData.phone" required class="w-full px-4 py-3 text-accent1 border border-accent1 focus:border-b-bg2 rounded-[20px]">
+                <input type="phone" id="Phone" name="Phone" 
+                placeholder="+008 654 231" 
+                v-model="formData.data.Phone.value"          
+                :required="formData.data.Phone.required" 
+                class="w-full px-4 py-3 border border-accent1 focus:border-b-bg2 rounded-[20px]">
+                <p v-show="!formData.data.Phone.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Phone.validationMessage}}</p>
             </div> 
             <div class="w-full col-span-2 sm:col-span-1">
-                <input type="text" id="company" placeholder="Your Company's Name" v-model="formData.company" required  class="w-full px-4 py-3 text-accent1 border border-accent1 focus:border-b-bg2 rounded-[20px]">
+                <input type="text" id="CompanyName" name="CompanyName" 
+                placeholder="Your Company's Name"
+                v-model="formData.data.CompanyName.value"              
+                :required="formData.data.CompanyName.required" 
+                class="w-full px-4 py-3  border border-accent1 focus:border-b-bg2 rounded-[20px]">
+                <p v-show="!formData.data.CompanyName.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.CompanyName.validationMessage}}</p>
             </div>    
             <div class="w-full col-span-2">
-                <select class="w-full px-4 py-3 border border-accent1 focus:border-b-bg2 text-gray-500 rounded-[20px]">
+                <select id="Subject" name="Subject"
+                v-model="formData.data.Subject.value"
+                :required="formData.data.Subject.required" 
+                class="w-full px-4 py-3 border border-accent1 focus:border-b-bg2 text-gray-400 rounded-[20px]" >
                     <option selected>General Inquiries</option>
                     <option>Sales and Support</option>
-                </select>
+                </select>                    
+                <p v-show="!formData.data.Subject.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Subject.validationMessage}}</p>
             </div>
             <div class="w-full col-span-2">
-                <textarea id="message" rows="5" placeholder="Briefly tell us about your project and your current goals. How can we help you?" v-model="formData.message" required class="w-full px-4 py-3 text-accent1 border bg-accent1 focus:border-b-bg2 rounded-[20px]"></textarea>
-            </div>    
-            <div class="w-full col-span-2o">
-              <div>{{ response ? 'Verified' : 'Please click the checkbox' }}</div>
-              <Checkbox v-model="response" theme="dark" />          
+                <textarea id="Message" name="Message" rows="5" 
+                placeholder="Briefly tell us about your project and your current goals. How can we help you?" 
+                v-model="formData.data.Message.value" 
+                :required="formData.data.Message.required" 
+                class="w-full px-4 py-3 border bg-accent1 focus:border-b-bg2 rounded-[20px]"></textarea>
+                <p v-show="!formData.data.Message.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Message.validationMessage}}</p>
             </div>
-            <button aria-label="go to contact section" class="cursor-pointer w-fit col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[20px] shadow-sm bg-bg2 hover:brightness-125">Send Message</button>    
+            <!-- Recaptchs -->
+            <div class="w-full col-span-2">
+              <Checkbox v-model="ReCaptchaValid" theme="dark" />          
+              <p className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{ ReCaptchaValid ? 'Verified' : 'Please click the checkbox' }}</p>
+            </div>
+            <!-- Submit -->
+            <button aria-label="go to contact section" class="cursor-pointer w-fit relative z-[2] col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[20px] shadow-sm bg-bg2 hover:brightness-125">Send Message</button>    
+            <!-- Errors after submit -->
+            <ul v-show="hasErrorMessages" class="p-4 list-disc bg-red-200 border-red-600 ltr:border-l-4 rtl:border-r-4 marker:text-red-600" role="list">
+                <li v-for="(item, key) in ErrorMessages" :key="key" className="list-item mx-2">{{ item }}</li>
+            </ul>
         </form>
     </main>
 </template>
-<!-- 
-const ReCaptchaKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
-
-export default ReCaptchaKey;
- if (!reCaptchaValid) {
-      setReCaptchaValid(false);
-      return;
-    }    
-      const [postError, setPostError] = useState(false);
-  const [queryResult, setQueryResult] = useState();
-
-  const formSubmitted = async (event) => {
-    event.preventDefault();
-    setLoading(true);
-    dispatchForm({
-      type: "form_submit",
-    });
-    if (!reCaptchaValid) {
-      setReCaptchaValid(false);
-      return;
-    }    
-    setReCaptchaValid(true);
-    if (formState.isValid) {
-      const formData = {};
-
-      for (const key in formState.data) {
-        formData[key] = formState.data[key].value;
-      }
-
-      const encRes = await GETEncryptQueryApp({
-        Barcode: formData.barCode,
-        Selected: "Bar",
-      });
-
-      if (encRes.error) {
-        setPostError(true);
-        setLoading(false);
-        return;
-      } else {
-        setPostError(false);
-        setLoading(false);
-      }
-      setLoading(true);
-
-      const { data, status, error } = await POSTQueryApp(encRes);
-
-      if (!error) {
-        if (status == 200) 
-        setQueryResult(data.Records);
-      }     
-    }
-  };
-      <div className="col-span-2 flex justify-between items-center sm:flex-col">
-        <div
-            className={`g-recaptcha ${
-              reCaptchaValid == false && ""
-            } rounded-md`}
-          >
-            <ReCAPTCHA sitekey={ReCaptchaKey} onChange={onChange} />
-            <div
-              className={`text-red-600 text-lg m-2 ${
-                reCaptchaValid == false ? "max-h-20" : "max-h-0"
-              } overflow-hidden transition-all duration-300`}
-            >
-              {t("form:fieldIsRequired")}
-            </div>
-          </div>           
-          <div className="md:w-1/2 sm:w-full w-full flex items-center md:justify-end justify-start">
-            <PrimaryButton>
-              {t("send")}
-            </PrimaryButton>
-            <SecondaryButton
-            onClick={clearInputs}
-            type="button"
-            >
-              {t("cancel")}
-            </SecondaryButton>
-          </div>
-      </div>
-        const defaultData = {
-    data: {
-      Type: {
-        value: "CorMessageRequestFromWebsite",
-        isValid: true,
-        validationMessage: "",
-        required: true,
-        ref: useRef(),
-      },
-      RequesterType: {
-        value: "I",
-        isValid: true,
-        validationMessage: "",
-        required: true,
-        ref: useRef(),
-      },
-      Nic: {
-        value: "",
-        isValid: true,
-        validationMessage: "",
-        required: false,
-        ref: useRef(),
-        hidden: true
-      },
-      Name: {
-        value: "",
-        isValid: null,
-        validationMessage: "",
-        required: true,
-        ref: useRef(),
-      },
-      Email: {
-        value: "",
-        isValid: true,
-        validationMessage: "",
-        required: false,
-        ref: useRef(),
-      },
-      MobileNo: {
-        value: "",
-        isValid: null,
-        validationMessage: "",
-        required: true,
-        ref: useRef(),
-      },
-      Subject: {
-        value: "",
-        isValid: null,
-        validationMessage: "",
-        required: true,
-        ref: useRef(),
-      },
-      Message: {
-        value: "",
-        isValid: null,
-        validationMessage: "",
-        required: true,
-        ref: useRef(),
-      },
-      RequestFiles: {
-        value: selectedFiles,
-        isValid: true,
-        validationMessage: "",
-        required: false,
-        ref: useRef(),
-      }
-    },
-    isValid: false,
-  };
- -->
