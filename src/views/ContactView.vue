@@ -214,7 +214,7 @@ const handleSubmit = () => {
             <!-- Recaptchs -->
             <div class="w-full col-span-2">
               <Checkbox v-model="ReCaptchaValid" theme="dark" />          
-              <p className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{ ReCaptchaValid ? 'Verified' : 'Please click the checkbox' }}</p>
+              <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
             </div>
             <!-- Submit -->
             <button aria-label="go to contact section" class="cursor-pointer w-fit relative z-[2] col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[20px] shadow-sm bg-bg2 hover:brightness-125">Send Message</button>    
