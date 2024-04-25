@@ -7,6 +7,7 @@ import { useRecaptchaProvider } from 'vue-recaptcha'
 useRecaptchaProvider()
 const ReCaptchaValid = ref(false)
 const hasErrorMessages = ref(false)
+const loading = ref(null)
 console.log('hasErrorMessages', hasErrorMessages)
 
 const errors = {
@@ -15,6 +16,7 @@ const errors = {
   EmailInvalid: 'Please specify a real email.',
   CompanyNameRequired: 'Company Name is required.',
   PhoneRequired: 'Phone Number is required.',
+  PhoneInvalid: 'Phone Number should be numeric.',
   SubjectRequired: 'Subject is required.',
   SubjectInvalid: 'Invalid subject. Please select either General Inquiries or Sales and Support.',
   MessageRequired: 'Please enter your message.'
@@ -88,6 +90,9 @@ const validateField = (field) => {
     } else if (field.name === 'Email' && field.value && !isEmailValid(field.value)) {
         field.isValid = false;
         field.validationMessage = errors.EmailInvalid;
+    } else if (field.name === 'Phone' && field.value && !isPhoneValid(field.value)) {
+        field.isValid = false;
+        field.validationMessage = errors.PhoneInvalid;
     } else {
         field.isValid = true;
         field.validationMessage = '';
@@ -98,6 +103,11 @@ const isEmailValid = (email) => {
     // Add your email validation logic here
     return /\S+@\S+\.\S+/.test(email);
 };
+const isPhoneValid = (phone) => {
+    // Add your phone validation logic here
+    return /^[0-9]+$/.test(phone);
+};
+
 // Watch for changes in form data
 watch(formData, (newFormData) => {
     let allFieldsValid = true;
@@ -113,11 +123,11 @@ watch(formData, (newFormData) => {
 }, { deep: true });
 
 const handleSubmit = () => {
-    if (!ReCaptchaValid.value) {
-        console.log('ReCaptcha is invalid');
-        return; // Don't proceed with form submission
-    }
-
+    // if (!ReCaptchaValid.value) {
+    //     console.log('ReCaptcha is invalid');
+    //     return; // Don't proceed with form submission
+    // }
+    loading.value = true;
     if (formData.isValid) {
         // Create a new data object with the data to be sent
         const data = {
@@ -128,7 +138,6 @@ const handleSubmit = () => {
             subject: formData.data.Subject.value,
             message: formData.data.Message.value
         };
-
         // Submit the data
         axios.post('http://localhost:8000/api/v1/contact_submissions', data, {
             headers: {
@@ -145,14 +154,14 @@ const handleSubmit = () => {
                 Subject: '',
                 Message: ''
             };
+        loading.value = false;
         }).catch(error => {
             console.error('Errors:', error.response.data.errors);
             hasErrorMessages.value = true;
             ErrorMessages.value = error.response.data.errors;
+            loading.value = false;
         });
-    } else {
-        console.log('Form is not valid');
-    }
+    } 
 };
 
 </script>
@@ -217,10 +226,16 @@ const handleSubmit = () => {
               <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
             </div>
             <!-- Submit -->
-            <button aria-label="go to contact section" class="cursor-pointer w-fit relative z-[2] col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[20px] shadow-sm bg-bg2 hover:brightness-125">Send Message</button>    
+            <div class="flex flex-wrap items-center w-full gap-2">
+            <button aria-label="send your message" class="cursor-pointer w-fit relative z-[2] col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[20px] shadow-sm bg-bg2 hover:brightness-125">
+              {{loading === true ?  'Sending...' : 'Send Message'}}
+            </button>            
+            <p v-if="loading === false" class="text-green-500">Thank you for your message, we'll get back to you soon.</p>                
+            </div>
+
             <!-- Errors after submit -->
-            <ul v-show="hasErrorMessages" class="p-4 list-disc bg-red-200 border-red-600 ltr:border-l-4 rtl:border-r-4 marker:text-red-600" role="list">
-                <li v-for="(item, key) in ErrorMessages" :key="key" className="list-item mx-2">{{ item }}</li>
+            <ul v-if="hasErrorMessages === true" class="p-4 list-disc bg-red-200 border-red-600 border-s-4 marker:text-red-600" role="list">
+                <li v-for="(item, key) in ErrorMessages" :key="key" className="list-item mx-2">{{ item[0] }}</li>
             </ul>
         </form>
     </main>
