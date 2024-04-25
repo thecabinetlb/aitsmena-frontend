@@ -123,10 +123,10 @@ watch(formData, (newFormData) => {
 }, { deep: true });
 
 const handleSubmit = () => {
-    // if (!ReCaptchaValid.value) {
-    //     console.log('ReCaptcha is invalid');
-    //     return; // Don't proceed with form submission
-    // }
+    if (!ReCaptchaValid.value) {
+        console.log('ReCaptcha is invalid');
+        return; // Don't proceed with form submission
+    }
     loading.value = true;
     if (formData.isValid) {
         // Create a new data object with the data to be sent
