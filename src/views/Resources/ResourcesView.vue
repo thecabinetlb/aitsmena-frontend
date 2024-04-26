@@ -1,8 +1,8 @@
 <script setup>
 import banner from '/images/banners/resources.webp'
-import BlogCarousel from '@/components/BlogCarousel.vue';
+import BlogCarousel from '../../components/BlogCarousel.vue';
 import InnerHero from '../../components/InnerHero.vue';
-import VisionandValues from '@/components/VisionandValues.vue';
+import InsideBody from '../../components/InsideBody.vue';
 const blogposts = [
   { id: 1, title: 'The Impact of Industrial Digitization on Manufacturing Efficiency', summary: 'Explore how industrial digitization is revolutionizing manufacturing processes and improving efficiency.', to: 'https://example.com/post1', target: '_blank', date: '2024-04-26' },
   { id: 2, title: 'Challenges and Opportunities in Industrial Digitization', summary: 'Discover the key challenges faced and opportunities unlocked by the adoption of industrial digitization technologies.', to: 'https://example.com/post2', target: '_blank', date: '2024-04-25' },
@@ -17,8 +17,11 @@ const blogposts = [
 </script>
 <template>
     <main>
-        <InnerHero :pagebanner="banner" pagename="Resources" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
-        <VisionandValues/>
-        <BlogCarousel sectiontitle="Blogs" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :blogorindustryinsights='blogposts'/>
+      <InnerHero :pagebanner="banner" pagename="Resources" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
+
+      <section class="relative">
+      <BlogCarousel sectiontitle="Blogs" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :blogorindustryinsights='blogposts'/>
+      <InsideBody/>
+      </section>    
     </main>
 </template>

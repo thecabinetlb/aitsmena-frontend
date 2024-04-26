@@ -1,5 +1,5 @@
 <template>
-    <section class="w-11/12 mx-auto lg:mt-40 2xl:w-8/12 lg:10/12">
+    <section class="w-11/12 mx-auto lg:mt-40 2xl:w-8/12 lg:w-10/12">
       <h1 class="text-accent1 font-[200] text-lg uppercase">&#x2022; Mission and Vision</h1>
       <hr class="w-full h-4 mt-3 text-accent2"/>
       <div class="relative mt-10 space-y-20 z-[5]">

@@ -1,8 +1,27 @@
 <script setup>
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination } from 'vue3-carousel'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue';
 
+// Calculate the number of items to show based on screen width
+const getItemsToShow = () => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth >= 1280) {
+    return 2; // Desktop
+  } else if (screenWidth >= 1024) {
+    return 1; // smaller  Desktop
+  } else if (screenWidth >= 768) {
+    return 3; // Tablet
+  } else {
+    return 1; // Mobile
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('resize', () => {
+    getItemsToShow();
+  });
+});
 const myCarousel = ref(null)
 defineProps({
     sectiontitle: String,
@@ -10,18 +29,12 @@ defineProps({
     blogorindustryinsights: Array
 })
 </script>
-<style scoped>
-.carousel__slide{
-  display: block !important;
-  text-align: left !important;
-  margin: 10px !important;
-} 
-</style>
+
 
 <template>
     <section>
-        <div class="flex flex-wrap items-center w-full gap-6 lg:gap-0 lg:justify-between">
-            <div class="lg:w-1/2 w-11/12 2xl:ps-[16.666667%] sm:ps-[8.333333%] sm:pe-6">
+        <div class="flex flex-wrap items-center w-full h-full gap-6 my-40 lg:gap-0 lg:justify-between">
+            <div class="lg:w-1/2 w-11/12 2xl:ps-[16.666667%] lg:ps-[8.333333%] lg:pe-6 mx-auto h-full">
                 <h1 class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
                 <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6">{{ sectiondescription }}</p>
                 <!-- Navigation arrows -->
@@ -64,21 +77,24 @@ defineProps({
                 </button>
                 </div>
             </div>            
-            <div class="relative z-[1] lg:w-1/2 w-full">
+            <div class="relative z-[1] lg:w-1/2 w-full h-full">
             <carousel
             ref="myCarousel"
             :wrap-around="true"
             :autoplay="6000" 
             :transition="2000"
-            class="w-full h-full py-20">
-                <slide v-for="item in blogorindustryinsights" :key="key" class="rounded-[16px] border border-bg2 w-[200px]">
-                    <div class="w-full h-20 bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]"></div>
-                    <div class="flex flex-col gap-3 p-3">
-                        <h3 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.date }}</h3>
-                        <h2 class="text-accent1 font-[200] dm:text-lg">{{ item.title }}</h2>
-                        <p class="text-accent2 font-[200] max-sm:text-[14px] text-jusify">{{ item.summary }}</p>
+            :items-to-show="getItemsToShow()"
+            class="w-full h-full min-h-[50vh] lg:py-20">
+                <slide v-for="item in blogorindustryinsights" :key="key" class="h-full min-h-[50vh] rounded-[16px] border border-bg2">
+                    <div class="w-full h-40 bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]"></div>
+                    <div class="flex flex-col gap-6 p-6">
+                        <h3 class="text-accent2 font-[100] max-sm:text-[14px]">{{ item.date }}</h3>
+                        <h2 class="text-accent1 font-[500] sm:text-lg">{{ item.title }}</h2>
+                        <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.summary }}</p>
                     </div>
-                    <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'read-more-about' + item.title" :to="item.to" :target="item.target" class="m-3 ursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] shadow-lg text-accent1 bg-bg2 hover:brightness-125">Read More</RouterLink>
+                    <div class="h-20">
+                    <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'read-more-about' + item.title" :to="item.to" :target="item.target" class="ms-6 ursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] shadow-lg text-accent1 bg-bg2 hover:brightness-125 mt-auto mb-0">Read More</RouterLink>
+                    </div>
                 </slide>
                 <template #addons>
                 <Pagination />
@@ -88,3 +104,11 @@ defineProps({
         </div>
     </section>
 </template>
+
+<style scoped>
+.carousel__slide{
+  display: block !important;
+  text-align: left !important;
+  margin: 10px !important;
+} 
+</style>

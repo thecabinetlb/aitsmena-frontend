@@ -14,7 +14,7 @@ import InsideBody from '@/components/InsideBody.vue';
     <main>
         <InnerHero :pagebanner="banner" pagename="About Us" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
 
-        <section class="relative ">
+        <section class="relative">
             <Partners/>
             <CSR/>
             <InsideBody/>

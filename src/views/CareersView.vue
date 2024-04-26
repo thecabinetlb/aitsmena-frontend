@@ -1,6 +1,8 @@
 <script setup>
-import JobsList from '@/components/JobsList.vue';
+import banner from '/images/banners/about.webp'
+import JobsList from '../components/JobsList.vue';
 import InnerHero from '../components/InnerHero.vue';
+import InsideBody from '../components/InsideBody.vue';
 const jobs = [
   { id: 1, title: 'Software Engineer', type: 'Full-time', to: 'https://example.com/job1', target: '_blank', location: 'San Francisco, CA' },
   { id: 2, title: 'Data Analyst', type: 'Contract', to: 'https://example.com/job2', target: '_blank', location: 'New York, NY' },
@@ -13,8 +15,12 @@ const jobs = [
 ];
 </script>
 <template>
-    <main>
-        <InnerHero pagename="careers" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
-        <JobsList sectiontitle="Jobs" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :jobsorinternships='jobs'/>
+  <main>
+      <InnerHero :pagebanner="banner" pagename="careers" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
+      
+      <section class="relative">
+      <JobsList sectiontitle="Jobs" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :jobsorinternships='jobs'/>
+      <InsideBody/>
+      </section>    
     </main>
 </template>
