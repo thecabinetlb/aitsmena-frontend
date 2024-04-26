@@ -28,7 +28,7 @@ const showDes = (id) => {
 </style>
 
 <template>
-    <section class="w-11/12 px-6 mx-auto 2xl:w-8/12 sm:w-10/12">
+    <section class="w-11/12 px-6 mx-auto my-40 2xl:w-8/12 sm:w-10/12">
     <h1 class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase lg:mb-10 mb-20">Our Sub-Companies</h1>
     <!-- Desktop -->
     <div class="relative hidden lg:block 2xl:min-h-[200px] xl:h-full lg:h-[400px]">

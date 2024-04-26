@@ -22,13 +22,15 @@ const testimoniesslides = [
 
 <template>
   <section class="relative z-[1] my-40">
+  <h1 class="text-accent1 font-[200] text-lg uppercase"> &#x2022; What Our Clients Think</h1>
+  <hr class="w-full h-4 mt-3 text-accent2"/>  
   <carousel
   ref="myCarousel"
   :wrap-around="true"
   :items-to-show="1" 
   :autoplay="6000" 
   :transition="2000"
-  class="w-10/12 py-10 mx-auto 2xl:w-8/12">
+  class="w-10/12 py-10 mx-auto mt-10 2xl:w-8/12">
       <slide v-for="slide in testimoniesslides" :key="slide.id" class="space-y-10">
           <h1 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase">
               {{ slide.title }}

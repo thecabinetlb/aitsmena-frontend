@@ -6,7 +6,7 @@ defineProps({
 })
 </script>
 <template>
-    <section class="relative flex flex-col justify-center items-center -mt-[40px] h-[70vh] mb-20">
+    <section class="relative flex flex-col justify-center items-center -mt-[40px] h-[70vh] mb-40 z-[-1]">
         <img :src="pagebanner" :alt="pagetitle" width="1442" height="718" center cover responsive loading="eager" class="absolute inset-0 w-full h-full aspect-[2.01/1]"/>
         <div class="absolute w-11/12 mx-auto transform -translate-y-1/2 top-1/2 z-1 2xl:w-8/12 sm:w-10/12">
             <div class="h-[40vh] rounded-[16px] flex flex-col justify-center items-center mx-auto bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">

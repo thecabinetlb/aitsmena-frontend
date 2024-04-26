@@ -1,5 +1,5 @@
 <script setup>
-import banner from '/images/banners/about.webp'
+import banner from '/images/banners/industries.webp'
 import industriesiconF from '/images/industries/F&B.svg'
 import industriesiconW from '/images/industries/Water.svg'
 import industriesiconC from '/images/industries/City.svg'
@@ -10,7 +10,8 @@ import industriesiconM from '/images/industries/Mining.svg'
 import industriesiconL from '/images/industries/LifeScience.svg'
 import InnerHero from '../../components/InnerHero.vue';
 import IndustriesList from '../../components/IndustriesList.vue'
-import Testimonies from '@/components/Testimonies.vue'
+import Testimonies from '../../components/Testimonies.vue'
+import InsideBody from '../../components/InsideBody.vue'
 const industries = [
 { id: 1, title: 'Food & Beverage', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconF },
 { id: 2, title: 'Water & Wastewater', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconW },
@@ -24,9 +25,14 @@ const industries = [
 
 </script>
 <template>
-    <main class="h-full">
+    <main>
         <InnerHero :pagebanner="banner" pagename="Industries" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
-        <IndustriesList :industries="industries"/>
-        <Testimonies/>
-</main>
+        
+        <section class="relative">
+            <IndustriesList :industries="industries"/>
+            <Testimonies/>
+            <InsideBody/>
+        </section>
+ 
+    </main>
 </template>

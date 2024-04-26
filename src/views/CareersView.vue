@@ -13,7 +13,7 @@ const jobs = [
 ];
 </script>
 <template>
-    <main class="h-full">
+    <main>
         <InnerHero pagename="careers" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
         <JobsList sectiontitle="Jobs" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :jobsorinternships='jobs'/>
     </main>

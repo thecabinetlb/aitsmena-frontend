@@ -67,8 +67,8 @@ const toggleOpen = () => {
     :class="{'h-fit' : isOpen}">
     <div class="absolute inset-0 w-full h-full z-[-1] rounded-[16px]"
     :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || hasSubMenu}"/>
-    <RouterLink id="Homepage" :aria-label="'go to homepage'" to="/" class="max-lg:my-[20px]">
-    <img :src="logo" alt="AITS logo" width="100" height="33" cover center responsive loading="eager"
+    <RouterLink id="Homepage" :aria-label="'go to homepage'" to="/">
+    <img :src="logo" alt="AITS logo" width="100" height="33" cover center responsive loading="eager" class="max-lg:my-[20px]"
     :class="{'scale-125' : !changecolor}"/>    
     </RouterLink>
     <!-- Desktop -->

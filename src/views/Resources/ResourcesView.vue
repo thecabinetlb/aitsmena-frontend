@@ -1,4 +1,5 @@
 <script setup>
+import banner from '/images/banners/resources.webp'
 import BlogCarousel from '@/components/BlogCarousel.vue';
 import InnerHero from '../../components/InnerHero.vue';
 import VisionandValues from '@/components/VisionandValues.vue';
@@ -15,9 +16,9 @@ const blogposts = [
 
 </script>
 <template>
-    <main class="h-full">
-        <InnerHero pagename="Resources" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
-<VisionandValues/>
+    <main>
+        <InnerHero :pagebanner="banner" pagename="Resources" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
+        <VisionandValues/>
         <BlogCarousel sectiontitle="Blogs" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :blogorindustryinsights='blogposts'/>
     </main>
 </template>
