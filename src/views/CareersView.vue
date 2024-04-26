@@ -1,5 +1,5 @@
 <script setup>
-import banner from '/images/banners/about.webp'
+import banner from '/images/banners/careers.webp'
 import JobsList from '../components/JobsList.vue';
 import InnerHero from '../components/InnerHero.vue';
 import InsideBody from '../components/InsideBody.vue';
