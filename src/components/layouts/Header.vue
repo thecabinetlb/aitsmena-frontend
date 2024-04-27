@@ -81,8 +81,8 @@ const toggleOpen = () => {
         </RouterLink>
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[250px] h-fit absolute left-0 top-[60px] p-5 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
         @mouseleave="hasSubMenu = false">
-          <div v-for="(subitem, subkey) in item.submenu" :key="subkey">
-            <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-4 drop-shadow-md">
+          <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-4 drop-shadow-md">
+            <<RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to">
               {{ subitem.name }}
             </RouterLink>            
           </div>
@@ -107,7 +107,7 @@ const toggleOpen = () => {
         </RouterLink>
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 pb-4 drop-shadow-md">
-              {{ subitem.name }}
+              <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to">{{ subitem.name }}</RouterLink>
             </div>
         </nav>
       </div>
