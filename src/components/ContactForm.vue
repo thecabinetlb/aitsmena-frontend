@@ -179,7 +179,7 @@ const handleSubmit = () => {
                 v-model="formData.data.Name.value"
                 :required="formData.data.Name.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] ]w-full text-accent1 bg-transparent border-0 border-b-2 border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"               
-                :class="'border-red-500' : formData.data.Name.isValid">
+                :class="{'border-red-500' : formData.data.Name.isValid}">
                 <p v-show="!formData.data.Name.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Name.validationMessage}}</p>
             </div>
             <div class="w-full col-span-2 sm:col-span-1">
@@ -188,7 +188,7 @@ const handleSubmit = () => {
                 v-model="formData.data.Email.value" 
                 :required="formData.data.Email.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] ]w-full text-accent1 bg-transparent border-0 border-b-2 border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
-                :class="'border-red-500' : formData.data.Email.isValid">
+                :class="{'border-red-500' : formData.data.Email.isValid}">
                 <p v-show="!formData.data.Email.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Email.validationMessage}}</p>
             </div>      
             <div class="w-full col-span-2 sm:col-span-1">
@@ -197,7 +197,7 @@ const handleSubmit = () => {
                 v-model="formData.data.Phone.value"          
                 :required="formData.data.Phone.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] ]w-full text-accent1 bg-transparent border-0 border-b-2 border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
-                :class="'border-red-500' : formData.data.Phone.isValid">
+                :class="{'border-red-500' : formData.data.Phone.isValid}">
                 <p v-show="!formData.data.Phone.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Phone.validationMessage}}</p>
             </div> 
             <div class="w-full col-span-2 sm:col-span-1">
@@ -206,7 +206,7 @@ const handleSubmit = () => {
                 v-model="formData.data.CompanyName.value"              
                 :required="formData.data.CompanyName.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] ]w-full text-accent1 bg-transparent border-0 border-b-2 border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
-                :class="'border-red-500' : formData.data.CompanyName.isValid">
+                :class="{'border-red-500' : formData.data.CompanyName.isValid}">
                 <p v-show="!formData.data.CompanyName.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.CompanyName.validationMessage}}</p>
             </div>    
             <div class="w-full col-span-2">
@@ -214,7 +214,7 @@ const handleSubmit = () => {
                 v-model="formData.data.Subject.value"
                 :required="formData.data.Subject.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] ]w-full text-accent1/70 bg-transparent border-0 border-b-2 border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
-                :class="'border-red-500' : formData.data.Subject.isValid">
+                :class="{'border-red-500' : formData.data.Subject.isValid}">
                     <option  class="text-black" selected>General Inquiries</option>
                     <option class="text-black">Sales and Support</option>
                 </select>                    
@@ -226,7 +226,7 @@ const handleSubmit = () => {
                 v-model="formData.data.Message.value" 
                 :required="formData.data.Message.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] ]w-full text-accent1 bg-transparent border-0 border-b-2 border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"
-                :class="'border-red-500' : formData.data.Message.isValid"></textarea>
+                :class="{'border-red-500' : formData.data.Message.isValid}"></textarea>
                 <p v-show="!formData.data.Message.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Message.validationMessage}}</p>
             </div>
             <!-- Recaptchs -->
