@@ -15,7 +15,7 @@ defineProps({
             <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
         </div>
         <ul role="list" class="flex flex-wrap justify-center lg;justify-between gap-10 lg:gap-3 list-style-none">
-            <li v-for="(item, key) in data" :key="key" class="sm:w-[49%] relative group max-sm:min-h-[440px]">
+            <li v-for="(item, key) in data" :key="key" class="lg:w-[49%] sm:w-[46%] w-full  relative group max-sm:min-h-[440px]">
             <div class="w-full h-full max-sm:min-h-[440px] absolute -inset-0 bg-gradient-to-br from-accent1/10 to-accent1/30 group-hover:from-bg2/50 group-hover:to-bg2 rounded-[16px] opacity-35 group-hover:opacity-50 transform duration-400 group-hover:duration-600"></div>
                 <div class="p-3 w-full h-full relative flex justify-between items-center lg:gap-3 gap-6 rounded-[16px] bg-noise bg-opacity-10 bg-cover bg-center border-2 border-bg2">
                     <h1 class="w-1/4 text-center"><span class="font-[400] 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] text-accent1">{{ item.date.day }}</span><br/>
