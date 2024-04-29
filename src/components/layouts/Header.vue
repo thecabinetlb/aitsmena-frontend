@@ -73,7 +73,7 @@ const toggleOpen = () => {
  <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[67px] z-[9] 2xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-around items-center mx-auto gap-2 px-6 rounded-[16px]" 
     :class="{'h-fit' : isOpen}">
     <div class="absolute inset-0 w-full h-full z-[-1] rounded-[16px]"
-    :class="{'bg-bg/80' : changecolor || isOpen || hasSubMenu}"/>
+    :class="{'bg-bg' : changecolor || isOpen || hasSubMenu}"/>
     <RouterLink id="Homepage" :aria-label="'go to homepage'" to="/">
     <img :src="logo" alt="AITS logo" width="80" height="22" cover center responsive loading="eager" class="max-lg:my-[20px]"/>    
     </RouterLink>
