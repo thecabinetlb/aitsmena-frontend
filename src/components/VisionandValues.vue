@@ -3,7 +3,7 @@
       <h1 class="text-accent1 font-[200] text-lg uppercase">&#x2022; Mission and Vision</h1>
       <hr class="w-full h-4 mt-3 text-accent2"/>
       <div class="relative mt-10 space-y-20 z-[5]">
-        <div class="flex flex-wrap items-center justify-center w-full gap-6 lg:gap-0 lg:justify-between"
+        <div class="flex flex-wrap items-center justify-center w-full gap-6 lg:gap-3 lg:justify-between"
         v-motion
           :initial="{
             opacity: 0,
@@ -24,7 +24,7 @@
           </div>
           <img src="/images/hero/missionandvision/vision.webp" alt="AITS" width="391" height="290" center cover responsive loading="lazy"/>    
         </div>
-        <div class="flex flex-wrap items-center justify-center w-full gap-6 lg:gap-0 lg:justify-between max-lg:flex-col-reverse"
+        <div class="flex flex-wrap items-center justify-center w-full gap-6 lg:gap-3 lg:justify-between max-lg:flex-col-reverse"
         v-motion
           :initial="{
             opacity: 0,

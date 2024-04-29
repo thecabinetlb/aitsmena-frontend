@@ -28,14 +28,14 @@ const showDes = (id) => {
 </style>
 
 <template>
-    <section class="w-11/12 px-6 mx-auto my-40 2xl:w-8/12 sm:w-10/12">
+    <section class="w-11/12 px-6 mx-auto 2xl:w-8/12 sm:w-10/12">
     <h1 class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase lg:mb-10 mb-20">Our Sub-Companies</h1>
     <!-- Desktop -->
     <div class="relative hidden lg:block 2xl:min-h-[200px] xl:h-full lg:h-[400px]">
         <div v-for="item in partners" :key="key" class="absolute inset-0 lg:w-[60%]">
             <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
         </div>
-        <div class="2xl:ms-auto 2xl:me-0 ms-[60%] 2xl:w-1/3 h-full flex 2xl:flex-row flex-col justify-center items-center gap-6">
+        <div class="2xl:ms-auto 2xl:me-0 ms-[60%] 2xl:w-1/2 h-full flex 2xl:flex-row flex-col justify-center items-center gap-6">
             <button v-for="item in partners" :key="key" :aria-label="'click on' + item.title + 'to read the description'">
                 <img :src="item.logo" :alt="item.title" width="168" height="168" center cover responsive class="rounded-[16px]" 
                 @mouseenter="showDes(item.id)" :class="{ 'border-2 border-bg2 transform duration-600 shadow-sm shadow-bg2' : isHovered === item.id}"/>

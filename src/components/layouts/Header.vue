@@ -11,7 +11,7 @@ const navlinks = [
   to: '/industries',
   submenu: [
   { id: 1, name: "Overview", to:"/industries" },
-  { id: 2, name: "Case Studies", to:"/industries" },
+  { id: 2, name: "Case Studies/Testimonials", to:"/industries" },
   { id: 3, name: "Succes Stories", to:"/industries" },
   ]},
   { 
@@ -20,13 +20,20 @@ const navlinks = [
     to: '/resources',
     submenu: [
       { id: 1, name: 'Blog' },
-      { id: 2, name: 'Industry Insights' }
+      { id: 2, name: 'Whitepapers' },
+      { id: 3, name: 'Webinars' },
+      { id: 4, name: 'Industry Insights' }
     ]
   },
   { 
     id: 5, 
     name: 'Careers', 
-    to: '/careers'
+    to: '/careers',
+    submenu: [
+      { id: 1, name: 'Job Openings' },
+      { id: 2, name: 'Internship Opportunities' },
+      { id: 3, name: 'Employee Benefits' }
+    ]
   },
   { id: 6, name: 'Contact', to: '/contact' },
 ]
@@ -79,10 +86,10 @@ const toggleOpen = () => {
         @mouseenter="openSubMenu = item.id, hasSubMenu = item.submenu ? true : false">
           {{ item.name }}
         </RouterLink>
-        <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[250px] h-fit absolute left-0 top-[60px] p-5 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
+        <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[280px] h-fit absolute left-0 top-[60px] p-5 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
         @mouseleave="hasSubMenu = false">
           <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-4 drop-shadow-md">
-            <<RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to">
+            <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to">
               {{ subitem.name }}
             </RouterLink>            
           </div>

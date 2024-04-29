@@ -60,7 +60,7 @@ const sociallinks = [
                     132 Lorum Ipsum Street, Lorum Ipsum 02156 Lorum Ipsum
                 </li>
             </ul>
-            <div class="flex flex-wrap items-center justify-between gap-y-3 lg:gap-0 place-content-end h-1/4">
+            <div class="flex flex-wrap items-center justify-between gap-y-3 lg:gap-3 place-content-end h-1/4">
                 <div class="flex items-center justify-between gap-2">
                 <a v-for="(item, key) in sociallinks" :key="key" :id="'go-to-' +item.name" :href="item.to" :target="item.target" class="w-10 aspect-square font-[200] bg-bg2 text-accent1 hover:brightness-115 rounded-[8px] p-1 flex items-center justify-center">
                     <img :src="item.icon" :alt="'AITS' + item.name" center cover responsive  loading="lazy"/>

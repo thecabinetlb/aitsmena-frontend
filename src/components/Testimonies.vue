@@ -21,7 +21,7 @@ const testimoniesslides = [
 </style>
 
 <template>
-  <section class="relative z-[1] my-40">
+  <section class="w-11/12 relative mx-auto z-[1] mt-40 2xl:w-8/12 lg:w-10/12">
   <h1 class="text-accent1 font-[200] text-lg uppercase"> &#x2022; What Our Clients Think</h1>
   <hr class="w-full h-4 mt-3 text-accent2"/>  
   <carousel
@@ -30,7 +30,7 @@ const testimoniesslides = [
   :items-to-show="1" 
   :autoplay="6000" 
   :transition="2000"
-  class="w-10/12 py-10 mx-auto mt-10 2xl:w-8/12">
+  class="py-10 mx-auto mt-10">
       <slide v-for="slide in testimoniesslides" :key="slide.id" class="space-y-10">
           <h1 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase">
               {{ slide.title }}
@@ -47,7 +47,7 @@ const testimoniesslides = [
       </template>
     </carousel>
   <!-- Navigation arrows -->
-  <div class="absolute inset-0 items-center justify-between hidden px-6 mx-auto transform -translate-y-1/2 md:flex 2xl:w-10/12 md:w-full top-1/2 z-1">
+  <div class="absolute inset-0 items-center justify-between hidden px-6 mx-auto transform -translate-y-1/2 md:flex md:w-full top-1/2 z-1">
     <button aria-label="go to the next testimony" @click="myCarousel.prev()">
       <svg width="70" height="70" viewBox="0 0 70 70" class="w-10 aspect-square"  fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0ZM35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069Z" fill="url(#paint0_linear_274_875)"/>
