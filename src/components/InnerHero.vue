@@ -11,7 +11,7 @@ defineProps({
         <div class="absolute w-11/12 mx-auto transform -translate-y-1/2 top-1/2 z-1 2xl:w-8/12 sm:w-10/12">
             <div class="h-[40vh] rounded-[16px] flex flex-col justify-center items-center mx-auto bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
                 <h1 class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] text-center uppercase mb-10 text-accent">{{ pagename }}</h1>   
-                <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mx-auto sm:w-2/3" style="text-align-last: center;">{{ pagedescription }}</p>
+                <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mx-auto w-2/3" style="text-align-last: center;">{{ pagedescription }}</p>
             </div>
         </div>
         <!-- Highlights -->

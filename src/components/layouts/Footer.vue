@@ -1,5 +1,5 @@
 <script setup>
-import logo from '/AITSwhite.webp'
+import logo from '/AITSLogoNoSlogan.webp'
 const footerlinks = [
   {
   id: 1,
@@ -55,7 +55,7 @@ const footerlinks = [
     <footer class="relative flex flex-col items-center justify-center gap-10 pt-20 mt-20">
         <div class="flex flex-wrap justify-between w-11/12 gap-6 px-6 my-10 lg:gap-0 2xl:w-8/12 sm:w-10/12 gap-y-6">
             <div class="w-full lg:w-[20%] lg:mb-0 mb-10">
-            <img :src="logo" alt="AITS logo" width="100" height="33" center cover responsive loading="lazy"/>
+            <img :src="logo" alt="AITS logo" width="80" height="22" center cover responsive loading="lazy"/>
             </div>
             <ul role="list" class="flex flex-wrap justify-between w-full gap-y-3 lg:gap-3 lg:w-3/4 list-style-none">
               <li v-for="(item, key) in footerlinks" :key="key" class="w-full sm:w-1/2 lg:w-[24%] md:w-1/3">

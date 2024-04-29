@@ -11,7 +11,7 @@ defineProps({
         <div class="grid items-center w-full grid-cols-2 gap-6 mt-10 text-center lg:grid-cols-4 md:grid-cols-3">
             <div v-for="(item, key) in industries" :key="key" class="cursor-pointer relative group col-sapn-1 aspect-square max-sm:min-h-[135px]">
             <div class="w-full h-full max-sm:min-h-[135px] absolute inset-0 bg-gradient-to-br from-accent1/10 to-accent1/30 group-hover:from-bg2/50 group-hover:to-bg2 rounded-[16px] opacity-35 group-hover:opacity-50 transform duration-400 group-hover:duration-600"></div>
-                <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title + ' page'" :to="item.to" :target="item.target" class="w-full h-full max-sm:min-h-[135px] relative flex flex-col justify-center items-center gap-4 rounded-[16px] bg-noise bg-fill bg-center border border-bg2/30 goup-hover:border-bg2">
+                <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title + ' page'" :to="item.to" :target="item.target" class="w-full h-full max-sm:min-h-[135px] relative flex flex-col justify-center items-center gap-3 rounded-[16px] bg-noise bg-opacity-10 bg-cover bg-center border-2 border-bg2/30 goup-hover:border-bg2">
                     <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive loading="lazy" class="max-sm:w-[54px] aspect-square"/>
                     <h2 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[400] max-sm:min-h-[48px]">{{ item.title }}</h2>
                 </RouterLink>

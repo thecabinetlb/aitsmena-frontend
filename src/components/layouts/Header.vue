@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
-import logo from '/AITSwhite.webp'
+import logo from '/AITSLogoNoSlogan.webp'
 const navlinks = [
   { id: 1, name: 'Home', to: '/' },
   { id: 2, name: 'About', to: '/about' },
@@ -73,23 +73,26 @@ const toggleOpen = () => {
  <header class="fixed left-1/2 transform -translate-x-1/2 top-[20px] h-[67px] z-[9] 2xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-around items-center mx-auto gap-2 px-6 rounded-[16px]" 
     :class="{'h-fit' : isOpen}">
     <div class="absolute inset-0 w-full h-full z-[-1] rounded-[16px]"
-    :class="{'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]' : changecolor || isOpen || hasSubMenu}"/>
+    :class="{'bg-bg/80' : changecolor || isOpen || hasSubMenu}"/>
     <RouterLink id="Homepage" :aria-label="'go to homepage'" to="/">
-    <img :src="logo" alt="AITS logo" width="100" height="33" cover center responsive loading="eager" class="max-lg:my-[20px]"
-    :class="{'scale-125' : !changecolor}"/>    
+    <img :src="logo" alt="AITS logo" width="80" height="22" cover center responsive loading="eager" class="max-lg:my-[20px]"/>    
     </RouterLink>
     <!-- Desktop -->
     <nav class="items-center justify-end hidden w-full h-full gap-4 lg:flex">
       <div v-for="(item, key) in navlinks" :key="key" class="relative">
-        <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" 
-        class="py-2 px-3 cursor-pointer text-lg font-[400] text-accent1 hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20 hover:backdrop-blur-[16px] hover:rounded-[8px] transform duration-600"
+        <RouterLink :id="item.name" :aria-label="'go to ' + item.name" :to="item.to" 
+        :activeClass="'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[8px]'"
+        :exactActiveClass="'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[8px]'"
+        class="py-2 px-3 cursor-pointer text-lg font-[400] text-accent1 hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20 hover:backdrop-blur-[16px] hover:rounded-[8px]"
         @mouseenter="openSubMenu = item.id, hasSubMenu = item.submenu ? true : false">
           {{ item.name }}
         </RouterLink>
-        <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[280px] h-fit absolute left-0 top-[60px] p-5 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
+        <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[280px] h-fit absolute left-0 top-[60px] p-5 rounded-[16px] bg-bg/80"
         @mouseleave="hasSubMenu = false">
           <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-4 drop-shadow-md">
-            <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to">
+            <RouterLink :id="item.name" :aria-label="'go to ' + item.name" :to="item.to"        
+            :activeClass="'text-accent1/70'"
+            :exactActiveClass="'text-accent1/70'">
               {{ subitem.name }}
             </RouterLink>            
           </div>
@@ -107,14 +110,17 @@ const toggleOpen = () => {
     </button>
     <nav v-if="isOpen" class="w-full py-5 mt-5 space-y-4 lg:hidden">
       <div v-for="(item, key) in navlinks" :key="key">
-        <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="cursor-pointer font-[400] text-accent1 drop-shadow-md"
-        :class="{'text-accent1/70' : openSubMenu === item.id }"
+        <RouterLink :id="item.name" :aria-label="'go to ' + item.name" :to="item.to" class="cursor-pointer font-[400] text-accent1 drop-shadow-md"
+        :activeClass="'text-accent1/70'"
+        :exactActiveClass="'text-accent1/70'"
         @click="toggleSubMenu(item)">
           {{ item.name }}
         </RouterLink>
-        <nav v-if="hasSubMenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
+        <nav v-if="hasSubMenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-bg/80">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 pb-4 drop-shadow-md">
-              <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to">{{ subitem.name }}</RouterLink>
+              <RouterLink :id="item.name" :aria-label="'go to ' + item.name" :to="item.to"
+              :activeClass="'text-accent1/70'"
+        :exactActiveClass="'text-accent1/70'">{{ subitem.name }}</RouterLink>
             </div>
         </nav>
       </div>
