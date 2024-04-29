@@ -87,7 +87,7 @@ const toggleOpen = () => {
         @mouseenter="openSubMenu = item.id, hasSubMenu = item.submenu ? true : false">
           {{ item.name }}
         </RouterLink>
-        <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[280px] h-fit absolute left-0 top-[60px] p-5 rounded-[16px] bg-bg/80"
+        <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[280px] h-fit absolute left-0 top-[60px] p-5 rounded-[16px] bg-bg"
         @mouseleave="hasSubMenu = false">
           <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-4 drop-shadow-md">
             <RouterLink :id="item.name" :aria-label="'go to ' + item.name" :to="item.to"        
