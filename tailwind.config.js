@@ -24,6 +24,7 @@ export default {
       },
       aspectRatio: {
         '2.01/1': '2.01 / 1',
+        '0.88/1': '0.88 / 1'
       },
       dropShadow: {
         'lg': '0 10px 8px rgba(255,255,255)'
