@@ -6,7 +6,7 @@ defineProps({
 })
 </script>
 <template>
-    <section class="w-11/12 mx-auto my-40 2xl:w-8/12 lg:w-10/12">
+    <section id="employee-benefits" class="w-11/12 mx-auto my-40 2xl:w-8/12 lg:w-10/12">
       <div class="flex flex-col items-center justify-center w-full gap-6 mt-10 2xl:gap-[4px] lg:gap-3 lg:justify-between">
         <div>
             <h1 class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>

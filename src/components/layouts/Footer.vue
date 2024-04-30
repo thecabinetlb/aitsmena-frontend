@@ -1,21 +1,40 @@
 <script setup>
 import logo from '/AITSLogoNoSlogan.webp'
 const footerlinks = [
+  { id: 1, name: 'Home', to: '/' },
+  { id: 2, name: 'About', to: '/about' },
   {
-  id: 1,
-  name: "Quick Links",
-  submenu: [
-    { id: 1, name: "About Us",  to: '/about' },
-    { id: 2, name: "Contact Us",  to: '/contact' },
-  ]
-  },
-  {
-  id: 2,
+  id: 3,
   name: "Industries",
+  to: '/industries',
   submenu: [
-  { id: 1, name: "Overview" },
-  { id: 2, name: "Case Studies/Testimonials" },
-  { id: 3, name: "Succes Stories" },    
+  { id: 1, name: "Overview", to:"/industries" },
+  { id: 2, name: "Case Studies/Testimonials", to:"/industries/#testimonials" },
+  { id: 3, name: "Succes Stories", to:"/industries/#success-stories" },
+  ]},
+  { 
+    id: 4, 
+    name: 'Resources', 
+    to: '/resources',
+    submenu: [
+      { id: 1, name: 'Blog', to:'/resources/#blog' },
+      { id: 2, name: 'Whitepapers', to:'/resources/#whitepapers' },
+      { id: 3, name: 'Webinars', to:'/resources/#webinars' },
+      { id: 4, name: 'Industry Insights', to:'/resources/#industry-insights' }
+    ]
+  },
+  { 
+    id: 5, 
+    name: 'Careers', 
+    to: '/careers',
+    submenu: [
+      { id: 1, name: 'Job Openings', to:'/careers/#jobs-and-internships' },
+      { id: 2, name: 'Internship Opportunities', to:'/careers/#jobs-and-internships' },
+      { id: 3, name: 'Employee Benefits', to:'/careers/#employee-benefits' }
+    ]
+  },
+  { id: 6, name: 'Contact', to: '/contact' },
+]
     // { id: 1, name: "Food & Beverage" },
     // { id: 2, name: "Water & Wastewater" },
     // { id: 3, name: "Smart Cities" },
@@ -24,31 +43,6 @@ const footerlinks = [
     // { id: 6, name: "Power & Utilities" },
     // { id: 7, name: "Life Science" },
     // { id: 8, name: "Metals, Mining, & Minerals" }
-  ]
-  },
-  { 
-    id: 3, 
-    name: 'Resources', 
-    to: '/resources',
-    submenu: [
-      { id: 1, name: 'Blog' },
-      { id: 2, name: 'Whitepapers' },
-      { id: 3, name: 'Webinars' },
-      { id: 4, name: 'Industry Insights' }
-    ]
-  },
-  { 
-    id: 4, 
-    name: 'Careers', 
-    to: '/careers',
-    submenu: [
-      { id: 1, name: 'Job Openings' },
-      { id: 2, name: 'Internship Opportunities' },
-      { id: 3, name: 'Employee Benefits' }
-    ]
-  },
-]
-
 </script>
 
 <template>
@@ -77,4 +71,4 @@ const footerlinks = [
       <p class="text-accent1">Copyright @ AITS All Rights Reserved.</p>
       </div>
     </footer>
-</template>
+</template>    

@@ -11,18 +11,18 @@ const navlinks = [
   to: '/industries',
   submenu: [
   { id: 1, name: "Overview", to:"/industries" },
-  { id: 2, name: "Case Studies/Testimonials", to:"/industries" },
-  { id: 3, name: "Succes Stories", to:"/industries" },
+  { id: 2, name: "Case Studies/Testimonials", to:"/industries/#testimonials" },
+  { id: 3, name: "Succes Stories", to:"/industries/#success-stories" },
   ]},
   { 
     id: 4, 
     name: 'Resources', 
     to: '/resources',
     submenu: [
-      { id: 1, name: 'Blog' },
-      { id: 2, name: 'Whitepapers' },
-      { id: 3, name: 'Webinars' },
-      { id: 4, name: 'Industry Insights' }
+      { id: 1, name: 'Blog', to:'/resources/#blog' },
+      { id: 2, name: 'Whitepapers', to:'/resources/#whitepapers' },
+      { id: 3, name: 'Webinars', to:'/resources/#webinars' },
+      { id: 4, name: 'Industry Insights', to:'/resources/#industry-insights' }
     ]
   },
   { 
@@ -30,9 +30,9 @@ const navlinks = [
     name: 'Careers', 
     to: '/careers',
     submenu: [
-      { id: 1, name: 'Job Openings' },
-      { id: 2, name: 'Internship Opportunities' },
-      { id: 3, name: 'Employee Benefits' }
+      { id: 1, name: 'Job Openings', to:'/careers/#jobs-and-internships' },
+      { id: 2, name: 'Internship Opportunities', to:'/careers/#jobs-and-internships' },
+      { id: 3, name: 'Employee Benefits', to:'/careers/#employee-benefits' }
     ]
   },
   { id: 6, name: 'Contact', to: '/contact' },

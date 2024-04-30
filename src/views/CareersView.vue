@@ -3,7 +3,7 @@ import banner from '/images/banners/careers.webp'
 import JobsList from '../components/JobsList.vue';
 import InnerHero from '../components/InnerHero.vue';
 import InsideBody from '../components/InsideBody.vue';
-import BenifitsFlexWithBlur from '@/components/BenifitsFlexWithBlur.vue';
+import BenefitsFlexWithBlur from '../components/BenefitsFlexWithBlur.vue';
 const jobs = [
   { id: 1, title: 'Software Engineer', type: 'Full-time', to: 'https://example.com/job1', target: '_blank', location: 'San Francisco, CA' },
   { id: 2, title: 'Data Analyst', type: 'Contract', to: 'https://example.com/job2', target: '_blank', location: 'New York, NY' },
@@ -58,7 +58,7 @@ const benefits = [
       
       <section class="relative">
         <JobsList sectiontitle="Available Jobs and Internships" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :jobsorinternships='jobs'/>
-        <BenifitsFlexWithBlur sectiontitle="What  Our Employees Get" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='benefits'/>
+        <BenefitsFlexWithBlur sectiontitle="What  Our Employees Get" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='benefits'/>
         <InsideBody/>
       </section>    
     </main>

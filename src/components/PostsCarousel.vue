@@ -24,6 +24,7 @@ onMounted(() => {
 });
 const myCarousel = ref(null)
 defineProps({
+    sectionid: String,
     sectiontitle: String,
     sectiondescription: String,
     data: Array
@@ -32,8 +33,7 @@ defineProps({
 
 
 <template>
-    <section>
-        <div class="flex flex-wrap items-center w-full h-full gap-6 mt-40 lg:gap-0 lg:justify-between">
+    <section :id="sectionid" class="flex flex-wrap items-center w-full h-full gap-6 mt-40 lg:gap-0 lg:justify-between">
             <div class="lg:w-1/2 w-11/12 2xl:ps-[16.666667%] lg:ps-[8.333333%] lg:pe-6 mx-auto h-full">
                 <h1 class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
                 <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6">{{ sectiondescription }}</p>
@@ -60,7 +60,6 @@ defineProps({
                 </template>
             </carousel>
             </div> 
-        </div>
     </section>
 </template>
 
