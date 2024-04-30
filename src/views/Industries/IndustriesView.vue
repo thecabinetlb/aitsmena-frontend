@@ -12,6 +12,7 @@ import industriesiconL from '/images/industries/LifeScience.svg'
 import InnerHero from '../../components/InnerHero.vue';
 import IndustriesList from '../../components/IndustriesList.vue'
 import Testimonies from '../../components/Testimonies.vue'
+import InsideBody from '../../components/InsideBody.vue'
 import PostsGrid from '@/components/PostsGrid.vue'
 const industries = [
 { id: 1, title: 'Food & Beverage', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconF },
@@ -108,10 +109,11 @@ const successStories = [
     <main>
         <InnerHero :pagebanner="banner" pagename="Industries" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
         
-        <section class="relative overflow-hidden before:absolute before:inset-0 before:w-full before:h-full before:max-sm:h-11/12 before:transform before:bg-center before:bg-cover before:z-[-1] before:sm:bg-colors before:bg-mobilecolors">
+        <section class="relative">
             <IndustriesList :industries="industries"/>
             <Testimonies/>
             <PostsGrid sectiontitle="Success Stories" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='successStories'/>
+            <InsideBody/>
         </section>
  
     </main>
