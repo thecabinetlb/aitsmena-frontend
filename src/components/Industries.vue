@@ -12,9 +12,8 @@ const industries = [
     <section class="w-11/12 h-full mx-auto mt-40 2xl:w-8/12 lg:w-10/12">
         <h1 class="text-accent1 font-[200] text-lg uppercase"> &#x2022; Industries we serve</h1>
         <hr class="w-full h-4 mt-3 text-accent2"/>
-        <div v-for="(item, key) in industries" :key="item.id" class="mt-10 relative group max-sm:min-h-[200px] bg-extended-noise bg-cover bg-center rounded-[16px]">
-        <div class="w-full h-full max-sm:min-h-[200px] absolute -inset-0 bg-gradient-to-br from-accent1/10 to-accent1/30 group-hover:from-bg2/50 group-hover:to-bg2 rounded-[16px] opacity-35 group-hover:opacity-50 transform duration-400 group-hover:duration-600"></div>
-            <div class="p-6 flex max-sm:flex-wrap items-center gap-3 w-full h-full relative rounded-[16px] border-2 border-bg2/30 goup-hover:border-bg2">
+        <div v-for="(item, key) in industries" :key="key" class="mt-10 group bg-noise bg-cover bg-center p-6 flex max-sm:flex-wrap items-center gap-3 w-full h-full relative rounded-[16px] border-2 border-bg2/30 goup-hover:border-bg2bg-center">
+        <div class="w-full h-full absolute inset-0 bg-gradient-to-br from-accent1/10 to-accent1/30 group-hover:from-bg2/50 group-hover:to-bg2 rounded-[16px] opacity-35 group-hover:opacity-50 transform duration-400 group-hover:duration-600"></div>
                 <div class="flex flex-col items-center justify-center w-full gap-3 sm:w-2/5">
                     <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive loading="lazy" class="w-[54px] aspect-square"/>
                     <h2 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 text-center font-[400]">{{ item.title }}</h2>                        
@@ -33,7 +32,6 @@ const industries = [
                     </defs>
                     </svg>
                 </RouterLink>
-            </div>
         </div>
     </section>
 </template>

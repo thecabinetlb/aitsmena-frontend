@@ -11,18 +11,18 @@ const navlinks = [
   to: '/industries',
   submenu: [
   { id: 1, name: "Overview", to:"/industries" },
-  { id: 2, name: "Case Studies/Testimonials", to:"/industries/#testimonials" },
-  { id: 3, name: "Succes Stories", to:"/industries/#success-stories" },
+  { id: 2, name: "Case Studies/Testimonials", to:"#testimonials" },
+  { id: 3, name: "Succes Stories", to:"#success-stories" },
   ]},
   { 
     id: 4, 
     name: 'Resources', 
     to: '/resources',
     submenu: [
-      { id: 1, name: 'Blog', to:'/resources/#blog' },
-      { id: 2, name: 'Whitepapers', to:'/resources/#whitepapers' },
-      { id: 3, name: 'Webinars', to:'/resources/#webinars' },
-      { id: 4, name: 'Industry Insights', to:'/resources/#industry-insights' }
+      { id: 1, name: 'Blog', to:'#blog' },
+      { id: 2, name: 'Whitepapers', to:'#whitepapers' },
+      { id: 3, name: 'Webinars', to:'#webinars' },
+      { id: 4, name: 'Industry Insights', to:'#industry-insights' }
     ]
   },
   { 
@@ -30,9 +30,9 @@ const navlinks = [
     name: 'Careers', 
     to: '/careers',
     submenu: [
-      { id: 1, name: 'Job Openings', to:'/careers/#jobs-and-internships' },
-      { id: 2, name: 'Internship Opportunities', to:'/careers/#jobs-and-internships' },
-      { id: 3, name: 'Employee Benefits', to:'/careers/#employee-benefits' }
+      { id: 1, name: 'Job Openings', to:'#jobs-and-internships' },
+      { id: 2, name: 'Internship Opportunities', to:'#jobs-and-internships' },
+      { id: 3, name: 'Employee Benefits', to:'#employee-benefits' }
     ]
   },
   { id: 6, name: 'Contact', to: '/contact' },
@@ -90,7 +90,7 @@ const toggleOpen = () => {
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[280px] h-fit absolute left-0 top-[60px] p-5 rounded-[16px] bg-bg"
         @mouseleave="hasSubMenu = false">
           <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-4 drop-shadow-md">
-            <RouterLink :id="item.name" :aria-label="'go to ' + item.name" :to="item.to"        
+            <RouterLink :id="subitem.name" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"        
             :activeClass="'text-accent1/70'"
             :exactActiveClass="'text-accent1/70'">
               {{ subitem.name }}
@@ -118,9 +118,9 @@ const toggleOpen = () => {
         </RouterLink>
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-bg/80">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 pb-4 drop-shadow-md">
-              <RouterLink :id="item.name" :aria-label="'go to ' + item.name" :to="item.to"
+              <RouterLink :id="subitem.name" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"        
               :activeClass="'text-accent1/70'"
-        :exactActiveClass="'text-accent1/70'">{{ subitem.name }}</RouterLink>
+              :exactActiveClass="'text-accent1/70'">{{ subitem.name }}</RouterLink>
             </div>
         </nav>
       </div>

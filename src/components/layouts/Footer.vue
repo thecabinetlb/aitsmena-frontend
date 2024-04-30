@@ -1,26 +1,33 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import logo from '/AITSLogoNoSlogan.webp'
 const footerlinks = [
-  { id: 1, name: 'Home', to: '/' },
-  { id: 2, name: 'About', to: '/about' },
+  { id: 1, 
+    name: 'Quick Links',
+    to:'',
+    submenu: [
+    { id: 1, name: "Home", to:"/" },
+    { id: 2, name: 'About', to: '/about' },
+    { id: 3, name: 'Contact ', to: '/contact' },
+  ]},
   {
   id: 3,
   name: "Industries",
   to: '/industries',
   submenu: [
   { id: 1, name: "Overview", to:"/industries" },
-  { id: 2, name: "Case Studies/Testimonials", to:"/industries/#testimonials" },
-  { id: 3, name: "Succes Stories", to:"/industries/#success-stories" },
+  { id: 2, name: "Case Studies/Testimonials", to:"#testimonials" },
+  { id: 3, name: "Succes Stories", to:"#success-stories" },
   ]},
   { 
     id: 4, 
     name: 'Resources', 
     to: '/resources',
     submenu: [
-      { id: 1, name: 'Blog', to:'/resources/#blog' },
-      { id: 2, name: 'Whitepapers', to:'/resources/#whitepapers' },
-      { id: 3, name: 'Webinars', to:'/resources/#webinars' },
-      { id: 4, name: 'Industry Insights', to:'/resources/#industry-insights' }
+      { id: 1, name: 'Blog', to:'#blog' },
+      { id: 2, name: 'Whitepapers', to:'#whitepapers' },
+      { id: 3, name: 'Webinars', to:'#webinars' },
+      { id: 4, name: 'Industry Insights', to:'#industry-insights' }
     ]
   },
   { 
@@ -28,12 +35,11 @@ const footerlinks = [
     name: 'Careers', 
     to: '/careers',
     submenu: [
-      { id: 1, name: 'Job Openings', to:'/careers/#jobs-and-internships' },
-      { id: 2, name: 'Internship Opportunities', to:'/careers/#jobs-and-internships' },
-      { id: 3, name: 'Employee Benefits', to:'/careers/#employee-benefits' }
+      { id: 1, name: 'Job Openings', to:'#jobs-and-internships' },
+      { id: 2, name: 'Internship Opportunities', to:'#jobs-and-internships' },
+      { id: 3, name: 'Employee Benefits', to:'#employee-benefits' }
     ]
-  },
-  { id: 6, name: 'Contact', to: '/contact' },
+  }
 ]
     // { id: 1, name: "Food & Beverage" },
     // { id: 2, name: "Water & Wastewater" },
@@ -53,11 +59,13 @@ const footerlinks = [
             </div>
             <ul role="list" class="flex flex-wrap justify-between w-full gap-y-3 lg:gap-3 lg:w-3/4 list-style-none">
               <li v-for="(item, key) in footerlinks" :key="key" class="w-full sm:w-1/2 lg:w-[24%] md:w-1/3">
-                <h1 class="text-lg font-[400] text-accent1 lg:mb-4 mb-2">
+                <h1 class="text-lg font-[400] text-accent1 mb-3">
                     {{ item.name }}
                 </h1>            
-                <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="text-md font-[200] text-accent1 hover:brightness-85">
-                    {{ subitem.name }}
+                <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="pb-3">
+                    <RouterLink :id="subitem.name" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem?.to}" 
+                    class="font-[200] text-accent1 hover:brightness-75">
+                    {{ subitem.name }}</RouterLink>
                 </div>                
               </li>
             </ul>

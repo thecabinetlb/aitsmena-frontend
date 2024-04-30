@@ -84,7 +84,7 @@ import VisionandValues from './VisionandValues.vue';
  
       <!-- right layer -->
       <img src="/images/hero/elements/righttop.svg" alt="AITS" width="1467" height="1474" 
-      class="min-h-screen absolute right-0 lg:top-1/4 lg:-translate-y-1/4 top-0 z-[-1]" center cover responsive loading="eager" />
+      class="min-h-screen w-screen absolute right-0 lg:top-1/4 lg:-translate-y-1/4 top-0 z-[-1]" center cover responsive loading="eager" />
       <!-- v-motion  
         :initial="{
           position: 'absolute',

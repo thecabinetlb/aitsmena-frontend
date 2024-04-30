@@ -17,12 +17,12 @@ defineProps({
         <ul role="list" class="flex flex-wrap justify-center lg;justify-between md:gap-3 gap-6 list-style-none mt-10">
             <li v-for="(item, key) in data" :key="key" class="flex-grow lg:w-[49%] sm:w-[46%] w-full relative group">
             <div class="w-full h-full absolute -inset-0 bg-gradient-to-br from-accent1/10 to-accent1/30 group-hover:from-bg2/50 group-hover:to-bg2 rounded-[16px] opacity-35 group-hover:opacity-50 transform duration-400 group-hover:duration-600"></div>
-                <div class="p-3 w-full h-full relative flex flex-wrap justify-between items-center gap-3 rounded-[16px] bg-noise bg-opacity-10 bg-cover bg-center border-2 border-bg2">
+                <div class="p-3 w-full h-full relative flex flex-wrap items-center gap-3 rounded-[16px] bg-noise bg-opacity-10 bg-cover bg-center border-2 border-bg2">
                     <h1 class="w-full text-center sm:w-1/5"><span class="font-[400] 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] text-accent1">{{ item.date.day }}</span><br/>
                     <span class="font-[200] text-accent2">{{ item.date.month }} {{ item.date.year }}</span></h1>                        
                     <div class="w-full sm:w-3/5">
                         <h2 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[400] mb-3">{{ item.title }}</h2>
-                        <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mb-3">{{ item.description }}</p>
+                        <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
                         <!-- <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'apply for' + item.title" :to="item.to" :target="item.target" class="ms-auto me-0 block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Secure Your Spot</RouterLink> -->
                     </div>
                     <svg width="70" height="70" viewBox="0 0 70 70" class="w-10 cursor-pointer sm:mx-auto aspect-square ms-auto me-0" fill="none" xmlns="http://www.w3.org/2000/svg">
