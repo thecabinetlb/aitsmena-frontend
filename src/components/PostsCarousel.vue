@@ -47,11 +47,11 @@ defineProps({
             :transition="2000"
             :items-to-show="getItemsToShow()"
             class="w-full h-full min-h-[40vh]">
-                <slide v-for="item in data" :key="key" class="h-full rounded-[16px] border-2 border-bg2">
+                <slide v-for="item in data" :key="key" class="rounded-[16px] border-2 border-bg2">
                     <div class="w-full h-40 bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]"></div>
-                    <div class="flex flex-col gap-6 p-6">
+                    <div class="flex flex-col gap-3 p-3">
                         <h3 class="text-accent2 font-[100] max-sm:text-[14px]">{{ item.date }}</h3>
-                        <h2 class="text-accent1 font-[500] sm:text-lg">{{ item.title }}</h2>
+                        <h2 class="text-accent1 font-[400] sm:text-lg">{{ item.title }}</h2>
                         <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.summary }}</p>
                     </div>
                 </slide>

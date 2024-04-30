@@ -2,7 +2,6 @@
 import banner from '/images/banners/careers.webp'
 import JobsList from '../components/JobsList.vue';
 import InnerHero from '../components/InnerHero.vue';
-import InsideBody from '../components/InsideBody.vue';
 import BenifitsFlexWithBlur from '@/components/BenifitsFlexWithBlur.vue';
 const jobs = [
   { id: 1, title: 'Software Engineer', type: 'Full-time', to: 'https://example.com/job1', target: '_blank', location: 'San Francisco, CA' },
@@ -56,10 +55,9 @@ const benefits = [
   <main>
       <InnerHero :pagebanner="banner" pagename="careers" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
       
-      <section class="relative">
-        <JobsList sectiontitle="Jobs" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :jobsorinternships='jobs'/>
+      <section class="relative overflow-hidden before:absolute before:inset-0 before:w-full before:h-full before:max-sm:h-11/12 before:transform before:bg-center before:bg-cover before:z-[-1] before:sm:bg-colors before:bg-mobilecolors">
+        <JobsList sectiontitle="Available Jobs and Internships" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :jobsorinternships='jobs'/>
         <BenifitsFlexWithBlur sectiontitle="What  Our Employees Get" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='benefits'/>
-      <InsideBody/>
       </section>    
     </main>
 </template>

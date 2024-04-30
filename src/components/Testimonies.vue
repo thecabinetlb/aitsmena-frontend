@@ -32,10 +32,15 @@ const testimoniesslides = [
   :transition="2000"
   class="py-10 mx-auto mt-10">
       <slide v-for="slide in testimoniesslides" :key="slide.id" class="space-y-10">
-          <h1 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase">
+          <!-- <h1 class="text-accent1 font-[400] 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase">
               {{ slide.title }}
-          </h1>
-          <p class="text-accent2 font-[200] max-sm:text-[14px] text-jusify" style="text-align-last: center">{{ slide.content }}</p>
+          </h1> -->
+          <blockquote class="max-w-screen-lg mx-auto text-center 2xl:max-w-screen-md md:max-w-screen-sm">
+            <!-- <svg class="w-10 h-10 mx-auto mb-3 text-bg2/30" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+            </svg> -->
+            <p class="text-accent2 text-3xl font-[200] max-sm:text-[14px] text-jusify" style="text-align-last: center">{{ slide.content }}</p>
+          </blockquote>
           <figcaption class="flex items-center justify-center gap-2 mt-6">
               <cite class="text-accent2 font-[400]">{{ slide.ceo }}</cite>
               <img :src="slide.icon" :alt="slide.title" width="40" height="40" center cover responsive  loading="lazy" class="rounded-[8px]"/>
@@ -47,7 +52,7 @@ const testimoniesslides = [
       </template>
     </carousel>
   <!-- Navigation arrows -->
-  <div class="absolute inset-0 items-center justify-between hidden px-6 mx-auto transform -translate-y-1/2 md:flex md:w-full top-1/2 z-1">
+  <div class="absolute inset-0 items-center justify-between hidden w-full px-6 mx-auto transform -translate-y-1/2 md:flex top-1/2 z-1">
     <button aria-label="go to the next testimony" @click="myCarousel.prev()">
       <svg width="70" height="70" viewBox="0 0 70 70" class="w-10 aspect-square"  fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0ZM35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069Z" fill="url(#paint0_linear_274_875)"/>
@@ -66,7 +71,7 @@ const testimoniesslides = [
             </defs>
       </svg>
     </button>
-    <button aria-label="go to the previous testimony"@click="myCarousel.next()">
+    <button aria-label="go to the previous testimony" @click="myCarousel.next()">
       <svg width="70" height="70" viewBox="0 0 70 70" class="w-10 aspect-square" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 6.25948e-06 35 4.5696e-06C15.67 2.87972e-06 -2.87972e-06 15.67 -4.5696e-06 35C-6.25948e-06 54.33 15.67 70 35 70ZM35 68.7931C16.3366 68.7931 1.2069 53.6634 1.2069 35C1.2069 16.3366 16.3366 1.2069 35 1.2069C53.6634 1.2069 68.7931 16.3366 68.7931 35C68.7931 53.6634 53.6634 68.7931 35 68.7931Z" fill="url(#paint0_linear_274_876)"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M45.6864 34.7959L36.7651 44.638C36.3491 45.0858 35.6739 45.1378 35.1882 44.6833C34.7548 44.2784 34.7439 43.4869 35.1447 43.0459L42.3062 35.1578L24.1152 35.1578C23.4988 35.1578 23 34.6399 23 33.9999C23 33.3599 23.4988 32.842 24.1152 32.842L42.3062 32.842L35.1447 24.9538C34.7439 24.5128 34.7722 23.7416 35.1882 23.3165C35.6282 22.8687 36.3557 22.9072 36.7651 23.3617L45.6864 33.2038C45.9477 33.4707 45.9956 33.7285 46 33.9999C46 34.2667 45.8432 34.624 45.6864 34.7959Z" fill="url(#paint1_linear_274_876)"/>

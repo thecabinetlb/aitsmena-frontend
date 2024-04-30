@@ -14,7 +14,7 @@ const industries = [
         <hr class="w-full h-4 mt-3 text-accent2"/>
         <div v-for="(item, key) in industries" :key="item.id" class="mt-10 relative group max-sm:min-h-[200px] bg-extended-noise bg-cover bg-center rounded-[16px]">
         <div class="w-full h-full max-sm:min-h-[200px] absolute -inset-0 bg-gradient-to-br from-accent1/10 to-accent1/30 group-hover:from-bg2/50 group-hover:to-bg2 rounded-[16px] opacity-35 group-hover:opacity-50 transform duration-400 group-hover:duration-600"></div>
-            <div class="p-6 flex max-sm:flex-wrap  items-center gap-3 w-full h-full relative rounded-[16px] border-2 border-bg2/30 goup-hover:border-bg2">
+            <div class="p-6 flex max-sm:flex-wrap items-center gap-3 w-full h-full relative rounded-[16px] border-2 border-bg2/30 goup-hover:border-bg2">
                 <div class="flex flex-col items-center justify-center w-full gap-3 sm:w-2/5">
                     <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive loading="lazy" class="w-[54px] aspect-square"/>
                     <h2 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 text-center font-[400]">{{ item.title }}</h2>                        
@@ -22,8 +22,8 @@ const industries = [
                 <div class="w-full">
                     <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mb-3">{{ item.description }}</p>
                 </div>
-                <RouterLink v-if="item.to" :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" :to="item.to" class="w-full cursor-pointer hover:translate-x-10 sm:w-1/5">
-                    <svg width="34" height="41" viewBox="0 0 34 41" fill="none" class="mx-auto delay-300 transform duration-600 max-sm:ms-auto max-sm:me-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <RouterLink v-if="item.to" :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" :to="item.to" class="w-full delay-300 transform cursor-pointer hover:translate-x-10 duration-600 sm:w-1/5">
+                    <svg width="34" height="41" viewBox="0 0 34 41" fill="none" class="sm:mx-auto ms-auto me-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <rect x="33.0359" y="0.501709" width="40" height="32.5843" transform="rotate(89.2695 33.0359 0.501709)" fill="url(#pattern0_662_424)"/>
                     <defs>
                     <pattern id="pattern0_662_424" patternContentUnits="objectBoundingBox" width="1" height="1">

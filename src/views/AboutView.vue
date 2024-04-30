@@ -2,7 +2,6 @@
 import banner from '/images/banners/about.webp'
 import InnerHero from '../components/InnerHero.vue';
 import Partners from '../components/Partners.vue';
-import InsideBody from '../components/InsideBody.vue';
 import ImageTextFlex from '../components/ImageTextFlex.vue';
 import teammember1 from '/images/insidepages/about/team/teammember1.webp'
 import teammember2 from '/images/insidepages/about/team/teammember2.webp'
@@ -38,11 +37,10 @@ const csr = [
     <main>
         <InnerHero :pagebanner="banner" isAbout="true" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
 
-        <section class="relative">
+        <section class="relative overflow-hidden before:absolute before:inset-0 before:w-full before:h-full before:max-sm:h-11/12 before:transform before:bg-center before:bg-cover before:z-[-1] before:sm:bg-colors before:bg-mobilecolors">
             <Partners/>
             <ImageTextFlex sectiontitle="Company Social Responsability" :data="csr"/>
             <ImagesFlex sectiontitle="Meet The Team" :data="team"/>
-            <InsideBody/>
         </section>
 
     </main>
