@@ -1,22 +1,46 @@
 <script setup>
+import { ref } from 'vue';
 import { RouterLink } from 'vue-router'
 defineProps({
     sectiontitle: String,
     sectiondescription: String,
-    jobsorinternships: Array
 })
+const jobsorinternships = ref([
+  { id: 1, title: 'Software Engineer', type: 'Full-time', to: 'https://example.com/job1', target: '_blank', location: 'San Francisco, CA' },
+  { id: 2, title: 'Data Analyst', type: 'Contract', to: 'https://example.com/job2', target: '_blank', location: 'New York, NY' },
+  { id: 3, title: 'Marketing Specialist', type: 'Part-time', to: 'https://example.com/job3', target: '_blank', location: 'Los Angeles, CA' },
+  { id: 4, title: 'Graphic Designer', type: 'Freelance', to: 'https://example.com/job4', target: '_blank', location: 'Chicago, IL' },
+  { id: 5, title: 'Project Manager', type: 'Full-time', to: 'https://example.com/job5', target: '_blank', location: 'Seattle, WA' },
+  { id: 6, title: 'HR Coordinator', type: 'Internship', to: 'https://example.com/job6', target: '_blank', location: 'Boston, MA' },
+  { id: 7, title: 'Financial Analyst', type: 'Full-time', to: 'https://example.com/job7', target: '_blank', location: 'Austin, TX' },
+  { id: 8, title: 'Customer Service Representative', type: 'Part-time', to: 'https://example.com/job8', target: '_blank', location: 'Denver, CO' },
+]);
+const filteredjobs = ref(jobsorinternships);
+const filterJobs = () => {
+  if (filteredjobs.value  === jobsorinternships.value) {
+    return jobsorinternships.value.filter(job => job.type === 'Internship');
+  } else {
+    return jobsorinternships.value;
+  }
+}
 </script>
 
 <template>
     <section id="jobs-and-internships" class="w-11/12 mx-auto 2xl:w-8/12 sm:w-10/12">
         <h1 class="text-accent1 font-[200] text-lg uppercase"> &#x2022; New Opportunities</h1>
         <hr class="w-full h-4 mt-3 text-accent2"/>          
-        <div class="w-full my-10">
-            <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase lg:mb-10 mb-20">{{ sectiontitle }}</h1>
-            <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
+        <div class="flex justify-between w-full gap-3 my-10">
+            <div>
+                <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase lg:mb-10 mb-20">{{ sectiontitle }}</h1>
+                <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
+            </div>
+            <div>
+                <button @click="filterJobs" class="px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 focus:outline-none focus:ring-0 focus:border-bg2 peer">
+                Internships</button>                
+            </div>
         </div>
         <ul role="list" class="flex flex-wrap justify-center lg;justify-between md:gap-3 gap-6 list-style-none">
-            <li v-for="(item, key) in jobsorinternships" :key="key" class="flex-grow lg:w-[49%] sm:w-[46%] w-full cursor-pointer relative group max-sm:min-h-[135px] bg-extended-noise bg-cover bg-center rounded-[16px]">
+            <li v-for="(item, key) in filteredjobs" :key="key" class="flex-grow lg:w-[49%] sm:w-[46%] w-full cursor-pointer relative group max-sm:min-h-[135px] bg-extended-noise bg-cover bg-center rounded-[16px]">
                 <div class="p-3 w-full h-full relative flex justify-between items-center gap-3 rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 border-2 border-bg2">
                     <div class="w-2/3">
                         <h3 class="px-3 py-2 w-fit font-[200] max-sm:text-[14px] rounded-[16px] text-accent1 shadow-sm border-2 border-bg2 mb-3">{{ item.type }}</h3>
