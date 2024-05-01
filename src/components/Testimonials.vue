@@ -2,7 +2,6 @@
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination } from 'vue3-carousel'
 import client1 from '/images/testimonies/client1.svg'
-// import Partners from './Partners.vue'
 import { ref } from 'vue'
 
 const myCarousel = ref(null)

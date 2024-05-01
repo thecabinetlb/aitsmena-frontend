@@ -10,10 +10,10 @@ import industriesiconCh from '/images/industries/Chemicals.svg'
 import industriesiconM from '/images/industries/Mining.svg'
 import industriesiconL from '/images/industries/LifeScience.svg'
 import InnerHero from '../../components/InnerHero.vue';
-import IndustriesList from '../../components/IndustriesGrid.vue'
-import Testimonies from '../../components/Testimonies.vue'
+import IndustriesGrid from '../../components/IndustriesGrid.vue'
+import Testimonials from '../../components/Testimonials.vue'
 import InsideBody from '../../components/InsideBody.vue'
-import PostsGrid from '@/components/PostsGrid.vue'
+import PostsGrid from '../../components/PostsGrid.vue'
 const industries = [
 { id: 1, title: 'Food & Beverages', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconF },
 { id: 2, title: 'Water & Wastewater', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconW },
@@ -110,8 +110,8 @@ const successStories = [
         <InnerHero :pagebanner="banner" pagename="Industries" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
         
         <section class="relative">
-            <IndustriesList :industries="industries"/>
-            <Testimonies/>
+            <IndustriesGrid :industries="industries"/>
+            <Testimonials />
             <PostsGrid sectionid="success-stories" sectiontitle="Success Stories" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='successStories'/>
             <InsideBody/>
         </section>

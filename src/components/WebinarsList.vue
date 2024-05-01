@@ -17,15 +17,17 @@ defineProps({
         <ul role="list" class="flex flex-col items-center gap-3 mt-10 list-style-none">
             <li v-for="(item, key) in data" :key="key" class="relative w-full group sm:min-h-[135px]">
             <div class="w-full h-full absolute -inset-0 bg-gradient-to-br from-accent1/10 to-accent1/30 group-hover:from-bg2/50 group-hover:to-bg2 rounded-[16px] opacity-35 group-hover:opacity-50 transform duration-400 group-hover:duration-600"></div>
-                <div class="p-6 w-full h-full relative flex flex-wrap items-center gap-3 rounded-[16px] bg-extended-noise bg-opacity-10 bg-cover bg-center border-2 border-bg2">
-                    <h1 class="w-full text-center sm:w-1/5"><span class="font-[400] 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] text-accent1">{{ item.date.day }}</span><br/>
+                <div class="p-6 w-full h-full relative flex max-sm:flex-wrap items-center gap-3 rounded-[16px] bg-extended-noise bg-opacity-10 bg-cover bg-center border-2 border-bg2">
+                    <h1 class="w-full text-center sm:w-3/12"><span class="font-[400] 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] text-accent1">{{ item.date.day }}</span><br/>
                     <span class="font-[200] text-accent2">{{ item.date.month }} {{ item.date.year }}</span></h1>                        
-                    <div class="w-full sm:w-3/5">
+                    <div class="w-full sm:w-7/12">
                         <h2 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[400] mb-3">{{ item.title }}</h2>
                         <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
                         <!-- <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'apply for' + item.title" :to="item.to" :target="item.target" class="ms-auto me-0 block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Secure Your Spot</RouterLink> -->
                     </div>
-                    <div class="hover:text-accent1 text-bg2 w-[34px] h-[34px] cursor-pointer aspect-square grid place-content-center ms-auto me-0 border-2 border-bg2 hover:border-accent1 rounded-full"> → </div>             
+                    <RouterLink v-if="item.to" :id="'go-to-' + item.title + 'webinars-page'" :aria-label="'go to ' + item.title" :to="item.to" class="w-full cursor-pointer sm:w-2/12">
+                        <div class="hover:text-accent1 text-bg2 w-[34px] h-[34px] cursor-pointer aspect-square grid place-content-center sm:mx-auto ms-auto me-0 border-2 border-bg2 hover:border-accent1 rounded-full"> → </div>             
+                    </RouterLink>
                 </div>
             </li>
         </ul>
