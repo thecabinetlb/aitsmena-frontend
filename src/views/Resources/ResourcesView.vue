@@ -12,14 +12,14 @@ const blogposts = [
   { id: 3, title: 'Implementing Industrial IoT for Smart Factories', summary: 'Learn how Industrial Internet of Things (IIoT) is transforming traditional factories into smart, connected environments.', to: 'https://example.com/post3', target: '_blank', date: '2024-04-24' },
   { id: 4, title: 'Data Analytics in Industrial Digitization', summary: 'Discover how data analytics is driving insights and optimizations in industrial processes through digitization initiatives.', to: 'https://example.com/post4', target: '_blank', date: '2024-04-23' },
   { id: 5, title: 'Cybersecurity Considerations for Industrial Digitization', summary: 'Explore the importance of cybersecurity measures in safeguarding industrial digitization systems and infrastructure.', to: 'https://example.com/post5', target: '_blank', date: '2024-04-22' },
-  { id: 6, title: 'The Role of Artificial Intelligence in Industrial Automation', summary: 'Learn how artificial intelligence technologies are powering automation and optimization in industrial processes.', to: 'https://example.com/post6', target: '_blank', date: '2024-04-21' },
-  { id: 7, title: 'Digital Twin Technology in Industrial Applications', summary: 'Discover how digital twin technology is enabling predictive maintenance and virtual simulations in industrial settings.', to: 'https://example.com/post7', target: '_blank', date: '2024-04-20' },
-  { id: 8, title: 'Scaling Up: Strategies for Successful Industrial Digitization Implementation', summary: 'Explore strategies for effectively scaling up industrial digitization initiatives and achieving sustainable growth.', to: 'https://example.com/post8', target: '_blank', date: '2024-04-19' },
+  // { id: 6, title: 'The Role of Artificial Intelligence in Industrial Automation', summary: 'Learn how artificial intelligence technologies are powering automation and optimization in industrial processes.', to: 'https://example.com/post6', target: '_blank', date: '2024-04-21' },
+  // { id: 7, title: 'Digital Twin Technology in Industrial Applications', summary: 'Discover how digital twin technology is enabling predictive maintenance and virtual simulations in industrial settings.', to: 'https://example.com/post7', target: '_blank', date: '2024-04-20' },
+  // { id: 8, title: 'Scaling Up: Strategies for Successful Industrial Digitization Implementation', summary: 'Explore strategies for effectively scaling up industrial digitization initiatives and achieving sustainable growth.', to: 'https://example.com/post8', target: '_blank', date: '2024-04-19' },
 ];
 const whitepaper = [
   { 
     id: 1, 
-    title: 'Explore AITS Whitepapers for Innovation', 
+    title: 'AITS Whitepapers for Innovation', 
     description: 'Discover cutting-edge insights and transformative ideas in our collection of whitepapers. Dive deep into industry trends, emerging technologies, and best practices to propel your business forward.', 
     to:'/whitepapers', 
     image:'/images/insidepages/resources/whitepapers.webp' 
@@ -71,33 +71,33 @@ const industryInsights = [
     date: '2024-04-22',
     category: "Chemicals"
   },
-  { 
-    id: 6, 
-    title: 'Transforming Power Grids with Smart Technology', 
-    summary: 'Learn about the integration of smart meters and grid automation in modernizing power distribution networks and enhancing reliability.', 
-    to: 'https://example.com/power-utilities-insights', 
-    target: '_blank', 
-    date: '2024-04-21',
-    category: "Power & Utilities"
-  },
-  { 
-    id: 7, 
-    title: 'Advancements in Pharmaceutical Manufacturing', 
-    summary: 'Explore how advancements in automation and data analytics are driving efficiency and compliance in pharmaceutical manufacturing.', 
-    to: 'https://example.com/life-science-insights', 
-    target: '_blank', 
-    date: '2024-04-20',
-    category: "Life Science"
-  },
-  { 
-    id: 8, 
-    title: 'Digitization Trends in Mining Operations', 
-    summary: 'Discover how digital technologies are optimizing mining operations, from exploration to extraction, and improving safety and productivity.', 
-    to: 'https://example.com/mining-digitization-insights', 
-    target: '_blank', 
-    date: '2024-04-19',
-    category: "Metals, Mining, & Minerals"
-  },
+  // { 
+  //   id: 6, 
+  //   title: 'Transforming Power Grids with Smart Technology', 
+  //   summary: 'Learn about the integration of smart meters and grid automation in modernizing power distribution networks and enhancing reliability.', 
+  //   to: 'https://example.com/power-utilities-insights', 
+  //   target: '_blank', 
+  //   date: '2024-04-21',
+  //   category: "Power & Utilities"
+  // },
+  // { 
+  //   id: 7, 
+  //   title: 'Advancements in Pharmaceutical Manufacturing', 
+  //   summary: 'Explore how advancements in automation and data analytics are driving efficiency and compliance in pharmaceutical manufacturing.', 
+  //   to: 'https://example.com/life-science-insights', 
+  //   target: '_blank', 
+  //   date: '2024-04-20',
+  //   category: "Life Science"
+  // },
+  // { 
+  //   id: 8, 
+  //   title: 'Digitization Trends in Mining Operations', 
+  //   summary: 'Discover how digital technologies are optimizing mining operations, from exploration to extraction, and improving safety and productivity.', 
+  //   to: 'https://example.com/mining-digitization-insights', 
+  //   target: '_blank', 
+  //   date: '2024-04-19',
+  //   category: "Metals, Mining, & Minerals"
+  // },
 ];
 const webinars = [
   { 
@@ -121,27 +121,27 @@ const webinars = [
     to: "/webinar/blockchain-supply-chain",
     target: "_blank"
   },
-  { 
-    date: { day: 5, month: "June", year: 2024 },
-    title: "Advanced Robotics in Manufacturing",
-    description: "Discover the latest advancements in robotics technology and its applications in modern manufacturing.",
-    to: "/webinar/advanced-robotics",
-    target: "_blank"
-  },
-  { 
-    date: { day: 12, month: "June", year: 2024 },
-    title: "Sustainability in Industrial Operations",
-    description: "Learn about sustainable practices and technologies driving environmental stewardship in industrial operations.",
-    to: "/webinar/sustainability-industrial",
-    target: "_blank"
-  },
-  { 
-    date: { day: 19, month: "June", year: 2024 },
-    title: "Future of Digital Twin Technology",
-    description: "Explore the potential of digital twin technology in revolutionizing product design, testing, and maintenance.",
-    to: "/webinar/digital-twin-future",
-    target: "_blank"
-  }
+  // { 
+  //   date: { day: 5, month: "June", year: 2024 },
+  //   title: "Advanced Robotics in Manufacturing",
+  //   description: "Discover the latest advancements in robotics technology and its applications in modern manufacturing.",
+  //   to: "/webinar/advanced-robotics",
+  //   target: "_blank"
+  // },
+  // { 
+  //   date: { day: 12, month: "June", year: 2024 },
+  //   title: "Sustainability in Industrial Operations",
+  //   description: "Learn about sustainable practices and technologies driving environmental stewardship in industrial operations.",
+  //   to: "/webinar/sustainability-industrial",
+  //   target: "_blank"
+  // },
+  // { 
+  //   date: { day: 19, month: "June", year: 2024 },
+  //   title: "Future of Digital Twin Technology",
+  //   description: "Explore the potential of digital twin technology in revolutionizing product design, testing, and maintenance.",
+  //   to: "/webinar/digital-twin-future",
+  //   target: "_blank"
+  // }
 ];
 
 </script>
@@ -149,11 +149,12 @@ const webinars = [
     <main class="relative overflow-hidden">
       <InnerHero :pagebanner="banner" pagename="Resources" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
 
-      <section class="-mt-40 before:absolute before:inset-0 before:w-full before:h-11/12 before:transform before:bg-center before:bg-cover before:z-[-1] before:sm:bg-colors before:bg-mobilecolors">
+      <section class="relative -mt-40">
         <PostsCarousel sectionid="blog" sectiontitle="Featured Blogs" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='blogposts'/>
-        <ImageTextFlex sectiontitle="Whitepapers" :data="whitepaper"/>
+        <ImageTextFlex sectionid="whitepapers" sectiontitle="Whitepapers" :data="whitepaper"/>
         <PostsCarousel sectionid="industry-insights" sectiontitle="Featured Industry Insights" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='industryInsights'/>
         <WebinarsList sectiontitle="Webinars" :data='webinars'/>
+        <InsideBody/>
       </section>    
     </main>
 </template>

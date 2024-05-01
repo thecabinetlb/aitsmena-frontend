@@ -10,14 +10,14 @@ import industriesiconCh from '/images/industries/Chemicals.svg'
 import industriesiconM from '/images/industries/Mining.svg'
 import industriesiconL from '/images/industries/LifeScience.svg'
 import InnerHero from '../../components/InnerHero.vue';
-import IndustriesList from '../../components/IndustriesList.vue'
+import IndustriesList from '../../components/IndustriesGrid.vue'
 import Testimonies from '../../components/Testimonies.vue'
 import InsideBody from '../../components/InsideBody.vue'
 import PostsGrid from '@/components/PostsGrid.vue'
 const industries = [
-{ id: 1, title: 'Food & Beverage', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconF },
+{ id: 1, title: 'Food & Beverages', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconF },
 { id: 2, title: 'Water & Wastewater', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconW },
-{ id: 3, title: 'Smart City', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconC },
+{ id: 3, title: 'Smart Cities', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconC },
 { id: 4, title: 'Oil & Gas', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconG },
 { id: 5, title: 'Power Utilities', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconP },
 { id: 6, title: 'Chemicals', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip.', to:'/', target:'_blank', icon:industriesiconCh },
@@ -28,7 +28,7 @@ const successStories = [
   // Food & Beverage
   {
     id: 1,
-    category: "Food & Beverage",
+    category: "Food & Beverages",
     title: "Reducing Waste and Increasing Efficiency in Food Processing",
     logo: customerlogo,
     summary: "Learn how a food processing company implemented digital solutions to optimize their production processes, resulting in significant waste reduction and improved efficiency.",
