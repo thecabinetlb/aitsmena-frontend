@@ -49,7 +49,7 @@ const benefits = [
       
       <section class="relative">
         <JobsList sectiontitle="Available Jobs and Internships" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
-        <BenefitsFlexWithBlur sectiontitle="What  Our Employees Get" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='benefits'/>
+        <BenefitsFlexWithBlur sectiontitle="What  Our Employees Get" :data='benefits'/>
         <InsideBody/>
       </section>    
     </main>

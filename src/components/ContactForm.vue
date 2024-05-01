@@ -167,11 +167,11 @@ const handleSubmit = () => {
 </script>
 
 <template>
-    <div class="flex flex-wrap items-center justify-between w-11/12 gap-6 mx-auto lg:gap-0 2xl:w-8/12 lg:w-10/12">
-        <div class="w-full lg:w-6/12 lg:pe-8">
+    <div class="flex flex-wrap items-center justify-between w-11/12 gap-6 py-40 mx-auto lg:gap-0 2xl:w-8/12 lg:w-10/12">
+        <div class="w-full lg:w-6/12 lg:pe-8 max-md:text-center">
             <h1 class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Contact Us</h1>
-            <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6">For sales and support, or any other inquiry, we've made it easy for you to get in touch with us. Simply fill out the form below with your message and contact details, and our team will be happy to assist you.</p>
-        </div>           
+            <p class="text-accent2 font-[200] max-sm:text-[14px] md:text-justify" style="text-align-last: center;">For sales and support, or any other inquiry, we've made it easy for you to get in touch with us. Simply fill out the form below with your message and contact details, and our team will be happy to assist you.</p>
+        </div>
         <form class="grid flex-grow w-full grid-cols-2 gap-3 mx-auto lg:w-6/12" @submit.prevent="handleSubmit">
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="Name" name="Name"

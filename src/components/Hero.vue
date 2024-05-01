@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import VisionandValues from './VisionandValues.vue';
 </script>
 
 <template>
@@ -130,10 +129,6 @@ import VisionandValues from './VisionandValues.vue';
       <!-- pattern -->
       <img src="/images/patterns/pattern (2).svg" alt="AITS" width="832" height="1771" center cover responsive loading="eager"
       class="absolute z-[-1] right-0 top-[100%] transform -translate-y-[100%] opacity-75"/>                
-
-
-    <!-- Mission and Values  -->
-    <VisionandValues/>
 
   </section>
 </template>

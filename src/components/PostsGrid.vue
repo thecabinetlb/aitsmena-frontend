@@ -11,9 +11,9 @@ defineProps({
 
 <template>
     <section :id="sectionid" class="flex flex-wrap items-center justify-between w-11/12 gap-6 pt-40 mx-auto lg:gap-0 2xl:w-8/12 lg:w-10/12">
-        <div class="w-full lg:w-6/12 lg:pe-8">
+        <div class="w-full max-md:text-center lg:w-6/12 lg:pe-8">
             <h1 class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
-            <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6">{{ sectiondescription }}</p>
+            <p class="text-accent2 font-[200] max-sm:text-[14px] sm:text-justify mb-6"">{{ sectiondescription }}</p>
             <RouterLink id="'go-to-success-stories-page'" aria-label="go to success stories page" to="/industries/#success-stories" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 mt-auto mb-0">Browse All</RouterLink>
         </div> 
         <div class="grid flex-grow w-full h-full grid-cols-2 gap-3 mx-auto lg:w-6/12">
