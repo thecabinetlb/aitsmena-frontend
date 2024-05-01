@@ -43,9 +43,7 @@ defineProps({
     <div class="absolute inset-0 w-full h-full" style="mask-image: linear-gradient(to left, rgba(0,0,0,1) 80%, rgba(0,0,0,0));">
       <carousel
         ref="myCarousel"
-        :wrap-around="true"
-        :autoplay="6000" 
-        :transition="2000"
+
         :items-to-show="getItemsToShow()" 
         class="w-full h-full min-h-[40vh]">
         <slide v-for="(item, key) in data" :key="key" class="rounded-[16px] aspect-square border-2 border-bg2">
