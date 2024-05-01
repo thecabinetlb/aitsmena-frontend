@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref,computed } from 'vue';
 import { RouterLink } from 'vue-router'
 defineProps({
     sectiontitle: String,
@@ -15,14 +15,14 @@ const jobsorinternships = ref([
   { id: 7, title: 'Financial Analyst', type: 'Full-time', to: 'https://example.com/job7', target: '_blank', location: 'Austin, TX' },
   { id: 8, title: 'Customer Service Representative', type: 'Part-time', to: 'https://example.com/job8', target: '_blank', location: 'Denver, CO' },
 ]);
-const filteredjobs = ref(jobsorinternships);
+const filteredjobs = ref(jobsorinternships)
 const filterJobs = () => {
-  if (filteredjobs.value  === jobsorinternships.value) {
-    return jobsorinternships.value.filter(job => job.type === 'Internship');
+  if (filteredjobs.value === jobsorinternships.value) {
+    filteredjobs.value = jobsorinternships.value.filter(job => job.type === 'Internship');
   } else {
-    return jobsorinternships.value;
+    filteredjobs.value = jobsorinternships.value;
   }
-}
+};
 </script>
 
 <template>
