@@ -20,7 +20,7 @@ import { RouterLink } from 'vue-router'
           y:90,
           transition: {
             type: 'spring',
-            delay: 800,
+            delay: 600,
             duration: 600
           },
         }"/>    
