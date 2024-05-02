@@ -20,7 +20,7 @@ import { RouterLink } from 'vue-router'
           y:90,
           transition: {
             type: 'spring',
-            delay: 1000,
+            delay: 800,
             duration: 600
           },
         }"/>    
@@ -46,8 +46,8 @@ import { RouterLink } from 'vue-router'
           y:0,
           transition: {
             type: 'spring',
-            delay: 1000,
-            duration: 4000
+            delay: 800,
+            duration: 600
           },
         }"/>
       
@@ -69,8 +69,8 @@ import { RouterLink } from 'vue-router'
           y:0,
           transition: {
             type: 'spring',
-            delay: 1100,
-            duration: 4000
+            delay: 900,
+            duration: 600
           },
         }"/>
 
@@ -121,8 +121,8 @@ import { RouterLink } from 'vue-router'
           y:0,
           transition: {
             type: 'spring',
-            delay: 1100,
-            duration: 4000
+            delay: 100,
+            duration: 600
           },
         }"/>    
       
