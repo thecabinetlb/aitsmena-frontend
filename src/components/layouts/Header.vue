@@ -42,6 +42,7 @@ const changecolor = ref(false)
 const hasSubMenu = ref(false)
 const openSubMenu = ref(null)
 const isOpen = ref(false)
+const isClicked = ref(false)
 
 const changeColor = () => {
   if (window.scrollY > 10) {
@@ -88,9 +89,9 @@ const toggleOpen = () => {
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[280px] h-fit absolute left-0 top-[50px] p-6 rounded-[16px] bg-bg"
         @mouseleave="hasSubMenu = false">
           <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-3 drop-shadow-md">
-            <RouterLink :id="subitem.name" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"        
-            :activeClass="'text-accent1/70'"
-            :exactActiveClass="'text-accent1/70'">
+            <RouterLink :id="subitem.name" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"
+            @click="isClicked = subitem.id"
+            :class="{'text-accent1/70' : isClicked === subitem.id}">
               {{ subitem.name }}
             </RouterLink>            
           </div>
@@ -117,8 +118,8 @@ const toggleOpen = () => {
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-bg/80">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 pb-3 drop-shadow-md">
               <RouterLink :id="subitem.name" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"        
-              :activeClass="'text-accent1/70'"
-              :exactActiveClass="'text-accent1/70'">{{ subitem.name }}</RouterLink>
+              @click="isClicked = subitem.id"
+            :class="{'text-accent1/70' : isClicked === subitem.id}">{{ subitem.name }}</RouterLink>
             </div>
         </nav>
       </div>
