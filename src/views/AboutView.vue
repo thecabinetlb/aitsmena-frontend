@@ -10,7 +10,7 @@ import teammember3 from '/images/insidepages/about/team/teammember3.webp'
 import ImagesFlex from '@/components/ImagesFlex.vue';
 
 const team = [
-  {
+  { 
     name: 'Emmy Rosum',
     jobtitle: 'Co-founder and CEO',
     image: teammember1
