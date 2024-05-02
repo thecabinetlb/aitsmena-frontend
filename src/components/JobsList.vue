@@ -36,7 +36,7 @@ const filterJobs = () => {
             </div>
             <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
             <ul role="list" class="flex flex-wrap justify-center lg;justify-between mt-10 gap-6 lg:gap-3 list-style-none">
-                <li v-for="(item, key) in filteredjobs" :key="key" class="flex-grow lg:w-5/12 w-full cursor-pointer relative group sm:min-h-[135px] bg-extended-noise bg-cover bg-center rounded-[16px]">
+                <li v-for="(item, key) in filteredjobs" :key="key" class="flex-grow lg:w-5/12 w-full relative group sm:min-h-[135px] bg-extended-noise bg-cover bg-center rounded-[16px]">
                     <div class="p-6 w-full h-full relative flex justify-between items-center gap-3 rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 border-2 border-bg2">
                         <div class="w-8/12">
                             <h3 class="font-[200] max-sm:text-[14px] text-accent1 underline mb-3">{{ item.type }}</h3>

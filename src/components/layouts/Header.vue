@@ -10,7 +10,7 @@ const navlinks = [
   name: "Industries",
   to: '/industries',
   submenu: [
-  { id: 1, name: "Overview", to:"/industries" },
+  { id: 1, name: "Overview", to:"#overview" },
   { id: 2, name: "Case Studies/Testimonials", to:"#testimonials" },
   { id: 3, name: "Succes Stories", to:"#success-stories" },
   ]},
@@ -86,7 +86,7 @@ const toggleOpen = () => {
         @mouseenter="openSubMenu = item.id, hasSubMenu = item.submenu ? true : false">
           {{ item.name }}
         </RouterLink>
-        <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[280px] h-fit absolute left-0 top-[50px] p-6 rounded-[16px] bg-bg/90"
+        <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[290px] h-fit absolute left-0 top-[50px] p-6 rounded-[16px] bg-bg/90"
         @mouseleave="hasSubMenu = false">
           <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-3 drop-shadow-md">
             <RouterLink :id="subitem.name" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"

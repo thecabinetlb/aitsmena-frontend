@@ -38,7 +38,7 @@ const testimoniesslides = [
           :items-to-show="1" 
           :autoplay="6000" 
           :transition="2000"
-          class="relative w-full h-full mx-auto mask">
+          class="relative w-11/12 h-full mx-auto mask">
           <slide v-for="(slide, index) in testimoniesslides" :key="index" class="relative flex items-center justify-center w-full h-full py-10">
             <blockquote class="max-w-screen-lg mx-auto text-center 2xl:max-w-screen-md md:max-w-screen-sm">
               <p class="text-accent2 text-3xl font-[200] max-sm:text-[14px] text-jusify" style="text-align-last: center">{{ slide.content }}</p>
@@ -53,9 +53,9 @@ const testimoniesslides = [
           </template>            
         </carousel>
       <!-- Navigation arrows -->
-      <div class="absolute left-0 items-center justify-between hidden w-full h-full px-6 mx-auto transform -translate-y-1/2 md:flex top-1/2 z-2">
-        <button aria-label="go to the next testimony" @click="myCarousel.prev()" class="lg:-ms-14 lg:me-auto text-accent2 hover:text-accent1 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 🡠 </button>            
-        <button aria-label="go to the prev testimony" @click="myCarousel.next()" class="lg:ms-auto lg:-me-14 text-accent2 hover:text-accent1 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 🡢 </button>
+      <div class="absolute left-0 items-center justify-between hidden w-full h-full px-6 mx-auto md:flex -top-10 z-2">
+        <button aria-label="go to the next testimony" @click="myCarousel.prev()" class="text-accent2 hover:text-accent1 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 🡠 </button>            
+        <button aria-label="go to the prev testimony" @click="myCarousel.next()" class="text-accent2 hover:text-accent1 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 🡢 </button>
       </div> 
     </div>
   </section>

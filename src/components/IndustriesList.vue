@@ -22,8 +22,8 @@ const industries = [
                 <div class="w-full sm:w-7/12">
                     <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mb-3">{{ item.description }}</p>
                 </div>
-                <RouterLink v-if="item.to" :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" :to="item.to" class="w-full cursor-pointer sm:w-2/12">
-                    <svg width="34" height="41" viewBox="0 0 34 41" fill="none" class="delay-300 transform sm:mx-auto ms-auto me-0 hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <RouterLink v-if="item.to" :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" :to="item.to" class="block mx-auto cursor-pointer sm:w-2/12">
+                    <svg width="34" height="41" viewBox="0 0 34 41" fill="none" class="ease-linear delay-300 transform sm:mx-auto ms-auto me-0 hover:translate-x-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <rect x="33.0359" y="0.501709" width="40" height="32.5843" transform="rotate(89.2695 33.0359 0.501709)" fill="url(#pattern0_662_424)"/>
                     <defs>
                     <pattern id="pattern0_662_424" patternContentUnits="objectBoundingBox" width="1" height="1">

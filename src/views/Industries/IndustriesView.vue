@@ -1,6 +1,6 @@
 <script setup>
 import banner from '/images/banners/industries.webp'
-import customerlogo from '/images/insidepages/industries/successstories/customerlogo.webp'
+import customerlogo from '/images/insidepages/industries/successstories/customerlogo.png'
 import industriesiconF from '/images/industries/F&B.svg'
 import industriesiconW from '/images/industries/Water.svg'
 import industriesiconC from '/images/industries/City.svg'
@@ -107,7 +107,7 @@ const successStories = [
 </script>
 <template>
     <main>
-        <InnerHero :pagebanner="banner" pagename="Industries" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
+        <InnerHero sectionid="overview" isIndustries :pagebanner="banner" pagename="Industries" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
         
         <section class="relative">
             <IndustriesGrid :industries="industries"/>

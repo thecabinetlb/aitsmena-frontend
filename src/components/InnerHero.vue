@@ -5,10 +5,13 @@ defineProps({
     pagebanner: Image,
     pagename: String,
     pagedescription: String,
-    isAbout: Boolean
+    sectionid: String,
+    isAbout: Boolean,
+    isIndustries: Boolean
 })
 </script>
 <template>
+    <div v-if="isIndustries" :id="sectionid"></div>
     <section class="relative flex flex-col justify-center items-center -mt-[40px] md:h-[90vh] h-[70vh] z-[-1]">
         <img :src="pagebanner" :alt="pagetitle" width="1442" height="718" center cover responsive loading="eager" class="absolute inset-0 w-full h-full aspect-[2.01/1]"/>
         <div class="absolute w-11/12 mx-auto transform -translate-y-1/2 top-1/2 z-1 2xl:w-8/12 sm:w-10/12">

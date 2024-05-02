@@ -35,13 +35,13 @@ defineProps({
 
 
 <template>
-<section :id="sectionid" class="relative flex flex-wrap items-center w-full h-full gap-6 pt-40 lg:gap-0 lg:justify-between">
+<section :id="sectionid" class="relative flex flex-wrap items-center w-full h-full gap-6 pt-40 lg:gap-3 lg:justify-between">
   <div class="lg:w-6/12 w-11/12 2xl:ps-[16.666667%] lg:ps-[8.333333%] lg:pe-8 mx-auto h-full">
     <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
     <p class="text-accent2 font-[200] max-sm:text-[14px] sm:text-justify mb-6">{{ sectiondescription }}</p>
     <RouterLink id="'go-to-blogs-page'" aria-label="go to blog page" to="/blogs" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 mt-auto mb-0">Browse All</RouterLink>
   </div>
-  <div class="relative w-full h-full mx-auto lg:w-6/12">
+    <div class="relative w-full h-full mx-auto lg:w-5/12">
       <carousel
         ref="myCarousel"
         :items-to-show="getItemsToShow()"

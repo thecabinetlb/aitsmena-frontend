@@ -29,13 +29,13 @@ const showDes = (id) => {
 
 <template>
     <section class="w-11/12 px-6 mx-auto 2xl:w-8/12 sm:w-10/12">
-    <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Our Sub-Companies</h1>
+    <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Our <br />Sub-Companies</h1>
     <!-- Desktop -->
     <div class="relative hidden lg:block 2xl:min-h-[200px] xl:h-full lg:h-[400px]">
-        <div v-for="item in partners" :key="key" class="absolute inset-0 lg:w-[60%]">
+        <div v-for="item in partners" :key="key" class="absolute inset-0 lg:w-6/12">
             <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
         </div>
-        <div class="flex items-end justify-end w-1/2 h-full gap-6 2xl:items-center ms-auto me-0 max-xl:flex-col">
+        <div class="flex items-end justify-end w-6/12 h-full gap-6 2xl:items-center ms-auto me-0 max-xl:flex-col">
             <button v-for="item in partners" :key="key" :aria-label="'click on' + item.title + 'to read the description'">
                 <img :src="item.logo" :alt="item.title" width="168" height="168"  cover center responsive loading="lazy" class="rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]" 
                 @mouseenter="showDes(item.id)" :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}"/>
