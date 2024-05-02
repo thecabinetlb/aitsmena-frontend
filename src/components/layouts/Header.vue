@@ -105,7 +105,7 @@ const toggleOpen = () => {
       </svg>   
       <Transition>
       <h1 v-if="isOpen" class="text-2xl text-accent1">&#10005;</h1>
-      </Transition> 
+      </Transition>
     </button>
     <nav v-if="isOpen" class="w-full py-5 mt-5 space-y-4 lg:hidden">
       <div v-for="(item, key) in navlinks" :key="key">
