@@ -40,12 +40,10 @@ defineProps({
     <RouterLink id="'go-to-blogs-page'" aria-label="go to blog page" to="/blogs" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 mt-auto mb-0">Browse All</RouterLink>
   </div>
   <div class="relative z-[1] w-full h-full min-h-[70vh] lg:w-6/12">
-    <div class="absolute inset-0 w-full h-full" style="mask-image: linear-gradient(to left, rgba(0,0,0,1) 80%, rgba(0,0,0,0));">
       <carousel
         ref="myCarousel"
-
         :items-to-show="getItemsToShow()" 
-        class="w-full h-full min-h-[40vh]">
+        class="w-full h-full min-h-[40vh] maskleft">
         <slide v-for="(item, key) in data" :key="key" class="rounded-[16px] aspect-square border-2 border-bg2">
           <div class="w-full h-40 bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]"></div>
           <div class="flex flex-col gap-3 p-6">
@@ -60,7 +58,6 @@ defineProps({
         </template>
       </carousel>
     </div>
-  </div>
 </section>
 </template>
 
@@ -70,5 +67,10 @@ defineProps({
   text-align: left !important;
   margin: 10px !important;
 }
-
+.maskleft {
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  mask-size: cover; 
+  mask-position: center;
+}
 </style>
