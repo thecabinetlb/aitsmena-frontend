@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "update-browserslist-db": "^1.0.13"
   },
   "devDependencies": {
     "@unhead/vue": "^1.9.7",
