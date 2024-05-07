@@ -19,10 +19,10 @@ const navlinks = [
     name: 'Resources', 
     to: '/resources',
     submenu: [
-      { id: 1, name: 'Blog', to:'#blog' },
-      { id: 2, name: 'Whitepapers', to:'#whitepapers' },
-      { id: 3, name: 'Webinars', to:'#webinars' },
-      { id: 4, name: 'Industry Insights', to:'#industry-insights' }
+      { id: 4, name: 'Blog', to:'#blog' },
+      { id: 5, name: 'Whitepapers', to:'#whitepapers' },
+      { id: 6, name: 'Webinars', to:'#webinars' },
+      { id: 7, name: 'Industry Insights', to:'#industry-insights' }
     ]
   },
   { 
@@ -30,9 +30,9 @@ const navlinks = [
     name: 'Careers', 
     to: '/careers',
     submenu: [
-      { id: 1, name: 'Job Openings', to:'#jobs-and-internships' },
-      { id: 2, name: 'Internship Opportunities', to:'#jobs-and-internships' },
-      { id: 3, name: 'Employee Benefits', to:'#employee-benefits' }
+      { id: 8, name: 'Job Openings', to:'#jobs-and-internships' },
+      { id: 9, name: 'Internship Opportunities', to:'#jobs-and-internships' },
+      { id: 10, name: 'Employee Benefits', to:'#employee-benefits' }
     ]
   },
   { id: 6, name: 'Contact', to: '/contact' },
@@ -42,7 +42,7 @@ const changecolor = ref(false)
 const hasSubMenu = ref(false)
 const openSubMenu = ref(null)
 const isOpen = ref(false)
-const isClicked = ref(false)
+const isClicked = ref(null)
 
 const changeColor = () => {
   if (window.scrollY > 10) {
@@ -68,7 +68,6 @@ const toggleSubMenu = (item) => {
 const toggleOpen = () => {
   isOpen.value = !isOpen.value
 }
-
 </script>
 <template>
  <header class="fixed left-1/2 transform bg-bg/90 -translate-x-1/2 top-0 h-[67px] z-[9] 2xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-between items-center mx-auto px-6 rounded-b-[16px]" 
