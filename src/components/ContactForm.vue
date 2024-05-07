@@ -172,7 +172,7 @@ const handleSubmit = () => {
             <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Contact Us</h1>
             <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">For sales and support, or any other inquiry, we've made it easy for you to get in touch with us. Simply fill out the form below with your message and contact details, and our team will be happy to assist you.</p>
         </div>
-        <form class="grid w-full h-full grid-cols-2 gap-3 lg:w-6/12" @submit.prevent="handleSubmit">
+        <form class="grid w-full h-full grid-cols-2 gap-3 lg:w-5/12" @submit.prevent="handleSubmit">
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="Name" name="Name"
                 placeholder="Your Name" 
@@ -209,11 +209,11 @@ const handleSubmit = () => {
                 :class="{'border-red-500 focus:border-red-500' : formData.data.CompanyName.isValid===false}">
                 <p v-show="!formData.data.CompanyName.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.CompanyName.validationMessage}}</p>
             </div>    
-            <div class="w-full col-span-2">
+            <div class="w-full col-span-2 mb-3">
                 <select id="Subject" name="Subject"
                 v-model="formData.data.Subject.value"
                 :required="formData.data.Subject.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/70 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Subject.isValid===false}">
                     <option  class="text-black" selected>General Inquiries</option>
                     <option class="text-black">Sales and Support</option>

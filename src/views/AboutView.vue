@@ -7,7 +7,7 @@ import ImageTextFlex from '../components/ImageTextFlex.vue';
 import teammember1 from '/images/insidepages/about/team/teammember1.webp'
 import teammember2 from '/images/insidepages/about/team/teammember2.webp'
 import teammember3 from '/images/insidepages/about/team/teammember3.webp'
-import ImagesFlex from '@/components/ImagesFlex.vue';
+import ImagesFlex from '../components/ImagesFlex.vue';
 
 const team = [
   { 

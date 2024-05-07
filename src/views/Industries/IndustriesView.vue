@@ -1,6 +1,6 @@
 <script setup>
 import banner from '/images/banners/industries.webp'
-import customerlogo from '/images/insidepages/industries/successstories/customerlogo.png'
+import customerlogo from '/images/insidepages/industries/successstories/customerlogo.webp'
 import industriesiconF from '/images/industries/F&B.svg'
 import industriesiconW from '/images/industries/Water.svg'
 import industriesiconC from '/images/industries/City.svg'

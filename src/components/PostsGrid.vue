@@ -17,16 +17,16 @@ defineProps({
             <RouterLink id="'go-to-success-stories-page'" aria-label="go to success stories page" to="/industries/#success-stories" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 mt-auto mb-0">Browse All</RouterLink>
         </div> 
         <div class="grid w-full h-full grid-cols-2 gap-3 lg:w-5/12">
-            <div v-for="item in data" :key="key" class="xl:col-span-1 lg:col-span-2 md:col-span-1 col-span-2 aspect-square w-full rounded-[16px] border-2 border-bg2">
-                <div class="relative w-full h-40 bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]">
+            <div v-for="item in data" :key="key" class="xl:col-span-1 lg:col-span-2 md:col-span-1 col-span-2 w-full rounded-[16px] border-2 border-bg2">
+                <div class="relative w-full h-32 bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]">
                     <div class="absolute inset-3 w-1/4 h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[8px]">
-                        <img :src="item.logo" :alt="item.title" width="100%" height="100%" center cover responsive loading="lazy" class="mx-auto aspect-video"/>    
+                        <img :src="item.logo" :alt="item.title" width="100%" height="100%" center cover responsive loading="lazy" class="mx-auto aspect-1.72/1 scale-125"/>    
                     </div>
                 </div>
-                <div class="flex flex-col gap-6 p-6">
-                    <h3 class="font-[200] max-sm:text-[14px] rounded-[16px] text-accent1 border-b-accent1 underline">{{ item.category }}</h3>
-                    <h2 class="text-accent1 font-[400] sm:text-lg 2xl:min-h-[112px] min-h-[48px]">{{ item.title }}</h2>
-                    <div class="hover:text-accent1 text-accent2 w-[34px] h-[34px] cursor-pointer aspect-square grid place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </div>             
+                <div class="p-6">
+                    <h3 class="font-[200] max-sm:text-[14px] rounded-[16px] text-accent1 border-b-accent1 mb-3 underline">{{ item.category }}</h3>
+                    <h2 class="text-accent1 font-[400] sm:text-lg 2xl:min-h-[106px] min-h-[48px]">{{ item.title }}</h2>
+                    <div class="hover:text-accent1 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </div>             
                     <!-- <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.summary }}</p> -->
                 </div>
             </div>
