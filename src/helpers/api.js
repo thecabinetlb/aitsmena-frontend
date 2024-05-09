@@ -1,5 +1,3 @@
-import customerlogo from '/images/insidepages/industries/successstories/customerlogo.webp'
-
 export function getSuccessStories (){
 return [
     // Food & Beverage
@@ -7,7 +5,7 @@ return [
       id: 1,
       industry: "Food & Beverages",
       title: "Reducing Waste and Increasing Efficiency in Food Processing",
-      logo: customerlogo,
+      logo: '/images/insidepages/industries/successstories/customerlogo.webp',
       summary: "Learn how a food processing company implemented digital solutions to optimize their production processes, resulting in significant waste reduction and improved efficiency.",
       date: "2024-05-08",
       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus. Nullam nec sodales tellus, vitae mattis lorem. Integer nec lacus nisl. Aenean pharetra suscipit nisi nec gravida. Nulla facilisi. Nullam vel sapien ut enim efficitur sollicitudin a id tortor. Sed in magna nisl. Nulla lobortis ligula sit amet commodo congue. Maecenas fringilla consectetur purus, eget pharetra odio. Vivamus vestibulum risus vitae eros laoreet vulputate. Nulla facilisi. Aenean consequat auctor dui, sit amet volutpat urna varius vitae. Sed ullamcorper, magna a ultrices ultrices, velit dui placerat urna, a ullamcorper lectus dolor quis nunc. Cras convallis ante eget velit malesuada lobortis."
@@ -17,7 +15,7 @@ return [
       id: 2,
       industry: "Water & Wastewater",
       title: "Improving Water Treatment Efficiency with IoT Sensors",
-      logo: customerlogo,
+      logo: '/images/insidepages/industries/successstories/customerlogo.webp',
       summary: "Discover how a wastewater treatment plant utilized IoT sensors to monitor water quality in real-time, leading to more efficient treatment processes and reduced environmental impact.",
       date: "2024-05-08",
       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus. Nullam nec sodales tellus, vitae mattis lorem. Integer nec lacus nisl. Aenean pharetra suscipit nisi nec gravida. Nulla facilisi. Nullam vel sapien ut enim efficitur sollicitudin a id tortor. Sed in magna nisl. Nulla lobortis ligula sit amet commodo congue. Maecenas fringilla consectetur purus, eget pharetra odio. Vivamus vestibulum risus vitae eros laoreet vulputate. Nulla facilisi. Aenean consequat auctor dui, sit amet volutpat urna varius vitae. Sed ullamcorper, magna a ultrices ultrices, velit dui placerat urna, a ullamcorper lectus dolor quis nunc. Cras convallis ante eget velit malesuada lobortis."
@@ -27,7 +25,7 @@ return [
       id: 3,
       industry: "Smart Cities",
       title: "Transforming Urban Mobility with Smart Transportation Systems",
-      logo: customerlogo,
+      logo: '/images/insidepages/industries/successstories/customerlogo.webp',
       summary: "Explore how a city implemented smart transportation systems, including traffic monitoring and dynamic routing, to alleviate congestion and improve overall mobility for residents.",
       date: "2024-05-08",
       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus. Nullam nec sodales tellus, vitae mattis lorem. Integer nec lacus nisl. Aenean pharetra suscipit nisi nec gravida. Nulla facilisi. Nullam vel sapien ut enim efficitur sollicitudin a id tortor. Sed in magna nisl. Nulla lobortis ligula sit amet commodo congue. Maecenas fringilla consectetur purus, eget pharetra odio. Vivamus vestibulum risus vitae eros laoreet vulputate. Nulla facilisi. Aenean consequat auctor dui, sit amet volutpat urna varius vitae. Sed ullamcorper, magna a ultrices ultrices, velit dui placerat urna, a ullamcorper lectus dolor quis nunc. Cras convallis ante eget velit malesuada lobortis."
@@ -37,7 +35,7 @@ return [
       id: 4,
       industry: "Oil & Gas",
       title: "Enhancing Safety and Efficiency in Offshore Drilling Operations",
-      logo: customerlogo,
+      logo: '/images/insidepages/industries/successstories/customerlogo.webp',
       summary: "Learn how an oil and gas company utilized advanced technology and automation to improve safety standards and increase efficiency in offshore drilling operations.",
       date: "2024-05-08",
       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus. Nullam nec sodales tellus, vitae mattis lorem. Integer nec lacus nisl. Aenean pharetra suscipit nisi nec gravida. Nulla facilisi. Nullam vel sapien ut enim efficitur sollicitudin a id tortor. Sed in magna nisl. Nulla lobortis ligula sit amet commodo congue. Maecenas fringilla consectetur purus, eget pharetra odio. Vivamus vestibulum risus vitae eros laoreet vulputate. Nulla facilisi. Aenean consequat auctor dui, sit amet volutpat urna varius vitae. Sed ullamcorper, magna a ultrices ultrices, velit dui placerat urna, a ullamcorper lectus dolor quis nunc. Cras convallis ante eget velit malesuada lobortis."
