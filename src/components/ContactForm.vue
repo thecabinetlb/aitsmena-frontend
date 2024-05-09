@@ -170,7 +170,9 @@ const handleSubmit = () => {
     <div class="flex flex-wrap items-center justify-between w-11/12 gap-6 mx-auto max-sm:py-40 lg:gap-3 2xl:w-8/12 lg:w-10/12">
         <div class="w-full lg:w-6/12">
             <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Contact Us</h1>
-            <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">For sales and support, or any other inquiry, we've made it easy for you to get in touch with us. Simply fill out the form below with your message and contact details, and our team will be happy to assist you.</p>
+            <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">Have questions or inquiries? Contact us today to learn more about our software solutions,
+            services, and how we can help your business succeed. Our team is here to assist you every
+            step of the way.</p>
         </div>
         <form class="grid w-full h-full grid-cols-2 gap-3 lg:w-5/12" @submit.prevent="handleSubmit">
             <div class="w-full col-span-2 sm:col-span-1">

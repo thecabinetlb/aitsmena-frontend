@@ -36,7 +36,12 @@ const csr = [
 </script>
 <template>
     <main>
-        <InnerHero :pagebanner="banner" isAbout="true" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
+        <InnerHero :pagebanner="banner" isAbout="true" pagetitle="Company Overview"
+        pagedescription="At AITS we are not only your trusted software company, we are also your strategic ally in
+        navigating the complex landscape of industrial automation. As a subsidiary within the IBi
+        family, we play a pivotal role in driving positive transformation across various industrial
+        sectors. Explore the essential values we contribute to diverse industries, our compelling
+        employee proposition, and explore current career opportunities at AITS"/>
 
         <section class="relative">
             <Partners/>

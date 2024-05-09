@@ -10,8 +10,8 @@ const blogposts = getFeaturedBlogPosts()
 const whitepaper = [
   { 
     id: 1, 
-    title: 'AITS Whitepapers for Innovation', 
-    description: 'Discover cutting-edge insights and transformative ideas in our collection of whitepapers. Dive deep into industry trends, emerging technologies, and best practices to propel your business forward.', 
+    title: 'Whitepapers', 
+    description: 'Dive deeper into key industry topics with our whitepapers. Gain valuable insights and actionable strategies to address complex challenges and drive business growth.', 
     to:'/whitepapers', 
     image:'/images/insidepages/resources/whitepapers.webp' 
   }
@@ -141,10 +141,14 @@ const webinars = [
       <InnerHero :pagebanner="banner" pagename="Resources" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
 
       <section class="relative -mt-40">
-        <PostsCarousel sectionid="blog" sectiontitle="Featured Blogs" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='blogposts'/>
+        <PostsCarousel sectionid="blog" sectiontitle="Featured Blogs" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
+        Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
+        your business stay ahead of the curve." :data='blogposts'/>
         <ImageTextFlex sectionid="whitepapers" sectiontitle="Whitepapers" :data="whitepaper"/>
-        <PostsCarousel sectionid="industry-insights" sectiontitle="Featured Industry Insights" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='industryInsights'/>
-        <WebinarsList sectiontitle="Webinars" :data='webinars'/>
+        <PostsCarousel sectionid="industry-insights" sectiontitle="Featured Industry Insights" sectiondescription="ccess exclusive industry insights and reports to stay informed about the latest trends,
+        developments, and opportunities in your sector. Stay ahead of the competition with
+        actionable intelligence from AITS" :data='industryInsights'/>
+        <!-- <WebinarsList sectiontitle="Webinars" :data='webinars'/> -->
         <InsideBody/>
       </section>    
     </main>

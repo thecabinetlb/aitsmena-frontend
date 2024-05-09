@@ -5,13 +5,13 @@ import Contact from '../components/Contact.vue'
 import ImageTextFlex from '@/components/ImageTextFlex.vue';
 const missionandvalues = [
   {
-    title: "Mission and Vision",
-    description: "Explore how AITS combines production with sustainability and preservation. By providing users with unique and easily accessible software solutions, AITS utilizes manufacturing plants’ various faculties and divisions under a common software that can be operated anywhere. With this approach, AITS  is one step closer to becoming the leading software innovator in the Gulf region.",
+    title: "At AITS, our goal is to be the leading industrial software innovator in the Gulf region.",
+    description: "We achieve this by delivering cutting-edge software solutions and exceptional customer experiences. Through our dedication to innovation and excellence, we empower individualsand organizations to reach new heights of efficiency and success.",
     image: "/images/hero/missionandvision/vision.webp",
   },
   {
-    title: "Values and Commitments",
-    description: "At AITS, we value change, and that is just what we are committed to doing. AITS is devoted to reshaping the production industry into a more cordial environment, allowing employees to thrive and offer the best customer service experience. With AITS’s amicable approach and customer-friendly attitude, a brighter future dawns on the automation industry.",
+    title: "At AITS, we are guided by a set of core values that shape our culture and define who we are.",
+    description: "We believe in integrity, collaboration, and continuous improvement. Our commitment is to cultivate positive transformation in the industrial landscape, creating an environment where our dedicated team can thrive, enabling us to better serve our clients and contribute to a brighter, more sustainable future",
     image: "/images/hero/values/values.webp",
   }
 ];
@@ -21,7 +21,7 @@ const missionandvalues = [
   <main>
   <Hero/>
   <ImageTextFlex sectiontitle="Mission and Values" :data="missionandvalues"/>
-  <IndustriesList/>
+  <!-- <IndustriesList/> -->
   <Contact/>
   </main>
 </template>

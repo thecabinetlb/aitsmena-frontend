@@ -4,27 +4,43 @@ import JobsList from '../components/JobsList.vue';
 import InnerHero from '../components/InnerHero.vue';
 import InsideBody from '../components/InsideBody.vue';
 import BenefitsFlexWithBlur from '../components/BenefitsFlexWithBlur.vue';
-
+const jobs =[
+  { id: 1, title: 'Software Engineer', type: 'Full-time', to: 'https://example.com/job1', target: '_blank', location: 'San Francisco, CA' },
+  { id: 2, title: 'Data Analyst', type: 'Contract', to: 'https://example.com/job2', target: '_blank', location: 'New York, NY' },
+  { id: 3, title: 'Marketing Specialist', type: 'Part-time', to: 'https://example.com/job3', target: '_blank', location: 'Los Angeles, CA' },
+  { id: 4, title: 'Graphic Designer', type: 'Freelance', to: 'https://example.com/job4', target: '_blank', location: 'Chicago, IL' },
+  { id: 5, title: 'Project Manager', type: 'Full-time', to: 'https://example.com/job5', target: '_blank', location: 'Seattle, WA' },
+  { id: 6, title: 'HR Coordinator', type: 'Full-time', to: 'https://example.com/job6', target: '_blank', location: 'Boston, MA' },
+  { id: 7, title: 'Financial Analyst', type: 'Full-time', to: 'https://example.com/job7', target: '_blank', location: 'Austin, TX' },
+  { id: 8, title: 'Customer Service Representative', type: 'Part-time', to: 'https://example.com/job8', target: '_blank', location: 'Denver, CO' },
+];
+const internships = [
+  { id: 1, title: 'Marketing Intern', type: 'Internship', to: 'https://example.com/internship1', target: '_blank', location: 'San Francisco, CA' },
+  { id: 2, title: 'Software Development Intern', type: 'Internship', to: 'https://example.com/internship2', target: '_blank', location: 'New York, NY' },
+  { id: 3, title: 'Data Analysis Intern', type: 'Internship', to: 'https://example.com/internship3', target: '_blank', location: 'Los Angeles, CA' },
+  { id: 4, title: 'Graphic Design Intern', type: 'Internship', to: 'https://example.com/internship4', target: '_blank', location: 'Chicago, IL' },
+  // { id: 5, title: 'Project Management Intern', type: 'Internship', to: 'https://example.com/internship5', target: '_blank', location: 'Seattle, WA' },
+];
 const benefits = [
   { 
     id: 1, 
-    title: 'Health Insurance', 
-    description: 'Comprehensive health insurance coverage for employees and their dependents, including medical, dental, and vision benefits.'
+    title: 'Competitive compensation and rewards packages tailored to recognize and appreciate individual contributions', 
+    // description: 'Comprehensive health insurance coverage for employees and their dependents, including medical, dental, and vision benefits.'
   },
   { 
     id: 2, 
-    title: 'Competitive Compensation', 
-    description: 'Competitive salaries and performance-based bonuses or incentives to reward employees for their contributions and achievements.'
+    title: 'Robust opportunities for professional development and career advancement, including access to cutting-edge training programs and mentorship initiatives', 
+    // description: 'Competitive salaries and performance-based bonuses or incentives to reward employees for their contributions and achievements.'
   },
   { 
     id: 3, 
-    title: 'Professional Development', 
-    description: 'Support for ongoing learning and skill development through training programs, workshops, conferences, and tuition reimbursement.'
+    title: 'A collaborative and supportive workplace culture that champions innovation, diversity, and work-life balance, ensuring every team member feels empowered and valued.', 
+    // description: 'Support for ongoing learning and skill development through training programs, workshops, conferences, and tuition reimbursement.'
   },
   { 
     id: 4, 
-    title: 'Company Events and Perks', 
-    description: 'Regular social events, team-building activities, and employee perks such as catered lunches, snacks, and recreational facilities to foster a positive and inclusive company culture.'
+    title: 'Unlock the full potential of your career journey with AITS, where your talents are nurtured, and your aspirations are embraced.', 
+    // description: 'Regular social events, team-building activities, and employee perks such as catered lunches, snacks, and recreational facilities to foster a positive and inclusive company culture.'
   },
   // { 
   //   id: 5, 
@@ -48,8 +64,16 @@ const benefits = [
       <InnerHero :pagebanner="banner" pagename="careers" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
       
       <section class="relative">
-        <JobsList sectiontitle="Available Jobs and Internships" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
-        <BenefitsFlexWithBlur sectiontitle="What  Our Employees Get" :data='benefits'/>
+        <JobsList sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
+          Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
+          your business stay ahead of the curve." :data="jobs"/>
+        <JobsList sectiontitle="Internship Opportunities" sectiondescription="Are you passionate about innovation, sustainability, and driving positive change in the
+        industrial landscape? Explore exciting career opportunities at AITS and join us on our mission
+        to revolutionize the industrial world." :data="internships"/>
+        <BenefitsFlexWithBlur sectiontitle="What  Our Employees Get" 
+        sectiondescription="At AITS, we value our employees and are committed to their growth and well-being, where
+        talent thrives and ambitions are realized. Explore the unique advantages of being part of our
+        team, encompassing:" :data='benefits'/>
         <InsideBody/>
       </section>    
     </main>
