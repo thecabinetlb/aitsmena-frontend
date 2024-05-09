@@ -1,9 +1,8 @@
 <script setup>
 import banner from '/images/banners/contact.webp'
-import InnerHero from '@/components/InnerHero.vue';
+import InnerHero from '../components/InnerHero.vue';
 import InsideBody from '../components/InsideBody.vue';
 import ContactForm from '../components/ContactForm.vue';
-
 </script>
 
 <template>
@@ -14,5 +13,4 @@ import ContactForm from '../components/ContactForm.vue';
             <InsideBody/>        
         </div>
     </main>
-
 </template>

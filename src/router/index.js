@@ -5,6 +5,9 @@ import AboutView from '../views/AboutView.vue'
 import IndustriesView from '../views/Industries/IndustriesView.vue'
 import CareersView from '../views/CareersView.vue'
 import ResourcesView from '../views/Resources/ResourcesView.vue'
+import StoriesPostDetailsView from '../views/Industries/StoriesPostDetailsView.vue'
+import BlogView from '../views/Resources/Blog/BlogView.vue'
+import BlogPostDetailsView from '../views/Resources/Blog/BlogPostDetailsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,6 +18,9 @@ const router = createRouter({
     { path: '/industries', component: IndustriesView},
     { path: '/careers', component: CareersView },
     { path: '/resources', component: ResourcesView },
+    { path: '/resources/blog', component: BlogView },
+    { path: '/resources/blog/:id', component: BlogPostDetailsView },
+    { path: '/industries/success-stories/:id', component: StoriesPostDetailsView }
   ],
     scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
