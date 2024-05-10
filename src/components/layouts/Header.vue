@@ -26,8 +26,8 @@ const navlinks = [
     name: 'Careers', 
     to: '/careers',
     submenu: [
-      { id: 8, name: 'Job Openings', to:'#jobs-and-internships' },
-      { id: 9, name: 'Internship Opportunities', to:'#jobs-and-internships' },
+      { id: 8, name: 'Job Openings', to:'#jobs' },
+      { id: 9, name: 'Internship Opportunities', to:'#internships' },
       { id: 10, name: 'Employee Benefits', to:'#employee-benefits' }
     ]
   },

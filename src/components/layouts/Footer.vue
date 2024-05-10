@@ -24,7 +24,7 @@ const footerlinks = [
       { id: 1, name: 'Blog', to:'#blog' },
       { id: 2, name: 'Whitepapers', to:'#whitepapers' },
       // { id: 3, name: 'Webinars', to:'#webinars' },
-      { id: 4, name: 'Industry Insights', to:'#industry-insights' }
+      { id: 3, name: 'Industry Insights', to:'#industry-insights' }
     ]
   },
   {
@@ -32,8 +32,8 @@ const footerlinks = [
     name: 'Careers', 
     to: '/careers',
     submenu: [
-      { id: 1, name: 'Job Openings', to:'#jobs-and-internships' },
-      { id: 2, name: 'Internship Opportunities', to:'#jobs-and-internships' },
+      { id: 1, name: 'Job Openings', to:'#jobs' },
+      { id: 2, name: 'Internship Opportunities', to:'#internships' },
       { id: 3, name: 'Employee Benefits', to:'#employee-benefits' }
     ]
   }
