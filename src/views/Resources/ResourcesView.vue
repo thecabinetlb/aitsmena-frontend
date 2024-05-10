@@ -3,19 +3,16 @@ import banner from '/images/banners/resources.webp'
 import PostsCarousel from '../../components/PostsCarousel.vue';
 import InnerHero from '../../components/InnerHero.vue';
 import InsideBody from '../../components/InsideBody.vue';
-import ImageTextFlex from '../../components/ImageTextFlex.vue';
 import WebinarsList from '../../components/WebinarsList.vue';
 import { getFeaturedBlogPosts } from '../../helpers/api'
+import OneImageTextFlex from '@/components/OneImageTextFlex.vue';
 const blogposts = getFeaturedBlogPosts()
-const whitepaper = [
-  { 
+const whitepaper ={ 
     id: 1, 
-    title: 'Whitepapers', 
+    title: 'Lorem ipsum', 
     description: 'Dive deeper into key industry topics with our whitepapers. Gain valuable insights and actionable strategies to address complex challenges and drive business growth.', 
-    to:'/whitepapers', 
     image:'/images/insidepages/resources/whitepapers.webp' 
-  }
-];
+  };
 const industryInsights = [
   { 
     id: 1, 
@@ -144,7 +141,7 @@ const webinars = [
         <PostsCarousel sectionid="blog" sectiontitle="Featured Blogs" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
         Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
         your business stay ahead of the curve." :data='blogposts'/>
-        <ImageTextFlex sectionid="whitepapers" sectiontitle="Whitepapers" :data="whitepaper"/>
+        <OneImageTextFlex sectionid="whitepapers" sectiontitle="Whitepapers" :item="whitepaper"/>
         <PostsCarousel sectionid="industry-insights" sectiontitle="Featured Industry Insights" sectiondescription="ccess exclusive industry insights and reports to stay informed about the latest trends,
         developments, and opportunities in your sector. Stay ahead of the competition with
         actionable intelligence from AITS" :data='industryInsights'/>
