@@ -67,7 +67,7 @@ const benefits = [
         <JobsList sectionid="jobs" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
           Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
           your business stay ahead of the curve." :data="jobs"/>
-        <JobsList class="pt-40" sectionid="internships" sectiontitle="Internship Opportunities" sectiondescription="Are you passionate about innovation, sustainability, and driving positive change in the
+        <JobsList sectionid="internships" sectiontitle="Internship Opportunities" sectiondescription="Are you passionate about innovation, sustainability, and driving positive change in the
         industrial landscape? Explore exciting career opportunities at AITS and join us on our mission
         to revolutionize the industrial world." :data="internships"/>
         <BenefitsFlexWithBlur sectiontitle="Employees Benifits" 
