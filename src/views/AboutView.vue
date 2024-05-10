@@ -1,13 +1,15 @@
 <script setup>
 import banner from '/images/banners/about.webp'
 import InnerHero from '../components/InnerHero.vue';
-import Partners from '../components/Partners.vue';
+import Partners_V1 from '../components/Partners_V1.vue';
 import InsideBody from '../components/InsideBody.vue';
 import ImageTextFlex from '../components/ImageTextFlex.vue';
 import teammember1 from '/images/insidepages/about/team/teammember1.webp'
 import teammember2 from '/images/insidepages/about/team/teammember2.webp'
 import teammember3 from '/images/insidepages/about/team/teammember3.webp'
 import ImagesFlex from '../components/ImagesFlex.vue';
+import ic2 from '/images/testimonies/partners/ic2.webp'
+import aveva from '/images/testimonies/partners/aveva.webp'
 
 const team = [
   { 
@@ -26,13 +28,12 @@ const team = [
     image: teammember3
   }
 ];
-// const navlinks = [
-// { id: 1, name: 'Home', to: '/' },
-// { id: 2, name: 'About', to: '/about' },
-// ];
-const csr = [
-  { id: 1, title: 'Company Social Responsability', description: 'Explore how AITS combines production with sustainability and preservation. By providing users with unique and easily accessible software solutions, AITS utilizes manufacturing plants’ various faculties and divisions under a common software that can be operated anywhere. With this approach, AITS  is one step closer to becoming the leading software innovator in the Gulf region.', image:'/images/insidepages/about/plant.webp' },
+const partners = [
+    { id: 1, title: 'AVEVA Select Gulf', logo: aveva },
+    { id: 2, title: 'IC2', logo: ic2 },
 ];
+
+
 </script>
 <template>
     <main>
@@ -44,11 +45,13 @@ const csr = [
         employee proposition, and explore current career opportunities at AITS"/>
 
         <section class="relative">
-            <Partners/>
-            <ImageTextFlex sectiontitle="Company Social Responsability" :data="csr"/>
-            <ImagesFlex sectiontitle="Meet The Team" :data="team"/>
+            <Partners_V1 sectionid="sub-companies" sectiondescription="As part of our family, we take pride in hosting two distinguished sub-companies: AVEVA
+            Select Gulf and IC2. Together, we offer a comprehensive suite of solutions designed to
+            address the diverse challenges faced by today's industries." :data="partners"/>
+            <ImageTextFlex sectiontitle="Corporate Social Responsability (CSR)" sectiondescription="We are committed to making a positive impact on society and the environment. Our CSR
+            initiatives are guided by three core verticals:"/>
+            <!-- <ImagesFlex sectiontitle="Meet The Team" :data="team"/> -->
             <InsideBody/>
         </section>
-
     </main>
 </template>

@@ -167,7 +167,7 @@ const handleSubmit = () => {
 </script>
 
 <template>
-    <div class="flex flex-wrap items-center justify-between w-11/12 gap-6 mx-auto max-sm:py-40 lg:gap-3 2xl:w-8/12 lg:w-10/12">
+    <div class="flex flex-wrap justify-between w-11/12 gap-6 mx-auto max-sm:py-40 lg:gap-3 2xl:w-8/12 lg:w-10/12">
         <div class="w-full lg:w-6/12">
             <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Contact Us</h1>
             <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">Have questions or inquiries? Contact us today to learn more about our software solutions,
@@ -227,6 +227,7 @@ const handleSubmit = () => {
                 placeholder="Briefly tell us about your project and your current goals. How can we help you?" 
                 v-model="formData.data.Message.value" 
                 :required="formData.data.Message.required" 
+                style="min-height: 60px;"
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Message.isValid===false}"></textarea>
                 <p v-show="!formData.data.Message.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Message.validationMessage}}</p>

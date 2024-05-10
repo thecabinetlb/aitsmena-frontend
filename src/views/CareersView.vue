@@ -61,16 +61,16 @@ const benefits = [
 </script>
 <template>
   <main>
-      <InnerHero :pagebanner="banner" pagename="careers" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
+      <InnerHero :pagebanner="banner" pagename="careers" />
       
       <section class="relative">
-        <JobsList sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
+        <JobsList sectionid="jobs" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
           Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
           your business stay ahead of the curve." :data="jobs"/>
-        <JobsList sectiontitle="Internship Opportunities" sectiondescription="Are you passionate about innovation, sustainability, and driving positive change in the
+        <JobsList class="pt-40" sectionid="internships" sectiontitle="Internship Opportunities" sectiondescription="Are you passionate about innovation, sustainability, and driving positive change in the
         industrial landscape? Explore exciting career opportunities at AITS and join us on our mission
         to revolutionize the industrial world." :data="internships"/>
-        <BenefitsFlexWithBlur sectiontitle="What  Our Employees Get" 
+        <BenefitsFlexWithBlur sectiontitle="Employees Benifits" 
         sectiondescription="At AITS, we value our employees and are committed to their growth and well-being, where
         talent thrives and ambitions are realized. Explore the unique advantages of being part of our
         team, encompassing:" :data='benefits'/>

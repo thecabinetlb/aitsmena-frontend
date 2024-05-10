@@ -6,13 +6,14 @@ import { RouterLink } from 'vue-router'
   <section id="AITSHero" class="relative flex flex-col flex-wrap items-center h-full px-6 mx-auto"> 
     <!-- headline + cta -->
     <div class="sm:10/12 w-11/12 flex flex-col justify-center items-center mx-auto gap-6 h-[90vh] lg:pt-40 pt-20">
-      <h1 class="text-accent1 uppercase 2xl:text-9xl lg:text-8xl md:text-6xl sm:text-4xl text-[30px] text-center font-[700]">Welcome to AITS – your trusted partner for industrial software solutions</h1>
+      <h1 class="text-accent1 uppercase 2xl:text-9xl lg:text-8xl md:text-6xl sm:text-4xl text-[30px] text-center font-[700]">Welcome to AITS</h1>
       <p class="font-[200] max-sm:text-[14px] text-justify text-accent2 2xl:w-1/2 sm:w-2/3" style="text-align-last: center;">
+        Your trusted partner for industrial software solutions
         empowering industries to thrive through innovative tech solutions tailored to their unique
         needs. Our commitment to sustainability and efficiency drives everything we do, ensuring
-        that our clients achieve their objectives while minimizing environmental impact.      </p>
+        that our clients achieve their objectives while minimizing environmental impact.</p>
       <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="relative z-[4] block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Contact Us</RouterLink>
-      <img src="/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive  loading="eager" class="max-md:w-[50px]"
+      <img src="/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive  loading="eager" class="w-[100px] max-md:w-[50px]"
       v-motion  
         :initial="{
           x:0,

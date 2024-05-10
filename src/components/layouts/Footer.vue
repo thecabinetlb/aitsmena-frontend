@@ -1,6 +1,10 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import logo from '/AITSLogoNoSlogan.webp'
+import x from '/images/socials/x.svg'
+import youtube from '/images/socials/youtube.svg'
+import facebook from '/images/socials/facebook.svg'
+import linkedin from '/images/socials/linkedin.svg'
 const footerlinks = [
   { id: 1, 
     name: 'Quick Links',
@@ -9,29 +13,22 @@ const footerlinks = [
     { id: 1, name: "Home", to:"/" },
     { id: 2, name: 'About', to: '/about' },
     { id: 3, name: 'Contact ', to: '/contact' },
-  ]},
+    { id: 3, name: 'Industries ', to: '/industries' },
+  ]
+  },
   {
-  id: 3,
-  name: "Industries",
-  to: '/industries',
-  submenu: [
-  { id: 1, name: "Overview", to:"/industries" },
-  { id: 2, name: "Case Studies/Testimonials", to:"#testimonials" },
-  { id: 3, name: "Succes Stories", to:"#success-stories" },
-  ]},
-  { 
-    id: 4, 
+    id: 2, 
     name: 'Resources', 
     to: '/resources',
     submenu: [
       { id: 1, name: 'Blog', to:'#blog' },
       { id: 2, name: 'Whitepapers', to:'#whitepapers' },
-      { id: 3, name: 'Webinars', to:'#webinars' },
+      // { id: 3, name: 'Webinars', to:'#webinars' },
       { id: 4, name: 'Industry Insights', to:'#industry-insights' }
     ]
   },
-  { 
-    id: 5, 
+  {
+    id: 3, 
     name: 'Careers', 
     to: '/careers',
     submenu: [
@@ -49,16 +46,34 @@ const footerlinks = [
     // { id: 6, name: "Power & Utilities" },
     // { id: 7, name: "Life Science" },
     // { id: 8, name: "Metals, Mining, & Minerals" }
+const sociallinks = [
+  { id: 1, name:'Linkedin', to: 'https://www.linkedin.com/company/aitsmena/', target:"_blank", icon:linkedin },
+  { id: 2, name:'Facebook', to: 'https://www.facebook.com/people/AITS/100057457570552/', target:"_blank", icon:facebook },
+  { id: 3, name:'X', to: 'https://twitter.com/AITSglobal', target:"_blank", icon:x },
+  { id: 4, name:'Youtube', to: 'https://www.youtube.com/channel/UC2e3BlBOc1EfhuxlBAaLQNw', target:"_blank", icon:youtube }
+];
 </script>
 
 <template>
-    <footer class="relative flex flex-col items-center justify-center gap-10 pt-20 mt-20">
-        <div class="flex flex-wrap justify-between w-11/12 gap-6 px-6 my-10 lg:gap-0 2xl:w-8/12 sm:w-10/12">
-            <div class="w-full mb-10 lg:w-4/12 lg:mb-0">
-            <img :src="logo" alt="AITS logo" width="80" height="22" center cover responsive loading="lazy"/>
+    <footer class="relative flex flex-col items-center justify-center gap-10 pt-20">
+      <div class="flex items-center justify-end w-11/12 gap-3 p-6 mx-auto 2xl:w-8/12 sm:w-10/12">
+        <input type="text" id="email" placeholder="example@gmail.com" class="w-1/2 block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"/>
+        <div  to="/" class="block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Subscribe</div>
+          <!-- <RouterLink id="subscribe-to-newsletter" aria-label="subscribe to newsletter" to="/" class="relative z-[4] block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Subscribe</RouterLink> -->
+      </div>
+      <div class="flex flex-wrap justify-between w-11/12 gap-6 px-6 my-10 lg:gap-0 2xl:w-8/12 sm:w-10/12">
+            <div class="flex flex-col w-full gap-2 mb-10 lg:w-4/12 lg:mb-0">
+              <img :src="logo" alt="AITS logo" width="80" height="22" center cover responsive loading="lazy"/>
+              <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">Stay connected with AITS on social media for the latest updates, news, and insights. Follow
+              us on LinkedIn, Twitter, Facebook, and Instagram to join the conversation and stay informed.</p>
+              <div class="relative z-[2] flex items-center gap-2">
+                <a v-for="(item, key) in sociallinks" :key="key" :id="'go-to-' + item.name" :href="item.to" :target="item.target" class="w-10 aspect-square font-[200] bg-bg2 text-accent1 hover:brightness-125 rounded-[8px] p-2 flex items-center justify-center">
+                    <img :src="item.icon" :alt="'AITS' + item.name" center cover responsive class="w-full h-full" loading="lazy"/>
+                </a>
+              </div>
             </div>
-            <ul role="list" class="flex flex-wrap justify-between w-full lg:w-8/12 gap-y-3 list-style-none">
-              <li v-for="(item, key) in footerlinks" :key="key" class="w-full sm:w-1/2 lg:w-[24%] md:w-1/3">
+            <ul role="list" class="flex flex-wrap justify-between w-full lg:w-7/12 gap-y-3 list-style-none">
+              <li v-for="(item, key) in footerlinks" :key="key" class="w-full sm:w-1/2 md:w-1/3">
                 <h1 class="text-lg font-[400] text-accent1 mb-3">
                     {{ item.name }}
                 </h1>            
@@ -69,8 +84,7 @@ const footerlinks = [
                 </div>                
               </li>
             </ul>
-        </div>
-
+      </div>
       <!-- pattern -->
       <img src="/images/patterns/patternfooter.svg" alt="AITS" width="446" height="643" center cover responsive loading="lazy"
       class="absolute left-0 top-[100%] transform -translate-y-[100%] opacity-75"/>       

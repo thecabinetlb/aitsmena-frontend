@@ -8,12 +8,8 @@ const navlinks = [
   {
   id: 3,
   name: "Industries",
-  to: '/industries',
-  submenu: [
-  { id: 1, name: "Overview", to:"#overview" },
-  { id: 2, name: "Case Studies/Testimonials", to:"#testimonials" },
-  { id: 3, name: "Succes Stories", to:"#success-stories" },
-  ]},
+  to: '/industries'
+  },
   { 
     id: 4, 
     name: 'Resources', 
@@ -21,7 +17,7 @@ const navlinks = [
     submenu: [
       { id: 4, name: 'Blog', to:'#blog' },
       { id: 5, name: 'Whitepapers', to:'#whitepapers' },
-      { id: 6, name: 'Webinars', to:'#webinars' },
+      // { id: 6, name: 'Webinars', to:'#webinars' },
       { id: 7, name: 'Industry Insights', to:'#industry-insights' }
     ]
   },

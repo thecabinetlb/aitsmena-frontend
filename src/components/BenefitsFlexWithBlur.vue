@@ -13,9 +13,9 @@ defineProps({
           <li v-for="(item, key) in data" :key="key" class="flex items-center justify-between flex-grow w-full h-full gap-3 max-sm:flex-wrap lg:w-4/12"
           :class="{'border-b border-accent1' : key === 0 || key === 1 }">
             <h1 class="sm:w-2/12 w-full font-[400] 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] text-accent1">0{{ item.id }}</h1>
-            <div class="w-full sm:w-10/12 lg:min-h-[160px]">
-                <h2 class="2xl:text-2xl lg:text-xl text-lg text-accent1 font-[400] mb-3">{{ item.title }}</h2>
-                <!-- <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>           -->
+            <div class="w-full sm:w-10/12 lg:min-h-[96px]">
+                <!-- <h2 class="2xl:text-2xl lg:text-xl text-lg text-accent1 font-[400] mb-3">{{ item.title }}</h2> -->
+                <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mb-3">{{ item.title }}</p>          
             </div>
           </li>
         </ul>
