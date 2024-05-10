@@ -138,11 +138,11 @@ const webinars = [
       <InnerHero :pagebanner="banner" pagename="Resources" pagedescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip."/>
 
       <section class="relative -mt-40">
-        <PostsCarousel sectionid="blog" sectiontitle="Featured Blogs" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
+        <PostsCarousel sectionid="blog" sectiontitle="Blogs" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
         Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
         your business stay ahead of the curve." :data='blogposts'/>
         <OneImageTextFlex sectionid="whitepapers" sectiontitle="Whitepapers" :item="whitepaper"/>
-        <PostsCarousel sectionid="industry-insights" sectiontitle="Featured Industry Insights" sectiondescription="ccess exclusive industry insights and reports to stay informed about the latest trends,
+        <PostsCarousel sectionid="industry-insights" sectiontitle="Industry Insights" sectiondescription="ccess exclusive industry insights and reports to stay informed about the latest trends,
         developments, and opportunities in your sector. Stay ahead of the competition with
         actionable intelligence from AITS" :data='industryInsights'/>
         <!-- <WebinarsList sectiontitle="Webinars" :data='webinars'/> -->
