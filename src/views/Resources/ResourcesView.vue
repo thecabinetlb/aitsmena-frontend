@@ -9,7 +9,7 @@ import OneImageTextFlex from '@/components/OneImageTextFlex.vue';
 const blogposts = getFeaturedBlogPosts()
 const whitepaper ={ 
     id: 1, 
-    title: 'Lorem ipsum', 
+    title: 'Explore Our Whitepapers', 
     description: 'Dive deeper into key industry topics with our whitepapers. Gain valuable insights and actionable strategies to address complex challenges and drive business growth.', 
     image:'/images/insidepages/resources/whitepapers.webp' 
   };
