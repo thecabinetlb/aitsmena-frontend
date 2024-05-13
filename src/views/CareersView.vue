@@ -61,10 +61,10 @@ const benefits = [
 </script>
 <template>
   <main>
-      <InnerHero :pagebanner="banner" pagename="careers" />
+      <InnerHero :pagebanner="banner" pagename="Careers" />
       
       <section class="relative">
-        <JobsList sectionid="jobs" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
+        <JobsList sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
           Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
           your business stay ahead of the curve." :data="jobs"/>
         <JobsList class="pt-40" sectionid="internships" sectiontitle="Internship Opportunities" sectiondescription="Are you passionate about innovation, sustainability, and driving positive change in the

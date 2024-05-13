@@ -22,6 +22,7 @@ export default {
         'extended-noise':'url(/images/noise/extended-noise.svg)',
         'colors':'url(/images/insidepages/elements/allelements.webp)',
         'mobilecolors':'url(/images/insidepages/elements/allelementsmobile.webp)',
+        'noise-small':'url(/images/noise/noise-small.svg)',
       },
       aspectRatio: {
         '2.01/1': '2.01 / 1',

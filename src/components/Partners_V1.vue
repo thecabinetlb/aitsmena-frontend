@@ -14,7 +14,7 @@ defineProps({
                 {{ sectiondescription }}
             </p>
         </div>
-        <div class="relative flex gap-6 lg:w-5/12">
+        <div class="relative flex gap-3 lg:w-5/12">
             <div v-for="item in data" :key="key" class="ms-auto me-0">
             <img :src="item.logo" width="168" height="168" :alt="item.title" cover center responsive loading="lazy" 
             class="aspect-square border-2 border-accent1 transform duration-600 shadow-md shadow-accent1 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]" />            
