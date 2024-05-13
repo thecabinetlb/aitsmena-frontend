@@ -9,7 +9,7 @@ defineProps({
     <section :id="sectionid" class="w-11/12 px-6 mx-auto 2xl:w-8/12 sm:w-10/12">
     <div class="flex flex-wrap justify-between gap-6 lg:gap-3">
         <div class="lg:w-6/12">
-            <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Our</br>Sub-Companies</h1>
+            <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Our<br/>Sub-Companies</h1>
             <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">
                 {{ sectiondescription }}
             </p>
