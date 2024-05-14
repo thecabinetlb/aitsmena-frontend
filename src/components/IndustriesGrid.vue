@@ -1,22 +1,28 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
 defineProps({
-  industries: Array
+    data: Array
 })
+const openDetails = ref(null)
+
 </script>
 <template>
     <section class="w-11/12 h-full mx-auto 2xl:w-8/12 lg:w-10/12">
         <h1 class="text-accent1 font-[200] text-lg uppercase"> &#x2022; Industries we serve</h1>
         <hr class="w-full h-4 mt-3 text-accent2"/>
-        <div class="grid items-center w-full grid-cols-2 gap-6 mt-10 text-center lg:grid-cols-4 md:grid-cols-3">
-            <div v-for="(item, key) in industries" :key="key" class="relative cursor-pointer group aspect-square min-h-[135px]">
-            <div class="w-full h-full absolute inset-0 bg-gradient-to-br from-accent1/10 to-accent1/30 group-hover:from-bg2/50 group-hover:to-bg2 rounded-[16px] opacity-35 group-hover:opacity-50 transform duration-400 group-hover:duration-600"></div>
-                <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title + ' page'" :to="item.to" :target="item.target" class="w-full h-full relative flex flex-col justify-center items-center gap-3 rounded-[16px] bg-noise bg-opacity-10 bg-cover bg-center border-2 border-bg2/30 goup-hover:border-bg2">
-                    <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive loading="lazy" class="max-sm:w-[54px] aspect-square"/>
-                    <h2 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[400] h-[48px]">{{ item.title }}</h2>
-                </RouterLink>
+        <div class="grid relative w-full justify-center items-center grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 gap-6 md:mb-[135px] mt-10 max-md:pb-10"> 
+            <div v-for="(item, key) in data" :key="key" @click="openDetails = key"
+            class="relative p-6 cursor-pointer flex flex-col gap-3 justify-center items-center col-span-1 text-center aspect-square rounded-[16px] border-2 bg-noise bg-opacity-50 bg-cover bg-center"
+            :class="{'border-bg2/30' : openDetails === key, 'border-bg2' : openDetails !== key}">
+            <div class="absolute inset-0 w-full h-full rounded-[16px] bg-gradient-to-br transform duration-300 z-[-1]"
+            :class="{'from-bg2/50 to-bg2 bg-opacity-75' : openDetails === key, 'from-accent1/10 to-accent1/30 bg-opacity-50' : openDetails != key}"></div>
+                <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive loading="lazy" class="max-sm:w-[54px] aspect-square mx-auto"/>
+                <h2 class="max-sm:text-[14px] text-accent1 font-[400] h-[48px]">{{ item.title }}</h2>
             </div>
+            <!-- Desktop -->
+            <p v-for="(item, key) in data" :key="key" v-show="openDetails === key" class="md:block absolute hidden left-0 top-[100%] mt-6 md:h-[135px] font-[200] max-sm:text-[14px] text-justify text-accent2">{{ item.description }}</p>
         </div>
+        <!-- Mobile -->
+        <p v-show="openDetails === key"  v-for="(item, key) in data" :key="key" class="font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-6 md:hidden">{{ item.description }}</p>
     </section>
 </template>
-<!-- shadow-[4px_-4px_25px_-12px_rgba(50,82,123)]  shadow-[4px_-4px_25px_-12px_rgba(50,82,123)]-->

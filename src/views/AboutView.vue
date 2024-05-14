@@ -1,7 +1,7 @@
 <script setup>
 import banner from '/images/banners/about.webp'
 import InnerHero from '../components/InnerHero.vue';
-import Partners_V1 from '../components/Partners_V1.vue';
+import Partners from '../components/Partners.vue';
 import InsideBody from '../components/InsideBody.vue';
 import ImageTextFlexFilters from '../components/ImageTextFlexFilters.vue';
 import teammember1 from '/images/insidepages/about/team/teammember1.webp'
@@ -45,7 +45,7 @@ const partners = [
         employee proposition, and explore current career opportunities at AITS"/>
 
         <section class="relative">
-            <Partners_V1 sectionid="sub-companies" sectiondescription="As part of our family, we take pride in hosting two distinguished sub-companies: AVEVA
+            <Partners sectionid="sub-companies" sectiondescription="As part of our family, we take pride in hosting two distinguished sub-companies: AVEVA
             Select Gulf and IC2. Together, we offer a comprehensive suite of solutions designed to
             address the diverse challenges faced by today's industries." :data="partners"/>
             <ImageTextFlexFilters sectiontitle="Corporate Social Responsability (CSR)" sectiondescription="We are committed to making a positive impact on society and the environment. Our CSR

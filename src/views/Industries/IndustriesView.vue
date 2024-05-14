@@ -7,7 +7,7 @@ import industriesiconG from '/images/industries/Gas.svg'
 import industriesiconU from '/images/industries/utilities.svg'
 import industriesiconE from '/images/industries/energy.svg'
 import InnerHero from '../../components/InnerHero.vue';
-import IndustriesGrid_V1 from '../../components/IndustriesGrid_V1.vue'
+import IndustriesGrid from '../../components/IndustriesGrid.vue'
 import Testimonials from '../../components/Testimonials.vue'
 import InsideBody from '../../components/InsideBody.vue'
 import PostsGrid from '../../components/PostsGrid.vue'
@@ -32,7 +32,7 @@ console.log(successStories)
         software solutions to meet the unique challenges faced by today's industries. Discover how
         our industry-specific solutions can drive success for your business"/>
         <section class="relative">
-            <IndustriesGrid_V1 :data="industries"/>
+            <IndustriesGrid :data="industries"/>
             <!-- <Testimonials />
             <PostsGrid sectionid="success-stories" sectiontitle="Success Stories" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='successStories'/> -->
             <InsideBody/>
