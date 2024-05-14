@@ -3,14 +3,14 @@ import { ref } from 'vue'
 defineProps({
     data: Array
 })
-const openDetails = ref(null)
+const openDetails = ref(0)
 
 </script>
 <template>
     <section class="w-11/12 h-full mx-auto 2xl:w-8/12 lg:w-10/12">
         <h1 class="text-accent1 font-[200] text-lg uppercase"> &#x2022; Industries we serve</h1>
         <hr class="w-full h-4 mt-3 text-accent2"/>
-        <div class="grid relative w-full justify-center items-center grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 gap-6 md:mb-[135px] mt-10 max-md:pb-10"> 
+        <div class="grid relative w-full justify-center items-center grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 gap-6 md:mb-[194px] mt-10 max-md:pb-10"> 
             <div v-for="(item, key) in data" :key="key" @click="openDetails = key"
             class="relative p-6 cursor-pointer flex flex-col gap-3 justify-center items-center col-span-1 text-center aspect-square rounded-[16px] border-2 bg-noise bg-opacity-50 bg-cover bg-center"
             :class="{'border-bg2/30' : openDetails === key, 'border-bg2' : openDetails !== key}">
@@ -20,9 +20,9 @@ const openDetails = ref(null)
                 <h2 class="max-sm:text-[14px] text-accent1 font-[400] h-[48px]">{{ item.title }}</h2>
             </div>
             <!-- Desktop -->
-            <p v-for="(item, key) in data" :key="key" v-show="openDetails === key" class="md:block absolute hidden left-0 top-[100%] mt-6 md:h-[135px] font-[200] max-sm:text-[14px] text-justify text-accent2">{{ item.description }}</p>
+            <p v-for="(item, key) in data" :key="key" v-show="openDetails === key" class="md:block absolute hidden lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:w-8/12 top-[100%] my-10 md:h-[194px] font-[200] max-sm:text-[14px] text-justify text-accent2" style="text-align-last: center;">{{ item.description }}</p>
         </div>
         <!-- Mobile -->
-        <p v-show="openDetails === key"  v-for="(item, key) in data" :key="key" class="font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-6 md:hidden">{{ item.description }}</p>
+        <p v-show="openDetails === key"  v-for="(item, key) in data" :key="key" class="font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">{{ item.description }}</p>
     </section>
 </template>

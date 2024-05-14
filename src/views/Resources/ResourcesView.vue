@@ -135,7 +135,7 @@ const webinars = [
 </script>
 <template>
     <main class="relative overflow-hidden">
-      <InnerHero :pagebanner="banner" pagename="Resources"/>
+      <InnerHero :pagebanner="banner" pagename="Resources" pagedescription="Need resources to explore the complex world of software solutions? Welcome to the home of the latest industry news, insights, trends, and much more. "/>
 
       <section class="relative -mt-40">
         <PostsCarousel sectionid="blog" sectiontitle="Blogs" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.

@@ -9,7 +9,7 @@ defineProps({
 </script>
 
 <template>
-    <section class="w-11/12 py-40 mx-auto 2xl:w-8/12 sm:w-10/12">
+    <section class="w-11/12 py-40 mx-auto 2xl:w-8/12 lg:w-10/12">
         <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
         <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
         <ul role="list" class="grid grid-cols-3 gap-6 mt-10 lg:gap-3 list-style-none">

@@ -68,7 +68,7 @@ const toggleOpen = () => {
 <template>
  <header class="fixed left-1/2 transform bg-bg/90 -translate-x-1/2 top-0 h-[67px] z-[9] 2xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-between items-center mx-auto px-6 rounded-b-[16px]" 
     :class="{'h-fit' : isOpen}">
-    <RouterLink id="Homepage" :aria-label="'go to homepage'" to="/" class="w-4/12">
+    <RouterLink id="Home" :aria-label="'go to home'" to="/" class="w-4/12">
     <img :src="logo" alt="AITS logo" width="80" height="22" cover center responsive loading="eager" class="max-lg:my-[20px]"/>    
     </RouterLink>
     <!-- Desktop -->

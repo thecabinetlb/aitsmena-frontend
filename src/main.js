@@ -6,7 +6,6 @@ import App from './App.vue'
 import router from './router'
 import { MotionPlugin } from '@vueuse/motion'
 import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
-import VueCookies from 'vue3-cookies'
 
 const app = createApp(App)
 const head = createHead()
@@ -16,6 +15,4 @@ app.use(router)
 app.use(VueRecaptchaPlugin, {
   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
 })
-app.use(VueCookies)
-
 app.mount('#app')

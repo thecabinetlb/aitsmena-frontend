@@ -8,11 +8,10 @@ defineProps({
 })
 </script>
 <template>
-    <section :id="sectionid" class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
+    <section :id="sectionid" class="w-11/12 px-6 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
       <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
       <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
-      
-      <div v-for="(item, key) in data" :key="key" class="flex flex-wrap items-center justify-center w-full gap-6 mt-10 lg:gap-3 lg:justify-between max-lg:flex-col-reverse" 
+      <div v-for="(item, key) in data" :key="key" class="flex flex-wrap items-center justify-center w-full gap-6 mt-10 lg:gap-3 lg:justify-between" 
       v-motion
         :initial="{
           opacity: 0,

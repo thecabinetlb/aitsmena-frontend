@@ -27,7 +27,7 @@ console.log(successStories)
 </script>
 <template>
     <main>
-        <InnerHero :pagebanner="banner" pagename="Industries" 
+        <InnerHero :pagebanner="banner" pagename="Industries" isIndustries
         pagedescription="From Smart Cities to F&B, oil & gas, energy, transportation, and beyond, AITS offers tailored
         software solutions to meet the unique challenges faced by today's industries. Discover how
         our industry-specific solutions can drive success for your business"/>
