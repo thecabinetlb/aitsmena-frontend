@@ -32,14 +32,10 @@ import { RouterLink } from 'vue-router'
     </div>
     <!-- animation elements -->
       <!-- middle layor -->
-     <img src="/images/hero/elements/centermiddle.svg" alt="AITS" width="1253" height="1239" class="min-h-[90vh]" center cover responsive loading="eager"
+     <img src="/images/hero/elements/centermiddle.webp" alt="AITS" width="1253" height="1239" center cover responsive loading="eager"
       v-motion  
         :initial="{
           opacity: 1,
-          position: 'absolute',
-          top: '0',
-          left: '50%',
-          zIndex: 1,
           transform: 'translate(-50%, 0%)',
           x:0,
           y:0,
@@ -54,17 +50,13 @@ import { RouterLink } from 'vue-router'
             delay: 800,
             duration: 600
           },
-        }"/>
+        }" class="absolute top-0 z-1 left-1/2 max-sm:top-32 max-sm:-translate-y-1/4 max-sm:h-[400px]" />
       
       <!-- left layer -->
-      <img src="/images/hero/elements/lefttop.svg" alt="AITS" width="846" height="1078" class="min-h-screen" center cover responsive loading="eager"
+      <img src="/images/hero/elements/lefttop (1).webp" alt="AITS" width="339" height="1416" center cover responsive loading="eager"
       v-motion  
         :initial="{
-          position: 'absolute',
-          top: '0',
-          left: '0',
           transform: 'translate(0%)',
-          zIndex: 3,
           x:0,
           y:0,
         }"
@@ -77,17 +69,17 @@ import { RouterLink } from 'vue-router'
             delay: 900,
             duration: 600
           },
-        }"/>
+        }" class="absolute top-0 left-0 z-3 max-sm:top-20 max-sm:h-[400px]" />
 
-      <img src="/images/hero/elements/leftmiddle.svg" alt="AITS" width="2765" height="2473" center cover responsive loading="eager"
-      class="absolute left-0 min-h-screen transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3"/>
-      <img src="/images/hero/elements/leftmiddleoposite.svg" alt="AITS" width="1232" height="233" center cover responsive loading="eager"
-      class="absolute left-0 transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3 min-h-[233px]"/>    
-      <!-- <img src="/images/hero/elements/leftbottom.svg" alt="AITS" width="339" height="1416" center cover responsive loading="eager"
-      class="absolute left-0 transform z-3 top-1/3 -translate-y-1/3"/> -->
+      <img src="/images/hero/elements/leftmiddle (1).webp" alt="AITS" width="1232" height="233" center cover responsive loading="eager"
+      class="absolute left-0 transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3  max-sm:h-[400px]"/>
+      <img src="/images/hero/elements/leftmiddleoposite (1).webp" alt="AITS" width="339" height="1416" center cover responsive loading="eager"
+      class="absolute left-0 transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3 max-sm:h-[400px]"/>    
+      <img src="/images/hero/elements/leftbottom (1).webp" alt="AITS" width="1122" height="764" center cover responsive loading="eager"
+      class="absolute left-0 z-3 top-[100%]"/>
  
       <!-- right layer -->
-      <img src="/images/hero/elements/righttop.svg" alt="AITS" width="1467" height="1474" 
+      <img src="/images/hero/elements/righttop.webp" alt="AITS" width="1467" height="1474" 
       class="min-h-screen w-screen absolute right-0 lg:top-1/4 lg:-translate-y-1/4 top-0 z-[-1]" center cover responsive loading="eager" />
       <!-- v-motion  
         :initial="{
@@ -109,7 +101,7 @@ import { RouterLink } from 'vue-router'
             duration: 4000
           },
         }" -->
-      <img src="/images/hero/elements/rightmiddle.svg" alt="AITS" width="2499" height="1501" center cover responsive loading="eager"
+      <img src="/images/hero/elements/rightmiddle.webp" alt="AITS" width="2499" height="1501" center cover responsive loading="eager"
       v-motion  
         :initial="{
           position: 'absolute',
@@ -132,7 +124,7 @@ import { RouterLink } from 'vue-router'
         }"/>    
       
       <!-- pattern -->
-      <img src="/images/patterns/patternhero.svg" alt="AITS" width="862" height="1771" center cover responsive loading="eager"
+      <img src="/images/patterns/patternhero.webp" alt="AITS" width="862" height="1771" center cover responsive loading="eager"
       class="absolute z-[-1] right-0 top-0 opacity-75"/>
 
   </section>

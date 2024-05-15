@@ -23,15 +23,15 @@ defineProps({
         </div>
         <!-- Highlights -->
             <!-- top left -->
-            <img src="/images/banners/elements/topleft.svg" alt="AITS" width="909" height="683" center cover responsive loading="lazy"
+            <img src="/images/banners/elements/topleft.webp" alt="AITS" width="909" height="683" center cover responsive loading="lazy"
             class="absolute inset-0 z-1"/>
 
             <!-- top right -->
-            <img src="/images/banners/elements/topright.svg" alt="AITS" width="1232" height="792" center cover responsive loading="lazy"
+            <img src="/images/banners/elements/topright.webp" alt="AITS" width="1232" height="792" center cover responsive loading="lazy"
             class="absolute top-0 right-0 z-1"/> 
 
             <!-- bottom right -->
-            <img src="/images/banners/elements/bottomright.svg" alt="AITS" width="728" height="1074" center cover responsive loading="lazy"
+            <img src="/images/banners/elements/bottomright.webp" alt="AITS" width="728" height="1074" center cover responsive loading="lazy"
             class="absolute bottom-0 right-0 z-1"/>
     </section>
 </template>
