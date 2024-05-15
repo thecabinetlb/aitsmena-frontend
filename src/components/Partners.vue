@@ -15,7 +15,7 @@ defineProps({
                 {{ sectiondescription }}
             </p>
         </div>
-        <div class="relative flex justify-center gap-5 mx-auto sm:ms-auto sm:me-0 lg:justify-end lg:w-5/12">
+        <div class="relative flex justify-center gap-5 mx-auto lg:ms-auto lg:me-0 lg:justify-end lg:w-5/12">
             <div v-for="item in data" :key="key">
             <img :src="item.logo" width="168" height="168" :alt="item.title" cover center responsive loading="lazy" 
             class="aspect-square border-2 border-accent1 transform duration-600 shadow-md shadow-accent1 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]" />            
