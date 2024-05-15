@@ -3,7 +3,7 @@ import logo from '/AITSLogoWithSlogan.webp'
 import { RouterLink } from 'vue-router'
 defineProps({
     pagebanner: Image,
-    pagename: String,
+    pagetitle: String,
     pagedescription: String,
     sectionid: String,
     isAbout: Boolean,
@@ -12,11 +12,11 @@ defineProps({
 </script>
 <template>
     <section class="relative flex flex-col justify-center items-center -mt-[40px] md:h-[90vh] h-[70vh]">
-        <img :src="pagebanner" :alt="pagetitle" width="393" height="103" center cover responsive loading="eager" class="absolute inset-0 z-[-1] w-full h-full aspect-[2.01/1]"/>
+        <img :src="pagebanner" :alt="'AITS' + pagetitle" width="1140" height="718" center cover responsive loading="eager" class="absolute inset-0 z-[-1] w-full h-full aspect-[1.59/1]"/>
         <div class="absolute w-11/12 mx-auto transform -translate-y-1/2 top-1/2 z-[1] 2xl:w-8/12 lg:w-10/12">
             <div class="2xl:h-[40vh] h-8/12 space-y-6 rounded-[16px] flex flex-col justify-center p-6 items-center mx-auto bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
                 <img v-if="isAbout" :src="logo" alt="AITS logo" width="443" height="148" cover center responsive loading="eager"/>    
-                <h1 v-else class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] text-center uppercase">{{ pagename }}</h1>
+                <h1 v-else class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] text-center uppercase">{{ pagetitle }}</h1>
                 <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mx-auto md:w-8/12" style="text-align-last: center;">{{ pagedescription }}</p>
                 <RouterLink v-if="isIndustries" id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="block relative z-[2] cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Discover Our Solutions</RouterLink>
             </div>

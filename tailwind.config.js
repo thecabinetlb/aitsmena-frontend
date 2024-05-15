@@ -24,7 +24,7 @@ export default {
         'mobilecolors':'url(/images/insidepages/elements/allelementsmobile.webp)',
       },
       aspectRatio: {
-        '2.01/1': '2.01 / 1',
+        '1.59/1': '1.59 / 1',
         '0.88/1': '0.88 / 1',
         '1.72/1': '1.72 / 1'
       },

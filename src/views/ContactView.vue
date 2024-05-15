@@ -36,7 +36,7 @@ const locations = [
 
 <template>
     <main>
-        <InnerHero :pagebanner="banner" pagename="Contact" pagedescription="Get in touch to learn more about our industry software solutions and how you can take your business a step further!"/>
+        <InnerHero :pagebanner="banner" pagetitle="Contact" pagedescription="Get in touch to learn more about our industry software solutions and how you can take your business a step further!"/>
         <div class="relative">
             <ContactForm/>
             <TextGrid sectionid="office-locations" sectiontitle="Office Locations"

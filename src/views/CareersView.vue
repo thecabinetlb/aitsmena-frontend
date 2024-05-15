@@ -61,7 +61,7 @@ const benefits = [
 </script>
 <template>
   <main>
-      <InnerHero :pagebanner="banner" pagename="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the AITS family."/>
+      <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the AITS family."/>
       <section class="relative">
         <JobsList sectionid="jobs" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
         Explore our blog for thought-provoking articles, expert opinions, and practical tips to help

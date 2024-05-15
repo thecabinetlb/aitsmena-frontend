@@ -37,7 +37,7 @@ const partners = [
 </script>
 <template>
     <main>
-        <InnerHero :pagebanner="banner" isAbout="true" pagetitle="Company Overview"
+        <InnerHero :pagebanner="banner" isAbout="true" 
         pagedescription="At AITS we are not only your trusted software company, we are also your strategic ally in
         navigating the complex landscape of industrial automation. As a subsidiary within the IBi
         family, we play a pivotal role in driving positive transformation across various industrial
