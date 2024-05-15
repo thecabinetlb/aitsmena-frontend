@@ -87,64 +87,60 @@ const industryInsights = [
   //   category: "Metals, Mining, & Minerals"
   // },
 ];
-const webinars = [
-  { 
-    date: { day: 15, month: "May", year: 2024 },
-    title: "Harnessing AI for Industrial Efficiency",
-    description: "Explore the transformative potential of artificial intelligence in optimizing industrial processes and increasing efficiency.",
-    to: "/webinar/harnessing-ai",
-    target: "_blank"
-  },
-  { 
-    date: { day: 22, month: "May", year: 2024 },
-    title: "IoT Solutions for Smart Manufacturing",
-    description: "Discover how Internet of Things (IoT) technologies are revolutionizing manufacturing operations and enabling predictive maintenance.",
-    to: "/webinar/iot-smart-manufacturing",
-    target: "_blank"
-  },
-  { 
-    date: { day: 29, month: "May", year: 2024 },
-    title: "Blockchain Applications in Supply Chain Management",
-    description: "Learn about the role of blockchain technology in enhancing transparency and traceability in industrial supply chains.",
-    to: "/webinar/blockchain-supply-chain",
-    target: "_blank"
-  },
-  // { 
-  //   date: { day: 5, month: "June", year: 2024 },
-  //   title: "Advanced Robotics in Manufacturing",
-  //   description: "Discover the latest advancements in robotics technology and its applications in modern manufacturing.",
-  //   to: "/webinar/advanced-robotics",
-  //   target: "_blank"
-  // },
-  // { 
-  //   date: { day: 12, month: "June", year: 2024 },
-  //   title: "Sustainability in Industrial Operations",
-  //   description: "Learn about sustainable practices and technologies driving environmental stewardship in industrial operations.",
-  //   to: "/webinar/sustainability-industrial",
-  //   target: "_blank"
-  // },
-  // { 
-  //   date: { day: 19, month: "June", year: 2024 },
-  //   title: "Future of Digital Twin Technology",
-  //   description: "Explore the potential of digital twin technology in revolutionizing product design, testing, and maintenance.",
-  //   to: "/webinar/digital-twin-future",
-  //   target: "_blank"
-  // }
-];
+// const webinars = [
+//   { 
+//     date: { day: 15, month: "May", year: 2024 },
+//     title: "Harnessing AI for Industrial Efficiency",
+//     description: "Explore the transformative potential of artificial intelligence in optimizing industrial processes and increasing efficiency.",
+//     to: "/webinar/harnessing-ai",
+//     target: "_blank"
+//   },
+//   { 
+//     date: { day: 22, month: "May", year: 2024 },
+//     title: "IoT Solutions for Smart Manufacturing",
+//     description: "Discover how Internet of Things (IoT) technologies are revolutionizing manufacturing operations and enabling predictive maintenance.",
+//     to: "/webinar/iot-smart-manufacturing",
+//     target: "_blank"
+//   },
+//   { 
+//     date: { day: 29, month: "May", year: 2024 },
+//     title: "Blockchain Applications in Supply Chain Management",
+//     description: "Learn about the role of blockchain technology in enhancing transparency and traceability in industrial supply chains.",
+//     to: "/webinar/blockchain-supply-chain",
+//     target: "_blank"
+//   },
+//   // { 
+//   //   date: { day: 5, month: "June", year: 2024 },
+//   //   title: "Advanced Robotics in Manufacturing",
+//   //   description: "Discover the latest advancements in robotics technology and its applications in modern manufacturing.",
+//   //   to: "/webinar/advanced-robotics",
+//   //   target: "_blank"
+//   // },
+//   // { 
+//   //   date: { day: 12, month: "June", year: 2024 },
+//   //   title: "Sustainability in Industrial Operations",
+//   //   description: "Learn about sustainable practices and technologies driving environmental stewardship in industrial operations.",
+//   //   to: "/webinar/sustainability-industrial",
+//   //   target: "_blank"
+//   // },
+//   // { 
+//   //   date: { day: 19, month: "June", year: 2024 },
+//   //   title: "Future of Digital Twin Technology",
+//   //   description: "Explore the potential of digital twin technology in revolutionizing product design, testing, and maintenance.",
+//   //   to: "/webinar/digital-twin-future",
+//   //   target: "_blank"
+//   // }
+// ];
 
 </script>
 <template>
     <main class="relative overflow-hidden">
-      <InnerHero :pagebanner="banner" pagetitle="Resources" pagedescription="Need resources to explore the complex world of software solutions? Welcome to the home of the latest industry news, insights, trends, and much more. "/>
+      <InnerHero :pagebanner="banner" pagetitle="Resources" pagedescription="Need some resources to explore the complex world of software solutions? Welcome to the home of the latest industry news, insights, trends, and much more."/>
 
       <section class="relative -mt-40">
-        <PostsCarousel sectionid="blog" sectiontitle="Blogs" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
-        Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
-        your business stay ahead of the curve." :data='blogposts'/>
+        <PostsCarousel sectionid="blog" sectiontitle="Blog" sectiondescription="Stay informed with the latest trends and developments in industrial automation. Explore our blog for thought-provoking articles, expert opinions, and practical tips to help your business stay ahead of the curve." :data='blogposts'/>
         <OneImageTextFlex sectionid="whitepapers" sectiontitle="Whitepapers" :item="whitepaper"/>
-        <PostsCarousel sectionid="industry-insights" sectiontitle="Industry Insights" sectiondescription="ccess exclusive industry insights and reports to stay informed about the latest trends,
-        developments, and opportunities in your sector. Stay ahead of the competition with
-        actionable intelligence from AITS" :data='industryInsights'/>
+        <PostsCarousel sectionid="industry-insights" sectiontitle="Industry Insights" sectiondescription="Access exclusive industry insights and reports to stay informed about the latest news, developments, and opportunities in your sector. Stay ahead of the competition with actionable intelligence from AITS." :data='industryInsights'/>
         <!-- <WebinarsList sectiontitle="Webinars" :data='webinars'/> -->
         <InsideBody/>
       </section>    

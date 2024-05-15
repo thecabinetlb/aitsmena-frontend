@@ -32,8 +32,8 @@ const footerlinks = [
     name: 'Careers', 
     to: '/careers',
     submenu: [
-      { id: 1, name: 'Job Openings', to:'#jobs' },
-      { id: 2, name: 'Internship Opportunities', to:'#internships' },
+      { id: 1, name: 'Job Openings', to:'#jobs-openings' },
+      { id: 2, name: 'Internship Opportunities', to:'#internship-opportunities' },
       { id: 3, name: 'Employee Benefits', to:'#employee-benefits' }
     ]
   }

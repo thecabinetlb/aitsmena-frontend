@@ -20,7 +20,7 @@ const openDetails = ref(0)
                 <h2 class="max-sm:text-[14px] text-accent1 font-[400] h-[48px]">{{ item.title }}</h2>
             </div>
             <!-- Desktop -->
-            <p v-for="(item, key) in data" :key="key" v-show="openDetails === key" class="md:block absolute hidden lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:w-8/12 top-[100%] my-10 md:h-[194px] font-[200] max-sm:text-[14px] text-justify text-accent2" style="text-align-last: center;">{{ item.description }}</p>
+            <p v-for="(item, key) in data" :key="key" v-show="openDetails === key" class="md:block absolute hidden 2xl:left-1/2 2xl:transform 2xl:-translate-x-1/2 2xl:w-8/12 top-[100%] my-10 md:h-[194px] font-[200] max-sm:text-[14px] text-justify text-accent2" style="text-align-last: center;">{{ item.description }}</p>
         </div>
         <!-- Mobile -->
         <p v-show="openDetails === key"  v-for="(item, key) in data" :key="key" class="font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">{{ item.description }}</p>

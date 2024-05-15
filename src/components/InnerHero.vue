@@ -13,8 +13,8 @@ defineProps({
 <template>
     <section class="relative flex flex-col justify-center items-center -mt-[40px] md:h-[90vh] h-[70vh]">
         <img :src="pagebanner" :alt="'AITS' + pagetitle" width="1140" height="718" center cover responsive loading="eager" class="absolute inset-0 z-[-1] w-full h-full aspect-[1.59/1]"/>
-        <div class="absolute w-11/12 mx-auto transform -translate-y-1/2 top-1/2 z-[1] 2xl:w-8/12 lg:w-10/12">
-            <div class="2xl:h-[40vh] h-8/12 space-y-6 rounded-[16px] flex flex-col justify-center p-6 items-center mx-auto bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
+        <div class="absolute w-11/12 mx-auto md:transform md:-translate-y-1/2 md:top-1/2 z-[1] 2xl:w-8/12 lg:w-10/12 top-2/3 -translate-y-2/3">
+            <div class="2xl:h-[40vh] h-8/12 space-y-6 rounded-[16px] flex flex-col md:justify-center justify-end p-6 items-center mx-auto bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]">
                 <img v-if="isAbout" :src="logo" alt="AITS logo" width="443" height="148" cover center responsive loading="eager"/>    
                 <h1 v-else class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] text-center uppercase">{{ pagetitle }}</h1>
                 <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mx-auto md:w-8/12" style="text-align-last: center;">{{ pagedescription }}</p>

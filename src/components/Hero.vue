@@ -9,10 +9,7 @@ import { RouterLink } from 'vue-router'
       <h1 class="text-accent1 uppercase 2xl:text-9xl lg:text-8xl md:text-6xl sm:text-5xl text-[36px] text-center font-[700]">AITS</h1>
       <h1 class="text-accent1 uppercase 2xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-[30px] text-center font-[700]">Where Innovation<br/> Knows No Limits</h1>
       <p class="font-[200] max-sm:text-[14px] text-justify text-accent2 2xl:w-5/12 px-4 sm:w-2/3" style="text-align-last: center;">
-        Your trusted partner for industrial software solutions
-        empowering industries to thrive through innovative tech solutions tailored to their unique
-        needs. Our commitment to sustainability and efficiency drives everything we do, ensuring
-        that our clients achieve their objectives while minimizing environmental impact.</p>
+        Looking for a trusted partner with industrial software solutions? AITS empowers industries like yours to thrive through innovative tech solutions tailored to your unique needs.</p>
       <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="relative z-[4] block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Get Started</RouterLink>
       <img src="/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive  loading="eager" class="w-[100px] max-md:w-[50px]"
       v-motion  

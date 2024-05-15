@@ -40,10 +40,7 @@ const locations = [
         <div class="relative">
             <ContactForm/>
             <TextGrid sectionid="office-locations" sectiontitle="Office Locations"
-            sectiondescription="Need assistance with sales or support? Get in touch with our dedicated sales and support
-            team for personalized assistance and expert guidance Find the nearest AITS office and get in touch with us to schedule a consultation or learn
-            more about our solutions and services. We have offices located across the Gulf region to
-            serve you better" :data="locations"/>
+            sectiondescription="Need assistance with sales or support? Get in touch with our dedicated sales and support team for personalized assistance and expert guidance. Find the nearest AITS office and get in touch with us to schedule a consultation or learn more about our solutions and services. We have offices located across the Gulf region to serve you better." :data="locations"/>
             <InsideBody/>        
         </div>
     </main>

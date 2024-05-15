@@ -1,49 +1,13 @@
 <script setup>
 import { ref } from 'vue';
-import improvement from '/images/insidepages/about/csr/improvement.webp'
-import gender from '/images/insidepages/about/csr/gender.webp'
-import employee from '/images/insidepages/about/csr/employee.webp'
 
 defineProps({
     sectionid: String,
     sectiontitle: String,
     sectiondescription: String,
+    data: Array
 })
-const data = [
-  {
-    id: 1,
-    image:gender,
-    title: 'Gender Equality',
-    description: 'At AITS, we believe in adopting an inclusive workplace culture where everyone, regardless of gender, has equal opportunities for growth and success. We are dedicated to promoting gender equality within our organization and the communities we serve through:',
-    initiatives: [
-      'Diverse Workforce',
-      'Equal Opportunities',
-      'Supportive Policies'
-    ]
-  },
-  {
-    id: 2,
-    image:employee,
-    title: 'Employee First',
-    description: 'Our employees are our greatest asset, and their well-being is our top priority. We are committed to creating a supportive and inclusive work environment where employees feel valued, empowered, and motivated to excel. Our employee-first approach includes:',
-    initiatives: [
-      'Health and Safety',
-      'Professional Development',
-      'Employee Engagement'
-    ]
-  },
-  {
-    id: 3,
-    image:improvement,
-    title: 'Continuous Improvement',
-    description: 'We are committed to continuous improvement in all aspects of our business operations, striving for excellence in performance, efficiency, and sustainability. Our continuous improvement initiatives include:',
-    initiatives: [
-      'Quality Management',
-      'Innovation',
-      'Sustainability'
-    ]
-  }
-];
+
 const filterdata = ref(data[0])
 const filterData = (key) => {
    if (filterdata.value === data[0]) {

@@ -24,12 +24,12 @@ import BenefitsFlexWithBlur from '../components/BenefitsFlexWithBlur.vue';
 const benefits = [
   { 
     id: 1, 
-    title: 'Competitive compensation and rewards packages tailored to recognize and appreciate individual contributions', 
+    title: 'Competitive compensation and rewards packages tailored to recognize and appreciate individual contributions.', 
     // description: 'Comprehensive health insurance coverage for employees and their dependents, including medical, dental, and vision benefits.'
   },
   { 
     id: 2, 
-    title: 'Robust opportunities for professional development and career advancement, including access to cutting-edge training programs and mentorship initiatives', 
+    title: 'Robust opportunities for professional development and career advancement, including access to cutting-edge training programs and mentorship initiatives.', 
     // description: 'Competitive salaries and performance-based bonuses or incentives to reward employees for their contributions and achievements.'
   },
   { 
@@ -61,18 +61,14 @@ const benefits = [
 </script>
 <template>
   <main>
-      <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the AITS family."/>
+      <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the family."/>
       <section class="relative">
-        <JobsList sectionid="jobs" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
+        <JobsList sectionid="jobs-openings" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
         Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
         your business stay ahead of the curve."/>
-        <JobsList class="pt-40" sectionid="internships" sectiontitle="Internship Opportunities" sectiondescription="Are you passionate about innovation, sustainability, and driving positive change in the
-        industrial landscape? Explore exciting career opportunities at AITS and join us on our mission
-        to revolutionize the industrial world."/>
+        <JobsList class="pt-40" sectionid="internship-opportunities" sectiontitle="Internship Opportunities" sectiondescription="Got a knack for learning? Join our team as an intern and develop your skills while exploring the mystical world of software solutions."/>
         <BenefitsFlexWithBlur sectiontitle="Employees Benefits" 
-        sectiondescription="At AITS, we value our employees and are committed to their growth and well-being, where
-        talent thrives and ambitions are realized. Explore the unique advantages of being part of our
-        team, encompassing:" :data='benefits'/>
+        sectiondescription="AITS, where talent thrives and ambitions are realized. We value our employees and are committed to their growth and well-being. Explore the unique advantages of being part of our team, encompassing:" :data='benefits'/>
         <InsideBody/>
       </section>    
     </main>
