@@ -124,8 +124,8 @@ import { RouterLink } from 'vue-router'
         }"/>    
       
       <!-- pattern -->
-      <img src="/images/patterns/patternhero.webp" alt="AITS" width="708" height="694" center cover responsive loading="eager"
-      class="absolute z-[-1] right-0 top-0 opacity-75"/>
+      <img src="/images/patterns/patternhero.webp" alt="AITS" width="626" height="1394" center cover responsive loading="eager"
+      class="absolute z-[-1] right-0 top-1/3 transform -translate-y-1/3 opacity-75"/>
 
   </section>
 </template>
