@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
-import Pages from 'vite-plugin-pages'
-import generateSitemap from 'vite-plugin-pages-sitemap'
+import Sitemap from 'vite-plugin-sitemap'
+
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -8,9 +8,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [
     vue(),
-    Pages({
-      onRoutesGenerated: routes => (generateSitemap({ routes })),
-    })
+    Sitemap(),
   ],
   resolve: {
     alias: {
