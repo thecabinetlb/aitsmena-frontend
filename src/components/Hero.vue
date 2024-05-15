@@ -53,7 +53,7 @@ import { RouterLink } from 'vue-router'
         }" class="absolute top-0 z-1 left-1/2 max-sm:top-32 max-sm:-translate-y-1/4 max-sm:h-[400px]" />
       
       <!-- left layer -->
-      <img src="/images/hero/elements/lefttop (1).webp" alt="AITS" width="339" height="1416" center cover responsive loading="eager"
+      <img src="/images/hero/elements/lefttop_small.webp" alt="AITS" width="712" height="964" center cover responsive loading="eager"
       v-motion  
         :initial="{
           transform: 'translate(0%)',
@@ -69,17 +69,17 @@ import { RouterLink } from 'vue-router'
             delay: 900,
             duration: 600
           },
-        }" class="absolute top-0 left-0 z-3 max-sm:top-20 max-sm:h-[400px]" />
+        }" class="absolute top-0 left-0 z-3 max-sm:top-20" />
 
-      <img src="/images/hero/elements/leftmiddle (1).webp" alt="AITS" width="1232" height="233" center cover responsive loading="eager"
+      <img src="/images/hero/elements/leftmiddle_small.webp" alt="AITS" width="824" height="1096" center cover responsive loading="eager"
       class="absolute left-0 transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3  max-sm:h-[400px]"/>
-      <img src="/images/hero/elements/leftmiddleoposite (1).webp" alt="AITS" width="339" height="1416" center cover responsive loading="eager"
+      <img src="/images/hero/elements/leftmiddleoposite_small.webp" alt="AITS" width="962" height="1753" center cover responsive loading="eager"
       class="absolute left-0 transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3 max-sm:h-[400px]"/>    
-      <img src="/images/hero/elements/leftbottom (1).webp" alt="AITS" width="1122" height="764" center cover responsive loading="eager"
+      <img src="/images/hero/elements/leftbottom_small.webp" alt="AITS" width="616" height="1104" center cover responsive loading="eager"
       class="absolute left-0 z-3 top-[100%]"/>
  
       <!-- right layer -->
-      <img src="/images/hero/elements/righttop.webp" alt="AITS" width="1467" height="1474" 
+      <img src="/images/hero/elements/righttop_small.webp" alt="AITS" width="720" height="749" 
       class="min-h-screen w-screen absolute right-0 lg:top-1/4 lg:-translate-y-1/4 top-0 z-[-1]" center cover responsive loading="eager" />
       <!-- v-motion  
         :initial="{
@@ -101,7 +101,7 @@ import { RouterLink } from 'vue-router'
             duration: 4000
           },
         }" -->
-      <img src="/images/hero/elements/rightmiddle.webp" alt="AITS" width="2499" height="1501" center cover responsive loading="eager"
+      <img src="/images/hero/elements/rightmiddle_small.webp" alt="AITS" width="720" height="1151" center cover responsive loading="eager"
       v-motion  
         :initial="{
           position: 'absolute',
@@ -124,7 +124,7 @@ import { RouterLink } from 'vue-router'
         }"/>    
       
       <!-- pattern -->
-      <img src="/images/patterns/patternhero.webp" alt="AITS" width="862" height="1771" center cover responsive loading="eager"
+      <img src="/images/patterns/patternhero.webp" alt="AITS" width="708" height="694" center cover responsive loading="eager"
       class="absolute z-[-1] right-0 top-0 opacity-75"/>
 
   </section>
