@@ -69,7 +69,7 @@ import { RouterLink } from 'vue-router'
             delay: 900,
             duration: 600
           },
-        }" class="absolute top-0 left-0 z-3 max-sm:top-20 max-sm:h-[400px]" />
+        }" class="absolute top-0 left-0 z-3 max-sm:top-20 max-sm:h-[400px] overflow-hidden" />
 
       <img src="/images/hero/elements/leftmiddle_small.webp" alt="AITS" width="824" height="1096" center cover responsive loading="eager"
       class="absolute left-0 transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3  max-sm:h-[400px]"/>
