@@ -175,7 +175,7 @@ const handleSubmit = () => {
         <form  class="grid w-full h-full grid-cols-2 gap-3 lg:w-5/12" @submit.prevent="handleSubmit">
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="Name" name="Name"
-                placeholder="Your Name" 
+                placeholder="Your Name" aria-label="Enter your name"
                 v-model="formData.data.Name.value"
                 :required="formData.data.Name.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2"               
@@ -183,7 +183,7 @@ const handleSubmit = () => {
                 <p v-show="!formData.data.Name.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Name.validationMessage}}</p>
             </div>
             <div class="w-full col-span-2 sm:col-span-1">
-                <input type="text" id="Email" name="Email"
+                <input type="text" id="Email" name="Email" aria-label="Enter your email"
                 placeholder="example@gmail.com" 
                 v-model="formData.data.Email.value" 
                 :required="formData.data.Email.required" 
@@ -192,7 +192,7 @@ const handleSubmit = () => {
                 <p v-show="!formData.data.Email.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Email.validationMessage}}</p>
             </div>      
             <div class="w-full col-span-2 sm:col-span-1">
-                <input type="text" id="Phone" name="Phone" 
+                <input type="text" id="Phone" name="Phone" aria-label="Enter your phone"
                 placeholder="00961 71 654 231" 
                 v-model="formData.data.Phone.value"          
                 :required="formData.data.Phone.required" 
@@ -201,7 +201,7 @@ const handleSubmit = () => {
                 <p v-show="!formData.data.Phone.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Phone.validationMessage}}</p>
             </div> 
             <div class="w-full col-span-2 sm:col-span-1">
-                <input type="text" id="CompanyName" name="CompanyName" 
+                <input type="text" id="CompanyName" name="CompanyName"  aria-label="Enter your company's name"
                 placeholder="Your Company's Name"
                 v-model="formData.data.CompanyName.value"              
                 :required="formData.data.CompanyName.required" 
@@ -210,7 +210,7 @@ const handleSubmit = () => {
                 <p v-show="!formData.data.CompanyName.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.CompanyName.validationMessage}}</p>
             </div>    
             <div class="w-full col-span-2 mb-3">
-                <select id="Subject" name="Subject"
+                <select id="Subject" name="Subject" aria-label="select a subject for your message"
                 v-model="formData.data.Subject.value"
                 :required="formData.data.Subject.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
@@ -221,7 +221,7 @@ const handleSubmit = () => {
                 <p v-show="!formData.data.Subject.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Subject.validationMessage}}</p>
             </div>
             <div class="w-full col-span-2">
-                <textarea id="Message" name="Message" rows="5" 
+                <textarea id="Message" name="Message" rows="5"  aria-label="Type out your message"
                 placeholder="Briefly tell us about your project and your current goals. How can we help you?" 
                 v-model="formData.data.Message.value" 
                 :required="formData.data.Message.required" 

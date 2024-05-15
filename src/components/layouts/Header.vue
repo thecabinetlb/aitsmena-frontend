@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
 import logo from '/AITSLogoNoSlogan.webp'
 const navlinks = [
-  { id: 1, name: 'Home', to: '/' },
+  { id: 1, name: 'Home', to: 'https://aitsmena-test.netlify.app/' },
   { id: 2, name: 'About', to: '/about' },
   {
   id: 3,
@@ -68,13 +68,13 @@ const toggleOpen = () => {
 <template>
  <header class="fixed left-1/2 transform bg-bg/90 -translate-x-1/2 top-0 h-[67px] z-[9] 2xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-between items-center mx-auto px-6 rounded-b-[16px]" 
     :class="{'h-fit' : isOpen}">
-    <RouterLink id="Home" :aria-label="'go to home'" to="/" class="w-4/12">
-    <img :src="logo" alt="AITS logo" width="80" height="22" cover center responsive loading="eager" class="max-lg:my-[20px]"/>    
+    <RouterLink id="Home" aria-label="go to home" to="https://aitsmena-test.netlify.app/" class="w-4/12">
+      <img :src="logo" alt="AITS logo" width="80" height="22" cover center responsive loading="eager" class="max-lg:my-[20px]"/>    
     </RouterLink>
     <!-- Desktop -->
     <nav class="items-center justify-end hidden w-8/12 h-full gap-2.5 lg:flex">
       <div v-for="(item, key) in navlinks" :key="key" class="relative">
-        <RouterLink :id="item.name" :aria-label="'go to ' + item.name" :to="item.to" 
+        <RouterLink :id="item.name + (openSubMenu === item.id ? '-active' : '')" :aria-label="'go to ' + item.name" :to="item.to" 
         :activeClass="'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[8px]'"
         :exactActiveClass="'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[8px]'"
         class="py-2 px-3 cursor-pointer text-lg font-[400] text-accent1 hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20 hover:backdrop-blur-[16px] hover:rounded-[8px]"
@@ -83,9 +83,9 @@ const toggleOpen = () => {
         </RouterLink>
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-[290px] h-fit absolute left-0 top-[50px] p-6 rounded-[16px] bg-bg/90"
         @mouseleave="hasSubMenu = false">
-          <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-3 drop-shadow-md">
-            <RouterLink :id="subitem.name" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"
-            @click="isClicked = subitem.id"
+          <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-3 drop-shadow-md"  
+          @click="isClicked = subitem.id">
+            <RouterLink :id="subitem.name + (isClicked === subitem.id ? '-active' : '')" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"
             :class="{'text-accent1/70' : isClicked === subitem.id}">
               {{ subitem.name }}
             </RouterLink>            
@@ -94,7 +94,7 @@ const toggleOpen = () => {
       </div> 
     </nav>   
     <!-- Mobile -->
-    <button aria-label="open menu" class="absolute flex items-center justify-center w-6 h-6 lg:hidden right-6 top-6" @click="toggleOpen">
+    <button :id="!isOpen ? 'open-menu' : 'close-menu'" :aria-label="!isOpen ? 'open menu' : 'close menu'" class="absolute flex items-center justify-center w-6 h-6 lg:hidden right-6 top-6" @click="toggleOpen">
       <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" fill="white" viewBox="0 0 50 50">
       <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"></path>
       </svg>   
@@ -104,7 +104,7 @@ const toggleOpen = () => {
     </button>
     <nav v-if="isOpen" class="w-full py-5 mt-5 space-y-4 lg:hidden">
       <div v-for="(item, key) in navlinks" :key="key">
-        <RouterLink :id="item.name" :aria-label="'go to ' + item.name" :to="item.to" class="cursor-pointer font-[400] text-accent1 drop-shadow-md"
+        <RouterLink :id="item.name + (isClicked === item.id ? '-active' : '')" :aria-label="'go to ' + item.name" :to="item.to" class="cursor-pointer font-[400] text-accent1 drop-shadow-md"
         :activeClass="'text-accent1/70'"
         :exactActiveClass="'text-accent1/70'"
         @click="toggleSubMenu(item)">
@@ -112,7 +112,7 @@ const toggleOpen = () => {
         </RouterLink>
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-bg/70">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 pb-3 drop-shadow-md">
-              <RouterLink :id="subitem.name" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"        
+              <RouterLink :id="subitem.name + (isClicked === subitem.id ? '-active' : '')" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"        
               @click="isClicked = subitem.id"
             :class="{'text-accent1/70' : isClicked === subitem.id}">{{ subitem.name }}</RouterLink>
             </div>
