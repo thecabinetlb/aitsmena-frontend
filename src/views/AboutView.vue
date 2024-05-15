@@ -13,7 +13,7 @@ import aveva from '/images/testimonies/partners/aveva.webp'
 import improvement from '/images/insidepages/about/csr/improvement.webp'
 import gender from '/images/insidepages/about/csr/gender.webp'
 import employee from '/images/insidepages/about/csr/employee.webp'
-const data = [
+const csr = [
   {
     id: 1,
     image:gender,
@@ -78,7 +78,7 @@ const partners = [
         pagedescription="Need a trusted software company and strategic ally in navigating the complex landscape of industrial automation? You’re in the right place. Powered by IBI (Impact By Innovation), AITS plays a pivotal role in driving positive transformation across various industrial sectors. Explore our added value to diverse industries, compelling employee propositions, and available job vacancies."/>
         <section class="relative">
             <Partners sectionid="sub-companies" sectiontitle="Mother Company of Two" sectiondescription="AITS takes pride in holding two distinguished sub-companies: AVEVA Select Gulf and IC2. Together, we offer a comprehensive suite of solutions designed to address the diverse challenges faced by today's industries." :data="partners"/>
-            <ImageTextFlexFilters sectiontitle="Because We Care" :data="data"
+            <ImageTextFlexFilters sectiontitle="Because We Care" :data="csr"
             sectiondescription="This planet has already been through enough. We are committed to making a positive impact on society and the environment. Our CSR initiatives are guided by three core values:"/>
             <!-- <ImagesFlex sectiontitle="Meet The Team" :data="team"/> -->
             <InsideBody/>

@@ -1,19 +1,19 @@
 <script setup>
 import { ref } from 'vue';
 
-defineProps({
+const props = defineProps({
     sectionid: String,
     sectiontitle: String,
     sectiondescription: String,
     data: Array
 })
 
-const filterdata = ref(data[0])
+const filterdata = ref(props.data[0])
 const filterData = (key) => {
-   if (filterdata.value === data[0]) {
-    filterdata.value === data[key];
+   if (filterdata.value === props.data[0]) {
+    filterdata.value === props.data[key];
    } else {
-    filterdata.value = data[key];
+    filterdata.value = props.data[key];
    }
 }
 </script>
