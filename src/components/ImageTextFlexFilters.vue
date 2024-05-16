@@ -7,10 +7,11 @@ const props = defineProps({
     sectiondescription: String,
     data: Array
 })
-
+const clicked = ref(0)
 const filterdata = ref(props.data[0])
 const filterData = (key) => {
-   if (filterdata.value === props.data[0]) {
+  clicked.value = key
+  if (filterdata.value === props.data[0]) {
     filterdata.value === props.data[key];
    } else {
     filterdata.value = props.data[key];
@@ -22,10 +23,10 @@ const filterData = (key) => {
       <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
       <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
       <div class="flex flex-wrap justify-center gap-3 mt-10 lg:justify-end">
-        <button @click="filterData(0)" 
-        class="px-4 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border hover:border-bg2 border-accent2 focus:outline-none focus:ring-0 focus:border-bg2 peer"
-        :class="{'border-bg2' : filterdata === data[0]}">
-            Gender Equality</button>   
+        <button @click="filterData(0)"
+        class="px-4 border border-accent2 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent hover:border-bg2 focus:outline-none focus:ring-0 focus:border-bg2 peer"
+        :class="{'border border-bg2': clicked === 0}">
+            Gender Equality</button>
         <button @click="filterData(1)" 
         class="px-4 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border hover:border-bg2 border-accent2 focus:outline-none focus:ring-0 focus:border-bg2 peer">
             Employee First</button>      

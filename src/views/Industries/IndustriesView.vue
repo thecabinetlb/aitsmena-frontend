@@ -27,7 +27,7 @@ console.log(successStories)
 </script>
 <template>
     <main>
-        <InnerHero :pagebanner="banner" pagetitle="Industries" isIndustries
+        <InnerHero :pagebanner="banner" pagetitle="Industries"
         pagedescription="From Smart Cities to Food and Beverage, Energy, Transportation, and much more, AITS offers tailored software solutions to meet your unique needs in various industries. Discover how our industry-specific solutions can drive success for your business."/>
         <section class="relative">
             <IndustriesGrid :data="industries"/>

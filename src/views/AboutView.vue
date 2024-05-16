@@ -75,7 +75,7 @@ const partners = [
 <template>
     <main>
         <InnerHero :pagebanner="banner" isAbout="true" 
-        pagedescription="Need a trusted software company and strategic ally in navigating the complex landscape of industrial automation? You’re in the right place. Powered by IBI (Impact By Innovation), AITS plays a pivotal role in driving positive transformation across various industrial sectors. Explore our added value to diverse industries, compelling employee propositions, and available job vacancies."/>
+        pagedescription="Do you need a trusted software company and strategic ally in navigating the complex landscape of industrial automation? You’re in the right place. Powered by IBI, AITS plays a pivotal role in driving positive transformation across various industrial sectors. Explore our added value to diverse industries, compelling employee propositions, and available job vacancies."/>
         <section class="relative">
             <Partners sectionid="sub-companies" sectiontitle="Mother Company of Two" sectiondescription="AITS takes pride in holding two distinguished sub-companies: AVEVA Select Gulf and IC2. Together, we offer a comprehensive suite of solutions designed to address the diverse challenges faced by today's industries." :data="partners"/>
             <ImageTextFlexFilters sectiontitle="Because We Care" :data="csr"
