@@ -37,11 +37,6 @@ const benefits = [
     title: 'A collaborative and supportive workplace culture that champions innovation, diversity, and work-life balance, ensuring every team member feels empowered and valued.', 
     // description: 'Support for ongoing learning and skill development through training programs, workshops, conferences, and tuition reimbursement.'
   },
-  { 
-    id: 4, 
-    title: 'Unlock the full potential of your career journey with AITS, where your talents are nurtured, and your aspirations are embraced.', 
-    // description: 'Regular social events, team-building activities, and employee perks such as catered lunches, snacks, and recreational facilities to foster a positive and inclusive company culture.'
-  },
   // { 
   //   id: 5, 
   //   title: 'Parental Leave', 
