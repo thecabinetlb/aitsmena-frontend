@@ -23,14 +23,14 @@ const filterData = (key) => {
       <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
       <div class="flex flex-wrap justify-center gap-3 mt-10 lg:justify-end">
         <button @click="filterData(0)" 
-        class="px-4 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border border-accent2 focus:outline-none focus:ring-0 focus:border-bg2 peer"
+        class="px-4 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border hover:border-bg2 border-accent2 focus:outline-none focus:ring-0 focus:border-bg2 peer"
         :class="{'border-bg2' : filterdata === data[0]}">
             Gender Equality</button>   
         <button @click="filterData(1)" 
-        class="px-4 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border border-accent2 focus:outline-none focus:ring-0 focus:border-bg2 peer">
+        class="px-4 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border hover:border-bg2 border-accent2 focus:outline-none focus:ring-0 focus:border-bg2 peer">
             Employee First</button>      
           <button @click="filterData(2)" 
-          class="px-4 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border border-accent2 focus:outline-none focus:ring-0 focus:border-bg2 peer">
+          class="px-4 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border hover:border-bg2 border-accent2 focus:outline-none focus:ring-0 focus:border-bg2 peer">
             Continuous Improvement</button>                 
       </div>
       <div class="flex flex-wrap items-center justify-center w-full gap-6 mt-10 lg:gap-3 lg:justify-between max-lg:flex-col-reverse">

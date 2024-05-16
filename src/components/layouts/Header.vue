@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 import logo from '/AITSLogoNoSlogan.webp'
 const navlinks = [
   { id: 1, name: 'Home', to: 'https://aitsmena-test.netlify.app/' },
@@ -34,30 +34,30 @@ const navlinks = [
   { id: 6, name: 'Contact', to: '/contact' },
 ]
 
-const changecolor = ref(false)
 const hasSubMenu = ref(false)
 const openSubMenu = ref(null)
 const isOpen = ref(false)
 const isClicked = ref(null)
+// const changecolor = ref(false)
 
-const changeColor = () => {
-  if (window.scrollY > 10) {
-    changecolor.value = true;
-  } else {
-    changecolor.value = false;
-  }
-}
+// const changeColor = () => {
+//   if (window.scrollY > 10) {
+//     changecolor.value = true;
+//   } else {
+//     changecolor.value = false;
+//   }
+// }
+// onMounted(() => {
+//   window.addEventListener("scroll", changeColor);
+// })
 
-onMounted(() => {
-  window.addEventListener("scroll", changeColor);
-})
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", changeColor);
-})
+// onUnmounted(() => {
+//   window.removeEventListener("scroll", changeColor);
+// })
 
 const toggleSubMenu = (item) => {
   hasSubMenu.value = item.submenu ? true : false
+  isOpen.value = hasSubMenu.value ? true : false
   openSubMenu.value = openSubMenu.value !== item.id ? item.id : null
 }
 
@@ -66,7 +66,7 @@ const toggleOpen = () => {
 }
 </script>
 <template>
- <header class="fixed left-1/2 transform bg-bg/90 -translate-x-1/2 top-0 h-[67px] z-[9] 2xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-between items-center mx-auto px-6 rounded-b-[16px]" 
+  <header class="fixed left-1/2 transform bg-bg/90 -translate-x-1/2 top-0 h-[67px] z-[9] 2xl:w-8/12 lg:w-10/12 w-11/12 lg:flex justify-between items-center mx-auto px-6 rounded-b-[16px]" 
     :class="{'h-fit' : isOpen}">
     <RouterLink id="Home" aria-label="go to home" to="https://aitsmena-test.netlify.app/" class="w-4/12">
       <img :src="logo" alt="AITS logo" width="80" height="22" cover center responsive loading="eager" class="max-lg:my-[20px]"/>    
@@ -113,12 +113,12 @@ const toggleOpen = () => {
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-bg/70">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 pb-3 drop-shadow-md">
               <RouterLink :id="subitem.name + (isClicked === subitem.id ? '-active' : '')" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"        
-              @click="isClicked = subitem.id"
+              @click="isClicked = subitem.id, isOpen = null"
             :class="{'text-accent1/70' : isClicked === subitem.id}">{{ subitem.name }}</RouterLink>
             </div>
         </nav>
       </div>
     </nav>
-  </header>
+  </header> 
 </template>
 <!-- 'bg-bg/70' : changecolor || isOpen || hasSubMenu} -->
