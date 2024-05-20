@@ -26,8 +26,11 @@ const successStories = getSuccessStories()
 console.log(successStories)
 </script>
 <template>
-    <main>
-        <InnerHero :pagebanner="banner" pagetitle="Industries"
+    <head>
+      <title>AITS - The Various Industries We Serve</title>
+      <meta name="description" content="We provide solutions to Smart Cities, F&B, Manufacturing, Oil&Gas, Energy, and Utilities. Interested? Let's get started!"/>
+    </head>        
+    <InnerHero :pagebanner="banner" pagetitle="Industries"
         pagedescription="From Smart Cities to Food and Beverage, Energy, Transportation, and much more, AITS offers tailored software solutions to meet your unique needs in various industries. Discover how our industry-specific solutions can drive success for your business."/>
         <section class="relative">
             <IndustriesGrid :data="industries"/>
@@ -35,6 +38,4 @@ console.log(successStories)
             <PostsGrid sectionid="success-stories" sectiontitle="Success Stories" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='successStories'/> -->
             <InsideBody/>
         </section>
- 
-    </main>
 </template>

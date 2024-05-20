@@ -55,16 +55,18 @@ const benefits = [
 ];
 </script>
 <template>
-  <main>
-      <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the family."/>
-      <section class="relative">
-        <JobsList sectionid="jobs-openings" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
-        Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
-        your business stay ahead of the curve."/>
-        <JobsList class="pt-40" sectionid="internship-opportunities" sectiontitle="Internship Opportunities" sectiondescription="Got a knack for learning? Join our team as an intern and develop your skills while exploring the mystical world of software solutions."/>
-        <BenefitsFlexWithBlur sectiontitle="Employees Benefits" 
-        sectiondescription="AITS, where talent thrives and ambitions are realized. We value our employees and are committed to their growth and well-being. Explore the unique advantages of being part of our team, encompassing:" :data='benefits'/>
-        <InsideBody/>
-      </section>    
-    </main>
+    <head>
+      <title>AITS - Join the AITS Team</title>
+      <meta name="description" content="Browse through our available job openings to join the team and make an impact at AITS! We welcome diverse experts from all parts of the world."/>
+    </head>      
+    <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the family."/>
+    <section class="relative">
+      <JobsList sectionid="jobs-openings" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
+      Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
+      your business stay ahead of the curve."/>
+      <JobsList class="pt-40" sectionid="internship-opportunities" sectiontitle="Internship Opportunities" sectiondescription="Got a knack for learning? Join our team as an intern and develop your skills while exploring the mystical world of software solutions."/>
+      <BenefitsFlexWithBlur sectiontitle="Employees Benefits" 
+      sectiondescription="AITS, where talent thrives and ambitions are realized. We value our employees and are committed to their growth and well-being. Explore the unique advantages of being part of our team, encompassing:" :data='benefits'/>
+      <InsideBody/>
+    </section>    
 </template>
