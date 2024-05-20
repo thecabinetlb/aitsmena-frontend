@@ -19,8 +19,8 @@ const router = createRouter({
     { path: '/careers', component: CareersView },
     { path: '/resources', component: ResourcesView },
     { path: '/resources/blog', component: BlogView },
-    { path: '/resources/blog/:id', component: BlogPostDetailsView },
-    { path: '/industries/success-stories/:id', component: StoriesPostDetailsView }
+    { path: '/resources/blog/:slug', component: BlogPostDetailsView, props: true },
+    { path: '/industries/success-stories/:slug', component: StoriesPostDetailsView }
   ],
     scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

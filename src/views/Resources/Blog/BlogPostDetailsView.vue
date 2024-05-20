@@ -2,10 +2,12 @@
 import PostDetails from '../../../components/PostDetails.vue'
 import { getBlogPostById } from '../../../helpers/api'
 import { useRoute } from 'vue-router'
-
+defineProps({
+  slug: String
+})
 const route = useRoute()
 
-const blogpost = getBlogPostById(route.params.id)
+const blogpost = getBlogPostById(route.params.slug)
 </script>
 <template>
     <PostDetails sectiontitle="Blog Post Details" :item="blogpost"/>
