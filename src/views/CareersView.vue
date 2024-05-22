@@ -65,7 +65,6 @@ const benefits = [
       Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
       your business stay ahead of the curve."/>
       <JobsList sectionid="internship-opportunities" sectiontitle="Internship Opportunities" sectiondescription="Got a knack for learning? Join our team as an intern and develop your skills while exploring the mystical world of software solutions."/>
-      <!-- <iframe src='https://widgets.sociablekit.com/linkedin-page-jobs/iframe/25415729' frameborder='0' width='100%' height='100%'></iframe>       -->
       <BenefitsFlexWithBlur sectiontitle="Employees Benefits" 
       sectiondescription="AITS, where talent thrives and ambitions are realized. We value our employees and are committed to their growth and well-being. Explore the unique advantages of being part of our team, encompassing:" :data='benefits'/>
       <InsideBody/>
