@@ -20,6 +20,9 @@ const valuesandcommitments =
   <head>
     <title>AITS - Industrial Software Solutions Tailored To Your Business</title>
     <meta name="description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!"/>
+    <meta property="og:title" content="AITS - Industrial Software Solutions Tailored To Your Business" />
+    <meta name="org:description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!"/>
+    <meta property="og:image" content="/AITSLogoWithSlogan.webp" />  
   </head>
   <Hero/>
   <OneImageTextFlex sectiontitle="Mission and Vision" :item="missionandvission"/>
