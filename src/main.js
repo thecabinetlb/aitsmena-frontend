@@ -1,6 +1,6 @@
 import './assets/css/index.css'
 
-import { createApp } from 'vue'
+import { createSSRApp } from 'vue'
 import { createHead } from '@unhead/vue'
 import App from './App.vue'
 import router from './router'
@@ -8,7 +8,7 @@ import { MotionPlugin } from '@vueuse/motion'
 import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
 import { InferSeoMetaPlugin } from '@unhead/addons'
 
-const app = createApp(App)
+const app = createSSRApp(App)
 
 // Use @unhead/vue for meta management
 const head = createHead()
