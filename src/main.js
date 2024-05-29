@@ -6,19 +6,15 @@ import App from './App.vue'
 import router from './router'
 import { MotionPlugin } from '@vueuse/motion'
 import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
+import VueMeta from 'vue-meta'
 
 const app = createApp(App)
-
-// Use @unhead/vue for meta management
 const head = createHead()
 app.use(head)
-
-// Use other plugins
+Vue.use(VueMeta)
 app.use(MotionPlugin)
 app.use(router)
 app.use(VueRecaptchaPlugin, {
   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
 })
-
-// Mount the app
 app.mount('#app')
