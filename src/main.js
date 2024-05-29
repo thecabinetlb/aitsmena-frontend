@@ -11,7 +11,7 @@ import VueMeta from 'vue-meta'
 const app = createApp(App)
 const head = createHead()
 app.use(head)
-Vue.use(VueMeta)
+app.use(VueMeta)
 app.use(MotionPlugin)
 app.use(router)
 app.use(VueRecaptchaPlugin, {
