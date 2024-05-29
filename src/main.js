@@ -6,12 +6,13 @@ import App from './App.vue'
 import router from './router'
 import { MotionPlugin } from '@vueuse/motion'
 import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
-
+import { InferSeoMetaPlugin } from '@unhead/addons'
 
 const app = createApp(App)
 
 // Use @unhead/vue for meta management
 const head = createHead()
+head.use(InferSeoMetaPlugin())
 app.use(head)
 
 // Use other plugins

@@ -1,7 +1,7 @@
 <script setup>
 import Hero from '../components/Hero.vue'
 import Contact from '../components/Contact.vue'
-import OneImageTextFlex from '@/components/OneImageTextFlex.vue'
+import OneImageTextFlex from '../components/OneImageTextFlex.vue'
 import { useSeoMeta } from '@unhead/vue'
 // Set SEO meta tags using useSeoMeta
 useSeoMeta({

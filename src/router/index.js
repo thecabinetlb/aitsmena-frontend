@@ -8,20 +8,20 @@ import ResourcesView from '../views/Resources/ResourcesView.vue'
 import StoriesPostDetailsView from '../views/Industries/StoriesPostDetailsView.vue'
 import BlogView from '../views/Resources/Blog/BlogView.vue'
 import BlogPostDetailsView from '../views/Resources/Blog/BlogPostDetailsView.vue'
-
+const routes= [
+  { path: '/', component: HomeView},
+  { path: '/about', component: AboutView },
+  { path: '/contact', component: ContactView },
+  { path: '/industries', component: IndustriesView},
+  { path: '/careers', component: CareersView },
+  { path: '/resources', component: ResourcesView },
+  { path: '/resources/blog', component: BlogView },
+  { path: '/resources/blog/:slug', component: BlogPostDetailsView, props: true },
+  { path: '/industries/success-stories/:slug', component: StoriesPostDetailsView }
+]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    { path: '/', component: HomeView},
-    { path: '/about', component: AboutView },
-    { path: '/contact', component: ContactView },
-    { path: '/industries', component: IndustriesView},
-    { path: '/careers', component: CareersView },
-    { path: '/resources', component: ResourcesView },
-    { path: '/resources/blog', component: BlogView },
-    { path: '/resources/blog/:slug', component: BlogPostDetailsView, props: true },
-    { path: '/industries/success-stories/:slug', component: StoriesPostDetailsView }
-  ],
+  routes,
     scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
         return savedPosition
@@ -34,5 +34,5 @@ const router = createRouter({
       return { top: 0,  behavior: 'smooth' }
   }  
 })
-
+export { routes }
 export default router
