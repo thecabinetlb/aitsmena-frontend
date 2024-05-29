@@ -20,14 +20,14 @@ const valuesandcommitments =
 // Define your dynamic meta information
 const myTitle = 'AITS - Industrial Software Solutions Tailored To Your Business'
 const myDescription = 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!'
-const myOgImage = '/aits-og-image.png' // Ensure the path is correct
+const myOgImage = 'https://aitsmena-test.netlify.app/aits-og-image.png' // Ensure the path is correct
 
 // Set SEO meta tags using useSeoMeta
 useSeoMeta({
   title: myTitle,
   description: myDescription,
-  ogDescription: myDescription,
   ogTitle: myTitle,
+  ogDescription: myDescription,
   ogImage: myOgImage,
 })
 
