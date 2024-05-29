@@ -2,7 +2,7 @@
 import Hero from '../components/Hero.vue'
 import Contact from '../components/Contact.vue'
 import OneImageTextFlex from '@/components/OneImageTextFlex.vue'
-import { Head } from '@unhead/vue/components'
+import { useSeoMeta } from '@unhead/vue'
 
 const missionandvission =
   {
@@ -17,15 +17,22 @@ const valuesandcommitments =
   image: "/images/hero/values/values.webp",
 }
 
+// Define your dynamic meta information
+const myTitle = 'AITS - Industrial Software Solutions Tailored To Your Business'
+const myDescription = 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!'
+const myOgImage = '/aits-og-image.png' // Ensure the path is correct
+
+// Set SEO meta tags using useSeoMeta
+useSeoMeta({
+  title: myTitle,
+  description: myDescription,
+  ogDescription: myDescription,
+  ogTitle: myTitle,
+  ogImage: myOgImage,
+})
+
 </script>
 <template>
-  <Head>
-    <title>AITS - Industrial Software Solutions Tailored To Your Business</title>
-    <meta name="description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!"/>
-    <meta property="og:title" content="AITS - Industrial Software Solutions Tailored To Your Business" />
-    <meta name="org:description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!"/>
-    <meta property="og:image" content="/aits-og-image.png"/>  
-  </Head>
   <Hero/>
   <OneImageTextFlex sectiontitle="Mission and Vision" :item="missionandvission"/>
   <OneImageTextFlex  sectiontitle="Values and Commitments" :item="valuesandcommitments" reverse/>
