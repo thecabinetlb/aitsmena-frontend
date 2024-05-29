@@ -2,21 +2,8 @@
 import Hero from '../components/Hero.vue'
 import Contact from '../components/Contact.vue'
 import OneImageTextFlex from '@/components/OneImageTextFlex.vue'
-import { useHead } from '@unhead/vue';
+import { Head } from '@unhead/vue/components'
 
-const myTitle = 'AITS - Industrial Software Solutions Tailored To Your Business';
-const myDescription = 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!';
-const myOgImage = '/aits-og-image.png';
-
-useHead({
-  title: myTitle,
-  meta: [
-    { name: 'description', content: myDescription },
-    { property: 'og:title', content: myTitle },
-    { property: 'og:description', content: myDescription },
-    { property: 'og:image', content: myOgImage },
-  ],
-});
 const missionandvission =
   {
     title: "A Vision In Sight",
@@ -32,6 +19,13 @@ const valuesandcommitments =
 
 </script>
 <template>
+  <Head>
+    <title>AITS - Industrial Software Solutions Tailored To Your Business</title>
+    <meta name="description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!"/>
+    <meta property="og:title" content="AITS - Industrial Software Solutions Tailored To Your Business" />
+    <meta name="org:description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!"/>
+    <meta property="og:image" content="/aits-og-image.png"/>  
+  </Head>
   <Hero/>
   <OneImageTextFlex sectiontitle="Mission and Vision" :item="missionandvission"/>
   <OneImageTextFlex  sectiontitle="Values and Commitments" :item="valuesandcommitments" reverse/>
