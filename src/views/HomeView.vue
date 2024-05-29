@@ -3,7 +3,14 @@ import Hero from '../components/Hero.vue'
 import Contact from '../components/Contact.vue'
 import OneImageTextFlex from '@/components/OneImageTextFlex.vue'
 import { useSeoMeta } from '@unhead/vue'
-
+// Set SEO meta tags using useSeoMeta
+useSeoMeta({
+  title: 'AITS - Industrial Software Solutions Tailored To Your Business',
+  description: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!',
+  ogTitle: 'AITS - Industrial Software Solutions Tailored To Your Business',
+  ogDescription: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!',
+  ogImage: '/aits-og-image.png',
+})
 const missionandvission =
   {
     title: "A Vision In Sight",
@@ -17,14 +24,7 @@ const valuesandcommitments =
   image: "/images/hero/values/values.webp",
 }
 
-// Set SEO meta tags using useSeoMeta
-useSeoMeta({
-  title: 'AITS - Industrial Software Solutions Tailored To Your Business',
-  description: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!',
-  ogTitle: 'AITS - Industrial Software Solutions Tailored To Your Business',
-  ogDescription: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!',
-  ogImage: '/aits-og-image.png',
-})
+
 
 </script>
 <template>

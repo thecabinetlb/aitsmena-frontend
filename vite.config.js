@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
-import Sitemap from 'vite-plugin-sitemap'
+import Pages from 'vite-plugin-pages'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -8,7 +8,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [
     vue(),
-    Sitemap(),
+    Pages(),
   ],
   resolve: {
     alias: {
