@@ -20,7 +20,7 @@ const locations =
     <InnerHero :pagebanner="banner" pagetitle="Contact" pagedescription="Get in touch to learn more about our industry software solutions and how you can take your business a step further!"/>
     <div class="relative">
         <ContactForm/>
-        <TextGrid sectionid="office-locations" sectiontitle="Office Locations"
+        <TextGrid sectiontitle="Office Location"
         sectiondescription="Need assistance with sales or support? Get in touch with our dedicated sales and support team for personalized assistance and expert guidance. Find the nearest AITS office and get in touch with us to schedule a consultation or learn more about our solutions and services. We have offices located across the Gulf region to serve you better." :item="locations"/>
         <InsideBody/>        
     </div>
