@@ -10,7 +10,6 @@ import industriesiconMi from '/images/industries/Mining.svg'
 import InnerHero from '../../components/InnerHero.vue';
 import IndustriesGrid from '../../components/IndustriesGrid.vue'
 import InsideBody from '../../components/InsideBody.vue'
-import { getSuccessStories } from '../../helpers/api'
 
 const industries = [
 { id: 1, title: 'Smart Cities', description:"Smart Cities are at the forefront of innovation to enhance the quality of life for residents and optimize city operations. AITS is pioneering the transformation of urban landscapes by providing advanced software solutions and digital services that integrate information and communication technology (ICT) to drive efficiency, sustainability, and citizen-centric services. From smart infrastructure management to intelligent transportation systems and data-driven decision-making, our solutions empower cities to harness the power of real-time data for better resource allocation and enhanced service delivery.", icon:industriesiconC },
@@ -22,8 +21,6 @@ const industries = [
 { id: 7, title: 'Metal, Mining, & Minerals', description:"The mining and metal industry is a challenging one, especially in today’s decade where companies are experiencing potential for increased geopolitical risks, years of underinvestment, acute labor shortages, and much more.Our advanced digital threads and connected workers help in bettering waste management, optimize mineral recovery, reduce costs, and increase revenue.", icon:industriesiconMi },
 ];
 
-const successStories = getSuccessStories()
-console.log(successStories)
 </script>
 <template>
     <head>

@@ -1,6 +1,6 @@
 <script setup>
 import PostDetails from '../../components/PostDetails.vue'
-import { getSuccessStoryById } from '../../helpers/api'
+import { getSuccessStoryById } from '../../utils/api'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
