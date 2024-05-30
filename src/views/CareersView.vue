@@ -21,38 +21,38 @@ import BenefitsFlexWithBlur from '../components/BenefitsFlexWithBlur.vue';
 //   { id: 4, title: 'Graphic Design Intern', type: 'Internship', to: 'https://example.com/internship4', target: '_blank', location: 'Chicago, IL' },
 //   { id: 5, title: 'Project Management Intern', type: 'Internship', to: 'https://example.com/internship5', target: '_blank', location: 'Seattle, WA' },
 // ];
-const benefits = [
-  { 
-    id: 1, 
-    title: 'Competitive compensation and rewards packages tailored to recognize and appreciate individual contributions.', 
-    // description: 'Comprehensive health insurance coverage for employees and their dependents, including medical, dental, and vision benefits.'
-  },
-  { 
-    id: 2, 
-    title: 'Robust opportunities for professional development and career advancement, including access to cutting-edge training programs and mentorship initiatives.', 
-    // description: 'Competitive salaries and performance-based bonuses or incentives to reward employees for their contributions and achievements.'
-  },
-  { 
-    id: 3, 
-    title: 'A collaborative and supportive workplace culture that champions innovation, diversity, and work-life balance, ensuring every team member feels empowered and valued.', 
-    // description: 'Support for ongoing learning and skill development through training programs, workshops, conferences, and tuition reimbursement.'
-  },
-  // { 
-  //   id: 5, 
-  //   title: 'Parental Leave', 
-  //   description: 'Paid parental leave policies for new parents, including maternity, paternity, and adoption leave, to support employees during significant life transitions.'
-  // },
-  // { 
-  //   id: 6, 
-  //   title: 'Employee Recognition Programs', 
-  //   description: 'Recognition programs to acknowledge and reward employees for their contributions, milestones, and achievements, fostering a culture of appreciation and recognition.'
-  // },
-  // { 
-  //   id: 7, 
-  //   title: 'Employee Referral Program', 
-  //   description: 'Incentives for employees who refer qualified candidates to open positions within the company, helping to attract top talent through employee networks.'
-  // }
-];
+// const benefits = [
+//   { 
+//     id: 1, 
+//     title: 'Competitive compensation and rewards packages tailored to recognize and appreciate individual contributions.', 
+//     // description: 'Comprehensive health insurance coverage for employees and their dependents, including medical, dental, and vision benefits.'
+//   },
+//   { 
+//     id: 2, 
+//     title: 'Robust opportunities for professional development and career advancement, including access to cutting-edge training programs and mentorship initiatives.', 
+//     // description: 'Competitive salaries and performance-based bonuses or incentives to reward employees for their contributions and achievements.'
+//   },
+//   { 
+//     id: 3, 
+//     title: 'A collaborative and supportive workplace culture that champions innovation, diversity, and work-life balance, ensuring every team member feels empowered and valued.', 
+//     // description: 'Support for ongoing learning and skill development through training programs, workshops, conferences, and tuition reimbursement.'
+//   },
+//   // { 
+//   //   id: 5, 
+//   //   title: 'Parental Leave', 
+//   //   description: 'Paid parental leave policies for new parents, including maternity, paternity, and adoption leave, to support employees during significant life transitions.'
+//   // },
+//   // { 
+//   //   id: 6, 
+//   //   title: 'Employee Recognition Programs', 
+//   //   description: 'Recognition programs to acknowledge and reward employees for their contributions, milestones, and achievements, fostering a culture of appreciation and recognition.'
+//   // },
+//   // { 
+//   //   id: 7, 
+//   //   title: 'Employee Referral Program', 
+//   //   description: 'Incentives for employees who refer qualified candidates to open positions within the company, helping to attract top talent through employee networks.'
+//   // }
+// ];
 </script>
 <template>
     <head>
@@ -66,7 +66,7 @@ const benefits = [
       your business stay ahead of the curve."/>
       <JobsList sectionid="internship-opportunities" sectiontitle="Internship Opportunities" sectiondescription="Got a knack for learning? Join our team as an intern and develop your skills while exploring the mystical world of software solutions."/>
       <BenefitsFlexWithBlur sectiontitle="Employees Benefits" 
-      sectiondescription="AITS, where talent thrives and ambitions are realized. We value our employees and are committed to their growth and well-being. Explore the unique advantages of being part of our team, encompassing:" :data='benefits'/>
+      sectiondescription="AITS, where talent thrives and ambitions are realized. We value our employees and are committed to their growth and well-being. Explore the unique advantages of being part of our team, encompassing:"/>
       <InsideBody/>
     </section>    
 </template>

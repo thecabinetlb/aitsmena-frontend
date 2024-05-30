@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "generate-sitemap": "node generate-sitemap.js"
+    "buildssr": "vite-ssg build"
   },
   "dependencies": {
     "vue": "^3.4.21"
@@ -15,7 +15,7 @@
   "devDependencies": {
     "@unhead/addons": "^1.9.11",
     "@unhead/ssr": "^1.9.11",
-    "@unhead/vue": "^1.9.7",
+    "@unhead/vue": "^1.9.11",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vueuse/motion": "^2.1.0",
     "autoprefixer": "^10.4.19",
@@ -23,9 +23,9 @@
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
     "vite": "^5.2.12",
-    "vite-plugin-sitemap": "^0.6.2",
+    "vite-ssg": "^0.23.7",
     "vue-recaptcha": "^3.0.0-alpha.6",
-    "vue-router": "^4.0.13",
+    "vue-router": "^4.3.2",
     "vue3-carousel": "^0.3.3"
   }
 }

@@ -139,7 +139,7 @@ const industryInsights = [
       <title>AITS - Resources</title>
       <meta name="description" content="Got a knack for reading? Gain access to free resources including whitepapers, industry insights, educational blogs, and specialized webinars."/>
     </head>
-    <InnerHero :pagebanner="banner" pagetitle="Resources" pagedescription="Need some resources to explore the complex world of software solutions? Welcome to the home of the latest industry news, insights, trends, and much more."/>
+    <InnerHero :pagebanner="banner" pagetitle="Resources" pagedescription="Need some resources to explore the complex world of software solutions and digital services? Welcome to the home of the latest industry news, insights, trends, and much more."/>
     <section class="relative -mt-40">
       <PostsCarousel sectionid="blog" sectiontitle="Blog" sectiondescription="Stay informed with the latest trends and developments in industrial automation. Explore our blog for thought-provoking articles, expert opinions, and practical tips to help your business stay ahead of the curve." :data='blogposts'/>
       <OneImageTextFlex sectionid="whitepapers" sectiontitle="Whitepapers" :item="whitepaper"/>

@@ -5,32 +5,10 @@ import InsideBody from '../components/InsideBody.vue';
 import ContactForm from '../components/ContactForm.vue';
 import TextGrid from '../components/TextGrid.vue';
 
-const locations = [
+const locations = 
   {
-    id: 1,
-    title: 'Al Reem Island, Abu Dhabi, UAE',
-    address: '3003 Addax Tower',
-    phone: '+971 (2) 222 2130',
-    poBox: 'PO Box 3628',
-    email: 'info@aitsmena.com',
-    website: 'https://aitsmena.com/'
-  },
-  {
-    id: 2,
-    title: 'Dubai Digital Park',
-    address: 'A6 building, 401 Office Silicon Oasis, Dubai, UAE',
-    phone: '+971 4 344 4901',
-    fax: '+971 4 344 4902',
-    poBox: 'PO Box: 342112',
-    email: 'info@aitsmena.com',
-    website: 'https://aitsmena.com/'
-  },
-  {
-    id: 3,
-    title: 'dba AVEVA Select Gulf',
-    address: 'Office no. 214, Sulimaniya Office Building, 3135 Prince sultan Bin Abdulaziz Road As Sulimaniyah, Riyad, Kingdom of Saudi Arabia'
+    title: 'Sulimaniyah Office Building, Office no.214, 3132 Prince Sultan Bin Abdulaziz Road, Sulimaniyah, Riyad, Kingdom of Saudi Arabia.',
   }
-];
 
 </script>
 
@@ -43,7 +21,7 @@ const locations = [
     <div class="relative">
         <ContactForm/>
         <TextGrid sectionid="office-locations" sectiontitle="Office Locations"
-        sectiondescription="Need assistance with sales or support? Get in touch with our dedicated sales and support team for personalized assistance and expert guidance. Find the nearest AITS office and get in touch with us to schedule a consultation or learn more about our solutions and services. We have offices located across the Gulf region to serve you better." :data="locations"/>
+        sectiondescription="Need assistance with sales or support? Get in touch with our dedicated sales and support team for personalized assistance and expert guidance. Find the nearest AITS office and get in touch with us to schedule a consultation or learn more about our solutions and services. We have offices located across the Gulf region to serve you better." :item="locations"/>
         <InsideBody/>        
     </div>
 </template>

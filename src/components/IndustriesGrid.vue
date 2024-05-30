@@ -10,7 +10,7 @@ const openDetails = ref(0)
     <section class="w-11/12 h-full mx-auto 2xl:w-8/12 lg:w-10/12">
         <h1 class="text-accent1 font-[200] text-lg uppercase"> &#x2022; Industries we serve</h1>
         <hr class="w-full h-4 mt-3 text-accent2"/>
-        <div class="grid relative w-full justify-center items-center grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 gap-6 md:mb-[194px] mt-10 max-md:pb-10"> 
+        <div class="grid relative w-full justify-center items-center grid-cols-2 md:grid-cols-4 2xl:grid-cols-7 gap-6 md:mb-[194px] mt-10 max-md:pb-10"> 
             <div v-for="(item, key) in data" :key="key" @click="openDetails = key"
             class="relative p-6 cursor-pointer flex flex-col gap-3 justify-center items-center col-span-1 text-center aspect-square rounded-[16px] border-2 bg-noise bg-opacity-50 bg-cover bg-center"
             :class="{'border-bg2/30' : openDetails === key, 'border-bg2' : openDetails !== key}">

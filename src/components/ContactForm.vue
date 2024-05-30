@@ -232,8 +232,8 @@ const handleSubmit = () => {
             </div>
             <!-- Recaptchs -->
             <div class="w-full col-span-2">
-            <Checkbox v-model="ReCaptchaValid" theme="dark" />          
-            <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
+                <Checkbox v-model="ReCaptchaValid" theme="dark" />                            
+                <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
             </div>
             <!-- Submit -->
             <div class="flex flex-wrap items-center w-full gap-2">
