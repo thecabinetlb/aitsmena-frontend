@@ -7,9 +7,10 @@ import { useSeoMeta } from '@unhead/vue'
 useSeoMeta({
   title: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business',
   description: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!',
+  ogUrl:'https://aitsmena-test.netlify.app/',
   ogTitle: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business',
   ogDescription: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!',
-  ogImage: 'https://aitsmena-test.netlify.app/aits-og-image.png',
+  ogImage: '/aits-og-image.png',
 })
 const missionandvission =
   {
