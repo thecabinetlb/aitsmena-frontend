@@ -8,9 +8,6 @@ useSeoMeta({
   title: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business',
   description: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!',
   ogUrl:'https://aitsmena-test.netlify.app/',
-  ogTitle: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business',
-  ogDescription: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!',
-  ogImage: '/aits-og-image.png',
 })
 const missionandvission =
   {
@@ -27,6 +24,11 @@ const valuesandcommitments =
 
 </script>
 <template>
+  <head>
+    <meta name="image" property="og:image" content="/aits-og-image.png">
+    <meta property="og:title" content="AITS - Industrial Software Solutions And Digital Services Tailored To Your Business">
+    <meta property="og:description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
+  </head>
   <Hero/>
   <OneImageTextFlex sectiontitle="Mission and Vision" :item="missionandvission"/>
   <OneImageTextFlex  sectiontitle="Values and Commitments" :item="valuesandcommitments" reverse/>
