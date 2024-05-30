@@ -16,10 +16,9 @@ export default {
         '10': '0.1',
       },
       backgroundImage: {
-        'noise':'url(/images/noise/noise.svg)',
-        'blue-noise':'url(/images/noise/blue-noise.svg)',
+        'noise':'url(/images/noise/noise_v2.svg)',
         'footer-noise':'url(/images/noise/footer-noise.svg)',
-        'extended-noise':'url(/images/noise/extended-noise.svg)',
+        'extended-noise':'url(/images/noise/extended-noise_v2.svg)',
         'colors':'url(/images/insidepages/elements/allelements.webp)',
         'mobilecolors':'url(/images/insidepages/elements/allelementsmobile.webp)',
       },

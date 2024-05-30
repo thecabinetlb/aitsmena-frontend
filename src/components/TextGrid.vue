@@ -13,7 +13,7 @@ defineProps({
             {{ sectiondescription }}
         </p>
     <!-- <ul role="list" class="grid items-center w-full grid-cols-1 gap-6 mt-10 lg:grid-cols-3 sm:grid-cols-2 p-10 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] list-style-none"> -->
-        <div class="flex flex-col gap-3  p-10 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] mt-10">
+        <div class="flex flex-col gap-3 p-10 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] mt-10">
         <!-- :class="{'lg:border-r lg:border-accent1' : key === 0 ||  key === 1, 'sm:border-r sm:border-accent1' : key === 0 }" -->
             <!-- <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive loading="lazy" class="max-sm:w-[54px] aspect-square"/> -->
             <h2 class="max-sm:text-[14px] text-accent1 text-justify font-[200]">
