@@ -4,6 +4,7 @@ import JobsList from '../components/JobsList.vue';
 import InnerHero from '../components/InnerHero.vue';
 import InsideBody from '../components/InsideBody.vue';
 import BenefitsFlexWithBlur from '../components/BenefitsFlexWithBlur.vue';
+
 // const jobs =[
 //   { id: 1, title: 'Software Engineer', type: 'Full-time', to: 'https://example.com/job1', target: '_blank', location: 'San Francisco, CA' },
 //   { id: 2, title: 'Data Analyst', type: 'Contract', to: 'https://example.com/job2', target: '_blank', location: 'New York, NY' },
@@ -64,7 +65,7 @@ import BenefitsFlexWithBlur from '../components/BenefitsFlexWithBlur.vue';
       <JobsList sectionid="jobs-openings" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation.
       Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
       your business stay ahead of the curve."/>
-      <JobsList sectionid="internship-opportunities" sectiontitle="Internship Opportunities" sectiondescription="Got a knack for learning? Join our team as an intern and develop your skills while exploring the mystical world of software solutions."/>
+      <JobsList sectionid="internship-opportunities" sectiontitle="Internship Opportunities" sectiondescription="Got a knack for learning? Join our team as an intern and develop your skills while exploring the mystical world of software solutions and digital services."/>
       <BenefitsFlexWithBlur sectiontitle="Employees Benefits" 
       sectiondescription="AITS, where talent thrives and ambitions are realized. We value our employees and are committed to their growth and well-being. Explore the unique advantages of being part of our team, encompassing:"/>
       <InsideBody/>

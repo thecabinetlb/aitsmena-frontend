@@ -3,9 +3,9 @@ import banner from '/images/banners/resources.webp'
 import PostsCarousel from '../../components/PostsCarousel.vue';
 import InnerHero from '../../components/InnerHero.vue';
 import InsideBody from '../../components/InsideBody.vue';
-import WebinarsList from '../../components/WebinarsList.vue';
 import { getFeaturedBlogPosts } from '../../helpers/api'
 import OneImageTextFlex from '../../components/OneImageTextFlex.vue';
+
 const blogposts = getFeaturedBlogPosts()
 const whitepaper ={ 
     id: 1, 
@@ -25,7 +25,7 @@ const industryInsights = [
   },
   { 
     id: 2, 
-    title: 'Smart Solutions for Water Management', 
+    title: 'Software Solutions and Digital Services for Water Management', 
     summary: 'Discover innovative technologies and strategies for efficient water management and wastewater treatment.', 
     to: 'https://example.com/water-management-insights', 
     target: '_blank', 

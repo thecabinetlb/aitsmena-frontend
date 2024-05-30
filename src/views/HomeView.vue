@@ -5,16 +5,16 @@ import OneImageTextFlex from '../components/OneImageTextFlex.vue'
 import { useSeoMeta } from '@unhead/vue'
 // Set SEO meta tags using useSeoMeta
 useSeoMeta({
-  title: 'AITS - Industrial Software Solutions Tailored To Your Business',
+  title: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business',
   description: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!',
-  ogTitle: 'AITS - Industrial Software Solutions Tailored To Your Business',
+  ogTitle: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business',
   ogDescription: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!',
   ogImage: '/aits-og-image.png',
 })
 const missionandvission =
   {
     title: "A Vision In Sight",
-    description: "AITS strives to be the leading industrial software innovator in the Gulf region. How? By delivering cutting-edge software solutions, digital threads, and connected workers. It takes a thrill for innovation and excellence to empower organizations in reaching new heights of success.",
+    description: "AITS strives to be the leading industrial software innovator in the Gulf region. How? By delivering cutting-edge software solutions and digital services, digital threads, and connected workers. It takes a thrill for innovation and excellence to empower organizations in reaching new heights of success.",
     image: "/images/hero/missionandvision/vision.webp",
 }
 const valuesandcommitments =
