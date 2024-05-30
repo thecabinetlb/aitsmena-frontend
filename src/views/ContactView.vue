@@ -7,7 +7,9 @@ import TextGrid from '../components/TextGrid.vue';
 
 const locations = 
   {
-    title: 'Sulimaniyah Office Building, Office no.214, 3132 Prince Sultan Bin Abdulaziz Road, Sulimaniyah, Riyad, Kingdom of Saudi Arabia.',
+    address: 'Sulimaniyah Office Building, Office no.214, 3132 Prince Sultan Bin Abdulaziz Road, Sulimaniyah, Riyad, Kingdom of Saudi Arabia.',
+    email: 'info@aitsmena.com',
+    website: 'https://aitsmena.com/'
   }
 
 </script>
