@@ -11,8 +11,9 @@
     <link rel="preload" fetchpriority="high" as="image" type="image/webp" href="/images/hero/elements/lefttop (1).webp"/>
   </head>
   <body class="bg-black font-body">
-    <div id="app"></div>
+    <div id="app"><!--ssr-outlet--></div>
+    <script type="module" src="/src/entry-client.js"></script>
     <div id="portals"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>   -->
+    </body>
 </html>
