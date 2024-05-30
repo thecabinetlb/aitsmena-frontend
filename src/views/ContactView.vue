@@ -2,9 +2,11 @@
 import banner from '/images/banners/contact.webp'
 import InnerHero from '../components/InnerHero.vue';
 import InsideBody from '../components/InsideBody.vue';
-import ContactForm from '../components/ContactForm.vue';
 import TextGrid from '../components/TextGrid.vue';
-
+import { defineAsyncComponent } from 'vue'
+const ContactForm = defineAsyncComponent(() =>
+  import('../components/ContactForm.vue')
+)
 const locations = 
   {
     address: 'Sulimaniyah Office Building, Office no.214, 3132 Prince Sultan Bin Abdulaziz Road, Sulimaniyah, Riyad, Kingdom of Saudi Arabia.',

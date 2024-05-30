@@ -1,11 +1,13 @@
 <script setup>
 import banner from '/images/banners/resources.webp'
-import PostsCarousel from '../../components/PostsCarousel.vue';
 import InnerHero from '../../components/InnerHero.vue';
 import InsideBody from '../../components/InsideBody.vue';
-import { getFeaturedBlogPosts } from '../../helpers/api'
+import { getFeaturedBlogPosts } from '../../utils/api'
 import OneImageTextFlex from '../../components/OneImageTextFlex.vue';
-
+import { defineAsyncComponent } from 'vue'
+const PostsCarousel = defineAsyncComponent(() =>
+  import('../../components/PostsCarousel.vue')
+)
 const blogposts = getFeaturedBlogPosts()
 const whitepaper ={ 
     id: 1, 
@@ -141,7 +143,7 @@ const industryInsights = [
     </head>
     <InnerHero :pagebanner="banner" pagetitle="Resources" pagedescription="Need some resources to explore the complex world of software solutions and digital services? Welcome to the home of the latest industry news, insights, trends, and much more."/>
     <section class="relative -mt-40">
-      <PostsCarousel sectionid="blog" sectiontitle="Blog" sectiondescription="Stay informed with the latest trends and developments in industrial automation. Explore our blog for thought-provoking articles, expert opinions, and practical tips to help your business stay ahead of the curve." :data='blogposts'/>
+      <PostsCarousel sectionid="blog" sectiontitle="Blog" sectiondescription="Stay informed with the latest trends and developments in industrial automation. Explore our blog for thought-provoking articles, expert opinions, and practical tips to help your business stay ahead of the curve." :data='blogposts'/>   
       <OneImageTextFlex sectionid="whitepapers" sectiontitle="Whitepapers" :item="whitepaper"/>
       <PostsCarousel sectionid="industry-insights" sectiontitle="Industry Insights" sectiondescription="Access exclusive industry insights and reports to stay informed about the latest news, developments, and opportunities in your sector. Stay ahead of the competition with actionable intelligence from AITS." :data='industryInsights'/>
       <!-- <WebinarsList sectiontitle="Webinars" :data='webinars'/> -->

@@ -1,6 +1,6 @@
 <script setup>
 import PostDetails from '../../../components/PostDetails.vue'
-import { getBlogPostById } from '../../../helpers/api'
+import { getBlogPostById } from '../../../utils/api'
 import { useRoute } from 'vue-router'
 defineProps({
   slug: String
