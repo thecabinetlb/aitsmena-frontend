@@ -1,7 +1,13 @@
 <script setup>
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination } from 'vue3-carousel'
-import { ref, onMounted, watch } from 'vue';
+import { defineAsyncComponent } from 'vue'
+
+defineAsyncComponent(() =>
+  import('vue3-carousel/dist/carousel.css')
+)
+const { Carousel, Slide, Pagination } = defineAsyncComponent(() =>
+  import('vue3-carousel')
+)
+import { ref, onMounted } from 'vue';
 
 // Calculate the number of items to show based on screen width
 const getItemsToShow = () => {

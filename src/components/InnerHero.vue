@@ -2,7 +2,7 @@
 import logo from '/AITSLogoWithSlogan.webp'
 import { RouterLink } from 'vue-router'
 defineProps({
-    pagebanner: Image,
+    pagebanner: String,
     pagetitle: String,
     pagedescription: String,
     sectionid: String,

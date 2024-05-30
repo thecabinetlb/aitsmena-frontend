@@ -1,8 +1,11 @@
 <script setup>
 import axios from 'axios';
 import { ref, reactive, watch } from 'vue'
-import { Checkbox } from 'vue-recaptcha';
-import { useRecaptchaProvider } from 'vue-recaptcha'
+import { defineAsyncComponent } from 'vue'
+
+const {Checkbox, useRecaptchaProvider} = defineAsyncComponent(() =>
+  import('vue-recaptcha')
+)
 
 useRecaptchaProvider()
 const ReCaptchaValid = ref(false)
