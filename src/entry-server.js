@@ -2,7 +2,7 @@
 import { renderToString } from 'vue/server-renderer';
 import { createApp } from './main';
 
-export const render = async (url) => {
+export const render = async () => {
   const { app, head } = createApp();
   const html = await renderToString(app);
 
