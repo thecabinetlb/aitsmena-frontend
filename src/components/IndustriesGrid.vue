@@ -7,7 +7,7 @@ const openDetails = ref(0)
 
 </script>
 <template>
-    <section class="w-11/12 h-full mx-auto 2xl:w-8/12 lg:w-10/12">
+    <section class="w-11/12 mx-auto 2xl:w-8/12 lg:w-10/12">
         <h1 class="text-accent1 font-[200] text-lg uppercase"> &#x2022; Industries we serve</h1>
         <hr class="w-full h-4 mt-3 text-accent2"/>
         <div class="grid relative w-full justify-center items-center grid-cols-2 md:grid-cols-4 2xl:grid-cols-7 gap-6 md:mb-[194px] mt-10 max-md:pb-10"> 
