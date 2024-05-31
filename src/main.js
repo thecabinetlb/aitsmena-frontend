@@ -13,7 +13,6 @@ export const createApp = () => {
    */
   const app = createSSRApp(App);
 
-
   // Use other plugins
   app.use(MotionPlugin)
   app.use(router)

@@ -2,7 +2,17 @@
 import Hero from '../components/Hero.vue'
 import Contact from '../components/Contact.vue'
 import OneImageTextFlex from '../components/OneImageTextFlex.vue'
-
+import { useHead } from '@unhead/vue'
+useHead({
+  title: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business',
+  meta: [
+    { name: 'description', content: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!' },
+    { property: 'og:url', content: 'https://aitsmena-test.netlify.app/' },
+    { property: 'og:title', content: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business' },
+    { property: 'og:description', content: 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!' },
+    { property: 'og:image', content: '/aits-og-image.png' },
+  ],
+});
 const missionandvission =
   {
     title: "A Vision In Sight",
@@ -18,29 +28,6 @@ const valuesandcommitments =
 
 </script>
 <template>
-  <head>
- 	<!-- HTML Meta Tags -->
-<title>AITS - Industrial Software Solutions And Digital Services Tailored To Your Business</title>
-<meta name="description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
-
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://aitsmena-test.netlify.app/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AITS - Industrial Software Solutions And Digital Services Tailored To Your Business">
-<meta property="og:description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
-<meta property="og:image" content="/aits-og-image.png">
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="aitsmena-test.netlify.app">
-<meta property="twitter:url" content="https://aitsmena-test.netlify.app/">
-<meta name="twitter:title" content="AITS - Industrial Software Solutions And Digital Services Tailored To Your Business">
-<meta name="twitter:description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
-<meta name="twitter:image" content="/aits-og-image.png">
-
-<!-- Meta Tags Generated via https://www.opengraph.xyz -->    
-  </head>
- 
   <Hero/>
   <OneImageTextFlex sectiontitle="Mission and Vision" :item="missionandvission" 
   v-motion

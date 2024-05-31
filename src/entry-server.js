@@ -1,16 +1,13 @@
+// entry-server.js
 import { renderToString } from 'vue/server-renderer';
 import { createApp } from './main';
 
-/**
- * initiate the Vue App for a server-side application,
- * we use renderToString to render the app to HTML
- */
-
-export const render = async () => {
-  const { app } = createApp();
+export const render = async (url) => {
+  const { app, head } = createApp();
   const html = await renderToString(app);
 
-  return {
-    html,
-  };
+  // Generate head tags HTML
+  const headTags = head.headTags;
+
+  return { html, headTags };
 };

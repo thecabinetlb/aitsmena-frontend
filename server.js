@@ -25,17 +25,20 @@ async function createServer() {
       // Read index.html
       let template = fs.readFileSync(path.resolve(__dirname, 'index.html'), 'utf-8');
 
-
       // Apply Vite HTML transforms and load server entry
       template = await vite.transformIndexHtml(url, template);
       const { render } = await vite.ssrLoadModule('/src/entry-server.js');
 
-      // Render app HTML and inject into template
-      const appHtml = await render(url);
-      const html = template.replace(``, appHtml);
+      // Render app HTML and head tags
+      const { html, headTags } = await render(url);
+
+      // Inject the app HTML and head tags into the template
+      const finalHtml = template
+        .replace(`<!--ssr-outlet-->`, html)
+        .replace(`<!--head-outlet-->`, headTags);
 
       // Send rendered HTML after processing
-      res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
+      res.status(200).set({ 'Content-Type': 'text/html' }).end(finalHtml);
     } catch (e) {
       vite.ssrFixStacktrace(e);
       next(e);
