@@ -21,6 +21,6 @@ export const createApp = () => {
   const head = createHead()
   app.use(head)
   return {
-    app, router
+    app, router, head
   };
 };
