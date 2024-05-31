@@ -2,7 +2,6 @@ import './assets/css/index.css'
 
 import { createSSRApp } from 'vue'
 import { createHead } from '@unhead/vue'
-// import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
 import App from './App.vue'
 import router from './router'
 import { MotionPlugin } from '@vueuse/motion'

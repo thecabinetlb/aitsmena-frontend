@@ -27,7 +27,7 @@ async function createServer() {
 
       // Apply Vite HTML transforms and load server entry
       template = await vite.transformIndexHtml(url, template);
-      const { render } = await vite.ssrLoadModule('./dist/server/src/entry-server.js');
+      const { render } = await vite.ssrLoadModule('./dist/server/entry-server.js');
 
       // Render app HTML and head tags 
       const { html, headTags } = await render(url);
