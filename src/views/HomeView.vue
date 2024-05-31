@@ -33,8 +33,36 @@ const valuesandcommitments =
     <meta property="og:description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
   </head>
   <Hero/>
-  <OneImageTextFlex sectiontitle="Mission and Vision" :item="missionandvission"/>
-  <OneImageTextFlex  sectiontitle="Values and Commitments" :item="valuesandcommitments" reverse/>
+  <OneImageTextFlex sectiontitle="Mission and Vision" :item="missionandvission" 
+  v-motion
+  :initial="{
+    opacity: 0,
+    y: 100,
+  }"
+  :visibleOnce="{
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: '100',
+      delay: 100,
+    },
+  }"/>
+  <OneImageTextFlex  sectiontitle="Values and Commitments" :item="valuesandcommitments" reverse 
+  v-motion
+  :initial="{
+    opacity: 0,
+    y: 100,
+  }"
+  :visibleOnce="{
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: '100',
+      delay: 100,
+    },
+  }"/>
   <!-- <IndustriesList/> -->
   <Contact/>
 </template>
