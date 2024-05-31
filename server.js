@@ -33,12 +33,11 @@ async function createServer() {
       const { html, headTags } = await render(url);
 
       // Inject the app HTML and head tags into the template
-      const finalHtml = template
-        .replace(`<!--ssr-outlet-->`, html)
-        .replace(`<!--head-outlet-->`, headTags);
+      template = template.replace(`<!--head-outlet-->`, headTags);
+      template = template.replace(`<!--ssr-outlet-->`, html);
 
       // Send rendered HTML after processing
-      res.status(200).set({ 'Content-Type': 'text/html' }).end(finalHtml);
+      res.status(200).set({ 'Content-Type': 'text/html' }).end(template);
     } catch (e) {
       vite.ssrFixStacktrace(e);
       next(e);

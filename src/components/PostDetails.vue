@@ -6,7 +6,7 @@ defineProps({
 </script>
 <template>
     <section class="w-11/12 py-40 mx-auto 2xl:w-8/12 lg:w-10/12">
-        <h1 class="text-accent1 font-[200] text-lg uppercase"> &#x2022; {{sectiontitle}}</h1>
+        <h1 class="text-accent1 font-[200] text-lg uppercase">{{sectiontitle}}</h1>
         <hr class="w-full h-4 mt-3 text-accent2"/>
         <div class="flex flex-col gap-3 mt-10">
             <div class="w-full h-40 bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]"></div>

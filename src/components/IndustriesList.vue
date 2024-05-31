@@ -6,7 +6,7 @@ defineProps({
 </script>
 <template>
     <section class="w-11/12 h-full pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
-        <h1 class="text-accent1 font-[200] text-lg uppercase"> &#x2022; Industries we serve</h1>
+        <h1 class="text-accent1 font-[200] text-lg uppercase">Industries we serve</h1>
         <hr class="w-full h-4 mt-3 text-accent2"/>
         <ul role="list" class="flex flex-col items-center gap-3 mt-10 list-style-none">
             <li v-for="(item, key) in data" :key="key" class="group bg-extended-noise bg-cover bg-center p-6 flex max-sm:flex-wrap items-center gap-3 w-full h-full relative rounded-[16px] border-2 border-bg2/30 goup-hover:border-bg2">
