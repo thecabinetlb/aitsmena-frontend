@@ -39,7 +39,7 @@ defineProps({
             </li>
         </ul>
         <div v-else class="lg:w-full relative group bg-extended-noise bg-cover bg-center bg-opacity-50 rounded-[16px] mt-10 mx-auto">
-        <div class="px-10 py-6 w-full h-full relative flex justify-between items-center gap-3 rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 border-2 border-bg2">
+        <div class="px-10 py-6 relative flex justify-between items-center gap-3 rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 border-2 border-bg2">
             <h3 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[500]">No posted {{ sectionid }}.</h3>        
         </div>
         </div>        
