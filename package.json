@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "node server",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.js"
   },
   "dependencies": {
     "vue": "^3.4.21"
