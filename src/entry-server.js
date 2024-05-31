@@ -8,6 +8,6 @@ export const render = async (url) => {
 
   // Generate head tags HTML
   const headTags = head.headTags;
-
+console.log(headTags)
   return { html, headTags };
 };
