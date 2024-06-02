@@ -30,10 +30,9 @@ async function createServer() {
       const { render } = await vite.ssrLoadModule('./dist/server/entry-server.js');
 
       // Render app HTML and head tags 
-      const { html, headTags } = await render(url);
+      const { html } = await render(url);
 
       // Inject the app HTML and head tags into the template
-      template = template.replace(`<!--head-outlet-->`, headTags);
       template = template.replace(`<!--ssr-outlet-->`, html);
 
       // Send rendered HTML after processing
