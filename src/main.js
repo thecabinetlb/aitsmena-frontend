@@ -29,12 +29,12 @@ export const createApp = ViteSSG(
   ({ app, router, routes, isClient, initialState }) => {
     console.log('App initialized');
     console.log('Routes:', routes);    
+    // Use @unhead/vue for meta management
+    const head = createHead()
+    app.use(head)    
     // install plugins etc.
     app.use(MotionPlugin)
     app.use(router)
-    // Use @unhead/vue for meta management
-    const head = createHead()
-    app.use(head)
     // app.use(VueRecaptchaPlugin, {
     //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
     // })  
