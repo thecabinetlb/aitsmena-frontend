@@ -1,8 +1,8 @@
 <script setup>
 
-// import 'vue3-carousel/dist/carousel.css'
+import 'vue3-carousel/dist/carousel.css'
 
-// import { Carousel, Slide, Pagination } from 'vue3-carousel'
+import { Carousel, Slide, Pagination } from 'vue3-carousel'
 import { ref, onMounted } from 'vue';
 
 // Calculate the number of items to show based on screen width
@@ -57,7 +57,8 @@ defineProps({
               <h3 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.date }}</h3>
               <h2 class="text-accent1 font-[400] sm:text-lg sm:min-h-[56px] min-h-[56px]">{{ item.title }}</h2>
               <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify sm:min-h-[72px] min-h-[63px]">{{ item.summary }}</p>
- 
+              <!-- <div class="hover:text-accent1 text-accent2 w-[34px] sm:h-[34px] cursor-pointer aspect-square grid mt-[6px] place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </div> -->
+              <!-- <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'read more ' + item.title" :to="'/resources/' + sectionid + '/' + item.id" class="hover:text-accent1 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </RouterLink>              -->
             </div>
           </slide>
           <template #addons>
@@ -88,5 +89,4 @@ defineProps({
     margin: 5px !important;  
   }
 }
-</style>             <!-- <div class="hover:text-accent1 text-accent2 w-[34px] sm:h-[34px] cursor-pointer aspect-square grid mt-[6px] place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </div> -->
-              <!-- <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'read more ' + item.title" :to="'/resources/' + sectionid + '/' + item.id" class="hover:text-accent1 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </RouterLink>              -->
+</style>
