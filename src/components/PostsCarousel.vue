@@ -1,8 +1,8 @@
 <script setup>
 
-// import 'vue3-carousel/dist/carousel.css'
+import 'vue3-carousel/dist/carousel.css'
 
-// import { Carousel, Slide, Pagination } from 'vue3-carousel'
+import { Carousel, Slide, Pagination } from 'vue3-carousel'
 import { ref, onMounted } from 'vue';
 
 // Calculate the number of items to show based on screen width
@@ -45,24 +45,26 @@ defineProps({
     <!-- <RouterLink id="'go-to-blogs-page'" aria-label="go to blog page" :to="'/resources/' + sectionid" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 mt-auto mb-0">Browse All</RouterLink> -->
   </div>
     <div class="relative w-full mx-auto lg:w-5/12">
-     <!--  <carousel
+      <carousel
         ref="myCarousel"
         :items-to-show="getItemsToShow()"
         :wrap-around="true"
         class="w-full h-full maskleft">
           <slide v-for="(item, key) in data" :key="key" class="rounded-[16px] md:aspect-square border-2 border-bg2 my-10">
-            image should go here
+            <!-- image should go here -->
             <div class="w-full h-40 bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]"></div>
             <div class="flex flex-col gap-3 p-6 lg:gap-6">
               <h3 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.date }}</h3>
               <h2 class="text-accent1 font-[400] sm:text-lg sm:min-h-[56px] min-h-[56px]">{{ item.title }}</h2>
               <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify sm:min-h-[72px] min-h-[63px]">{{ item.summary }}</p>
-               </div>
+              <!-- <div class="hover:text-accent1 text-accent2 w-[34px] sm:h-[34px] cursor-pointer aspect-square grid mt-[6px] place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </div> -->
+              <!-- <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'read more ' + item.title" :to="'/resources/' + sectionid + '/' + item.id" class="hover:text-accent1 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </RouterLink>              -->
+            </div>
           </slide>
           <template #addons>
             <Pagination/>              
           </template>
-      </carousel> -->
+      </carousel>
     </div>
 </section>
 </template>
@@ -88,6 +90,3 @@ defineProps({
   }
 }
 </style>
- <!-- <div class="hover:text-accent1 text-accent2 w-[34px] sm:h-[34px] cursor-pointer aspect-square grid mt-[6px] place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </div> -->
-<!-- <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'read more ' + item.title" :to="'/resources/' + sectionid + '/' + item.id" class="hover:text-accent1 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </RouterLink>              -->
-          
