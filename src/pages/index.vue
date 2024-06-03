@@ -23,6 +23,7 @@ useHead({
   twitterImage: ogImage, // Assuming the same image is suitable for Twitter
   twitterCard: 'summary',
 })
+
 const missionandvission =
   {
     title: "A Vision In Sight",
