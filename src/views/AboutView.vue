@@ -10,7 +10,7 @@ import ImageTextFlexFilters from '../components/ImageTextFlexFilters.vue';
 import ImagesFlex from '../components/ImagesFlex.vue';
 import ic2 from '/images/testimonies/partners/ic2.webp'
 import aveva from '/images/testimonies/partners/aveva.webp'
-import improvement from '/images/insidepages/about/csr/improvement.webp'
+import improvement from '/images/insidepages/about/csr/improvement_v1.webp'
 import gender from '/images/insidepages/about/csr/gender_v1.webp'
 import employee from '/images/insidepages/about/csr/employee.webp'
 const csr = [
@@ -30,7 +30,7 @@ const csr = [
     id: 3,
     image:improvement,
     title: 'Continuous Improvement',
-    description: "We strive to promote an environment where everyone plays an active role in identifying and solving problems and proposing improvements. Our common mindsets and attitudes are detected throughout the organization by putting values and principles into practice."
+    description: "Our purpose-driven approach ensures that every employee understands their impact and contributes meaningfully to our shared goals. Whether it’s serving our customers, driving innovation, or making a positive impact in the world, purpose guides our actions and inspires excellence. Our attractive salary packages include performance-based annual increases, bonuses, and comprehensive benefits like health insurance, annual air tickets, and various paid leaves. Access training, professional development opportunities, and leadership programs for career growth, and enjoy flexible hours and remote work options to support work-life balance."
   }
 ];
 // const team = [
@@ -61,7 +61,7 @@ const partners = [
       <meta name="description" content="Powered by IBI, AITS plays a pivotal role in driving positive transformation across various industrial sectors. Explore our added value to diverse industries."/>
     </head>        
     <InnerHero :pagebanner="banner" isAbout="true" 
-      pagedescription="Do you need a trusted software company and strategic ally in navigating the complex landscape of industrial automation? You’re in the right place. Powered by IBI, AITS plays a pivotal role in driving positive transformation across various industrial sectors. Explore our added value to diverse industries, compelling employee propositions, and available job vacancies."/>
+      pagedescription="Do you need a trusted software company and strategic ally in navigating the complex landscape of industrial automation? You’re in the right place. AITS is powered by IBI Holding, an investment company that fuels innovation in businesses across various industries and actively seeks partnerships with companies and individuals who are driving transformation in today’s dynamic market. AITS plays a pivotal role in driving positive transformation across various industrial sectors. Explore our added value to diverse industries, compelling employee propositions, and available job vacancies."/>
       <section class="relative">
           <Partners sectionid="sub-companies" sectiontitle="Mother Company of Two" sectiondescription="Our portfolio holds two distinguished business lines: AVEVA Select Gulf and IC2. Together, we offer a comprehensive suite of solutions designed to address the diverse challenges faced by today's industries." :data="partners"/>
           <ImageTextFlexFilters sectiontitle="Our Culture" :data="csr"

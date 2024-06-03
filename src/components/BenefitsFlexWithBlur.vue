@@ -21,7 +21,7 @@ defineProps({
       </ul> -->
       <div class="space-y-3 p-10 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] mt-10">
         <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">At AITS, we’re committed to creating an environment where employees thrive both personally and professionally. Our inclusive culture celebrates diversity and collaboration, valuing every employee. We’re committed to aligning our mission and values with the work we do. Our purpose-driven approach ensures that every employee understands their impact and contributes meaningfully to our shared goals. Whether it’s serving our customers, driving innovation, or making a positive impact in the world, purpose guides our actions and inspires excellence.</p>
-        <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">Our attractive salary packages include performance-based annual increases and bonuses. Enjoy comprehensive benefits like health insurance, annual air tickets, and various paid leaves. Get access to training, professional development opportunities, and leadership programs for career growth, and enjoy flexible hours and remote work options to support work-life balance.</p>    
+        <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">Our attractive salary packages include performance-based annual increases, bonuses, and comprehensive benefits like health insurance, annual air tickets, and various paid leaves. Get access to training, professional development opportunities, and leadership programs for career growth, and enjoy flexible hours and remote work options to support work-life balance.</p>    
       </div>  
     </section>
 </template>

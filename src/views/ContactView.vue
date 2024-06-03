@@ -30,6 +30,8 @@ const locations = [
   {
     id:3,
     address: 'Sulimaniyah Office Building, Office no.214, 3132 Prince Sultan Bin Abdulaziz Road, Sulimaniyah, Riyad, Kingdom of Saudi Arabia.',
+    phone: '+966 114314440',
+    fax: '+966 114314440'
   }  
 ]
 

@@ -34,7 +34,7 @@ const filterData = (key) => {
         class="px-4 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 border-bg2 focus:outline-none focus:ring-0 focus:border-accent1 peer">
         Continuous Improvement</button>                 
       </div>
-      <div class="flex flex-wrap items-center justify-center w-full gap-6 mt-10 lg:gap-3 lg:justify-between max-lg:flex-col-reverse">
+      <div class="flex flex-wrap items-center justify-center w-full gap-6 mt-10 lg:gap-3 lg:justify-between max-lg:flex-col-reverse 2xl:min-h-[360px]">
         <img :src="filterdata.image" :alt="filterdata.title" width="391" height="290" center cover responsive loading="lazy"/>    
         <div class="w-full lg:w-6/12">
           <h2 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ filterdata.title }}</h2>
