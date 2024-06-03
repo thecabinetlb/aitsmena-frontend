@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, createMemoryHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/ContactView.vue'
 import AboutView from '../views/AboutView.vue'
@@ -19,10 +19,9 @@ const routes = [
   { path: '/resources/blog/:slug', component: BlogPostDetailsView, props: true },
   { path: '/industries/success-stories/:slug', component: StoriesPostDetailsView }
 ]
-const isServer = typeof window === 'undefined';
 
 const router = createRouter({
-  history: isServer ? createMemoryHistory() : createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
     scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
@@ -36,5 +35,4 @@ const router = createRouter({
       return { top: 0,  behavior: 'smooth' }
   }  
 })
-export { routes }
 export default router

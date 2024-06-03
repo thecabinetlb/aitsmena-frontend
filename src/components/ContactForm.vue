@@ -228,7 +228,7 @@ const handleSubmit = () => {
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Message.isValid===false}"></textarea>
                 <p v-show="!formData.data.Message.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Message.validationMessage}}</p>
             </div>
-            <!-- Recaptchs -->
+            <!-- Recaptcha -->
             <div class="w-full col-span-2">
                 <Checkbox v-model="ReCaptchaValid" theme="dark" />                            
                 <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>

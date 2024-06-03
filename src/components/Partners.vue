@@ -22,5 +22,6 @@ defineProps({
             </div>
         </div>
     </div>
+    <hr class="w-full h-4 mt-32 text-accent2"/>
     </section>
 </template>
