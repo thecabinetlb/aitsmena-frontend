@@ -1,8 +1,8 @@
 <script setup>
 
 // import 'vue3-carousel/dist/carousel.css'
-// import { Carousel, Slide, Pagination } from 'vue3-carousel'
 
+// import { Carousel, Slide, Pagination } from 'vue3-carousel'
 import { ref, onMounted } from 'vue';
 
 // Calculate the number of items to show based on screen width
@@ -45,13 +45,13 @@ defineProps({
     <!-- <RouterLink id="'go-to-blogs-page'" aria-label="go to blog page" :to="'/resources/' + sectionid" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 mt-auto mb-0">Browse All</RouterLink> -->
   </div>
     <div class="relative w-full mx-auto lg:w-5/12">
-      <!-- <carousel
+      <carousel
         ref="myCarousel"
         :items-to-show="getItemsToShow()"
         :wrap-around="true"
         class="w-full h-full maskleft">
           <slide v-for="(item, key) in data" :key="key" class="rounded-[16px] md:aspect-square border-2 border-bg2 my-10">
-            image should go here
+            <!-- image should go here -->
             <div class="w-full h-40 bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]"></div>
             <div class="flex flex-col gap-3 p-6 lg:gap-6">
               <h3 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.date }}</h3>
@@ -63,7 +63,7 @@ defineProps({
           <template #addons>
             <Pagination/>              
           </template>
-      </carousel> -->
+      </carousel>
     </div>
 </section>
 </template>
