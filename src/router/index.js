@@ -8,7 +8,7 @@ import ResourcesView from '../views/Resources/ResourcesView.vue'
 import StoriesPostDetailsView from '../views/Industries/StoriesPostDetailsView.vue'
 import BlogView from '../views/Resources/Blog/BlogView.vue'
 import BlogPostDetailsView from '../views/Resources/Blog/BlogPostDetailsView.vue'
-const routes= [
+const routes = [
   { path: '/', component: HomeView},
   { path: '/about', component: AboutView },
   { path: '/contact', component: ContactView },
@@ -36,4 +36,5 @@ const router = createRouter({
       return { top: 0,  behavior: 'smooth' }
   }  
 })
+export { routes }
 export default router
