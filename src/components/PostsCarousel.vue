@@ -1,9 +1,10 @@
 <script setup>
 
-import 'vue3-carousel/dist/carousel.css'
+// import 'vue3-carousel/dist/carousel.css'
 
-import { Carousel, Slide, Pagination } from 'vue3-carousel'
-import { ref, onMounted } from 'vue';
+// import { Carousel, Slide, Pagination } from 'vue3-carousel'
+import { onMounted } from 'vue';
+
 
 // Calculate the number of items to show based on screen width
 const getItemsToShow = () => {
@@ -26,7 +27,6 @@ onMounted(() => {
     getItemsToShow()
   });
 });
-const myCarousel = ref(null)
 defineProps({
     sectionid: String,
     sectiontitle: String,
@@ -45,8 +45,8 @@ defineProps({
     <!-- <RouterLink id="'go-to-blogs-page'" aria-label="go to blog page" :to="'/resources/' + sectionid" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 mt-auto mb-0">Browse All</RouterLink> -->
   </div>
     <div class="relative w-full mx-auto lg:w-5/12">
-      <carousel
-        ref="myCarousel"
+      <client-only class="hidden">
+        <Carousel ref="myCarousel"
         :items-to-show="getItemsToShow()"
         :wrap-around="true"
         class="w-full h-full maskleft">
@@ -64,7 +64,8 @@ defineProps({
           <template #addons>
             <Pagination/>              
           </template>
-      </carousel>
+        </Carousel>
+      </client-only>
     </div>
 </section>
 </template>
