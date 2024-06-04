@@ -12,7 +12,19 @@ export const createApp = ViteSSG(
   // the root component
   App,
   // vue-router options
-  {routes, scrollBehavior: () => ({ top: 0 }) },
+  { routes, 
+    scrollBehavior(to, from, savedPosition) {
+      if (savedPosition) {
+          return savedPosition
+      } else if (to.hash) {
+          return {
+            el: to.hash,
+            behavior: 'smooth',
+        }
+      }
+        return { top: 0,  behavior: 'smooth' }
+    }     
+  },
   // function to have custom setups
   ({ app, router, routes, isClient, initialState }) => {
     console.log('App initialized');
