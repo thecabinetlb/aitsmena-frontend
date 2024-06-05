@@ -4,9 +4,7 @@ import { createApp } from './main';
 
 export const render = async (url) => {
   const { app } = createApp();
-  
-  const ctx = {}
-  const html = renderToString(app, ctx)
+  const html = renderToString(app)
   // Generate head tags HTML
   // const headTags = head?.tags?.headTags?.map(tag => tag.toString()).join('\n') ?? '';
   return { html };
