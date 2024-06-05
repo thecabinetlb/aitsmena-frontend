@@ -3,7 +3,7 @@ import Hero from '../components/Hero.vue'
 import Contact from '../components/Contact.vue'
 import OneImageTextFlex from '../components/OneImageTextFlex.vue'
 import { useHead } from '@unhead/vue'
-
+ 
 // Replace placeholders with actual content
 const title = 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business';
 const description = 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!';
