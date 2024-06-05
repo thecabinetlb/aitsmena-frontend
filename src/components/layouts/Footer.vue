@@ -63,7 +63,7 @@ const sociallinks = [
       </div>
       <div class="flex flex-wrap justify-between w-11/12 gap-6 px-6 my-10 lg:gap-0 2xl:w-8/12 lg:w-10/12">
             <div class="flex flex-col w-full gap-2 mb-10 lg:w-4/12 lg:mb-0">
-              <img :src="logo" alt="AITS logo" width="164" height="43" center cover responsive loading="lazy"/>
+              <img :src="logo" alt="AITS logo" width="164" height="43" center cover responsive loading="lazy" class="-ms-4"/>
               <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">Stay connected with AITS on social media for the latest updates, news, and insights. Follow
               us on LinkedIn, Twitter, Facebook, and Instagram to join the conversation and stay informed.</p>
               <div class="relative z-[2] flex items-center gap-2">
