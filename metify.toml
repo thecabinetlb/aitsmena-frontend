@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist/client"
+
+[base]
+  # Assuming your website should be accessible at the root URL
+  = "/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
