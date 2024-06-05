@@ -35,10 +35,10 @@ const valuesandcommitments =
   description: "No company can operate without a set of core values that shape its culture and defines who it is. As for us? We believe in integrity, collaboration, and continuous improvement. Our commitment to enhance positive transformation in the industrial landscape creates an environment where our dedicated team can thrive. This enables us to better serve our clients and contribute to a brighter, more sustainable future.",
   image: "/images/hero/values/values_v1.webp",
 }
-
+ 
 </script>
 <template>
-    <head>
+  <head>
     <!-- HTML Meta Tags -->
     <title>AITS - Industrial Software Solutions And Digital Services Tailored To Your Business</title>
     <meta name="description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
