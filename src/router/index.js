@@ -20,7 +20,7 @@ const routes = [
   { path: '/resources/blog/:slug', component: BlogPostDetailsView, props: true },
   { path: '/industries/success-stories/:slug', component: StoriesPostDetailsView }
 ]
-
+ 
 const router = createRouter({
   history: createMemoryHistory(import.meta.env.BASE_URL),
   routes,
