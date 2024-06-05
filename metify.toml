@@ -1,12 +1,11 @@
 [build]
-  command = "npm run build"
-  publish = "dist/client"
+publish = "dist/client/"
+command = "npm run build"
 
-[base]
-  # Assuming your website should be accessible at the root URL
-  = "/"
+[functions]
+directory = "functions/"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = "/*"
+to = "/.netlify/functions/index"
+status = 200
