@@ -10,7 +10,7 @@ const description = 'AITS transforms businesses like yours through innovative te
 const ogImage = 'https://aitsmena-test.netlify.app/aits-open-graph_v1.jpg';
 const ogUrl = 'https://aitsmena-test.netlify.app'; // Replace with your website URL
 
-useSeoMeta({
+useSeoMeta({ 
   title,
   description,
   ogTitle: title, // Consider using the same title for consistency
