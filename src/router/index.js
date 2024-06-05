@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createMemoryHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/ContactView.vue'
 import AboutView from '../views/AboutView.vue'
@@ -8,6 +8,7 @@ import ResourcesView from '../views/Resources/ResourcesView.vue'
 import StoriesPostDetailsView from '../views/Industries/StoriesPostDetailsView.vue'
 import BlogView from '../views/Resources/Blog/BlogView.vue'
 import BlogPostDetailsView from '../views/Resources/Blog/BlogPostDetailsView.vue'
+
 const routes = [
   { path: '/', component: HomeView},
   { path: '/about', component: AboutView },
@@ -21,7 +22,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createMemoryHistory(import.meta.env.BASE_URL),
   routes,
     scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

@@ -1,5 +1,34 @@
 import './assets/css/index.css'
 
+
+import { createSSRApp } from 'vue'
+import { createHead } from '@unhead/vue'
+import App from './App.vue'
+import router from './router'
+import { MotionPlugin } from '@vueuse/motion'
+
+export const createApp = () => {
+  /**
+   * use createSSRApp to render the Vue App on the server
+   * and send it to the user to do the hydration process
+   */
+  const app = createSSRApp(App);
+
+  // Use other plugins
+  app.use(MotionPlugin)
+  app.use(router)
+  // Use @unhead/vue for meta management
+  const head = createHead()
+  app.use(head)
+  // app.use(VueRecaptchaPlugin, {
+  //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
+  // })
+  return {
+    app, router, head
+  };
+};
+
+
 // import { ViteSSG } from 'vite-ssg'
 // import App from './App.vue'
 // import { createHead } from '@unhead/vue'
@@ -42,19 +71,19 @@ import './assets/css/index.css'
 // )
 
 
-import { createApp } from 'vue'
-import { createHead } from '@unhead/vue'
-import App from './App.vue'
-import router from './router'
-import { MotionPlugin } from '@vueuse/motion'
-import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
+// import { createApp } from 'vue'
+// import { createHead } from '@unhead/vue'
+// import App from './App.vue'
+// import router from './router'
+// import { MotionPlugin } from '@vueuse/motion'
+// import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
 
-const app = createApp(App)
-const head = createHead()
-app.use(head)
-app.use(MotionPlugin)
-app.use(router)
-app.use(VueRecaptchaPlugin, {
-  v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
-})
-app.mount('#app')
+// const app = createApp(App)
+// const head = createHead()
+// app.use(head)
+// app.use(MotionPlugin)
+// app.use(router)
+// app.use(VueRecaptchaPlugin, {
+//   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
+// })
+// app.mount('#app')
