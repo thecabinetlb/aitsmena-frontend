@@ -10,8 +10,8 @@ import ImageTextFlexFilters from '../components/ImageTextFlexFilters.vue';
 import ic2 from '/images/testimonies/partners/ic2.webp'
 import aveva from '/images/testimonies/partners/aveva.webp'
 import improvement from '/images/insidepages/about/csr/improvement_v1.webp'
+import employee from '/images/insidepages/about/csr/employee_v1.webp'
 import gender from '/images/insidepages/about/csr/gender_v1.webp'
-import employee from '/images/insidepages/about/csr/employee.webp'
 
 const csr = [
   {

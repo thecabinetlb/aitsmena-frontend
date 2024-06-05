@@ -1,10 +1,17 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import Pages from 'vite-plugin-pages';
+import VitePluginSSR from "vite-plugin-ssr/plugin";
 
 export default defineConfig({
+  server: {
+    host: "0.0.0.0",
+    port: 3000
+  },
   plugins: [
     vue(),
-    Pages(),
-  ],
+    VitePluginSSR({
+      prerender: true,
+      includeAssetsImportedByServer: true
+    })
+  ]
 });
