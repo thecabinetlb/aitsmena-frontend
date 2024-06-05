@@ -7,30 +7,30 @@ import ImageTextFlexFilters from '../components/ImageTextFlexFilters.vue';
 // import teammember1 from '/images/insidepages/about/team/teammember1.webp'
 // import teammember2 from '/images/insidepages/about/team/teammember2.webp'
 // import teammember3 from '/images/insidepages/about/team/teammember3.webp'
-import ImagesFlex from '../components/ImagesFlex.vue';
 import ic2 from '/images/testimonies/partners/ic2.webp'
 import aveva from '/images/testimonies/partners/aveva.webp'
 import improvement from '/images/insidepages/about/csr/improvement_v1.webp'
 import gender from '/images/insidepages/about/csr/gender_v1.webp'
 import employee from '/images/insidepages/about/csr/employee.webp'
+
 const csr = [
   {
     id: 1,
     image:gender,
     title: 'Diversity & Inclusion',
-    description: "At AITS, we’re committed to creating an environment where employees thrive both personally and professionally. Our inclusive culture celebrates diversity and collaboration, valuing every employee. We’re committed to aligning our mission and values with the work we do. Inclusivity within our workplace culture is crucial, where everyone, regardless of gender, age, or race has equal opportunities for growth and success. Equality is promoted through a diverse workforce, equal opportunities, and supportive policies.",
+    description: "At AITS, we’re committed to creating an environment where employees thrive both personally and professionally. Our inclusive culture celebrates diversity and collaboration, valuing every employee and acknowledging that everyone, regardless of gender, age, or race has equal opportunities for growth and success.",
   },
   {
     id: 2,
     image:employee,
     title: 'Our People First',
-    description: "Our purpose-driven approach ensures that every employee understands their impact and contributes meaningfully to our shared goals. Whether it’s serving our customers, driving innovation, or making a positive impact in the world, purpose guides our actions and inspires excellence. Our attractive salary packages include performance-based annual increases and bonuses. Enjoy comprehensive benefits like health insurance, annual air tickets, and various paid leaves. Access training, professional development opportunities, and leadership programs for career growth, and enjoy flexible hours and remote work options to support work-life balance."
+    description: "Our purpose-driven approach ensures that every employee understands their impact and contributes meaningfully to our shared goals. Whether it’s serving our customers, driving innovation, or making a positive impact in the world, purpose guides our actions and inspires excellence. Our attractive salary packages include performance-based annual increases, bonuses, and comprehensive benefits like health insurance, annual air tickets, and various paid leaves. Access training, professional development opportunities, and leadership programs for career growth, and enjoy flexible hours and remote work options to support work-life balance."
   },
   {
     id: 3,
     image:improvement,
     title: 'Continuous Improvement',
-    description: "Our purpose-driven approach ensures that every employee understands their impact and contributes meaningfully to our shared goals. Whether it’s serving our customers, driving innovation, or making a positive impact in the world, purpose guides our actions and inspires excellence. Our attractive salary packages include performance-based annual increases, bonuses, and comprehensive benefits like health insurance, annual air tickets, and various paid leaves. Access training, professional development opportunities, and leadership programs for career growth, and enjoy flexible hours and remote work options to support work-life balance."
+    description: "We strive to promote an environment where everyone plays an active role in identifying and solving problems and proposing improvements. Our common mindsets and attitudes are detected throughout the organization by putting values and principles into practice."
   }
 ];
 // const team = [
