@@ -1,8 +1,8 @@
 import './assets/css/index.css'
 
 import { ViteSSG } from 'vite-ssg'
-import App from './App.vue'
 import { createHead } from '@unhead/vue'
+import App from './App.vue'
 
 import routes from '~pages';
 import { MotionPlugin } from '@vueuse/motion'
@@ -34,12 +34,12 @@ export const createApp = ViteSSG(
   ({ app, router, routes, isClient, initialState }) => {
     console.log('App initialized');
     console.log('Routes:', routes);    
-
+    
+    // Use @unhead/vue for meta management
+    app.use(head)
     // Install MotionPlugin for animations
     app.use(MotionPlugin)
 
-    // Use @unhead/vue for meta management
-    app.use(head)
     // Install VueReCaptcha plugin if running on client-side
     if (isClient) {
       // app.use(VueRecaptchaPlugin, {
