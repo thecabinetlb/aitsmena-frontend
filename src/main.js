@@ -7,7 +7,7 @@ import App from './App.vue'
 
 import routes from '~pages';
 import { MotionPlugin } from '@vueuse/motion'
-// import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
+import { VueRecaptcha } from 'vue-recaptcha'
 
 // Create head instance for meta management
 const head = createHead()
@@ -62,6 +62,8 @@ export const createApp = ViteSSG(
 
     // Install VueReCaptcha plugin if running on client-side
     if (isClient) {
+
+      app.component('vue-recaptcha', VueRecaptcha)
       // app.use(VueRecaptchaPlugin, {
       //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
       // })

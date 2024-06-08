@@ -26,6 +26,7 @@
     "vite-plugin-pages": "^0.32.2",
     "vite-ssg": "^0.23.7",
     "vite-ssg-sitemap": "^0.6.1",
+    "vue-recaptcha": "^2.0.3",
     "vue-router": "^4.3.2",
     "vue3-carousel": "0.1.35"
   }
