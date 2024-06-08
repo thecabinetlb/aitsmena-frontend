@@ -2,6 +2,8 @@ import './assets/css/index.css'
 
 import { ViteSSG } from 'vite-ssg'
 import { createHead } from '@unhead/vue'
+import { renderSSRHead } from '@unhead/ssr'
+
 import App from './App.vue'
 
 import routes from '~pages';
@@ -10,6 +12,7 @@ import { MotionPlugin } from '@vueuse/motion'
 
 // Create head instance for meta management
 const head = createHead()
+const payload = await renderSSRHead(head)
 
 // `export const createApp` is required instead of the original `createApp(App).mount('#app')`
 export const createApp = ViteSSG(
@@ -35,28 +38,28 @@ export const createApp = ViteSSG(
     console.log('App initialized');
     console.log('Routes:', routes);    
     
-    // Use @unhead/vue for meta management
-    app.use(head)
-    head.push({
-      meta: [
-        {
-          property: 'og:title',
-          content: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business'
-        },
-        {
-          property: 'og:image',
-          content: 'https://aitsmena-test.netlify.app/aits-open-graph_v1.jpg',
-        },
-        {
-          property: 'og:description',
-          content: " AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!",
-        },
-        {
-          property: 'og:url',
-          content: 'ogUrl',
-        },
-      ],   
-     })
+    // Use @unhead/ssr for meta management
+    app.use(payload)
+    // payload.push({
+    //   meta: [
+    //     {
+    //       property: 'og:title',
+    //       content: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business'
+    //     },
+    //     {
+    //       property: 'og:image',
+    //       content: 'https://aitsmena-test.netlify.app/aits-open-graph_v1.jpg',
+    //     },
+    //     {
+    //       property: 'og:description',
+    //       content: " AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!",
+    //     },
+    //     {
+    //       property: 'og:url',
+    //       content: 'ogUrl',
+    //     },
+    //   ],   
+    // })
     // Install MotionPlugin for animations
     app.use(MotionPlugin)
 

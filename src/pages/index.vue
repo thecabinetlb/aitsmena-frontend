@@ -67,17 +67,17 @@ const valuesandcommitments =
     <title>AITS - Industrial Software Solutions And Digital Services Tailored To Your Business</title>
     <meta name="description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
     <!-- Open Graph (og) Tags -->
-    <!-- <meta property="og:title" content="AITS - Industrial Software Solutions And Digital Services Tailored To Your Business">
+    <meta property="og:title" content="AITS - Industrial Software Solutions And Digital Services Tailored To Your Business">
     <meta property="og:description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
     <meta property="og:image" content="https://aitsmena-test.netlify.app/aits-open-graph_v1.jpg">
     <meta property="og:url" content="https://aitsmena-test.netlify.app">
-    <meta property="og:type" content="website"> -->
+    <meta property="og:type" content="website">
     
     <!-- Twitter Tags -->
-    <!-- <meta property="twitter:title" content="AITS - Industrial Software Solutions And Digital Services Tailored To Your Business">
+    <meta property="twitter:title" content="AITS - Industrial Software Solutions And Digital Services Tailored To Your Business">
     <meta property="twitter:description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
     <meta property="twitter:image" content="https://aitsmena-test.netlify.app/aits-open-graph_v1.jpg">
-    <meta property="twitter:card" content="summary"> -->
+    <meta property="twitter:card" content="summary">
 </head>
   <Hero/>
   <OneImageTextFlex sectiontitle="Mission and Vision" :item="missionandvission" 
