@@ -12,7 +12,7 @@ import { MotionPlugin } from '@vueuse/motion'
 
 // Create head instance for meta management
 const head = createHead()
-const payload = await renderSSRHead(head)
+const payload = renderSSRHead(head)
 
 // `export const createApp` is required instead of the original `createApp(App).mount('#app')`
 export const createApp = ViteSSG(
