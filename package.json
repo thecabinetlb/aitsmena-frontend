@@ -15,8 +15,8 @@
   },
   "devDependencies": {
     "@unhead/addons": "^1.9.11",
-    "@unhead/vue": "^1.9.11",
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vueuse/head": "^2.0.0",
     "@vueuse/motion": "^2.1.0",
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.8",
