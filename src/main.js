@@ -41,7 +41,7 @@ export const createApp = ViteSSG(
     app.use(MotionPlugin)
 
     // Use @unhead/vue for meta management
-    app.use(payload)
+    app.use(head)
     // Install VueReCaptcha plugin if running on client-side
     if (isClient) {
       // app.use(VueRecaptchaPlugin, {
