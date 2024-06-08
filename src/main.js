@@ -39,14 +39,12 @@ export const createApp = ViteSSG(
 
     // Use @unhead/vue for meta management
     app.use(head)
-
     // Install VueReCaptcha plugin if running on client-side
     if (isClient) {
-        // app.use(VueRecaptchaPlugin, {
-        //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
-        // })
+      // app.use(VueRecaptchaPlugin, {
+      //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
+      // })
     }
-
     // Use vue-router
     app.use(router)
   }

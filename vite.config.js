@@ -7,5 +7,7 @@ export default defineConfig({
   plugins: [vue(),Pages()],
   ssgOptions: {
     onFinished() { generateSitemap() },
+    script: 'async',
+    formatting: 'minify',
   },
 });

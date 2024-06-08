@@ -2,14 +2,48 @@
 import Hero from '../components/Hero.vue'
 import Contact from '../components/Contact.vue'
 import OneImageTextFlex from '../components/OneImageTextFlex.vue'
-// import { useHead } from '@unhead/vue'
+import { useHead } from '@unhead/vue'
  
-// // Replace placeholders with actual content
-// const title = 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business';
-// const description = 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!';
-// const ogImage = 'https://aitsmena-test.netlify.app/aits-open-graph_v1.jpg';
-// const ogUrl = 'https://aitsmena-test.netlify.app'; // Replace with your website URL
-
+// Replace placeholders with actual content
+const title = 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business';
+const description = 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!';
+const ogImage = 'https://aitsmena-test.netlify.app/aits-open-graph_v1.jpg';
+const ogUrl = 'https://aitsmena-test.netlify.app'; // Replace with your website URL
+useHead({
+  title,
+  htmlAttrs: {
+    lang: 'en',
+  },
+  link: [
+    {
+      hreflang: 'zh',
+      rel: 'alternate',
+      href: 'https://utilmeta.com/zh',
+    },
+  ],
+  meta: [
+    {
+      name: 'description',
+      content: description,
+    },
+    {
+      property: 'og:title',
+      content: title,
+    },
+    {
+      property: 'og:image',
+      content: ogImage,
+    },
+    {
+      property: 'og:description',
+      content: description,
+    },
+    {
+      property: 'og:url',
+      content: ogUrl,
+    },
+  ],
+});
 // useHead({ 
 //   title,
 //   description,
