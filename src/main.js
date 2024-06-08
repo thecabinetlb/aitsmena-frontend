@@ -2,7 +2,6 @@ import './assets/css/index.css'
 
 import { ViteSSG } from 'vite-ssg'
 import { createHead } from '@unhead/vue'
-import { renderSSRHead } from '@unhead/ssr'
 
 import App from './App.vue'
 
@@ -12,7 +11,6 @@ import { MotionPlugin } from '@vueuse/motion'
 
 // Create head instance for meta management
 const head = createHead()
-const payload = renderSSRHead(head)
 
 // `export const createApp` is required instead of the original `createApp(App).mount('#app')`
 export const createApp = ViteSSG(
@@ -69,7 +67,7 @@ export const createApp = ViteSSG(
       // })
     }
     // Use @unhead/ssr for meta management
-    app.use(payload)    
+    app.use(head)    
     // Use vue-router
     app.use(router)
   }
