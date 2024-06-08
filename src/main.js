@@ -3,12 +3,15 @@ import './assets/css/index.css'
 import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
 import { createHead } from '@unhead/vue'
+import { renderSSRHead } from '@unhead/ssr'
+
 import routes from '~pages';
 import { MotionPlugin } from '@vueuse/motion'
 // import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
 
 // Create head instance for meta management
 const head = createHead()
+const payload = await renderSSRHead(head)
 
 // `export const createApp` is required instead of the original `createApp(App).mount('#app')`
 export const createApp = ViteSSG(
@@ -38,7 +41,7 @@ export const createApp = ViteSSG(
     app.use(MotionPlugin)
 
     // Use @unhead/vue for meta management
-    app.use(head)
+    app.use(payload)
     // Install VueReCaptcha plugin if running on client-side
     if (isClient) {
       // app.use(VueRecaptchaPlugin, {
