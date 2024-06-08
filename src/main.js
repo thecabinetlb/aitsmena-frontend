@@ -37,6 +37,26 @@ export const createApp = ViteSSG(
     
     // Use @unhead/vue for meta management
     app.use(head)
+    head.push({
+      meta: [
+        {
+          property: 'og:title',
+          content: 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business'
+        },
+        {
+          property: 'og:image',
+          content: 'https://aitsmena-test.netlify.app/aits-open-graph_v1.jpg',
+        },
+        {
+          property: 'og:description',
+          content: " AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!",
+        },
+        {
+          property: 'og:url',
+          content: 'ogUrl',
+        },
+      ],   
+     })
     // Install MotionPlugin for animations
     app.use(MotionPlugin)
 
