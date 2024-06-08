@@ -38,8 +38,7 @@ export const createApp = ViteSSG(
     console.log('App initialized');
     console.log('Routes:', routes);    
     
-    // Use @unhead/ssr for meta management
-    app.use(payload)
+
     // payload.push({
     //   meta: [
     //     {
@@ -69,6 +68,8 @@ export const createApp = ViteSSG(
       //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
       // })
     }
+    // Use @unhead/ssr for meta management
+    app.use(payload)    
     // Use vue-router
     app.use(router)
   }
