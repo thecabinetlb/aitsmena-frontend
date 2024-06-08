@@ -31,7 +31,8 @@ const missionandvission =
 }
 const valuesandcommitments =
 {
-  title: "You Have Our Word",
+  title: "You Have",
+  title2: "Our Word",
   description: "No company can operate without a set of core values that shape its culture and defines who it is. As for us? We believe in integrity, collaboration, and continuous improvement. Our commitment to enhance positive transformation in the industrial landscape creates an environment where our dedicated team can thrive. This enables us to better serve our clients and contribute to a brighter, more sustainable future.",
   image: "/images/hero/values/values_v1.webp",
 }  

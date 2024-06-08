@@ -1,8 +1,9 @@
 <script setup>
 import axios from 'axios';
 import { ref, reactive, watch } from 'vue'
-import {Checkbox, useRecaptchaProvider} from 'vue-recaptcha'
-useRecaptchaProvider() 
+// import {Checkbox, useRecaptchaProvider} from 'vue-recaptcha'
+// useRecaptchaProvider() 
+
 const ReCaptchaValid = ref(false)
 const hasErrorMessages = ref(false)
 const loading = ref(null)
@@ -230,7 +231,7 @@ const handleSubmit = () => {
             </div>
             <!-- Recaptcha -->
             <div class="w-full col-span-2">
-                <Checkbox v-model="ReCaptchaValid" theme="dark" />
+                <!-- <Checkbox v-model="ReCaptchaValid" theme="dark" /> -->
                 <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
             </div>
             <!-- Submit -->

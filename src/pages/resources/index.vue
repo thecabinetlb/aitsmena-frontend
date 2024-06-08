@@ -4,10 +4,9 @@ import InnerHero from '../../components/InnerHero.vue';
 import InsideBody from '../../components/InsideBody.vue';
 import { getFeaturedBlogPosts } from '../../utils/api'
 import OneImageTextFlex from '../../components/OneImageTextFlex.vue';
-import { defineAsyncComponent } from 'vue'
-const PostsCarousel = defineAsyncComponent(() =>
-  import('../../components/PostsCarousel.vue')
-)
+// import { defineAsyncComponent } from 'vue'
+import PostsCarousel from'../../components/PostsCarousel.vue'
+
 const blogposts = getFeaturedBlogPosts()
 const whitepaper ={ 
     id: 1, 

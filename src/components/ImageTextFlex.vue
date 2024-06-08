@@ -29,7 +29,7 @@ defineProps({
         <img :src="item.image" :alt="item.title" width="391" height="290" center cover responsive loading="lazy"/>    
         <div class="w-full lg:w-6/12">
           <h2 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ item.title }}</h2>
-          <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6">{{ item.description }}</p>
+          <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6 tracking-wide">{{ item.description }}</p>
           <!-- <RouterLink v-if="item.to" :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" :to="item.to" class="cursor-pointer px-4 py-3 w-fit block max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Browse</RouterLink> -->
         </div>
       </div>

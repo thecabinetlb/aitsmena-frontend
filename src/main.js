@@ -1,74 +1,56 @@
 import './assets/css/index.css'
 
-
-import { createSSRApp } from 'vue'
-import { createHead } from '@unhead/vue'
+import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
-import router from './router'
+import { createHead } from '@unhead/vue'
+import routes from '~pages';
 import { MotionPlugin } from '@vueuse/motion'
+// import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
 
-export const createApp = () => {
-  /**
-   * use createSSRApp to render the Vue App on the server
-   * and send it to the user to do the hydration process
-   */
-  const app = createSSRApp(App);
+// Create head instance for meta management
+const head = createHead()
 
-  // Use other plugins
-  app.use(MotionPlugin)
-  app.use(router)
-  // Use @unhead/vue for meta management
-  const head = createHead()
-  app.use(head)
-  // app.use(VueRecaptchaPlugin, {
-  //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
-  // })
-  return {
-    app, router, head
-  };
-};
+// `export const createApp` is required instead of the original `createApp(App).mount('#app')`
+export const createApp = ViteSSG(
+  // the root component
+  App,
+  // vue-router options
+  { 
+    routes, 
+    scrollBehavior(to, from, savedPosition) {
+      if (savedPosition) {
+          return savedPosition
+      } else if (to.hash) {
+          return {
+            el: to.hash,
+            behavior: 'smooth',
+        }
+      }
+      return { top: 0,  behavior: 'smooth' }
+    }     
+  },
+  // function to have custom setups
+  ({ app, router, routes, isClient, initialState }) => {
+    console.log('App initialized');
+    console.log('Routes:', routes);    
 
+    // Install MotionPlugin for animations
+    app.use(MotionPlugin)
 
-// import { ViteSSG } from 'vite-ssg'
-// import App from './App.vue'
-// import { createHead } from '@unhead/vue'
-// import routes from '~pages';
-// import { MotionPlugin } from '@vueuse/motion'
-// // import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
+    // Use @unhead/vue for meta management
+    app.use(head)
 
-// // `export const createApp` is required instead of the original `createApp(App).mount('#app')`
-// export const createApp = ViteSSG(
-//   // the root component
-//   App,
-//   // vue-router options
-//   { routes, 
-//     scrollBehavior(to, from, savedPosition) {
-//       if (savedPosition) {
-//           return savedPosition
-//       } else if (to.hash) {
-//           return {
-//             el: to.hash,
-//             behavior: 'smooth',
-//         }
-//       }
-//         return { top: 0,  behavior: 'smooth' }
-//     }     
-//   },
-//   // function to have custom setups
-//   ({ app, router, routes, isClient, initialState }) => {
-//     console.log('App initialized');
-//     console.log('Routes:', routes);    
-//     // install plugins etc.
-//     app.use(MotionPlugin)
-//     app.use(router)
-//     // Use @unhead/vue for meta management
-//     const head = createHead()
-//     app.use(head)
-//     // app.use(VueRecaptchaPlugin, {
-//     //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
-//     // })  
-//   },
-// )
+    // Install VueReCaptcha plugin if running on client-side
+    if (isClient) {
+        // app.use(VueRecaptchaPlugin, {
+        //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
+        // })
+    }
+
+    // Use vue-router
+    app.use(router)
+  }
+)
 
 
 // import { createApp } from 'vue'
