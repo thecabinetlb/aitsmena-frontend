@@ -56,8 +56,7 @@ const missionandvission =
 }
 const valuesandcommitments =
 {
-  title: "You Have",
-  title2: "Our Word",
+  title: "You Have Our Word",
   description: "No company can operate without a set of core values that shape its culture and defines who it is. As for us? We believe in integrity, collaboration, and continuous improvement. Our commitment to enhance positive transformation in the industrial landscape creates an environment where our dedicated team can thrive. This enables us to better serve our clients and contribute to a brighter, more sustainable future.",
   image: "/images/hero/values/values_v1.webp",
 }  
@@ -67,7 +66,7 @@ const valuesandcommitments =
    <!-- <head>
     <title>AITS - Industrial Software Solutions And Digital Services Tailored To Your Business</title>
     <meta name="description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
-  Open Graph (og) Tags
+    Open Graph (og) Tags
     <meta property="og:title" content="AITS - Industrial Software Solutions And Digital Services Tailored To Your Business">
     <meta property="og:description" content="AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!">
     <meta property="og:image" content="https://aitsmena-test.netlify.app/aits-open-graph_v1.jpg">

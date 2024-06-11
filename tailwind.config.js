@@ -20,7 +20,7 @@ export default {
         'footer-noise':'url(/images/noise/footer-noise.svg)',
         'extended-noise':'url(/images/noise/extended-noise_v2.svg)',
         'colors':'url(/images/insidepages/elements/allelements.webp)',
-        'mobilecolors':'url(/images/insidepages/elements/allelementsmobile.webp)',
+        'mobilecolors':'url(/images/insidepages/elements/allelementsmobile_v1.webp)',
       },
       aspectRatio: {
         '1.59/1': '1.59 / 1',

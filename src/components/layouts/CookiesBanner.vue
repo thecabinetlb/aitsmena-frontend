@@ -31,7 +31,7 @@ const acceptCookies = () => {
             </div>
         
             <div class="w-full md:w-8/12">
-                <p class="text-accent2 font-[200] max-sm:text-[14px] md:text-justify text-center">
+                <p class="tracking-wide  text-accent2 font-[200] max-sm:text-[14px] md:text-justify text-center">
                     We use cookies to improve your experience on our website. Please click "Accept All Cookies" to enable all features and functionality, or "Decline" to continue without cookies.
                 </p>          
             </div>

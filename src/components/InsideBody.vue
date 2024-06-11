@@ -1,11 +1,6 @@
-<script setup>
-defineProps({
-    smallhieght: String,
-})
-</script>
 <template>
     <!-- Highlights -->
-    <div class="sm:hidden block absolute inset-0 w-full h-11/12 transform bg-center bg-cover z-[-1] bg-mobilecolors"/>
+    <div class="sm:hidden block absolute inset-0 w-full transform bg-center bg-cover z-[-1] bg-mobilecolors"/>
 
 
     <!-- center -->

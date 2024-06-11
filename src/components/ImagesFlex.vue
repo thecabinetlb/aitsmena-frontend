@@ -14,7 +14,7 @@ defineProps({
                 <div class="w-full h-full absolute inset-0 bg-gradient-to-t from-bg/75 to-bg/10 rounded-[16px]"/>
                 <div class="p-6 w-10/12 h-fit absolute left-1/2 transform -translate-x-1/2 bottom-[8.333333%] rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 backdrop-blur-[16px]">
                     <h2 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[500] mb-3">{{ item.name }}</h2>
-                    <p class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.jobtitle }}</p>
+                    <p class="tracking-wide hyphens-auto text-accent2 font-[200] max-sm:text-[14px]">{{ item.jobtitle }}</p>
                 </div>
             </li>
         </ul>    

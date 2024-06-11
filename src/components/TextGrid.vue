@@ -8,11 +8,11 @@ defineProps({
 <template>
     <section class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
         <h1 class="font-[200] text-accent1 text-justify 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
-        <p class="text-accent2 font-[200] max-sm:text-[14px] text-justify">
+        <p class="tracking-wide  text-accent2 font-[200] max-sm:text-[14px] text-justify">
             {{ sectiondescription }}
         </p>
-        <ul role="list" class="grid w-full grid-cols-1 gap-6 mt-10 lg:grid-cols-3 sm:grid-cols-2 p-10 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] list-style-none">
-            <li v-for="(item, key) in data" :key="key" class="flex flex-col col-span-1 gap-3 p-10"
+        <ul role="list" class="grid w-full grid-cols-1 gap-6 mt-10 lg:grid-cols-3 sm:grid-cols-2 md:p-10 p-6 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] list-style-none">
+            <li v-for="(item, key) in data" :key="key" class="flex flex-col col-span-1 gap-3 md:p-10"
             :class="{'lg:border-r lg:border-accent1' : key === 0 ||  key === 1, 'sm:border-r sm:border-accent1' : key === 0 }">
                 <!-- <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive loading="lazy" class="max-sm:w-[54px] aspect-square"/> -->
                 <h2 class="max-sm:text-[14px] text-accent1 text-justify font-[200]">
