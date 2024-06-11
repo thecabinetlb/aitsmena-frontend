@@ -95,7 +95,7 @@ const valuesandcommitments =
       delay: 100,
     },
   }"/>
-  <OneImageTextFlex  sectiontitle="Values and Commitments" :item="valuesandcommitments" reverse 
+  <OneImageTextFlex  sectiontitle="Values and Commitments" :item="valuesandcommitments" reverse hyphen
   v-motion
   :initial="{
     opacity: 0,

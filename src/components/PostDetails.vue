@@ -13,7 +13,7 @@ defineProps({
             <!-- <img :src="item.image" :alt="item.title" width="391" height="290" center cover responsive loading="eager"/>-->
             <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px]">{{ item.title }}</h1>
             <h3 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.date }}</h3>
-            <p class="tracking-wide  text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6">{{ item.body }}</p>
+            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6">{{ item.body }}</p>
         </div>
     </section>
 </template>

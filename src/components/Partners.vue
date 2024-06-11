@@ -11,7 +11,7 @@ defineProps({
     <div class="flex flex-wrap justify-between gap-6 lg:gap-3">
         <div class="lg:w-6/12">
             <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Mother <br class="max-sm:hidden"> Company of Two</h1>
-            <p class="tracking-wide  text-accent2 font-[200] max-sm:text-[14px] text-justify">
+            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify">
                 {{ sectiondescription }}
             </p>
         </div>

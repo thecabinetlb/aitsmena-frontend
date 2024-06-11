@@ -64,7 +64,7 @@ const sociallinks = [
       <div class="flex flex-wrap justify-between w-11/12 gap-6 px-6 my-10 lg:gap-0 2xl:w-8/12 lg:w-10/12">
             <div class="flex flex-col w-full gap-2 mb-10 lg:w-4/12 lg:mb-0">
               <img :src="logo" alt="AITS logo" width="164" height="43" center cover responsive loading="lazy" class="-ms-4"/>
-              <p class="tracking-wide  text-accent2 font-[200] max-sm:text-[14px] text-justify">Stay connected with AITS on social media for the latest updates, news, and insights. Follow
+              <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify">Stay connected with AITS on social media for the latest updates, news, and insights. Follow
               us on LinkedIn, Twitter, Facebook, and Instagram to join the conversation and stay informed.</p>
               <div class="relative z-[2] flex items-center gap-2">
                 <a v-for="(item, key) in sociallinks" :key="key" :id="'go-to-' + item.name" :href="item.to" :target="item.target" class="w-8 aspect-square font-[200] bg-bg2 text-accent1 hover:brightness-125 rounded-[8px] p-2 flex items-center justify-center">
@@ -90,7 +90,7 @@ const sociallinks = [
       class="absolute left-0 top-[100%] transform -translate-y-[100%] opacity-75"/>       
      
       <div class="text-center min-h-[50px] w-full flex flex-col items-center justify-center bg-footer-noise bg-cover bg-center">
-      <p class="tracking-wide  text-accent1 max-sm:text-[14px]">Copyright @ AITS All Rights Reserved.</p>
+      <p class="tracking-wide text-accent1 max-sm:text-[14px]">Copyright @ AITS All Rights Reserved.</p>
       </div>
     </footer>
 </template>    

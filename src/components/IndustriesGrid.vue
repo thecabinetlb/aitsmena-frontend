@@ -20,9 +20,9 @@ const openDetails = ref(0)
                 <h2 class="max-sm:text-[14px] text-accent1 font-[400] h-[48px]">{{ item.title }}</h2>
             </div>
             <!-- Desktop -->
-            <p v-for="(item, key) in data" :key="key" v-show="openDetails === key" class="traking-wide hyphens-auto md:block absolute hidden 2xl:left-1/2 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 md:h-[194px] font-[200] max-sm:text-[14px] text-justify text-accent2" style="text-align-last: center;">{{ item.description }}</p>
+            <p v-for="(item, key) in data" :key="key" v-show="openDetails === key" class="traking-wide md:block absolute hidden 2xl:left-1/2 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 md:h-[194px] font-[200] max-sm:text-[14px] text-justify text-accent2" style="text-align-last: center;">{{ item.description }}</p>
         </div>
         <!-- Mobile -->
-        <p v-show="openDetails === key"  v-for="(item, key) in data" :key="key" class="traking-wide hyphens-auto font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">{{ item.description }}</p>
+        <p v-show="openDetails === key"  v-for="(item, key) in data" :key="key" class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">{{ item.description }}</p>
     </section>
 </template>

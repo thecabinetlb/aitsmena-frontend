@@ -12,7 +12,7 @@ defineProps({
         <hr class="w-full h-4 mt-3 text-accent2"/>          
         <!-- <div class="w-full my-10">
             <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-10">{{ sectiontitle }}</h1>
-            <p class="tracking-wide  text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
+            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
         </div> -->
         <ul role="list" class="flex flex-col items-center gap-3 mt-10 list-style-none">
             <li v-for="(item, key) in data" :key="key" class="relative w-full group sm:min-h-[135px]">
@@ -22,7 +22,7 @@ defineProps({
                     <span class="font-[200] text-accent2">{{ item.date.month }} {{ item.date.year }}</span></h1>                        
                     <div class="w-full sm:w-7/12">
                         <h2 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[500] mb-3">{{ item.title }}</h2>
-                        <p class="tracking-wide  text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
+                        <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
                         <!-- <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'apply for' + item.title" :to="item.to" :target="item.target" class="ms-auto me-0 block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Secure Your Spot</RouterLink> -->
                     </div>
                     <RouterLink v-if="item.to" :id="'go-to-' + item.title + 'webinars-page'" :aria-label="'go to ' + item.title" :to="item.to" class="w-full cursor-pointer sm:w-2/12">
