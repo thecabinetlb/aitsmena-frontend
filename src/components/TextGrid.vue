@@ -7,22 +7,22 @@ defineProps({
 </script>
 <template>
     <section class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
-        <h1 class="font-[200] text-accent1 text-justify 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
-        <p class="tracking-wide  text-accent2 font-[200] max-sm:text-[14px] text-justify">
+        <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
+        <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">
             {{ sectiondescription }}
         </p>
         <ul role="list" class="grid w-full grid-cols-1 gap-6 mt-10 lg:grid-cols-3 sm:grid-cols-2 md:p-10 p-6 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] list-style-none">
             <li v-for="(item, key) in data" :key="key" class="flex flex-col col-span-1 gap-3 md:p-10"
             :class="{'lg:border-r lg:border-accent1' : key === 0 ||  key === 1, 'sm:border-r sm:border-accent1' : key === 0 }">
                 <!-- <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive loading="lazy" class="max-sm:w-[54px] aspect-square"/> -->
-                <h2 class="max-sm:text-[14px] text-accent1 text-justify font-[200]">
+                <h2 class="tracking-wide max-sm:text-[14px] text-accent1 font-[200]">
                     <svg width="17" height="21" viewBox="0 0 17 21" fill="none" class="inline" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.25001 0C6.06276 0.00258035 3.96584 0.872603 2.41923 2.41922C0.872612 3.96584 0.00258913 6.06276 8.77716e-06 8.25C-0.00261089 10.0374 0.581244 11.7763 1.66201 13.2C1.66201 13.2 1.88701 13.4962 1.92376 13.539L8.25001 21L14.5793 13.5353C14.6123 13.4955 14.838 13.2 14.838 13.2L14.8388 13.1978C15.919 11.7747 16.5026 10.0366 16.5 8.25C16.4974 6.06276 15.6274 3.96584 14.0808 2.41922C12.5342 0.872603 10.4373 0.00258035 8.25001 0ZM8.25001 11.25C7.65666 11.25 7.07665 11.0741 6.5833 10.7444C6.08995 10.4148 5.70543 9.94623 5.47837 9.39805C5.25131 8.84987 5.1919 8.24667 5.30765 7.66473C5.42341 7.08279 5.70913 6.54824 6.12869 6.12868C6.54825 5.70912 7.08279 5.4234 7.66474 5.30764C8.24668 5.19189 8.84988 5.2513 9.39806 5.47836C9.94624 5.70542 10.4148 6.08994 10.7444 6.58329C11.0741 7.07664 11.25 7.65666 11.25 8.25C11.249 9.04534 10.9326 9.80783 10.3702 10.3702C9.80784 10.9326 9.04535 11.249 8.25001 11.25Z" fill="white"/>
                     </svg>
                     <span v-show="item.title" class="inline ps-2">{{ item.title }}</span>                
                     <span class="inline ps-2">{{ item.address }}</span>                
                 </h2>
-                <a prefetch="false" v-show="item.phone" :id="'call-' + item.title + 'location'" :aria-label="'Call' + item.title + 'Location'" :href="'tel:'+ item.phone" class="cursor-pointer max-sm:text-[14px] font-[200] text-accent1 text-justify hover:brightness-75">
+                <a prefetch="false" v-show="item.phone" :id="'call-' + item.title + 'location'" :aria-label="'Call' + item.title + 'Location'" :href="'tel:'+ item.phone" class="cursor-pointer max-sm:text-[14px] font-[200] text-accent1 hover:brightness-75">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="white" class="inline" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_863_319" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                     <rect width="20" height="20" fill="#D9D9D9"/>
@@ -33,7 +33,7 @@ defineProps({
                     </svg>
                     <span class="inline ps-2">{{item.phone}}</span>
                 </a>
-                <h2 v-show="item.fax" class="max-sm:text-[14px] font-[200] text-accent1 text-justify hover:brightness-75">
+                <h2 v-show="item.fax" class="max-sm:text-[14px] font-[200] text-accent1 hover:brightness-75">
                     <svg width="25" height="20" viewBox="0 0 25 20" fill="none" stroke="white" class="inline" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_857_567" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="20">
                     <rect width="24.4444" height="20" fill="#D9D9D9"/>
@@ -44,7 +44,7 @@ defineProps({
                     </svg>
                     <span class="inline ps-2">{{item.fax}}</span>
                 </h2>
-                <h2 v-show="item.poBOX" class="max-sm:text-[14px] text-accent1 text-justify font-[400]">
+                <h2 v-show="item.poBOX" class="max-sm:text-[14px] text-accent1 font-[400]">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" class="inline" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_863_301" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                     <rect width="24" height="24" fill="#D9D9D9"/>
@@ -55,7 +55,7 @@ defineProps({
                     </svg>                 
                     <span class="inline ps-2">{{ item.poBOX }}</span>
                 </h2>
-                <a prefetch="false" v-show="item.email" :id="'email-' + item.title + 'location'" :aria-label="'Email' + item.title + 'Location'" :href="'mailto:'+ item.email" class="cursor-pointer max-sm:text-[14px] font-[200] text-accent1 text-justify hover:brightness-75">
+                <a prefetch="false" v-show="item.email" :id="'email-' + item.title + 'location'" :aria-label="'Email' + item.title + 'Location'" :href="'mailto:'+ item.email" class="cursor-pointer max-sm:text-[14px] font-[200] text-accent1 hover:brightness-75">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" class="inline" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_863_301" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                     <rect width="24" height="24" fill="#D9D9D9"/>
@@ -66,7 +66,7 @@ defineProps({
                     </svg> 
                     <span class="inline ps-2">{{item.email}}</span>
                 </a>
-                <a prefetch="false" v-show="item.website" id="go-href-aits-website" aria-label="go href AITS website" :href="item.website" class="cursor-pointer max-sm:text-[14px] font-[200] text-accent1 text-justify hover:brightness-75">
+                <a prefetch="false" v-show="item.website" id="go-href-aits-website" aria-label="go href AITS website" :href="item.website" class="cursor-pointer max-sm:text-[14px] font-[200] text-accent1 hover:brightness-75">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="white" class="inline" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_863_295" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                     <rect width="20" height="20" fill="#D9D9D9"/>
