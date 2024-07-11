@@ -49,8 +49,8 @@ export const createApp = ViteSSG(
     const head = createHead()
     const headPayload = renderSSRHead(head)
 
-    Object.entries(headPayload).forEach(([key, value]) => {
-      html = html.replace(`<!--${key}-->`, value)
+    Object.entries(headPayload).forEach(([name, value]) => {
+      html = html.replace(`<!--${name}-->`, value)
     })
     app.use(head)
     // Use vue-router
