@@ -2,51 +2,51 @@
 import Hero from '../components/Hero.vue'
 import Contact from '../components/Contact.vue'
 import OneImageTextFlex from '../components/OneImageTextFlex.vue'
-import { useHead } from '@unhead/vue'
+import { useSeoMeta } from '@unhead/vue'
 
 const title = 'AITS - Industrial Software Solutions And Digital Services Tailored To Your Business';
 const description = 'AITS transforms businesses like yours through innovative tech solutions tailored to your unique needs. Book your free consultation call to get started!';
 const ogImage = 'https://aitsmena-test.netlify.app/aits-open-graph_v1.jpg';
 const ogUrl = 'https://aitsmena-test.netlify.app'; // Replace with your website URL 
 
-// useSeoMeta({ 
-//   title,
-//   description,
-//   ogTitle: title, // Consider using the same title for consistency
-//   ogDescription: description,
-//   ogImage,
-//   ogUrl,
-//   ogType: 'website', // Recommended for most website content
-//   twitterTitle: title, // Consider using the same title for consistency
-//   twitterDescription: description,
-//   twitterImage: ogImage, // Assuming the same image is suitable for Twitter
-//   twitterCard: 'summary',
-// })
-useHead({
+useSeoMeta({ 
   title,
-  meta: [
-    {
-      name: 'description',
-      content: description,
-    },
-    {
-      property: 'og:title',
-      content: title,
-    },
-    {
-      property: 'og:image',
-      content: ogImage,
-    },
-    {
-      property: 'og:description',
-      content: description,
-    },
-    {
-      property: 'og:url',
-      content: ogUrl,
-    },
-  ],
-});
+  description,
+  ogTitle: title, // Consider using the same title for consistency
+  ogDescription: description,
+  ogImage,
+  ogUrl,
+  ogType: 'website', // Recommended for most website content
+  twitterTitle: title, // Consider using the same title for consistency
+  twitterDescription: description,
+  twitterImage: ogImage, // Assuming the same image is suitable for Twitter
+  twitterCard: 'summary',
+})
+// useHead({
+//   title,
+//   meta: [
+//     {
+//       name: 'description',
+//       content: description,
+//     },
+//     {
+//       property: 'og:title',
+//       content: title,
+//     },
+//     {
+//       property: 'og:image',
+//       content: ogImage,
+//     },
+//     {
+//       property: 'og:description',
+//       content: description,
+//     },
+//     {
+//       property: 'og:url',
+//       content: ogUrl,
+//     },
+//   ],
+// });
 
  
 const missionandvission =
