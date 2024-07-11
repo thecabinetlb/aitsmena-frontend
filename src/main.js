@@ -1,7 +1,8 @@
 import './assets/css/index.css'
 
 import { ViteSSG } from 'vite-ssg'
-// import { createHead } from '@unhead/vue'
+import { createHead } from '@unhead/vue'
+import { renderSSRHead } from '@unhead/ssr'
 
 import App from './App.vue'
 
@@ -44,7 +45,14 @@ export const createApp = ViteSSG(
       //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
       // })
     }
- 
+
+    const head = createHead()
+    const headPayload = renderSSRHead(head)
+
+    Object.entries(headPayload).forEach(([key, value]) => {
+      html = html.replace(`<!--${key}-->`, value)
+    })
+    app.use(head)
     // Use vue-router
     app.use(router)
   }
