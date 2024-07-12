@@ -9,6 +9,5 @@ import Footer from './components/layouts/Footer.vue';
   <Header/>
   <RouterView/>
   <Footer/>
-  <!-- <FloatingMenu/> -->
   </main>
 </template>
