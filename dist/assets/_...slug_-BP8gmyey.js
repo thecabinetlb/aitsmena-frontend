@@ -1,1 +1,0 @@
-import{_ as s}from"./PostDetails-CBQzNNch.js";import{c as e}from"./api-8CAHU-Ck.js";import{D as r,o as a,b as c,u as l}from"./app-NNAkR_fU.js";const g={__name:"[...slug]",props:{slug:String},setup(n){const t=r(),o=e(t.params.slug);return(u,m)=>(a(),c(s,{sectiontitle:"Blog Post Details",item:l(o)},null,8,["item"]))}};export{g as default};

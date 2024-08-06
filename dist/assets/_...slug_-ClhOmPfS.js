@@ -1,1 +1,0 @@
-import{_ as e}from"./PostDetails-CBQzNNch.js";import{b as o}from"./api-8CAHU-Ck.js";import{D as r,o as c,b as a,u}from"./app-NNAkR_fU.js";const f={__name:"[...slug]",setup(i){const s=r(),t=o(s.params.id);return(m,n)=>(c(),a(e,{sectiontitle:"Success Stories Details",item:u(t)},null,8,["item"]))}};export{f as default};
