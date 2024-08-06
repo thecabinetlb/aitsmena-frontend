@@ -3,6 +3,8 @@ import axios from 'axios';
 import { ref, reactive, watch } from 'vue'
 // import {Checkbox, useRecaptchaProvider} from 'vue-recaptcha'
 // useRecaptchaProvider() 
+const sitekey=import.meta.env.RECAPTCHAV2_SITEKEY
+console.log(sitekey)
 
 const ReCaptchaValid = ref(false)
 const hasErrorMessages = ref(false)
@@ -231,7 +233,7 @@ const handleSubmit = () => {
             </div>
             <!-- Recaptcha -->
             <div class="w-full col-span-2">
-                <vue-recaptcha ref="recaptcha" v-model="ReCaptchaValid" sitekey="6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl"></vue-recaptcha>
+                <vue-recaptcha ref="recaptcha" v-model="ReCaptchaValid" :sitekey="sitekey"></vue-recaptcha>
 
                 <!-- <Checkbox v-model="ReCaptchaValid" theme="dark" /> -->
                 <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>

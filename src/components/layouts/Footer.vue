@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import logo from '/aitswhitewithibibig.webp'
+import logo from '/AITSLogoWithSloganBig.webp'
 import x from '/images/socials/x.svg'
 import youtube from '/images/socials/youtube.svg'
 import facebook from '/images/socials/facebook.svg'

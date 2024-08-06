@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
-import logo from '/aitswhitewithibibig.webp'
+import logo from '/AITSLogoWithSloganBig.webp'
 const navlinks = [
   { id: 1, name: 'Home', to: '/' },
   { id: 2, name: 'About', to: '/about' },
@@ -38,22 +38,7 @@ const hasSubMenu = ref(false)
 const openSubMenu = ref(null)
 const isOpen = ref(false)
 const isClicked = ref(null)
-// const changecolor = ref(false)
 
-// const changeColor = () => {
-//   if (window.scrollY > 10) {
-//     changecolor.value = true;
-//   } else {
-//     changecolor.value = false;
-//   }
-// }
-// onMounted(() => {
-//   window.addEventListener("scroll", changeColor);
-// })
-
-// onUnmounted(() => {
-//   window.removeEventListener("scroll", changeColor);
-// })
 
 const toggleSubMenu = (item) => {
   hasSubMenu.value = item.submenu ? true : false
