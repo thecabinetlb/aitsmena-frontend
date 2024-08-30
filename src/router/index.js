@@ -15,9 +15,8 @@ const routes = [
   { path: '/contact', component: ContactView },
   { path: '/industries', component: IndustriesView},
   { path: '/careers', component: CareersView },
-  { path: '/resources', component: ResourcesView },
-  { path: '/resources/blog', component: BlogView },
-  { path: '/resources/blog/:slug', component: BlogPostDetailsView, props: true },
+  { path: '/resource-center', component: ResourcesView },
+  { path: '/resource-center/blog/:slug', component: BlogPostDetailsView},
   { path: '/industries/success-stories/:slug', component: StoriesPostDetailsView }
 ]
  

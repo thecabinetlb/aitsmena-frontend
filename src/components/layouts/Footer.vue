@@ -18,14 +18,14 @@ const footerlinks = [
   },
   {
     id: 2, 
-    name: 'Resources', 
-    to: '/resources',
-    submenu: [
-      { id: 1, name: 'Blog', to:'#blog' },
-      { id: 2, name: 'Whitepapers', to:'#whitepapers' },
-      // { id: 3, name: 'Webinars', to:'#webinars' },
-      { id: 3, name: 'Industry Insights', to:'#industry-insights' }
-    ]
+    name: 'Resource Center', 
+    to: '/resource-center',
+    // submenu: [
+    //   { id: 1, name: 'Blog', to:'#blog' },
+    //   { id: 2, name: 'Whitepapers', to:'#whitepapers' },
+    //   // { id: 3, name: 'Webinars', to:'#webinars' },
+    //   { id: 3, name: 'Industry Insights', to:'#industry-insights' }
+    // ]
   },
   {
     id: 3, 

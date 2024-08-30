@@ -12,14 +12,14 @@ const navlinks = [
   },
   { 
     id: 4, 
-    name: 'Resources', 
-    to: '/resources',
-    submenu: [
-      { id: 4, name: 'Blog', to:'#blog' },
-      { id: 5, name: 'Whitepapers', to:'#whitepapers' },
-      // { id: 6, name: 'Webinars', to:'#webinars' },
-      { id: 7, name: 'Industry Insights', to:'#industry-insights' }
-    ]
+    name: 'Resource Center', 
+    to: '/resource-center',
+    // submenu: [
+    //   { id: 4, name: 'Blog', to:'#blog' },
+    //   { id: 5, name: 'Whitepapers', to:'#whitepapers' },
+    //   // { id: 6, name: 'Webinars', to:'#webinars' },
+    //   { id: 7, name: 'Industry Insights', to:'#industry-insights' }
+    // ]
   },
   { 
     id: 5, 
