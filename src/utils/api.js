@@ -217,7 +217,6 @@ export function getBlogPosts(){
     ];  
 }
 
-
 export function getBlogPostBySlug(slug) {
   let blogs = getBlogPosts();
   return blogs.find(blog => blog.slug === slug);
