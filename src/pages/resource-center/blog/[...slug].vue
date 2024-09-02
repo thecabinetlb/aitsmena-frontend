@@ -7,5 +7,5 @@ const route = useRoute()
 const blogpost = getBlogPostBySlug(route.params.slug)
 </script>
 <template>
-    <PostDetails sectiontitle="Blog Post Details" :item="blogpost"/>
+    <PostDetails sectiontitle="Resource Details" :item="blogpost"/>
 </template>
