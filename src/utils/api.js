@@ -277,20 +277,6 @@ export function getSuccessStories (){
       publication_type: "Success Stories",
       customer_logo: "/images/publications/success-stories/customer_logos/customerlogo.webp",
       customer_name: "TwinTech Solutions"
-    },
-    {
-      id: 8,
-      title: "Scaling Industrial Digitization: Successful Strategies",
-      slug: "scaling-industrial-digitization-successful-strategies",
-      summary: "Effective strategies for scaling industrial digitization projects and ensuring long-term success.",
-      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
-      published_at: "Apr 19, 24",
-      is_featured: false,
-      is_arabic: false,
-      industry: "Digital Transformation",
-      publication_type: "success_story",
-      customer_logo: "/images/publications/success-stories/customer_logos/customerlogo.webp",
-      customer_name: "ScaleUp Inc."
     }
   ];
   
