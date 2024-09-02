@@ -14,6 +14,6 @@ console.log(uniqueIndustries);
       <title>AITS - Resource Center</title>
       <meta name="description" content="Got a knack for reading? Gain access to free resources including whitepapers, industry insights, educational blogs, and specialized webinars."/>
     </head>
-    <InnerHero :pagebanner="banner" pagetitle="Resources" pagedescription="Need some resources to explore the complex world of software solutions and digital services? Welcome to the home of the latest industry news, insights, trends, and much more."/>
+    <InnerHero :pagebanner="banner" isRC pagetitle="Innovation Insights Hub" pagedescription="Explore the latest resources designed to keep you informed and ahead in the fast-paced world of industrial digital transformation."/>
     <PostsList :uniqueIndustries="uniqueIndustries" :data='posts'/>
 </template>

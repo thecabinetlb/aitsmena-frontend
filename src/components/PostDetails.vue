@@ -8,7 +8,7 @@ defineProps({
     <section class="w-11/12 py-40 mx-auto 2xl:w-8/12 lg:w-10/12">
         <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ item.title }}</h1>
         <p class="tracking-wide hyphens-auto text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.summary }}</p>
-        <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="block w-fit ms-auto me-0cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Contact</RouterLink>
+        <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="block w-fit ms-auto me-0 cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Contact</RouterLink>
         <div class="flex flex-col gap-3 mt-10">
             <!-- <div class="w-full h-40 bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]"></div> -->
             <img :src="item.image" :alt="item.title" center cover responsive loading="eager" class="aspect-video bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]"/>
