@@ -7,7 +7,7 @@ const route = useRoute()
 const post = getResourceBySlug(route.params.slug)
 </script>
 <template>
-          <head>
+      <head>
       <title>{{ post.title }}</title>
       <meta name="description" :content="post.summary"/>
     </head>

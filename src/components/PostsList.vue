@@ -1,16 +1,14 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 defineProps({
-    sectiontitle: String,
-    sectiondescription: String,
     data: Array
 })
 </script>
 
 <template>
-    <section class="w-11/12 py-40 mx-auto 2xl:w-8/12 lg:w-10/12">
-        <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
-        <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
+    <section class="w-11/12 mx-auto 2xl:w-8/12 lg:w-10/12">
+        <!-- <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
+        <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p> -->
         <ul role="list" class="grid grid-cols-3 gap-6 mt-10 lg:gap-3 list-style-none">
             <li v-for="(item, key) in data" :key="key" class="flex-grow lg:col-span-1 ms:col-span-2 col-span-3 w-full relative group sm:min-h-[135px] rounded-[16px] border-2 border-bg2">
                 <!-- image should go here -->
