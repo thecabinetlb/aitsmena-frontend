@@ -10,7 +10,7 @@ defineProps({
         <p class="tracking-wide hyphens-auto text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.summary }}</p>
         <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="block w-fit ms-auto me-0 cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Contact</RouterLink>
         <div class="flex flex-col gap-3 mt-10">
-            <div class="relative overflow-hidden aspect-video"
+            <div class="relative overflow-hidden aspect-video rounded-[16px]"
             :style="{ backgroundImage: 'url(' + item.image + ')', backgroundSize:'cover', backgroundPosition: 'center'}">
               <div v-if="item.customer_logo" class="p-2 absolute top-3 right-3 w-1/4 h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[8px]">
                 <img :src="item.customer_logo" :alt="item.title" width="100%" height="100%" center cover responsive loading="lazy" class="mx-auto aspect-1.72/1 scale-125"/>
