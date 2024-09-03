@@ -10,7 +10,7 @@ const props = defineProps({
 const isClicked = ref(null);
 const filteredData = ref(props.data);
 const currentPage = ref(1);
-const itemsPerPage = 3;
+const itemsPerPage = 6;
 
 // Function to filter data based on the selected industry
 const filterData = (industry) => {
