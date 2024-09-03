@@ -7,10 +7,10 @@ const props = defineProps({
   uniqueIndustries: Array,
 })
 
-const isClicked = ref('All');
+const isClicked = ref(null);
 const filteredData = ref(props.data);
 const currentPage = ref(1);
-const itemsPerPage = 6;
+const itemsPerPage = 3;
 
 // Function to filter data based on the selected industry
 const filterData = (industry) => {
@@ -20,6 +20,7 @@ const filterData = (industry) => {
   } else {
     filteredData.value = props.data.filter(item => item.industry === industry);
   }
+  currentPage.value = 1;
 };
 
 // Initial filter
@@ -50,9 +51,10 @@ const onPageChange = (page) => {
       v-for="(item, key) in props.uniqueIndustries" :key="key" 
       :id="item + (isClicked === item ? '-active' : '')" 
       :aria-label="'show ' + item"
-      class="px-4 py-3 w-fit max-sm:text-[14px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 border-bg2 focus:outline-none focus:ring-0 focus:border-accent1"
+      class="px-4 py-3 w-fit max-sm:text-[14px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent hover:border-accent1 focus:outline-none focus:ring-0 focus:border-accent1"
+      :class="{'border-b-2 border-accent1': isClicked === item, 'border-b-2 border-bg2' : isClicked != item}"
       @click="filterData(item)">
-      {{item}}</button>                      
+      {{item}}</button>
     </div>        
     <ul role="list" class="grid grid-cols-3 gap-6 mt-10 lg:gap-3 list-style-none">
       <li v-for="(item, key) in paginatedData" :key="key" class="flex-grow lg:col-span-1 ms:col-span-2 col-span-3 w-full relative group sm:min-h-[135px] rounded-[16px] border-2 border-bg2">
