@@ -3,7 +3,8 @@ import PostsList from '../../components/PostsList.vue';
 import { getAllResources } from '../../utils/api'
 import banner from '/images/banners/resources.webp'
 import InnerHero from '../../components/InnerHero.vue';
-const posts = getAllResources()
+const posts = getAllResources();
+
 // Extract the industries from the posts and then create a Set to get unique categories
 let uniqueIndustries = [...new Set(posts.map(post => post.industry))];
 

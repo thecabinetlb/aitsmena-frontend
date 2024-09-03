@@ -8,7 +8,10 @@ import App from './App.vue'
 import routes from '~pages';
 import { MotionPlugin } from '@vueuse/motion'
 import { VueRecaptcha } from 'vue-recaptcha'
+import VueAwesomePaginate from "vue-awesome-paginate"
 
+// Import the plugin's styles
+import "vue-awesome-paginate/dist/style.css"
 // `export const createApp` is required instead of the original `createApp(App).mount('#app')`
 export const createApp = ViteSSG(
   // the root component
@@ -35,10 +38,14 @@ export const createApp = ViteSSG(
    
     // Install MotionPlugin for animations
     app.use(MotionPlugin)
+    
+
 
     // Install VueReCaptcha plugin if running on client-side
     if (isClient) {
-
+      // Register the plugin
+      app.use(VueAwesomePaginate)
+      
       app.component('vue-recaptcha', VueRecaptcha)
       // app.use(VueRecaptchaPlugin, {
       //   v2SiteKey: '6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl',
@@ -46,7 +53,7 @@ export const createApp = ViteSSG(
     }
 
     const head = createHead()
- 
+
     app.use(head)
     // Use vue-router
     app.use(router)
