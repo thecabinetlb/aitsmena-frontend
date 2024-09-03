@@ -19,7 +19,7 @@ defineProps({
                 <img v-if="isAbout" :src="logo" alt="AITS logo" width="443" height="148" cover center responsive loading="eager" class="transform scale-95"/>    
                 <h1 v-else class="font-[400] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] text-center uppercase">{{ pagetitle }}</h1>
                 <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify mx-auto lg:w-8/12" style="text-align-last: center;"  :class="{'hyphens-auto' : hyphen}">{{ pagedescription }}</p>
-                <RouterLink v-if="isRC" id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="block relative z-[2] cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125">Book Your Consultation</RouterLink>
+                <RouterLink v-if="isRC" id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="block relative z-[2] cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Book Your Consultation</RouterLink>
             </div>
         </div>
         <!-- Highlights -->

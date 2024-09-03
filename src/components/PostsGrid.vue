@@ -14,8 +14,8 @@ defineProps({
         <div class="w-full lg:w-6/12">
             <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
             <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6">{{ sectiondescription }}</p>
-            <!-- <div class="cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 mt-auto mb-0"> Browse All </div>              -->
-            <!-- <RouterLink id="'go-to-success-stories-page'" aria-label="go to success stories page" to="/industries/success-stories" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 mt-auto mb-0">Browse All</RouterLink> -->
+            <!-- <div class="cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400 mt-auto mb-0"> Browse All </div>              -->
+            <!-- <RouterLink id="'go-to-success-stories-page'" aria-label="go to success stories page" to="/industries/success-stories" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400 mt-auto mb-0">Browse All</RouterLink> -->
         </div> 
         <div class="grid w-full h-full grid-cols-2 gap-3 lg:w-5/12">
             <div v-for="item in data" :key="key" class="xl:col-span-1 lg:col-span-2 md:col-span-1 col-span-2 w-full rounded-[16px] border-2 border-bg2">
