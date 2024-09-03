@@ -3,10 +3,8 @@ import banner from '/images/banners/contact.webp'
 import InnerHero from '../components/InnerHero.vue';
 import InsideBody from '../components/InsideBody.vue';
 import TextGrid from '../components/TextGrid.vue';
-import { defineAsyncComponent } from 'vue'
-const ContactForm = defineAsyncComponent(() =>
-  import('../components/ContactForm.vue')
-)
+import ContactForm from '../components/ContactForm.vue';
+
 const locations = [
 {
     id: 1,
