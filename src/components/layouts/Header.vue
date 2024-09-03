@@ -62,7 +62,7 @@ const toggleOpen = () => {
         <RouterLink :id="item.name + (openSubMenu === item.id ? '-active' : '')" :aria-label="'go to ' + item.name" :to="item.to" 
         :activeClass="'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[8px]'"
         :exactActiveClass="'bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[8px]'"
-        class="py-2 px-3 cursor-pointer text-lg font-[400] text-accent1 hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20 hover:backdrop-blur-[16px] hover:rounded-[8px]"
+        class="py-2 px-3 text-nowrap cursor-pointer text-lg font-[400] text-accent1 hover:bg-gradient-to-r hover:from-accent1/10 hover:to-accent1/20 hover:backdrop-blur-[16px] hover:rounded-[8px]"
         @mouseenter="openSubMenu = item.id, hasSubMenu = item.submenu ? true : false">
           {{ item.name }}
         </RouterLink>
