@@ -16,6 +16,7 @@ export default {
         '10': '0.1',
       },
       backgroundImage: {
+        'placeholder':'url(/placeholder.jpg)',
         'noise':'url(/images/noise/noise_v2.svg)',
         'footer-noise':'url(/images/noise/footer-noise.svg)',
         'extended-noise':'url(/images/noise/extended-noise_v2.svg)',
