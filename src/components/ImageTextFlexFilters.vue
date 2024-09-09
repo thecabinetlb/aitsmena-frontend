@@ -26,13 +26,13 @@ const filterData = (key) => {
         <button @click="filterData(0)"
         class="px-4 py-3 w-fit max-w-80 max-sm:text-[14px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 focus:outline-none"
         :class="{'border-b-2 border-accent1': clicked === 0, 'border-b-2 border-bg2' : clicked !==0}">
-        Commitment to Integrity, Diversity, and Transparency</button>
+        Human-centered</button>
         <button @click="filterData(1)" 
         class="px-4 py-3 w-fit max-sm:text-[14px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 border-bg2 focus:outline-none">
-        Our People First</button>      
+        Passionate & Driven</button>      
         <button @click="filterData(2)" 
         class="px-4 py-3 w-fit max-sm:text-[14px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 border-bg2 focus:outline-none">
-        Continuous Improvement</button>                 
+        Collaborative Spirit</button>                 
       </div>
       <div class="flex flex-wrap items-center justify-center w-full gap-6 mt-10 lg:gap-3 lg:justify-between max-lg:flex-col-reverse">
         <img :src="item.image" :alt="item.title" width="391" height="290" center cover responsive loading="lazy"/>    

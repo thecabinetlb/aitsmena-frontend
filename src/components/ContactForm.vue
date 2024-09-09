@@ -81,7 +81,7 @@ const formData = reactive({
         },
         Subject : {
             name: 'Subject',
-            value : 'General Inquiries',
+            value : 'general-inquiry',
             isValid: true,
             validationMessage: "",
             required: false,            
@@ -191,7 +191,7 @@ const handleSubmit = () => {
     <div id="contact-form"class="flex flex-wrap justify-between w-11/12 gap-6 mx-auto lg:gap-3 2xl:w-8/12 lg:w-10/12">
         <div class="w-full lg:w-6/12">
             <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Contact Us</h1>
-            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify">Have questions or inquiries? Contact us today to learn more about our software solutions, digital services, and how we can help your business succeed. Our team is here to assist you every step of the way.</p>
+            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify">Have questions or inquiries? Contact us today to learn more about our software solutions, digital services, and how we can help your business succeed in an ever ever-evolving market. Our team is here to assist you every step of the way.</p>
         </div>
         <form  class="grid w-full h-full grid-cols-2 gap-3 lg:w-5/12" @submit.prevent="handleSubmit">
             <div class="w-full col-span-2">
@@ -244,9 +244,9 @@ const handleSubmit = () => {
                 placeholder="Choose an industry"
                 v-model="formData.data.Industry.value"              
                 :required="formData.data.Industry.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Industry.isValid===false}">
-                <option value="smart-cities" class="text-black">Smart Cities</option>
+                <option value="smart-cities" class="text-black"selected>Smart Cities</option>
                 <option value="food-and-beverage" class="text-black">Food and Beverage</option>
                 <option value="manufacturing" class="text-black">Manufacturing</option>
                 <option value="oil-and-gas" class="text-black">Oil and Gas</option>
@@ -262,14 +262,14 @@ const handleSubmit = () => {
                 :required="formData.data.Subject.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Subject.isValid===false}">
-                    <option  class="text-black" selected>General Inquiries</option>
-                    <option class="text-black">Sales and Support</option>
+                    <option  class="text-black" value="general-inquiry" selected>General Inquiry</option>
+                    <option class="text-black" value="sales-and-support">Sales and Support</option>
                 </select>
                 <p v-show="!formData.data.Subject.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Subject.validationMessage}}</p>
             </div>
             <div class="w-full col-span-2">
                 <textarea id="Message" name="Message" rows="5"  aria-label="Type out your message"
-                placeholder="Briefly tell us about your project and your current goals. How can we help you?" 
+                placeholder="Tell us about your project and your current goals. How can we help you?" 
                 v-model="formData.data.Message.value" 
                 :required="formData.data.Message.required" 
                 style="min-height: 60px;"
