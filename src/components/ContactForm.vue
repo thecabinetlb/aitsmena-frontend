@@ -13,7 +13,9 @@ const errors = {
   NameRequired: 'Name is required.',
   EmailRequired: 'Email is required.',
   EmailInvalid: 'Please specify a real email.',
-  CompanyNameRequired: 'Company Name is required.',
+  CountryRequired: 'Country Name is required.',
+  CityRequired: 'City Name is required.',
+  IndustryRequired: 'Industry is required.',
   PhoneRequired: 'Phone Number is required.',
   PhoneInvalid: 'Phone Number should be numeric.',
   SubjectRequired: 'Subject is required.',
@@ -25,7 +27,9 @@ const ErrorMessages = ref({
     name: '',
     email: '',
     phone: '',
-    company_name: '',
+    country: '',
+    city: '',
+    industry: '',
     subject: '',
     message: ''
 })
@@ -54,9 +58,23 @@ const formData = reactive({
             validationMessage: "",
             required: true,            
         },            
-        CompanyName : {
-            name: 'CompanyName',
+        Country : {
+            name: 'Country',
             value : '',
+            isValid: null,
+            validationMessage: "",
+            required: true,            
+        },
+        City : {
+            name: 'City',
+            value : '',
+            isValid: null,
+            validationMessage: "",
+            required: true,            
+        },
+        Industry : {
+            name: 'Industry',
+            value : 'smart-cities',
             isValid: null,
             validationMessage: "",
             required: true,            
@@ -133,7 +151,9 @@ const handleSubmit = () => {
             name: formData.data.Name.value,
             email: formData.data.Email.value,
             phone: formData.data.Phone.value,
-            company_name: formData.data.CompanyName.value,
+            country: formData.data.Country.value,
+            city: formData.data.City.value,
+            industry: formData.data.industry.value,
             subject: formData.data.Subject.value,
             message: formData.data.Message.value
         };
@@ -149,7 +169,9 @@ const handleSubmit = () => {
                 Name: '',
                 Email: '',
                 Phone: '',
-                CompanyName: '',
+                Country: '',
+                City: '',
+                Industry: '',
                 Subject: '',
                 Message: ''
             };
@@ -172,9 +194,9 @@ const handleSubmit = () => {
             <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify">Have questions or inquiries? Contact us today to learn more about our software solutions, digital services, and how we can help your business succeed. Our team is here to assist you every step of the way.</p>
         </div>
         <form  class="grid w-full h-full grid-cols-2 gap-3 lg:w-5/12" @submit.prevent="handleSubmit">
-            <div class="w-full col-span-2 sm:col-span-1">
+            <div class="w-full col-span-2">
                 <input type="text" id="Name" name="Name"
-                placeholder="Your Name" aria-label="Enter your name"
+                placeholder="Your Full Name" aria-label="Enter your full name"
                 v-model="formData.data.Name.value"
                 :required="formData.data.Name.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2"               
@@ -183,7 +205,7 @@ const handleSubmit = () => {
             </div>
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="Email" name="Email" aria-label="Enter your email"
-                placeholder="example@gmail.com" 
+                placeholder="Work Email: example@gmail.com" 
                 v-model="formData.data.Email.value" 
                 :required="formData.data.Email.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
@@ -200,14 +222,40 @@ const handleSubmit = () => {
                 <p v-show="!formData.data.Phone.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Phone.validationMessage}}</p>
             </div> 
             <div class="w-full col-span-2 sm:col-span-1">
-                <input type="text" id="CompanyName" name="CompanyName"  aria-label="Enter your company's name"
-                placeholder="Your Company's Name"
-                v-model="formData.data.CompanyName.value"              
-                :required="formData.data.CompanyName.required" 
+                <input type="text" id="Country" name="Country"  aria-label="Enter your Country"
+                placeholder="Your Country"
+                v-model="formData.data.Country.value"              
+                :required="formData.data.Country.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
-                :class="{'border-red-500 focus:border-red-500' : formData.data.CompanyName.isValid===false}">
-                <p v-show="!formData.data.CompanyName.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.CompanyName.validationMessage}}</p>
+                :class="{'border-red-500 focus:border-red-500' : formData.data.Country.isValid===false}">
+                <p v-show="!formData.data.Country.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Country.validationMessage}}</p>
             </div>    
+            <div class="w-full col-span-2 sm:col-span-1">
+                <input type="text" id="City" name="City"  aria-label="Enter your City"
+                placeholder="Your City"
+                v-model="formData.data.City.value"              
+                :required="formData.data.City.required" 
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
+                :class="{'border-red-500 focus:border-red-500' : formData.data.City.isValid===false}">
+                <p v-show="!formData.data.City.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.City.validationMessage}}</p>
+            </div>  
+            <div class="w-full col-span-2">
+                <select id="industry" name="industry" aria-label="Choose an Industry"
+                placeholder="Choose an industry"
+                v-model="formData.data.Industry.value"              
+                :required="formData.data.Industry.required" 
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
+                :class="{'border-red-500 focus:border-red-500' : formData.data.Industry.isValid===false}">
+                <option value="smart-cities" class="text-black">Smart Cities</option>
+                <option value="food-and-beverage" class="text-black">Food and Beverage</option>
+                <option value="manufacturing" class="text-black">Manufacturing</option>
+                <option value="oil-and-gas" class="text-black">Oil and Gas</option>
+                <option value="energy" class="text-black">Energy</option>
+                <option value="utilities" class="text-black">Utilities</option>
+                <option value="metal-mining-and-minerals" class="text-black">Metal, Mining and Minerals</option>
+                </select>
+                <p v-show="!formData.data.Industry.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Industry.validationMessage}}</p>
+            </div>
             <div class="w-full col-span-2 mb-3">
                 <select id="Subject" name="Subject" aria-label="select a subject for your message"
                 v-model="formData.data.Subject.value"

@@ -8,31 +8,30 @@ import ContactForm from '../components/ContactForm.vue';
 const locations = [
 {
     id: 1,
-    title: 'Al Reem Island, Abu Dhabi, UAE',
-    address: '3003 Addax Tower',
+    address: 'UAE, Dubai, Dubai Digital Park, A6 Building, 401 Office',
     phone: '+971 (2) 222 2130',
     poBox: 'PO Box 3628',
     email: 'info@aitsmena.com',
     website: 'https://aitsmena.com/'
   },
-  {
-    id: 2,
-    title: 'Dubai Digital Park',
-    address: 'A6 building, 401 Office Silicon Oasis, Dubai, UAE',
-    phone: '+971 4 344 4901',
-    fax: '+971 4 344 4902',
-    poBox: 'PO Box: 342112',
-    email: 'info@aitsmena.com',
-    website: 'https://aitsmena.com/'
-  },
-  {
-    id:3,
-    address: 'Sulimaniyah Office Building, Office no.214, 3132 Prince Sultan Bin Abdulaziz Road, Sulimaniyah, Riyad, Kingdom of Saudi Arabia.',
-    phone: '+966 114314440',
-    fax: '+966 114314440',
-    email: 'info@aitsmena.com',
-    website: 'https://aitsmena.com/'  
-  }  
+  // {
+  //   id: 2,
+  //   title: 'Dubai Digital Park',
+  //   address: 'A6 building, 401 Office Silicon Oasis, Dubai, UAE',
+  //   phone: '+971 4 344 4901',
+  //   fax: '+971 4 344 4902',
+  //   poBox: 'PO Box: 342112',
+  //   email: 'info@aitsmena.com',
+  //   website: 'https://aitsmena.com/'
+  // },
+  // {
+  //   id:3,
+  //   address: 'Sulimaniyah Office Building, Office no.214, 3132 Prince Sultan Bin Abdulaziz Road, Sulimaniyah, Riyad, Kingdom of Saudi Arabia.',
+  //   phone: '+966 114314440',
+  //   fax: '+966 114314440',
+  //   email: 'info@aitsmena.com',
+  //   website: 'https://aitsmena.com/'  
+  // }  
 ]
 
 

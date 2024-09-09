@@ -48,24 +48,24 @@ useSeoMeta({
 //   ],
 // });
 
- 
+
 const missionandvission =
   {
-    title: "A Vision In Sight",
-    description: "AITS strives to be the leading industrial software innovator in the Gulf region. How? By delivering cutting-edge software solutions and digital services, digital threads, and connected workers. It takes a thrill for innovation and excellence to empower organizations in reaching new heights of success.",
+    title: "Leading the Region’s Industrial Digital Revolution",
+    description: "AITS aims to be the leading industrial software innovator in the Gulf region. We deliver comprehensive software solutions that enhance operational efficiency, support sustainability, and provide a competitive advantage in an evolving market.",
     image: "/images/hero/missionandvision/vision_v1.webp",
 }
 const valuesandcommitments =
 {
-  title: "You Have Our Word",
-  description: "No company can operate without a set of core values that shape its culture and defines who it is. As for us? We believe in integrity, collaboration, and continuous improvement. Our commitment to enhance positive transformation in the industrial landscape creates an environment where our dedicated team can thrive. This enables us to better serve our clients and contribute to a brighter, more sustainable future.",
+  title: "Innovation with Integrity and Passion",
+  description: "By placing a strong emphasis on human-centered design, customer experience, and transparency, we strive to deliver solutions that meet industry specific needs while building trust and driving progress. Our dedication to innovation and integrity ensures that we approach every challenge with determination and passion, setting new standards for excellence in the industrial sector.",
   image: "/images/hero/values/values_v1.webp",
 }  
   
 </script>
 <template>
   <Hero/>
-  <OneImageTextFlex sectiontitle="Mission and Vision" :item="missionandvission" 
+  <OneImageTextFlex sectiontitle="Our Mission" :item="missionandvission" 
   v-motion
   :initial="{
     opacity: 0,
@@ -80,7 +80,7 @@ const valuesandcommitments =
       delay: 100,
     },
   }"/>
-  <OneImageTextFlex  sectiontitle="Values and Commitments" :item="valuesandcommitments" reverse hyphen
+  <OneImageTextFlex  sectiontitle="Innovating for a Sustainable Future" :item="valuesandcommitments" reverse hyphen
   v-motion
   :initial="{
     opacity: 0,

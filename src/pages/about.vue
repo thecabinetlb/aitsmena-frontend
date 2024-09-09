@@ -17,8 +17,14 @@ const csr = [
   {
     id: 1,
     image:gender,
-    title: 'Diversity & Inclusion',
-    description: "At AITS, we’re committed to creating an environment where employees thrive both personally and professionally. Our inclusive culture celebrates diversity and collaboration, valuing every employee and acknowledging that everyone, regardless of gender, age, or race has equal opportunities for growth and success.",
+    title: 'Commitment to Integrity, Diversity, and Transparency',
+    description: "Our dedication to ethical practices, open communication, and equal opportunity fosters an inclusive environment where every voice is valued. We are committed to delivering effective solutions that align with our core values and support a diverse and equitable future for ourselves, our clients, and our partners.",
+    list: [
+      "Human-centered",
+      "Passionate & Driven",
+      "Collaborative Spirit"
+    ],
+    cta: 'Work with Us'
   },
   {
     id: 2,
@@ -60,11 +66,13 @@ const partners = [
       <title>AITS - About Us</title>
       <meta name="description" content="Powered by IBI, AITS plays a pivotal role in driving positive transformation across various industrial sectors. Explore our added value to diverse industries."/>
     </head>        
-    <InnerHero :pagebanner="banner" isAbout="true" hyphen
-      pagedescription="Do you need a trusted software company and strategic ally in navigating the complex landscape of industrial automation? You’re in the right place. AITS is powered by IBI Holding, an investment company that fuels innovation in businesses across various industries and actively seeks partnerships with companies and individuals who are driving transformation in today’s dynamic market. AITS plays a pivotal role in driving positive transformation across various industrial sectors. Explore our added value to diverse industries, compelling employee propositions, and available job vacancies."/>
+    <InnerHero :pagebanner="banner" pagetitle="Shaping the Industrial Software Future " hyphen
+      pagedescription="AITS serves as the central hub for software innovation within IBI Holding - an investment company, operating with a distinct focus on developing and optimizing industrial software solutions."
+      pagedescription1="AITS aims to lead the digital transformation journey across various industries in the GCC, ensuring they achieve operational excellence and sustainability throughout their entire operational lifecycle."
+      pagedescription2="AITS is dedicated to identifying and fulfilling the industrial sector’s software needs. We focus on creating value for our partners, customers, and the company by continuously delivering innovation and excellence."/>
       <section class="relative">
-          <Partners sectionid="sub-companies" sectiondescription="Our portfolio holds two distinguished business lines: AVEVA Select Gulf and IC2. Together, we offer a comprehensive suite of solutions designed to address the diverse challenges faced by today's industries." :data="partners"/>
-          <ImageTextFlexFilters sectiontitle="Our Culture" :data="csr"
+          <Partners sectionid="sub-companies" sectiondescription="AITS is leading two dynamic business divisions: AVEVA Select Gulf and IC2. Each one of these divisions plays a crucial role in our mission to advance industrial software solutions." :data="partners"/>
+          <ImageTextFlexFilters sectiontitle="Culture of Innovation and Excellence" :data="csr"
           sectiondescription="This planet has already been through enough. We are committed to making a positive impact on society and the environment. Our commitment to sustainability is guided by three core values:"/>
           <!-- <ImagesFlex sectiontitle="Meet The Team" :data="team"/> -->
           <InsideBody/>
