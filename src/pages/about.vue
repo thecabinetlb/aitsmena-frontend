@@ -66,7 +66,7 @@ const partners = [
       <title>AITS - About Us</title>
       <meta name="description" content="Powered by IBI, AITS plays a pivotal role in driving positive transformation across various industrial sectors. Explore our added value to diverse industries."/>
     </head>        
-    <InnerHero :pagebanner="banner" pagetitle="Shaping the Industrial Software Future " hyphen
+    <InnerHero :pagebanner="banner" pagetitle="Shaping the Industrial Software Future " hyphen cta="Learn More"
       pagedescription="AITS serves as the central hub for software innovation within IBI Holding - an investment company, operating with a distinct focus on developing and optimizing industrial software solutions."
       pagedescription1="AITS aims to lead the digital transformation journey across various industries in the GCC, ensuring they achieve operational excellence and sustainability throughout their entire operational lifecycle."
       pagedescription2="AITS is dedicated to identifying and fulfilling the industrial sector’s software needs. We focus on creating value for our partners, customers, and the company by continuously delivering innovation and excellence."/>

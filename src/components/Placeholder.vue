@@ -3,10 +3,10 @@
   <img :src="logo" alt="AITS logo" width="164" height="43" class="mt-10" loading="eager" />
 
   <div class="flex flex-col items-center justify-center w-11/12 h-full mx-auto 2xl:w-8/12 lg:w-10/12">
-    <h1 class="text-4xl text-center uppercase text-accent1 2xl:text-8xl lg:text-8xl md:text-7xl sm:text-5xl">
+    <h1 class="2xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-[30px] text-center uppercase text-accent1">
       <span class="font-[200]">Innovative Solutions</span>
       <br />
-      <span class="font-[700]">Coming Soon</span>
+      <span class="font-[900]">Coming Soon</span>
     </h1>
 
     <div class="flex items-center justify-center w-full gap-3 px-2 mt-10">
