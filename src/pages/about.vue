@@ -66,10 +66,8 @@ const partners = [
       <title>AITS - About Us</title>
       <meta name="description" content="Powered by IBI, AITS plays a pivotal role in driving positive transformation across various industrial sectors. Explore our added value to diverse industries."/>
     </head>        
-    <InnerHero :pagebanner="banner" pagetitle="Shaping the Industrial Software Future " hyphen cta="Learn More"
-      pagedescription="AITS serves as the central hub for software innovation within IBI Holding - an investment company, operating with a distinct focus on developing and optimizing industrial software solutions."
-      pagedescription1="AITS aims to lead the digital transformation journey across various industries in the GCC, ensuring they achieve operational excellence and sustainability throughout their entire operational lifecycle."
-      pagedescription2="AITS is dedicated to identifying and fulfilling the industrial sector’s software needs. We focus on creating value for our partners, customers, and the company by continuously delivering innovation and excellence."/>
+    <InnerHero :pagebanner="banner" pagetitle="Shaping the Industrial Software Future " cta="Learn More"
+      pagedescription="AITS serves as the central hub for software innovation within IBI Holding - an investment company, operating with a distinct focus on developing and optimizing industrial software solutions. AITS aims to lead the digital transformation journey across various industries in the GCC, ensuring they achieve operational excellence and sustainability throughout their entire operational lifecycle. AITS is dedicated to identifying and fulfilling the industrial sector’s software needs. We focus on creating value for our partners, customers, and the company by continuously delivering innovation and excellence."/>
       <section class="relative">
           <Partners sectionid="sub-companies" sectiondescription="AITS is leading two dynamic business divisions: AVEVA Select Gulf and IC2. Each one of these divisions plays a crucial role in our mission to advance industrial software solutions." :data="partners"/>
           <ImageTextFlexFilters sectiontitle="Culture of Innovation and Excellence" :data="csr"

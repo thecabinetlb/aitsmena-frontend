@@ -20,9 +20,9 @@ const openDetails = ref(1)
                 <h2 class="max-sm:text-[14px] text-accent1 font-[400] h-[48px]">{{ item.title }}</h2>
             </div>
             <!-- Desktop -->
-            <!-- <p v-for="(item, key) in data" :key="key" v-show="openDetails === key" class="traking-wide md:block absolute hidden 2xl:left-1/2 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 md:h-[194px] font-[200] max-sm:text-[14px] text-justify text-accent2" style="text-align-last: center;">
+            <!-- <p v-for="(item, key) in data" :key="key" v-show="openDetails === key" class="traking-wide md:block absolute hidden 2xl:left-1/2 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 md:h-[194px] font-[200] max-sm:text-[14px] text-justify text-accent2">
                 {{ item.description }}</p> -->
-                <div v-show="openDetails === 1" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3" style="text-align-last: center;">
+                <div v-show="openDetails === 1" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3">
                     <p class="font-[200]">Navigating the complex landscape of urban development requires a holistic approach to integrating and optimizing systems. With rapid urbanization, cost pressures, and a growing demand for enhanced quality of life, smart cities must address several key challenges: </p>
                     <ul role="list" class="list-disc ps-4">
                         <li class="text-accent2 font-[200] max-sm:text-[14px] text-justify"><span class="font-[700]">Seamless connectivity between diverse systems, sites, people, and assets.</span>Our solutions ensure that various city components work harmoniously for effective urban management and reduced energy costs. </li>
@@ -33,7 +33,7 @@ const openDetails = ref(1)
                     </ul>
                 </div>
                 
-                <div v-show="openDetails === 2" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3" style="text-align-last: center;">
+                <div v-show="openDetails === 2" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3">
                     <p class="font-[200]">The food and beverage sector is facing unique hurdles, like a spike in product variations and the need for speedy new product launches. As brands expand globally, manufacturers must boost efficiency and cut costs to stay competitive. With consumers becoming pickier and less brand-loyal, it’s vital to avoid stock shortages, provide a reliable customer experience, and quickly roll out innovative products.</p>
                     <p class="font-[200]">Our solutions tackle these issues with:</p>
                     <ul role="list" class="list-disc ps-4">
@@ -44,14 +44,14 @@ const openDetails = ref(1)
                     <p class="font-[200]">Regulatory standards, such as the U.S. Food Safety Modernization Act (FSMA), Hazard Analysis and Critical Control Points (HACCP), and Global Food Safety Initiative (GFSI), require stringent food safety measures. Our solutions are designed to meet these standards and keep your operations running smoothly. </p>
                 </div>
 
-                <div v-show="openDetails === 3" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3" style="text-align-last: center;">
+                <div v-show="openDetails === 3" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3">
                     <p class="font-[200]">Our technologies provide manufacturers with real-time insights, predictive maintenance, and optimization across all production levels. This helps minimize waste, reduce costs, and maximize efficiency. </p>
                     <p class="font-[200]">By harnessing these technologies, factories can unlock hidden value and improve eco-efficiency, which is essential for meeting net-zero targets, enhancing productivity, and achieving sustainability goals. </p>
                     <p class="font-[200]">In industries such as pharmaceuticals and consumer goods where maintaining quality and brand integrity is paramount, advanced manufacturing software solutions enable robust quality assurance, product transparency, and traceability at every level of the production. This practice ensures compliance with stringent regulatory standards while delivering on the brand’s promise to customers. </p>
                     <p class="font-[200]"><span class="font-[700]">The ability to respond swiftly to changing market conditions is vital for manufacturers.</span> As market trends shift toward product personalization and customization, our innovative softwares help manufacturers adapt quickly and efficiently. Real-time operational visibility enables precise order execution and schedule adherence, empowering the workforce to innovate and adapt. The successful delivery of critical products, like vaccines, illustrates how having the right tools can be the difference between merely meeting and significantly exceeding market demands.</p> 
                 </div>        
 
-                <div v-show="openDetails === 4" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3" style="text-align-last: center;">
+                <div v-show="openDetails === 4" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3">
                     <h1 class="font-[700]">Oil and Gas Production, Processing, and Refining </h1>
                     <p class="font-[200]">There is an increasing demand for optimizing existing assets in the Oil and Gas industry to safely boost output while adhering to environmental and regulatory standards.</p>
                   
@@ -65,13 +65,13 @@ const openDetails = ref(1)
                
                 </div>    
 
-                <div v-show="openDetails === 5" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3" style="text-align-last: center;">
+                <div v-show="openDetails === 5" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3">
                     <p class="font-[200]">In the energy sector, the focus is on revolutionizing the entire supply chain, from engineering and procurement to site material control and construction planning. By integrating advanced technologies, energy companies can streamline processes, reduce waste, and improve resource utilization, all while maintaining compliance with stringent regulatory standards.</p>
                     <p class="font-[200]">The digital transformation is an important step toward achieving net-zero targets. Our innovation supports the energy industry, from nuclear and fossil fuel to renewables. Through data-driven insights and our innovative solutions, energy companies are better equipped to meet climate commitments and become pioneers in the responsible use of resources. Collaboration with industry leaders across the sector is key.</p>
                     <p class="font-[200]">Our energy sector solutions enable organizations to tap into transformative benefits by harnessing data with greater precision. We bolster electric grid reliability and resilience, fine-tune the intricacies of generation, transmission, and distribution, and maximize asset utilization to elevate situational awareness while reducing carbon footprints. Our technologies empower workforce connectivity, driving agility and resilience.</p>
                 </div>   
                    
-                <div v-show="openDetails === 6" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3" style="text-align-last: center;">
+                <div v-show="openDetails === 6" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3">
                     <p class="font-[200]">The utilities sector, including water and wastewater management, is facing unprecedented challenges as it adapts to the demands of a rapidly changing world: increasing demands from regulators, customers, and environmental concerns. Our comprehensive solutions are designed to help utility operators tackle these challenges head-on with the tools, expertise, and insights needed to streamline operations, cut costs, and stay ahead of the game.</p>
                     <p class="font-[200]">The changes are driven by the need to better collect, analyze, and utilize vast amounts of data generated across the sector. Being able to make quick and informed decisions and meet regulatory standards is becoming increasingly important. </p>
                     
@@ -84,7 +84,7 @@ const openDetails = ref(1)
                     <p class="font-[200]">Automation is important in modern utility but comes with its own challenges. Our solutions offer the reliability and simplicity needed to address these challenges, reducing complexity and risk while ensuring continuous availability. </p>
                 </div>   
                 
-                <div v-show="openDetails === 7" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3" style="text-align-last: center;">
+                <div v-show="openDetails === 7" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-justify text-accent2 space-y-3">
                     <p class="font-[200]">In the metals, mining, and minerals industry, the application of advanced engineering, operations, and management skills is essential to addressing the sector's complex challenges. Our solutions are designed to enhance your ability to navigate the challenges and help you contribute effectively to this demanding field.</p>
                     
                     <h1 class="font-[700]">Handling Market Fluctuations</h1>
@@ -98,9 +98,9 @@ const openDetails = ref(1)
                 </div>   
             </div>
         <!-- Mobile -->
-        <!-- <p v-show="openDetails === key" v-for="(item, key) in data" :key="key" class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">
+        <!-- <p v-show="openDetails === key" v-for="(item, key) in data" :key="key" class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden">
             {{ item.description }}</p> -->
-        <div v-show="openDetails === 1" class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">
+        <div v-show="openDetails === 1" class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden">
                 <p class="font-[200]">Navigating the complex landscape of urban development requires a holistic approach to integrating and optimizing systems. With rapid urbanization, cost pressures, and a growing demand for enhanced quality of life, smart cities must address several key challenges: </p>
                 <ul role="list" class="list-disc ps-4">
                     <li class="text-accent2 font-[200] max-sm:text-[14px] text-justify"><span class="font-[700]">Seamless connectivity between diverse systems, sites, people, and assets.</span>Our solutions ensure that various city components work harmoniously for effective urban management and reduced energy costs. </li>
@@ -111,7 +111,7 @@ const openDetails = ref(1)
                 </ul>
         </div>
         
-        <div v-show="openDetails === 2" class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">
+        <div v-show="openDetails === 2" class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden">
             <p class="font-[200]">The food and beverage sector is facing unique hurdles, like a spike in product variations and the need for speedy new product launches. As brands expand globally, manufacturers must boost efficiency and cut costs to stay competitive. With consumers becoming pickier and less brand-loyal, it’s vital to avoid stock shortages, provide a reliable customer experience, and quickly roll out innovative products.</p>
             <p class="font-[200]">Our solutions tackle these issues with:</p>
             <ul role="list" class="list-disc ps-4">
@@ -122,14 +122,14 @@ const openDetails = ref(1)
             <p class="font-[200]">Regulatory standards, such as the U.S. Food Safety Modernization Act (FSMA), Hazard Analysis and Critical Control Points (HACCP), and Global Food Safety Initiative (GFSI), require stringent food safety measures. Our solutions are designed to meet these standards and keep your operations running smoothly. </p>
         </div>
 
-        <div v-show="openDetails === 3" class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">
+        <div v-show="openDetails === 3" class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden">
             <p class="font-[200]">Our technologies provide manufacturers with real-time insights, predictive maintenance, and optimization across all production levels. This helps minimize waste, reduce costs, and maximize efficiency. </p>
             <p class="font-[200]">By harnessing these technologies, factories can unlock hidden value and improve eco-efficiency, which is essential for meeting net-zero targets, enhancing productivity, and achieving sustainability goals. </p>
             <p class="font-[200]">In industries such as pharmaceuticals and consumer goods where maintaining quality and brand integrity is paramount, advanced manufacturing software solutions enable robust quality assurance, product transparency, and traceability at every level of the production. This practice ensures compliance with stringent regulatory standards while delivering on the brand’s promise to customers. </p>
             <p class="font-[200]"><span class="font-[700]">The ability to respond swiftly to changing market conditions is vital for manufacturers.</span> As market trends shift toward product personalization and customization, our innovative softwares help manufacturers adapt quickly and efficiently. Real-time operational visibility enables precise order execution and schedule adherence, empowering the workforce to innovate and adapt. The successful delivery of critical products, like vaccines, illustrates how having the right tools can be the difference between merely meeting and significantly exceeding market demands.</p> 
         </div>   
 
-        <div v-show="openDetails === 4"  class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">
+        <div v-show="openDetails === 4"  class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden">
             <h1 class="font-[700]">Oil and Gas Production, Processing, and Refining </h1>
             <p class="font-[200]">There is an increasing demand for optimizing existing assets in the Oil and Gas industry to safely boost output while adhering to environmental and regulatory standards.</p>
             
@@ -143,13 +143,13 @@ const openDetails = ref(1)
         
         </div>   
         
-        <div v-show="openDetails === 5"  class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">
+        <div v-show="openDetails === 5"  class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden">
             <p class="font-[200]">In the energy sector, the focus is on revolutionizing the entire supply chain, from engineering and procurement to site material control and construction planning. By integrating advanced technologies, energy companies can streamline processes, reduce waste, and improve resource utilization, all while maintaining compliance with stringent regulatory standards.</p>
             <p class="font-[200]">The digital transformation is an important step toward achieving net-zero targets. Our innovation supports the energy industry, from nuclear and fossil fuel to renewables. Through data-driven insights and our innovative solutions, energy companies are better equipped to meet climate commitments and become pioneers in the responsible use of resources. Collaboration with industry leaders across the sector is key.</p>
             <p class="font-[200]">Our energy sector solutions enable organizations to tap into transformative benefits by harnessing data with greater precision. We bolster electric grid reliability and resilience, fine-tune the intricacies of generation, transmission, and distribution, and maximize asset utilization to elevate situational awareness while reducing carbon footprints. Our technologies empower workforce connectivity, driving agility and resilience.</p>
         </div>   
             
-        <div v-show="openDetails === 6"  class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">
+        <div v-show="openDetails === 6"  class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden">
             <p class="font-[200]">The utilities sector, including water and wastewater management, is facing unprecedented challenges as it adapts to the demands of a rapidly changing world: increasing demands from regulators, customers, and environmental concerns. Our comprehensive solutions are designed to help utility operators tackle these challenges head-on with the tools, expertise, and insights needed to streamline operations, cut costs, and stay ahead of the game.</p>
             <p class="font-[200]">The changes are driven by the need to better collect, analyze, and utilize vast amounts of data generated across the sector. Being able to make quick and informed decisions and meet regulatory standards is becoming increasingly important. </p>
             
@@ -163,7 +163,7 @@ const openDetails = ref(1)
                
         </div>  
 
-        <div v-show="openDetails === 7"  class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden" style="text-align-last: center;">
+        <div v-show="openDetails === 7"  class="traking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 pb-10 mt-10 md:hidden">
             <p class="font-[200]">In the metals, mining, and minerals industry, the application of advanced engineering, operations, and management skills is essential to addressing the sector's complex challenges. Our solutions are designed to enhance your ability to navigate the challenges and help you contribute effectively to this demanding field.</p>
             
             <h1 class="font-[700]">Handling Market Fluctuations</h1>
