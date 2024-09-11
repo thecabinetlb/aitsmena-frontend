@@ -50,11 +50,11 @@ const showDes = (id) => {
         <div v-for="item in partners" :key="key" class="mt-10">
             <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
         </div>            
-        <RouterLink v-for="item in data" :key="key" :aria-label="'click on' + item.title + 'to read the description'" :to="item?.to" 
+        <a v-for="item in data" :key="key" :aria-label="'click on' + item.title + 'to read the description'" :href="item?.to" 
             class="w-[160px] h-[160px] grid place-content-center rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
                 @mouseenter="showDes(item.id)" :class="{'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}">
                 <component :is="item.logo" />
-            </RouterLink>            
+        </a>            
         </div>
     </div>
     </section>
