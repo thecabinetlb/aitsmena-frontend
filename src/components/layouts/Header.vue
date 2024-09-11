@@ -4,14 +4,13 @@ import { ref } from 'vue'
 import logo from '/AITS_v1.svg'
 const navlinks = [
   { id: 1, name: 'Home', to: '/' },
-  { id: 2, name: 'About', to: '/about' },
   {
-  id: 3,
+  id: 2,
   name: "Industries",
   to: '/industries'
   },
   { 
-    id: 4, 
+    id: 3, 
     name: 'Resource Center', 
     to: '/resource-center',
     // submenu: [
@@ -22,7 +21,7 @@ const navlinks = [
     // ]
   },
   { 
-    id: 5, 
+    id: 4, 
     name: 'Careers', 
     to: '/careers',
     submenu: [
@@ -31,7 +30,7 @@ const navlinks = [
       { id: 10, name: 'Employee Benefits', to:'#employee-benefits' }
     ]
   },
-  { id: 6, name: 'Contact', to: '/contact' },
+  { id: 5, name: 'Contact', to: '/contact' },
 ]
 
 const hasSubMenu = ref(false)

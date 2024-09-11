@@ -52,8 +52,8 @@ const csr = [
 //   }
 // ];
 const partners = [
-    { id: 1, title: 'AVEVA Select Gulf', logo: aveva },
-    { id: 2, title: 'IC2', logo: ic2 },
+    { id: 1, title: 'AVEVA Select Gulf', to:'https://gulf.avevaselect.com', logo: aveva, description:'AVEVA Select Gulf is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions. ' },
+    { id: 2, title: 'IC2', logo: ic2, description:'IC2 is dedicated to driving industrial transformation in the Smart Cities and Food & Beverage/CPG sectors.  ' },
 ];
 </script>
 <template>

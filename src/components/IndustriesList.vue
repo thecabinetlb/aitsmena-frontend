@@ -18,9 +18,9 @@ defineProps({
                 <div class="w-full sm:w-9/12">
                     <p class="tracking-wide hyphens-auto text-accent2 font-[200] max-sm:text-[14px] text-justify mb-3">{{ item.description }}</p>
                 </div>
-                <!-- <RouterLink v-if="item.to" :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" :to="item.to" class="w-full h-full cursor-pointer sm:w-2/12">
-                    <img src="/arrowleft.svg" alt="AITS" width="34" height="41"  class="ease-linear delay-300 transform sm:mx-auto ms-auto me-0 hover:translate-x-3" cover center responsive loading="lazy"/>    
-                </RouterLink> -->
+                <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" to="/industries" class="w-full h-full cursor-pointer sm:w-2/12">
+                    <img src="/arrowleft.svg" alt="AITS" width="34" height="41" class="ease-linear delay-300 transform sm:mx-auto ms-auto me-0 hover:translate-x-3" cover center responsive loading="lazy"/>    
+                </RouterLink>
             </li>
         </ul>
     </section>

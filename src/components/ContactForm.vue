@@ -214,7 +214,7 @@ const handleSubmit = () => {
             </div>      
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="Phone" name="Phone" aria-label="Enter your phone"
-                placeholder="00961 71 654 231" 
+                placeholder="71 654 231" 
                 v-model="formData.data.Phone.value"          
                 :required="formData.data.Phone.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                

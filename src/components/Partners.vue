@@ -1,28 +1,59 @@
 <script setup>
+import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
+
 defineProps({
-    sectionid: String,
-    sectiontitle: String,
-    sectiondescription: String,
     data: Array
 })
+const isHovered = ref(1);
+const showDes = (id) => {
+  isHovered.value = id
+};
 </script>
+
+
+<style scoped>
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.6s ease;
+  transform: none;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
+
 <template>
-    <section :id="sectionid" class="w-11/12 mx-auto 2xl:w-8/12 lg:w-10/12">
-    <div class="flex flex-wrap justify-between gap-6 lg:gap-3">
+<section class="w-11/12 px-6 pt-20 mx-auto 2xl:w-8/12 sm:w-10/12 sm:pt-40">
+    <!-- Desktop -->
+    <div class="relative hidden h-[200px] lg:flex gap-2">
         <div class="lg:w-6/12">
             <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Home of<br class="max-sm:hidden"> Two Divisions</h1>
-            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6">
-                {{ sectiondescription }}
-            </p>
-            <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Contact Our Experts</RouterLink>
-        </div>
-        <div class="relative flex justify-center gap-5 mx-auto lg:ms-auto lg:me-0 lg;mt-0 mt-10 lg:justify-end lg:w-5/12">
             <div v-for="item in data" :key="key">
-                <img :src="item.logo" width="168" height="168" :alt="item.title" cover center responsive loading="lazy" 
-                class="aspect-square border-2 border-accent1 transform duration-600 shadow-md shadow-accent1 rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]" />            
+                <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
             </div>
+        </div>     
+        <div class="absolute inset-0 flex justify-end w-6/12 h-full gap-6 ms-auto me-0">
+            <RouterLink v-for="item in data" :key="key" :aria-label="'click on' + item.title + 'to read the description'" :to="item?.to">
+                <img :src="item.logo" :alt="item.title" width="168" height="168"  cover center responsive loading="lazy" class="rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]" 
+                @mouseenter="showDes(item.id)" :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}"/>
+            </RouterLink>
         </div>
     </div>
-    <hr class="w-full h-4 mt-40 text-accent2"/>
+    <!-- Mobile -->
+    <div class="relative lg:hidden">
+        <div class="flex items-center justify-center w-full gap-6 pb-6">
+            <button v-for="item in partners" :key="key" :aria-label="'click on' + item.title + 'to read the description'">
+                <img :src="item.logo" :alt="item.title" width="168" height="168"  cover center responsive loading="lazy" class="rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] " 
+                @mouseenter="showDes(item.id)" :class="{'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}"/>
+            </button>            
+        </div>
+        <div v-for="item in partners" :key="key" class="mt-10">
+            <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
+        </div>
+    </div>
     </section>
 </template>
