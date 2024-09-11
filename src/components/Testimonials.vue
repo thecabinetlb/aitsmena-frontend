@@ -41,7 +41,7 @@ const testimoniesslides = [
           class="relative w-11/12 h-full mx-auto mask">
           <slide v-for="(slide, index) in testimoniesslides" :key="index" class="relative flex items-center justify-center w-full h-full py-10">
             <blockquote class="max-w-screen-lg mx-auto text-center 2xl:max-w-screen-md md:max-w-screen-sm">
-              <p class="tracking-wide hyphens-auto text-accent2 text-3xl font-[200] max-sm:text-[14px] text-jusify" style="text-align-last: center">{{ slide.content }}</p>
+              <p class="tracking-wide text-accent2 text-3xl font-[200] max-sm:text-[14px] text-jusify" style="text-align-last: center">{{ slide.content }}</p>
             </blockquote>
             <figcaption class="flex items-center justify-center gap-2 mt-6">
               <cite class="text-accent2 font-[400]">{{ slide.ceo }}</cite>

@@ -10,7 +10,7 @@ defineProps({
 <template>
     <section :id="sectionid" class="w-11/12 px-6 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
       <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
-      <p class="tracking-wide hyphens-auto text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ sectiondescription }}</p>
+      <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ sectiondescription }}</p>
       <div v-for="(item, key) in data" :key="key" class="flex flex-wrap items-center justify-center w-full gap-6 mt-10 lg:gap-3 lg:justify-between" 
       v-motion
         :initial="{
@@ -29,7 +29,7 @@ defineProps({
         <img :src="item.image" :alt="item.title" width="391" height="290" center cover responsive loading="lazy"/>    
         <div class="w-full lg:w-6/12">
           <h2 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ item.title }}</h2>
-          <p class="tracking-wide hyphens-auto text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6">{{ item.description }}</p>
+          <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6">{{ item.description }}</p>
           <!-- <RouterLink v-if="item.to" :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" :to="item.to" class="cursor-pointer px-4 py-3 w-fit block max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Browse</RouterLink> -->
         </div>
       </div>

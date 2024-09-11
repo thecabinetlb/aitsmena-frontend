@@ -27,7 +27,7 @@
     "vite-ssg-sitemap": "^0.6.1",
     "vue-awesome-paginate": "^1.2.0",
     "vue-recaptcha": "^2.0.3",
-    "vue-router": "^4.3.2",
+    "vue-router": "^4.4.4",
     "vue3-carousel": "^0.3.1"
   }
 }

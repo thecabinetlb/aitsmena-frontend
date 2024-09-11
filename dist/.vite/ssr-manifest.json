@@ -8,144 +8,144 @@
   "\u0000vite/preload-helper.js": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/AITSLogoWithSlogan.webp": [
-    "/assets/InnerHero-DEt1M0Ja.js"
+  "../../../../AITSLogoWithSlogan.webp": [
+    "/assets/InnerHero-B412dUvI.js"
   ],
-  "\u0000vite:asset:public/AITS_v1.svg": [
+  "../../../../AITS_v1.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/banners/about.webp": [
-    "/assets/about-Dtt-w8e3.js"
+  "../../../../images/banners/about.webp": [
+    "/assets/about-Cej_-O0l.js"
   ],
-  "\u0000vite:asset:public/images/banners/careers.webp": [
-    "/assets/careers-CtyE13a5.js"
+  "../../../../images/banners/careers.webp": [
+    "/assets/careers-B7BAywK5.js"
   ],
-  "\u0000vite:asset:public/images/banners/contact.webp": [
-    "/assets/contact-5TBl_p16.js"
+  "../../../../images/banners/contact.webp": [
+    "/assets/contact-DoGogO1_.js"
   ],
-  "\u0000vite:asset:public/images/banners/elements/bottomright.webp": [
-    "/assets/InnerHero-DEt1M0Ja.js"
+  "../../../../images/banners/elements/bottomright.webp": [
+    "/assets/InnerHero-B412dUvI.js"
   ],
-  "\u0000vite:asset:public/images/banners/elements/topleft.webp": [
-    "/assets/InnerHero-DEt1M0Ja.js"
+  "../../../../images/banners/elements/topleft.webp": [
+    "/assets/InnerHero-B412dUvI.js"
   ],
-  "\u0000vite:asset:public/images/banners/elements/topright.webp": [
-    "/assets/InnerHero-DEt1M0Ja.js"
+  "../../../../images/banners/elements/topright.webp": [
+    "/assets/InnerHero-B412dUvI.js"
   ],
-  "\u0000vite:asset:public/images/banners/industries.webp": [
-    "/assets/industries-B38OaneE.js"
+  "../../../../images/banners/industries.webp": [
+    "/assets/industries-CC10_Q8p.js"
   ],
-  "\u0000vite:asset:public/images/banners/resources.webp": [
-    "/assets/index-Br0AilS2.js",
+  "../../../../images/banners/resources.webp": [
+    "/assets/index-C8scAIpm.js",
     "/assets/index-MT7ebSgJ.css"
   ],
-  "\u0000vite:asset:public/images/hero/arrow.webp": [
+  "../../../../images/hero/arrow.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/hero/elements/centermiddle.webp": [
+  "../../../../images/hero/elements/centermiddle.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/hero/elements/leftbottom_small.webp": [
+  "../../../../images/hero/elements/leftbottom_small.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/hero/elements/leftmiddle_small.webp": [
+  "../../../../images/hero/elements/leftmiddle_small.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/hero/elements/leftmiddleoposite_small.webp": [
+  "../../../../images/hero/elements/leftmiddleoposite_small.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/hero/elements/lefttop_small.webp": [
+  "../../../../images/hero/elements/lefttop_small.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/hero/elements/rightmiddle_small.webp": [
+  "../../../../images/hero/elements/rightmiddle_small.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/hero/elements/righttop_small.webp": [
+  "../../../../images/hero/elements/righttop_small.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/industries/City.svg": [
-    "/assets/industries-B38OaneE.js"
-  ],
-  "\u0000vite:asset:public/images/industries/F&B.svg": [
-    "/assets/industries-B38OaneE.js"
-  ],
-  "\u0000vite:asset:public/images/industries/Gas.svg": [
-    "/assets/industries-B38OaneE.js"
-  ],
-  "\u0000vite:asset:public/images/industries/Mining.svg": [
-    "/assets/industries-B38OaneE.js"
-  ],
-  "\u0000vite:asset:public/images/industries/energy.svg": [
-    "/assets/industries-B38OaneE.js"
-  ],
-  "\u0000vite:asset:public/images/industries/manufactoring.svg": [
-    "/assets/industries-B38OaneE.js"
-  ],
-  "\u0000vite:asset:public/images/industries/utilities.svg": [
-    "/assets/industries-B38OaneE.js"
-  ],
-  "\u0000vite:asset:public/images/insidepages/about/csr/employee_v1.webp": [
-    "/assets/about-Dtt-w8e3.js"
-  ],
-  "\u0000vite:asset:public/images/insidepages/about/csr/gender_v1.webp": [
-    "/assets/about-Dtt-w8e3.js"
-  ],
-  "\u0000vite:asset:public/images/insidepages/about/csr/improvement_v1.webp": [
-    "/assets/about-Dtt-w8e3.js"
-  ],
-  "\u0000vite:asset:public/images/insidepages/elements/centermiddle.webp": [
-    "/assets/InsideBody-DLysTjRh.js"
-  ],
-  "\u0000vite:asset:public/images/insidepages/elements/centertop.webp": [
-    "/assets/InsideBody-DLysTjRh.js"
-  ],
-  "\u0000vite:asset:public/images/insidepages/elements/leftmiddle.webp": [
-    "/assets/InsideBody-DLysTjRh.js"
-  ],
-  "\u0000vite:asset:public/images/insidepages/elements/rightbottom.webp": [
-    "/assets/InsideBody-DLysTjRh.js"
-  ],
-  "\u0000vite:asset:public/images/insidepages/elements/rightmiddle.webp": [
-    "/assets/InsideBody-DLysTjRh.js"
-  ],
-  "\u0000vite:asset:public/images/insidepages/elements/righttop.webp": [
-    "/assets/InsideBody-DLysTjRh.js"
-  ],
-  "\u0000vite:asset:public/images/patterns/patternfooter.svg": [
+  "../../../../images/industries/City.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/patterns/patternhero.webp": [
+  "../../../../images/industries/F&B.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/socials/facebook.svg": [
+  "../../../../images/industries/Gas.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/socials/linkedin.svg": [
+  "../../../../images/industries/Mining.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/socials/x.svg": [
+  "../../../../images/industries/energy.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/socials/youtube.svg": [
+  "../../../../images/industries/manufactoring.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/testimonies/contact/elements/centermiddle.svg": [
+  "../../../../images/industries/utilities.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/testimonies/contact/elements/leftmiddle.svg": [
+  "../../../../images/insidepages/about/csr/employee_v1.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/testimonies/contact/elements/rightbottom.svg": [
+  "../../../../images/insidepages/about/csr/gender_v1.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/testimonies/contact/elements/rightmiddle.svg": [
+  "../../../../images/insidepages/about/csr/improvement_v1.webp": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "\u0000vite:asset:public/images/testimonies/partners/aveva.webp": [
-    "/assets/about-Dtt-w8e3.js"
+  "../../../../images/insidepages/elements/centermiddle.webp": [
+    "/assets/InsideBody-CdWF0AQO.js"
   ],
-  "\u0000vite:asset:public/images/testimonies/partners/ic2.webp": [
-    "/assets/about-Dtt-w8e3.js"
+  "../../../../images/insidepages/elements/centertop.webp": [
+    "/assets/InsideBody-CdWF0AQO.js"
+  ],
+  "../../../../images/insidepages/elements/leftmiddle.webp": [
+    "/assets/InsideBody-CdWF0AQO.js"
+  ],
+  "../../../../images/insidepages/elements/rightbottom.webp": [
+    "/assets/InsideBody-CdWF0AQO.js"
+  ],
+  "../../../../images/insidepages/elements/rightmiddle.webp": [
+    "/assets/InsideBody-CdWF0AQO.js"
+  ],
+  "../../../../images/insidepages/elements/righttop.webp": [
+    "/assets/InsideBody-CdWF0AQO.js"
+  ],
+  "../../../../images/patterns/patternfooter.svg": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "../../../../images/patterns/patternhero.webp": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "../../../../images/socials/facebook.svg": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "../../../../images/socials/linkedin.svg": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "../../../../images/socials/x.svg": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "../../../../images/socials/youtube.svg": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "../../../../images/testimonies/contact/elements/centermiddle.svg": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "../../../../images/testimonies/contact/elements/leftmiddle.svg": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "../../../../images/testimonies/contact/elements/rightbottom.svg": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "../../../../images/testimonies/contact/elements/rightmiddle.svg": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "../../../../images/testimonies/partners/aveva.webp": [
+    "/assets/about-Cej_-O0l.js"
+  ],
+  "../../../../images/testimonies/partners/ic2.webp": [
+    "/assets/about-Cej_-O0l.js"
   ],
   "index.html": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -153,19 +153,16 @@
   "node_modules/@unhead/dom/dist/index.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "node_modules/@unhead/dom/node_modules/@unhead/shared/dist/index.mjs": [
+  "node_modules/@unhead/shared/dist/index.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "node_modules/@unhead/vue/dist/index.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "node_modules/@unhead/vue/dist/shared/vue.cf295fb1.mjs": [
+  "node_modules/@unhead/vue/dist/shared/vue.8fc199ce.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "node_modules/@unhead/vue/dist/shared/vue.f36acd1f.mjs": [
-    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
-  ],
-  "node_modules/@unhead/vue/node_modules/@unhead/shared/dist/index.mjs": [
+  "node_modules/@unhead/vue/dist/shared/vue.f49591ad.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
@@ -190,133 +187,151 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "node_modules/axios/lib/adapters/adapters.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
+  ],
+  "node_modules/axios/lib/adapters/fetch.js": [
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/adapters/xhr.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/axios.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/cancel/CancelToken.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/cancel/CanceledError.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/cancel/isCancel.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/core/Axios.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/core/AxiosError.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/core/AxiosHeaders.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/core/InterceptorManager.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/core/buildFullPath.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/core/dispatchRequest.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/core/mergeConfig.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/core/settle.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/core/transformData.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/defaults/index.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/defaults/transitional.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/env/data.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/AxiosURLSearchParams.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/HttpStatusCode.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/bind.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/buildURL.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/combineURLs.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
+  ],
+  "node_modules/axios/lib/helpers/composeSignals.js": [
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/cookies.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/formDataToJSON.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/isAbsoluteURL.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/isAxiosError.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/isURLSameOrigin.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/null.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/parseHeaders.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/parseProtocol.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
+  ],
+  "node_modules/axios/lib/helpers/progressEventReducer.js": [
+    "/assets/contact-DoGogO1_.js"
+  ],
+  "node_modules/axios/lib/helpers/resolveConfig.js": [
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/speedometer.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/spread.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
+  ],
+  "node_modules/axios/lib/helpers/throttle.js": [
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/toFormData.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/toURLEncodedForm.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
+  ],
+  "node_modules/axios/lib/helpers/trackStream.js": [
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/helpers/validator.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/platform/browser/classes/Blob.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/platform/browser/classes/FormData.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/platform/browser/classes/URLSearchParams.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/platform/browser/index.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/platform/common/utils.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/platform/index.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/axios/lib/utils.js": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "node_modules/defu/dist/defu.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -435,9 +450,6 @@
   "node_modules/unhead/dist/index.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "node_modules/unhead/node_modules/@unhead/shared/dist/index.mjs": [
-    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
-  ],
   "node_modules/vite-ssg/dist/index.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
@@ -459,6 +471,12 @@
   "node_modules/vue-router/dist/vue-router.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
+  "node_modules/vue3-carousel/dist/carousel.css": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "node_modules/vue3-carousel/dist/carousel.es.js": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
   "src/App.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
@@ -466,51 +484,69 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/BenefitsFlexWithBlur.vue": [
-    "/assets/careers-CtyE13a5.js"
+    "/assets/careers-B7BAywK5.js"
   ],
   "src/components/Contact.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/ContactForm.vue": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "src/components/Hero.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/ImageTextFlexFilters.vue": [
-    "/assets/about-Dtt-w8e3.js"
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "src/components/IndustriesCarousel.vue": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "src/components/IndustriesCarousel.vue?vue&type=style&index=0&scoped=af92b051&lang.css": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/IndustriesGrid.vue": [
-    "/assets/industries-B38OaneE.js"
+    "/assets/industries-CC10_Q8p.js"
   ],
   "src/components/InnerHero.vue": [
-    "/assets/InnerHero-DEt1M0Ja.js"
+    "/assets/InnerHero-B412dUvI.js"
   ],
   "src/components/InsideBody.vue": [
-    "/assets/InsideBody-DLysTjRh.js"
+    "/assets/InsideBody-CdWF0AQO.js"
   ],
   "src/components/JobsList.vue": [
-    "/assets/careers-CtyE13a5.js"
+    "/assets/careers-B7BAywK5.js"
   ],
   "src/components/OneImageTextFlex.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/Partners.vue": [
-    "/assets/about-Dtt-w8e3.js"
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "src/components/Partners.vue?vue&type=style&index=0&scoped=4ffad4d3&lang.css": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/PostDetails.vue": [
-    "/assets/_...slug_-3YU7YyhC.js"
+    "/assets/_...slug_-DAWtFoKB.js"
   ],
   "src/components/PostsList.vue": [
-    "/assets/index-Br0AilS2.js",
+    "/assets/index-C8scAIpm.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/components/PostsList.vue?vue&type=style&index=0&lang.css": [
-    "/assets/index-Br0AilS2.js",
+    "/assets/index-C8scAIpm.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/components/TextGrid.vue": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
+  ],
+  "src/components/icons/arrowleft.vue": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "src/components/icons/aveva.vue": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "src/components/icons/ic2.vue": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/layouts/Footer.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -522,25 +558,25 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/pages/about.vue": [
-    "/assets/about-Dtt-w8e3.js"
+    "/assets/about-Cej_-O0l.js"
   ],
   "src/pages/careers.vue": [
-    "/assets/careers-CtyE13a5.js"
+    "/assets/careers-B7BAywK5.js"
   ],
   "src/pages/contact.vue": [
-    "/assets/contact-5TBl_p16.js"
+    "/assets/contact-DoGogO1_.js"
   ],
   "src/pages/index.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/pages/industries.vue": [
-    "/assets/industries-B38OaneE.js"
+    "/assets/industries-CC10_Q8p.js"
   ],
   "src/pages/resource-center/[...publication_type]/[...slug].vue": [
-    "/assets/_...slug_-3YU7YyhC.js"
+    "/assets/_...slug_-DAWtFoKB.js"
   ],
   "src/pages/resource-center/index.vue": [
-    "/assets/index-Br0AilS2.js",
+    "/assets/index-C8scAIpm.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/utils/api.js": [

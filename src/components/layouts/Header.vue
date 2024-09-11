@@ -69,7 +69,7 @@ const toggleOpen = () => {
         @mouseleave="hasSubMenu = false">
           <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 text-lg pb-3 drop-shadow-md"  
           @click="isClicked = subitem.id">
-            <RouterLink :id="subitem.name + (isClicked === subitem.id ? '-active' : '')" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"
+            <RouterLink :id="subitem.name + (isClicked === subitem.id ? '-active' : '')" :aria-label="'go to ' + subitem.name" :to="`${item.to}${subitem.to}`"
             :class="{'text-accent1/70' : isClicked === subitem.id}">
               {{ subitem.name }}
             </RouterLink>            
@@ -96,7 +96,7 @@ const toggleOpen = () => {
         </RouterLink>
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="mt-3 w-full p-4 rounded-[16px] bg-bg/70">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="hover:text-accent1/70 cursor-pointer font-[400] text-accent1 pb-3 drop-shadow-md">
-              <RouterLink :id="subitem.name + (isClicked === subitem.id ? '-active' : '')" :aria-label="'go to ' + subitem.name" :to="{path: item.to, hash: subitem.to}"        
+              <RouterLink :id="subitem.name + (isClicked === subitem.id ? '-active' : '')" :aria-label="'go to ' + subitem.name" :to="`${item.to}${subitem.to}`"     
               @click="isClicked = subitem.id, isOpen = null"
             :class="{'text-accent1/70' : isClicked === subitem.id}">{{ subitem.name }}</RouterLink>
             </div>

@@ -31,9 +31,9 @@ defineProps({
                     <path d="M16.2002 17.0833C14.6298 17.0833 13.0521 16.7182 11.4671 15.9879C9.88222 15.2576 8.42604 14.2275 7.09854 12.8975C5.77118 11.5674 4.74236 10.1111 4.01208 8.52875C3.2818 6.94653 2.91666 5.37021 2.91666 3.79979C2.91666 3.54743 3 3.33715 3.16666 3.16896C3.33333 3.00076 3.54166 2.91667 3.79166 2.91667H6.50958C6.72 2.91667 6.90562 2.98535 7.06646 3.12271C7.22729 3.25993 7.32958 3.42952 7.37333 3.63146L7.85104 6.08333C7.8841 6.31083 7.87715 6.50632 7.83021 6.66979C7.78312 6.83327 7.69868 6.97056 7.57687 7.08167L5.65229 8.95521C5.96201 9.52243 6.3159 10.059 6.71396 10.565C7.11187 11.0708 7.54271 11.554 8.00646 12.0144C8.46368 12.4717 8.94979 12.8965 9.46479 13.2885C9.97979 13.6806 10.5359 14.0455 11.1331 14.3831L13.0031 12.4969C13.1335 12.3612 13.2915 12.266 13.4769 12.2115C13.6622 12.157 13.8547 12.1437 14.0546 12.1715L16.3685 12.6427C16.579 12.6983 16.7507 12.8056 16.8837 12.9648C17.0168 13.124 17.0833 13.3045 17.0833 13.5065V16.2083C17.0833 16.4583 16.9992 16.6667 16.831 16.8333C16.6628 17 16.4526 17.0833 16.2002 17.0833ZM5.06083 7.7725L6.54812 6.34938C6.57479 6.32799 6.59215 6.29861 6.60021 6.26125C6.60826 6.22389 6.60694 6.18917 6.59625 6.15708L6.23396 4.29479C6.22326 4.25215 6.20458 4.22014 6.17791 4.19875C6.15125 4.17736 6.11653 4.16667 6.07375 4.16667H4.29166C4.25958 4.16667 4.23284 4.17736 4.21146 4.19875C4.19021 4.22014 4.17958 4.24688 4.17958 4.27896C4.22222 4.8484 4.31541 5.42688 4.45916 6.01438C4.60278 6.60202 4.80333 7.18806 5.06083 7.7725ZM12.3108 14.9744C12.8632 15.2319 13.4393 15.4288 14.0392 15.565C14.6392 15.7011 15.1998 15.782 15.721 15.8077C15.7531 15.8077 15.7799 15.797 15.8012 15.7756C15.8226 15.7542 15.8333 15.7275 15.8333 15.6954V13.9423C15.8333 13.8995 15.8226 13.8648 15.8012 13.8381C15.7799 13.8115 15.7478 13.7928 15.7052 13.7821L13.9552 13.4263C13.9231 13.4156 13.8951 13.4142 13.871 13.4223C13.847 13.4303 13.8216 13.4477 13.7948 13.4744L12.3108 14.9744Z" fill="#1C1B1F"/>
                     </g>
                     </svg>
-                    <span class="inline ps-2">{{item.phone}}</span>
+                    <span class="inline ps-2">+971 4 344 4901</span>
                 </a>
-                <h2 v-show="item.fax" class="max-sm:text-[14px] font-[200] text-accent1 hover:brightness-75">
+                <!-- <h2 v-show="item.fax" class="max-sm:text-[14px] font-[200] text-accent1 hover:brightness-75">
                     <svg width="25" height="20" viewBox="0 0 25 20" fill="none" stroke="white" class="inline" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_857_567" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="20">
                     <rect width="24.4444" height="20" fill="#D9D9D9"/>
@@ -43,7 +43,7 @@ defineProps({
                     </g>
                     </svg>
                     <span class="inline ps-2">{{item.fax}}</span>
-                </h2>
+                </h2> -->
                 <h2 v-show="item.poBOX" class="max-sm:text-[14px] text-accent1 font-[400]">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" class="inline" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_863_301" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -66,7 +66,7 @@ defineProps({
                     </svg> 
                     <span class="inline ps-2">{{item.email}}</span>
                 </a>
-                <a prefetch="false" v-show="item.website" id="go-href-aits-website" aria-label="go href AITS website" :href="item.website" class="cursor-pointer max-sm:text-[14px] font-[200] text-accent1 hover:brightness-75">
+                <!-- <a prefetch="false" v-show="item.website" id="go-href-aits-website" aria-label="go href AITS website" :href="item.website" class="cursor-pointer max-sm:text-[14px] font-[200] text-accent1 hover:brightness-75">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="white" class="inline" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_863_295" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                     <rect width="20" height="20" fill="#D9D9D9"/>
@@ -76,7 +76,7 @@ defineProps({
                     </g>
                     </svg>
                     <span class="inline ps-2">www.aitsmena.com</span>
-                </a>
+                </a> -->
             </li>
         </ul>
     </section>

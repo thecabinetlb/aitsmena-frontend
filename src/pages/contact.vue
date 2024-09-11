@@ -9,10 +9,8 @@ const locations = [
 {
     id: 1,
     address: 'UAE, Dubai, Dubai Digital Park, A6 Building, 401 Office',
-    phone: '+971 (2) 222 2130',
-    poBox: 'PO Box 3628',
+    phone: '00971043444901',
     email: 'info@aitsmena.com',
-    website: 'https://aitsmena.com/'
   },
   // {
   //   id: 2,

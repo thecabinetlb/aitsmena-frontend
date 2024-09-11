@@ -43,7 +43,7 @@ onMounted(() => {
 <section :id="sectionid" class="relative flex flex-wrap items-center w-full gap-6 pt-40 lg:gap-3 lg:justify-between">
   <div class="lg:w-6/12 w-11/12 2xl:ps-[15.666667%] lg:ps-[8.333333%] lg:pe-8 mx-auto h-full">
     <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
-    <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify mb-6" :class="{'hyphens-auto' : hyphen}">{{ sectiondescription }}</p>
+    <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6" :class="{'hyphens-auto' : hyphen}">{{ sectiondescription }}</p>
     <!-- <div class="cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400 mt-auto mb-0"> Browse All </div>              -->
     <!-- <RouterLink id="'go-to-blogs-page'" aria-label="go to blog page" :to="'/resources/' + sectionid" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400 mt-auto mb-0">Browse All</RouterLink> -->
   </div>
@@ -58,7 +58,7 @@ onMounted(() => {
             <div class="flex flex-col gap-3 p-6 lg:gap-6">
               <h3 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.date }}</h3>
               <h2 class="text-accent1 font-[400] sm:text-lg sm:min-h-[56px] min-h-[56px]">{{ item.title }}</h2>
-              <p class="tracking-wide hyphens-auto text-accent2 font-[200] max-sm:text-[14px] text-justify sm:min-h-[72px] min-h-[63px]">{{ item.summary }}</p>
+              <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] sm:min-h-[72px] min-h-[63px]">{{ item.summary }}</p>
               <!-- <div class="hover:text-accent1 text-accent2 w-[34px] sm:h-[34px] cursor-pointer aspect-square grid mt-[6px] place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </div> -->
               <!-- <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'read more ' + item.title" :to="'/resources/' + sectionid + '/' + item.id" class="hover:text-accent1 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center ms-auto me-0 border-2 border-accent2 hover:border-accent1 text-xl rounded-full"> 🡥 </RouterLink>              -->
             </div>

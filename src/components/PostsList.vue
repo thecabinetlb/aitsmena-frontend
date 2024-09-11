@@ -25,7 +25,9 @@ const filterData = (industry) => {
 
 // Initial filter
 filterData('All');
-
+const formatPublicationType = (publicationType) => {
+  return publicationType.toLowerCase().replace(/\s+/g, '-');
+}
 // Compute the paginated data
 const paginatedData = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage;
@@ -59,9 +61,10 @@ const onPageChange = (page) => {
     <ul role="list" class="grid grid-cols-1 gap-3 mt-10 lg:grid-cols-3 sm:grid-cols-2 list-style-none">
       <li v-for="(item, key) in paginatedData" :key="key" class="flex-grow group w-full relative group sm:min-h-[135px] rounded-[16px] border-2 border-bg2">
         <RouterLink 
+          v-if="item.slug && item.publication_type"
           :id="'go-to-' + item.title + '-page'" 
           :aria-label="'read more about ' + item.title" 
-          :to="`/resource-center/${item.publication_type.toLowerCase().replace(/\s+/g, '-')}/${item.slug}`">                 
+          :to="`/resource-center/${formatPublicationType(item.publication_type)}/${item.slug}`">                 
           <div class="relative overflow-hidden aspect-video bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]">
             <div class="absolute inset-0 z-[-1] duration-500 transform group-hover:scale-110"
             :style="{ backgroundImage: 'url(' + item.image + ')', backgroundSize:'cover', backgroundPosition: 'center'}"/>
@@ -76,7 +79,7 @@ const onPageChange = (page) => {
             <h3 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.published_at }}</h3>
             <h2 class="text-accent1 font-[400] sm:text-xl">{{ item.industry }}</h2>
             <h2 class="text-accent1 font-[200] sm:text-xl">{{ item.title }}</h2>
-            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.summary }}</p>
+            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ item.summary }}</p>
             <RouterLink 
             :id="'go-to-' + item.title + '-page'" 
             :aria-label="'read more about ' + item.title" 

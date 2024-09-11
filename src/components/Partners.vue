@@ -33,26 +33,28 @@ const showDes = (id) => {
         <div class="lg:w-6/12">
             <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Home of<br class="max-sm:hidden"> Two Divisions</h1>
             <div v-for="item in data" :key="key">
-                <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
+                <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
             </div>
         </div>     
         <div class="absolute inset-0 flex justify-end w-6/12 h-full gap-6 ms-auto me-0">
-            <RouterLink v-for="item in data" :key="key" :aria-label="'click on' + item.title + 'to read the description'" :to="item?.to">
-                <img :src="item.logo" :alt="item.title" width="168" height="168"  cover center responsive loading="lazy" class="rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]" 
-                @mouseenter="showDes(item.id)" :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}"/>
+            <RouterLink v-for="item in data" :key="key" :aria-label="'click on' + item.title + 'to read the description'" :to="item?.to" 
+            class="w-[160px] h-[160px] grid place-content-center rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
+            @mouseenter="showDes(item.id)" :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}">
+            <component :is="item.logo" />
             </RouterLink>
         </div>
     </div>
     <!-- Mobile -->
     <div class="relative lg:hidden">
         <div class="flex items-center justify-center w-full gap-6 pb-6">
-            <button v-for="item in partners" :key="key" :aria-label="'click on' + item.title + 'to read the description'">
-                <img :src="item.logo" :alt="item.title" width="168" height="168"  cover center responsive loading="lazy" class="rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] " 
-                @mouseenter="showDes(item.id)" :class="{'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}"/>
-            </button>            
-        </div>
         <div v-for="item in partners" :key="key" class="mt-10">
-            <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px] text-justify">{{ item.description }}</p>
+            <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
+        </div>            
+        <RouterLink v-for="item in data" :key="key" :aria-label="'click on' + item.title + 'to read the description'" :to="item?.to" 
+            class="w-[160px] h-[160px] grid place-content-center rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
+                @mouseenter="showDes(item.id)" :class="{'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}">
+                <component :is="item.logo" />
+            </RouterLink>            
         </div>
     </div>
     </section>

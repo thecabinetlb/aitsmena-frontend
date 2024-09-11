@@ -1,5 +1,5 @@
 <template>
-  <section id="AITSHero" class="relative flex flex-col items-center h-full px-6 mx-auto"> 
+  <section id="AITSHero" class="relative flex flex-col items-center h-full mx-auto"> 
     <!-- headline + cta -->
     <div class="sm:10/12 2xl:8/12  w-11/12 flex flex-col justify-center items-center mx-auto gap-6 h-[90vh] lg:pt-40 pt-40">
       <h1 class="text-accent1 uppercase 2xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-[30px] text-center font-[700]">Empowering Your Digital Transformation Journey</h1>

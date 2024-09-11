@@ -5,8 +5,8 @@ import OneImageTextFlex from '../components/OneImageTextFlex.vue'
 import { useSeoMeta } from '@unhead/vue'
 
 import Partners from '../components/Partners.vue'
-import ic2 from '/images/testimonies/partners/ic2.webp'
-import aveva from '/images/testimonies/partners/aveva.webp'
+import aveva from '../components/icons/aveva.vue'
+import ic2 from '../components/icons/ic2.vue'
 
 import IndustriesCarousel from '../components/IndustriesCarousel.vue'
 import industriesiconF from '/images/industries/F&B.svg'
