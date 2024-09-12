@@ -46,14 +46,14 @@ const onPageChange = (page) => {
     <!-- Filters -->
     <div class="flex flex-wrap justify-end gap-6 mt-10">
       <button @click="filterData('All')"
-      class="px-4 py-3 w-fit max-sm:text-[14px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 focus:outline-none"
+      class="px-4 py-3 w-fit max-sm:text-[14px] backdrop-blur-[16px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 focus:outline-none"
       :class="{'border-b-2 border-accent1': isClicked === 'All', 'border-b-2 border-bg2' : isClicked != 'All'}">
       All</button>
       <button 
       v-for="(item, key) in props.uniqueIndustries" :key="key" 
       :id="item + (isClicked === item ? '-active' : '')" 
       :aria-label="'show ' + item"
-      class="px-4 py-3 w-fit max-sm:text-[14px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]  transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 focus:outline-none"
+      class="px-4 py-3 w-fit max-sm:text-[14px] backdrop-blur-[16px]  transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 focus:outline-none"
       :class="{'border-b-2 border-accent1': isClicked === item, 'border-b-2 border-bg2' : isClicked != item}"
       @click="filterData(item)">
       {{item}}</button>
@@ -68,7 +68,7 @@ const onPageChange = (page) => {
           <div class="relative overflow-hidden aspect-video bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]">
             <div class="absolute inset-0 z-[-1] duration-500 transform group-hover:scale-110"
             :style="{ backgroundImage: 'url(' + item.image + ')', backgroundSize:'cover', backgroundPosition: 'center'}"/>
-              <div v-if="item.customer_logo" class="p-2 absolute top-3 right-3 w-1/4 h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[8px]">
+              <div v-if="item.customer_logo" class="p-2 absolute top-3 right-3 w-1/4 h-fit backdrop-blur-[16px] rounded-[8px]">
                 <img :src="item.customer_logo" :alt="item.title" width="100%" height="100%" center cover responsive loading="lazy" class="mx-auto aspect-1.72/1 scale-125"/>
               </div>
           </div>

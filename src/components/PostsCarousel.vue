@@ -43,7 +43,7 @@ onMounted(() => {
 <section :id="sectionid" class="relative flex flex-wrap items-center w-full gap-6 pt-40 lg:gap-3 lg:justify-between">
   <div class="lg:w-6/12 w-11/12 2xl:ps-[15.666667%] lg:ps-[8.333333%] lg:pe-8 mx-auto h-full">
     <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
-    <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6" :class="{'hyphens-auto' : hyphen}">{{ sectiondescription }}</p>
+    <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6" :class="{'' : hyphen}">{{ sectiondescription }}</p>
     <!-- <div class="cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400 mt-auto mb-0"> Browse All </div>              -->
     <!-- <RouterLink id="'go-to-blogs-page'" aria-label="go to blog page" :to="'/resources/' + sectionid" class="block cursor-pointer px-4 py-3 w-fit max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400 mt-auto mb-0">Browse All</RouterLink> -->
   </div>
