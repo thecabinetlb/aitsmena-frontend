@@ -1,5 +1,5 @@
 <template>
-<svg width="168" height="168" viewBox="0 0 168 168" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-full h-full absolute inset-0 z[2]">
+<svg width="168" height="168" viewBox="0 0 168 168" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
 <rect width="168" height="168" rx="4" fill="url(#pattern0_662_652)"/>
 <rect width="168" height="168" rx="4" stroke="url(#paint0_linear_662_652)"/>
 <defs>
