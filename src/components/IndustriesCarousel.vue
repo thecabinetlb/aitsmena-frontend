@@ -43,8 +43,8 @@ const breakpoints = {
           :autoplay="6000"
           :transition="500"
           class="w-11/12 mx-auto mt-10 2xl:w-8/12 sm:w-10/12 mask">
-          <Slide v-for="(item, key) in data" :key="item.d" class="relative aspect-square rounded-[16px] border-2 bg-noise bg-opacity-50 bg-cover bg-center my-10">
-          <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" to="/industries" class="cursor-pointer flex flex-col gap-3 justify-center items-center text-center absolute inset-0 w-full h-full rounded-[16px] bg-gradient-to-br transition-all duration-300 z-[-1] from-accent1/10 to-accent1/30 bg-opacity-50 hover:from-bg2/50 hover:to-bg2 hover:bg-opacity-75">
+          <Slide v-for="(item, key) in data" :key="item.id" class="relative aspect-square rounded-[16px] border-2 bg-noise bg-opacity-50 bg-cover bg-center my-10">
+          <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" to="industries" class="cursor-pointer flex flex-col gap-3 justify-center items-center text-center absolute inset-0 w-full h-full rounded-[16px] bg-gradient-to-br transition-all duration-300 z-[-1] from-accent1/10 to-accent1/30 bg-opacity-50 hover:from-bg2/50 hover:to-bg2 hover:bg-opacity-75">
             <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive loading="lazy" class="mx-auto"/>
             <h2 class="max-sm:text-[14px] text-accent1 font-[400] sm:h-[48px]">{{ item.title }}</h2>
             <arrowleft />

@@ -75,9 +75,9 @@ const formData = reactive({
         Industry : {
             name: 'Industry',
             value : 'smart-cities',
-            isValid: null,
+            isValid: true,
             validationMessage: "",
-            required: true,            
+            required: false,            
         },
         Subject : {
             name: 'Subject',

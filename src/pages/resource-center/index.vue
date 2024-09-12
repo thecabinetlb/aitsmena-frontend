@@ -1,5 +1,10 @@
 <script setup>
-import PostsList from '../../components/PostsList.vue';
+import { defineAsyncComponent, hydrateOnVisible } from 'vue'
+
+const PostsList = defineAsyncComponent({
+  loader: () => import('../../components/PostsList.vue'),
+  hydrate: hydrateOnVisible()
+})
 import { getAllResources } from '../../utils/api'
 import banner from '/images/banners/resources.webp'
 import InnerHero from '../../components/InnerHero.vue';

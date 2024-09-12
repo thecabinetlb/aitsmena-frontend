@@ -9,6 +9,7 @@ const footerlinks = [
   { 
     id: 1, 
     name: 'Quick Links',
+    to:'/',
     submenu: [
     { id: 1, name: "Home", to:"/" },
     { id: 2, name: 'Contact ', to: '/contact' },
