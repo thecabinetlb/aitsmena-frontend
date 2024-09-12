@@ -26,9 +26,3 @@ body {
     --vc-pgn-height: 12px !important;
     --vc-pgn-border-radius: 16px !important;
 }
-/* In your CSS or Tailwind config file */
-@media (min-width: 640px) {
-  .carousel__pagination {
-    display: none!important;
-  }
-}
