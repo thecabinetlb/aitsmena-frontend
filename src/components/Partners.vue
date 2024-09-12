@@ -29,32 +29,32 @@ const showDes = (id) => {
 <section class="w-11/12 pt-40 mx-auto 2xl:w-8/12 sm:w-10/12">
     <!-- Desktop -->
     <div class="relative hidden h-[200px] md:flex gap-2">
-        <div class="w-6/12">
-            <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Home of<br class="max-sm:hidden"> Two Divisions</h1>
-            <div v-for="(item, key) in data" :key="item.id">
-                <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
-            </div>
-        </div>     
-        <div class="absolute inset-0 flex justify-end w-6/12 h-full gap-6 ms-auto me-0">
+        <div class="flex w-6/12 h-full gap-10">
             <div v-for="(item, key) in data" :key="item.id"
             class="w-[160px] h-[160px] aspect-square rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
             :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}">
-            <a :aria-label="'click on' + item.title + 'to read the description'" :href="item.to || '/'" class="flex flex-col items-center justify-center w-full h-full"
+            <a :aria-label="'click on' + item.title + 'to read the description'" :href="item.to || '/'" class="flex flex-col items-center justify-center w-full h-full p-2"
             @mouseenter="showDes(item.id)">
                 <component :is="item.logo" />
             </a>
+            </div>
+        </div>
+        <div class="w-6/12">
+            <h1 class="font-[200] text-accent1 md:text-4xl text-[30px] uppercase mb-6">Home of Two Divisions</h1>
+            <div v-for="(item, key) in data" :key="item.id">
+                <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
             </div>
         </div>
     </div>
     <!-- Mobile -->
     <div class="relative md:hidden">
         <div class="w-full mb-6 space-y-3">
-            <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase">Home of Two Divisions</h1>
+            <h1 class="font-[200] text-accent1 md:text-4xl text-[30px] uppercase mb-6">Home of Two Divisions</h1>
             <div v-for="(item, key) in data" :key="item.id">
                 <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
             </div>  
             <div class="flex items-center justify-center gap-3">
-                <div class="flex flex-col items-center justify-center w-[160px] h-[160px] aspect-square rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
+                <div class="flex flex-col items-center justify-center w-[160px] h-[160px] p-2 aspect-square rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
                 :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === 1}"
                     @mouseenter="showDes(1)">
                     <svg width="168" height="168" viewBox="0 0 168 168" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -74,7 +74,7 @@ const showDes = (id) => {
                 </div>                
                 <div class="w-[160px] h-[160px] aspect-square rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
                 :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === 2}">
-                    <a aria-label="click on aveva to read the description" href="https://gulf.avevaselect.com" target="_blanck" class="flex flex-col items-center justify-center w-full h-full"
+                    <a aria-label="click on aveva to read the description" href="https://gulf.avevaselect.com" target="_blanck" class="flex flex-col items-center justify-center w-full h-full p-2"
                     @mouseenter="showDes(2)">
                         <svg width="80" height="112" viewBox="0 0 80 112" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_662_617)">
@@ -162,5 +162,5 @@ const showDes = (id) => {
             </div>          
         </div>
     </div>
-    </section>
+</section>
 </template>

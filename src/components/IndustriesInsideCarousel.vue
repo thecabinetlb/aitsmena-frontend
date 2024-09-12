@@ -29,10 +29,10 @@ const breakpoints = {
 
 </script>
 <template>
-<section class="pt-40">
+<section>
     <div class="w-11/12 mx-auto 2xl:w-8/12 sm:w-10/12">
-        <h1 class="text-accent1 font-[200] text-lg uppercase"> Industries we serve</h1>
-        <hr class="w-full h-4 mt-3 text-accent2"/>
+        <h1 class="text-accent1 font-[200] text-lg uppercase mb-3">{{ sectiontitle }}</h1>
+        <hr v-if="sectiontitle" class="w-full h-4 text-accent2"/>
     </div>
     <div class="relative w-full h-full z-[5] mt-10">
         <Carousel
@@ -51,8 +51,30 @@ const breakpoints = {
             <Pagination @click="handlePaginationClick(item.id)"/>
             </template>-->
        </Carousel>
-        <button aria-label="go to the next industry" @click="myCarousel.prev()" class="hidden absolute 2xl:left-40 left-6 top-1/2 transform -translate-y-1/2 z-[4] text-accent2 hover:text-accent1 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square md:grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 🡠 </button>            
-        <button aria-label="go to the prev industry" @click="myCarousel.next()" class="hidden absolute 2xl:right-40 right-6 top-1/2 transform -translate-y-1/2 z-[4] text-accent2 hover:text-accent1 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square md:grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 🡢 </button>
+       <button aria-label="go to the next industry" @click="myCarousel.prev()" class="hidden absolute 2xl:left-40 left-6 top-1/2 transform -translate-y-1/2 z-[4] hover:brightness-75 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square md:grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 
+            <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.827274 10.2041L10.1364 0.361975C10.5705 -0.085807 11.275 -0.13782 11.7819 0.316747C12.2341 0.721559 12.2455 1.51309 11.8273 1.95406L4.3544 9.84223H23.3364C23.9796 9.84223 24.5 10.3601 24.5 11.0001C24.5 11.6401 23.9795 12.158 23.3364 12.158H4.3544L11.8273 20.0462C12.2455 20.4872 12.2159 21.2584 11.7819 21.6835C11.3228 22.1313 10.5636 22.0928 10.1364 21.6383L0.827274 11.7962C0.554544 11.5293 0.504543 11.2715 0.5 11.0001C0.5 10.7333 0.663637 10.376 0.827274 10.2041Z" fill="url(#paint0_linear_274_838)"/>
+            <defs>
+            <linearGradient id="paint0_linear_274_838" x1="28.9197" y1="-3.0868" x2="1.15825" y2="26.1469" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white"/>
+            <stop offset="0.528659" stop-color="white"/>
+            <stop offset="1" stop-color="#91FFFF"/>
+            </linearGradient>
+            </defs>
+            </svg>
+        </button>            
+        <button aria-label="go to the prev industry" @click="myCarousel.next()" class="hidden absolute 2xl:right-40 right-6 top-1/2 transform -translate-y-1/2 z-[4] hover:brightness-75  text-2xl w-[44px] h-[44px] cursor-pointer aspect-square md:grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6864 11.7959L13.7651 21.638C13.3491 22.0858 12.6739 22.1378 12.1882 21.6833C11.7548 21.2784 11.7439 20.4869 12.1447 20.0459L19.3062 12.1578L1.11516 12.1578C0.498755 12.1578 9.0571e-07 11.6399 9.61662e-07 10.9999C1.01761e-06 10.3599 0.498772 9.84198 1.11516 9.84198L19.3062 9.84198L12.1447 1.95381C11.7439 1.51282 11.7722 0.741607 12.1882 0.316491C12.6282 -0.131291 13.3557 -0.0928428 13.7651 0.361718L22.6864 10.2038C22.9477 10.4707 22.9956 10.7285 23 10.9999C23 11.2667 22.8432 11.624 22.6864 11.7959Z" fill="url(#paint0_linear_274_870)"/>
+            <defs>
+            <linearGradient id="paint0_linear_274_870" x1="-4.23558" y1="25.0868" x2="23.5618" y2="-2.96506" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white"/>
+            <stop offset="0.528659" stop-color="white"/>
+            <stop offset="1" stop-color="#91FFFF"/>
+            </linearGradient>
+            </defs>
+            </svg>
+        </button>   
     </div>  
     <div class="w-11/12 mx-auto 2xl:w-8/12 sm:w-10/12">
         <div v-show="openDetails === 1" class="traking-wide font-[200] max-sm:text-[14px] text-accent2 pb-10 mt-10">

@@ -188,7 +188,7 @@ const handleSubmit = () => {
 </script>
 
 <template>
-    <div id="contact-form"class="flex flex-wrap justify-between w-11/12 gap-6 pt-40 mx-auto lg:gap-3 2xl:w-8/12 lg:w-10/12">
+    <div id="contact-form"class="flex flex-wrap justify-between w-11/12 gap-6 mx-auto lg:gap-3 2xl:w-8/12 lg:w-10/12">
         <div class="w-full lg:w-6/12">
             <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Contact Us</h1>
             <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">Have questions or inquiries? Contact us today to learn more about our software solutions, digital services, and how we can help your business succeed in an ever ever-evolving market. Our team is here to assist you every step of the way.</p>
@@ -199,7 +199,7 @@ const handleSubmit = () => {
                 placeholder="Your Full Name" aria-label="Enter your full name"
                 v-model="formData.data.Name.value"
                 :required="formData.data.Name.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2"               
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2"               
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Name.isValid===false}">
                 <p v-show="!formData.data.Name.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Name.validationMessage}}</p>
             </div>
@@ -208,7 +208,7 @@ const handleSubmit = () => {
                 placeholder="Work Email: example@gmail.com" 
                 v-model="formData.data.Email.value" 
                 :required="formData.data.Email.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Email.isValid===false}">
                 <p v-show="!formData.data.Email.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Email.validationMessage}}</p>
             </div>      
@@ -217,7 +217,7 @@ const handleSubmit = () => {
                 placeholder="71 654 231" 
                 v-model="formData.data.Phone.value"          
                 :required="formData.data.Phone.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Phone.isValid===false}">
                 <p v-show="!formData.data.Phone.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Phone.validationMessage}}</p>
             </div> 
@@ -226,7 +226,7 @@ const handleSubmit = () => {
                 placeholder="Your Country"
                 v-model="formData.data.Country.value"              
                 :required="formData.data.Country.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Country.isValid===false}">
                 <p v-show="!formData.data.Country.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Country.validationMessage}}</p>
             </div>    
@@ -235,7 +235,7 @@ const handleSubmit = () => {
                 placeholder="Your City"
                 v-model="formData.data.City.value"              
                 :required="formData.data.City.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.City.isValid===false}">
                 <p v-show="!formData.data.City.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.City.validationMessage}}</p>
             </div>  
@@ -244,7 +244,7 @@ const handleSubmit = () => {
                 placeholder="Choose an industry"
                 v-model="formData.data.Industry.value"              
                 :required="formData.data.Industry.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Industry.isValid===false}">
                 <option value="smart-cities" class="text-black"selected>Smart Cities</option>
                 <option value="food-and-beverage" class="text-black">Food and Beverage</option>
@@ -260,7 +260,7 @@ const handleSubmit = () => {
                 <select id="Subject" name="Subject" aria-label="select a subject for your message"
                 v-model="formData.data.Subject.value"
                 :required="formData.data.Subject.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"                
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Subject.isValid===false}">
                     <option  class="text-black" value="general-inquiry" selected>General Inquiry</option>
                     <option class="text-black" value="sales-and-support">Sales and Support</option>
@@ -273,7 +273,7 @@ const handleSubmit = () => {
                 v-model="formData.data.Message.value" 
                 :required="formData.data.Message.required" 
                 style="min-height: 60px;"
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"
+                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Message.isValid===false}"></textarea>
                 <p v-show="!formData.data.Message.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Message.validationMessage}}</p>
             </div>

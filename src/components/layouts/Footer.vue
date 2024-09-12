@@ -11,9 +11,9 @@ const footerlinks = [
     name: 'Quick Links',
     to:'/',
     submenu: [
-    { id: 1, name: "Home", to:"/" },
-    { id: 2, name: 'Contact ', to: '/contact' },
-    { id: 3, name: 'Industries ', to: '/industries' },
+    { id: 1, name: "Home", to:"" },
+    { id: 2, name: 'Contact ', to: 'contact' },
+    { id: 3, name: 'Industries ', to: 'industries' },
   ]
   },
   {
@@ -57,7 +57,7 @@ const sociallinks = [
 <template>
     <footer class="relative flex flex-col items-center justify-center gap-10 pt-20 sm:pt-40">
       <div class="flex items-center justify-center w-11/12 gap-3 p-6 mx-auto max-sm:flex-wrap 2xl:w-8/12 lg:w-10/12 rounded-[16px] bg-bg">
-        <input type="text" id="email" placeholder="Subscribe to our newsletter" class="md:w-6/12 w-full block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none focus:outline-none focus:ring-0 focus:border-bg2 peer"/>
+        <input type="text" id="email" placeholder="Subscribe to our newsletter" class="md:w-6/12 w-full block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"/>
         <div  to="/" class="block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Subscribe</div>
           <!-- <RouterLink id="subscribe-to-newsletter" aria-label="subscribe to newsletter" to="/" class="relative z-[4] block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Subscribe</RouterLink> -->
       </div>

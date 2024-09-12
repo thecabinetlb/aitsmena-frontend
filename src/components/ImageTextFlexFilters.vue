@@ -20,23 +20,38 @@ const filterData = (key) => {
 </script>
 <template>
     <section :id="sectionid" class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
-      <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
-      <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ sectiondescription }}</p>
-      <div class="flex flex-wrap justify-between gap-6 mt-10 lg:w-6/12">
+      <h1 class="text-accent1 font-[200] text-lg uppercase mb-3">{{ sectiontitle }}</h1>
+      <hr class="w-full h-4 text-accent2"/>
+      <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mt-10">{{ sectiondescription }}</p>
+      <div class="flex flex-wrap justify-between gap-6 mt-6 lg:w-6/12">
         <button @click="filterData(0)"
-        class="px-4 py-3 w-fit max-w-80 max-sm:text-[14px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 focus:outline-none"
-        :class="{'border-b-2 border-accent1': clicked === 0, 'border-b-2 border-bg2' : clicked !==0}">
+        class="px-4 py-3 w-fit max-w-80 max-sm:text-[14px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 outline-none"
+        :class="{'border-b-2 border-accent1': clicked === 0, 'border-b-2 border-bg2' : clicked !== 0}">
         Human-centered</button>
         <button @click="filterData(1)" 
-        class="px-4 py-3 w-fit max-sm:text-[14px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 focus:outline-none"
-        :class="{'border-b-2 border-accent1': clicked === 1, 'border-b-2 border-bg2' : clicked !==1}">
+        class="px-4 py-3 w-fit max-sm:text-[14px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 outline-none"
+        :class="{'border-b-2 border-accent1': clicked === 1, 'border-b-2 border-bg2' : clicked !== 1}">
         Passionate & Driven</button>      
         <button @click="filterData(2)" 
-        class="px-4 py-3 w-fit max-sm:text-[14px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 focus:outline-none"
-        :class="{'border-b-2 border-accent1': clicked === 2, 'border-b-2 border-bg2' : clicked !==2}">
+        class="px-4 py-3 w-fit max-sm:text-[14px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 outline-none"
+        :class="{'border-b-2 border-accent1': clicked === 2, 'border-b-2 border-bg2' : clicked !== 2}">
         Collaborative Spirit</button>                 
       </div>
-      <div class="flex flex-wrap items-center justify-center w-full gap-6 mt-10 lg:gap-3 lg:justify-between max-lg:flex-col-reverse">
+      <div class="flex flex-wrap items-center justify-center w-full gap-6 mt-10 lg:gap-3 lg:justify-between"
+      v-motion
+      :initial="{
+        opacity: 0,
+        y: 100,
+      }"
+      :visibleOnce="{
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: 'spring',
+          stiffness: '100',
+          delay: 100,
+        },
+      }">
         <div class="w-full space-y-3 lg:w-6/12">
           <h2 class="font-[200] text-accent1 md:text-4xl text-[30px] uppercase mb-6">{{ item.title }}</h2>
           <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>

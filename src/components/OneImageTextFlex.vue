@@ -10,8 +10,8 @@ defineProps({
 </script>
 <template>
     <section :id="sectionid" class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
-      <h1 class="text-accent1 font-[200] text-lg uppercase">{{ sectiontitle }}</h1>
-      <hr v-if="sectiontitle" class="w-full h-4 mt-3 mb-10 text-accent2"/>
+      <h1 class="text-accent1 font-[200] text-lg uppercase mb-3">{{ sectiontitle }}</h1>
+      <hr v-if="sectiontitle" class="w-full h-4 mb-10 text-accent2"/>
       <div class="flex flex-wrap items-center justify-center w-full gap-6 lg:gap-3 lg:justify-between" :class="{'lg:flex-row-reverse' : reverse}">
         <div class="w-full lg:w-6/12">
           <h2 class="font-[200] text-accent1 md:text-4xl text-[30px] uppercase mb-6">{{ item.title }}</h2>

@@ -133,7 +133,21 @@ const valuesandcommitments =
       delay: 100,
     },
   }"/>
-  <Partners :data="partners"/>
+  <Partners :data="partners"
+  v-motion
+  :initial="{
+    opacity: 0,
+    y: 100,
+  }"
+  :visibleOnce="{
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: '100',
+      delay: 100,
+    },
+  }"/>
   <ImageTextFlexFilters sectiontitle="Our culture" :data="csr"
   sectiondescription="This planet has already been through enough. We are committed to making a positive impact on society and the environment. Our commitment to sustainability is guided by three core values:"/>
   <OneImageTextFlex  sectiontitle="Innovating for a Sustainable Future" :item="valuesandcommitments" reverse hyphen
