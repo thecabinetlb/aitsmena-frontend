@@ -47,7 +47,6 @@ const breakpoints = {
           <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'go to ' + item.title" to="industries" class="cursor-pointer flex flex-col gap-3 justify-center items-center text-center absolute inset-0 w-full h-full rounded-[16px] bg-gradient-to-br transition-all duration-300 z-[-1] from-accent1/10 to-accent1/30 bg-opacity-50 hover:from-bg2/50 hover:to-bg2 hover:bg-opacity-75">
             <img :src="item.icon" :alt="item.title" width="94" height="94" center cover responsive loading="lazy" class="mx-auto"/>
             <h2 class="max-sm:text-[14px] text-accent1 font-[400] sm:h-[48px]">{{ item.title }}</h2>
-            <arrowleft />
           </RouterLink>
         </Slide>
 
@@ -55,8 +54,8 @@ const breakpoints = {
             <Pagination @click="handlePaginationClick(item.id)"/>
           </template>        
         </Carousel>
-        <button aria-label="go to the next industry" @click="myCarousel.prev()" class="hidden absolute 2xl:left-20 left-6 top-1/2 transform -translate-y-1/2 z-[4] text-accent2 hover:text-accent1 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square md:grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 🡠 </button>            
-        <button aria-label="go to the prev industry" @click="myCarousel.next()" class="hidden absolute 2xl:right-20 right-6 top-1/2 transform -translate-y-1/2 z-[4] text-accent2 hover:text-accent1 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square md:grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 🡢 </button>
+        <button aria-label="go to the next industry" @click="myCarousel.prev()" class="hidden absolute 2xl:left-40 left-6 top-1/2 transform -translate-y-1/2 z-[4] text-accent2 hover:text-accent1 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square md:grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 🡠 </button>            
+        <button aria-label="go to the prev industry" @click="myCarousel.next()" class="hidden absolute 2xl:right-40 right-6 top-1/2 transform -translate-y-1/2 z-[4] text-accent2 hover:text-accent1 text-2xl w-[44px] h-[44px] cursor-pointer aspect-square md:grid place-content-center border-2 border-accent2 hover:border-accent1 rounded-full"> 🡢 </button>
       </div>  
     </section>
 </template>

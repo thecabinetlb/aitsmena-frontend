@@ -48,13 +48,13 @@ const showDes = (id) => {
     </div>
     <!-- Mobile -->
     <div class="relative lg:hidden">
-        <div class="flex flex-col items-center justify-center w-full gap-6 pb-6">
-            <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">Home of<br class="max-sm:hidden"> Two Divisions</h1>
+        <div class="flex flex-col items-center justify-center w-full gap-3 pb-6">
+            <h1 class="font-[200] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase">Home of<br class="max-sm:hidden"> Two Divisions</h1>
             <div v-for="(item, key) in data" :key="item.id">
                 <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
             </div>            
             <div v-for="(item, key) in data" :key="item.id"
-                class="w-[160px] h-[160px] grid place-content-center rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
+                class="mt-6 w-[160px] h-[160px] grid place-content-center rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
                 :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}">
                 <a :aria-label="'click on' + item.title + 'to read the description'" :href="item.to || '/'" 
                 @mouseenter="showDes(item.id)">
