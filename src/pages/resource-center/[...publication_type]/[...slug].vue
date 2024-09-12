@@ -1,10 +1,5 @@
 <script setup>
-import { defineAsyncComponent, hydrateOnVisible } from 'vue'
-
-const PostDetails = defineAsyncComponent({
-  loader: () => import('../../../components/PostDetails.vue'),
-  hydrate: hydrateOnVisible()
-})
+import PostDetails from '../../../components/PostDetails.vue';
 import { getResourceBySlug } from '../../../utils/api'
 import { useRoute } from 'vue-router'
 const route = useRoute()

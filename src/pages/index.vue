@@ -5,8 +5,8 @@ import OneImageTextFlex from '../components/OneImageTextFlex.vue'
 import { useSeoMeta } from '@unhead/vue'
 
 import Partners from '../components/Partners.vue'
-import aveva from '../components/icons/aveva.vue'
-import ic2 from '../components/icons/ic2.vue'
+import avevaicons from '../components/icons/aveva.vue'
+import ic2icons from '../components/icons/ic2.vue'
 
 import IndustriesCarousel from '../components/IndustriesCarousel.vue'
 import industriesiconF from '/images/industries/F&B.svg'
@@ -83,8 +83,8 @@ const missionandvission =
     image: "/images/hero/missionandvision/vision_v1.webp",
 }
 const partners = [
-    { id: 1, title: 'AVEVA Select Gulf', to:'https://gulf.avevaselect.com', logo: aveva, description:'AVEVA Select Gulf is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions. ' },
-    { id: 2, title: 'IC2', logo: ic2, description:'IC2 is dedicated to driving industrial transformation in the Smart Cities and Food & Beverage/CPG sectors.  ' },
+    { id: 1, title: 'AVEVA Select Gulf', logo: avevaicons, to:'https://gulf.avevaselect.com', description:'AVEVA Select Gulf is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions. ' },
+    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is dedicated to driving industrial transformation in the Smart Cities and Food & Beverage/CPG sectors.  ' },
 ];
 const csr = [
   {
