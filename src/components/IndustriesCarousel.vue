@@ -8,22 +8,23 @@ const myCarousel = ref(null)
 defineProps({
     data: Array
 })
+
 const breakpoints = {
-    280: {
+  280: {
     itemsToShow: 1.5,
-    snapAlign: 'staart',
+    snapAlign:'center'
   },
   // 768px and up
   768: {
-    itemsToShow: 3.5,
-    snapAlign: 'start',
+    itemsToShow: 2.5,
+    snapAlign:'start'
   },
   // 1024 and up
   1024: {
-    itemsToShow: 5,
-    snapAlign: 'start',
+    itemsToShow: 6,
+    snapAlign:'start'
   },
-}
+};
 
 </script>
 <template>
@@ -32,10 +33,11 @@ const breakpoints = {
         <h1 class="text-accent1 font-[200] text-lg uppercase">Our industries</h1>
         <hr class="w-full h-4 mt-3 text-accent2"/>          
       </div>
-      <div class="relative w-full h-full z-[5]">
+      <div class="relativemx-auto  w-full h-full z-[5]">
         <Carousel
           ref="myCarousel"
           :breakpoints="breakpoints"
+          :wrap-around="true"
           :autoplay="6000"
           :transition="500"
           class="w-11/12 mx-auto mt-10 2xl:w-8/12 sm:w-10/12 mask">
