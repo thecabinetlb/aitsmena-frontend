@@ -30,7 +30,7 @@ const industries = [
     <InnerHero :pagebanner="banner" pagetitle="Innovative Solutions for Every Industry"
         pagedescription="Whether you’re in an emerging sector or a traditional industry, AITS can help you enhance operational efficiency and future-proof your operations with the most innovative industrial software solutions."/>
         <section class="relative">
-            <IndustriesInsideCarousel :data="industries"/>
+            <IndustriesInsideCarousel sectiontitle="Industries We Serve" :data="industries"/>
             <!-- <Testimonials />
             <PostsGrid sectionid="success-stories" sectiontitle="Success Stories" sectiondescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip." :data='successStories'/> -->
             <InsideBody/>

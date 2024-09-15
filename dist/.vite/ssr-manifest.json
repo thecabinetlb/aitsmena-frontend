@@ -9,35 +9,35 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../AITSLogoWithSlogan.webp": [
-    "/assets/InnerHero-CiV9I6Tm.js"
+    "/assets/InnerHero-BdLwhY7-.js"
   ],
   "../../../../AITS_v1.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/banners/about.webp": [
-    "/assets/about-BrfqN3Z7.js"
+    "/assets/about-BjWMedXE.js"
   ],
   "../../../../images/banners/careers.webp": [
-    "/assets/careers-CqMedHSA.js"
+    "/assets/careers-C0wCVs46.js"
   ],
   "../../../../images/banners/contact.webp": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "../../../../images/banners/elements/bottomright.webp": [
-    "/assets/InnerHero-CiV9I6Tm.js"
+    "/assets/InnerHero-BdLwhY7-.js"
   ],
   "../../../../images/banners/elements/topleft.webp": [
-    "/assets/InnerHero-CiV9I6Tm.js"
+    "/assets/InnerHero-BdLwhY7-.js"
   ],
   "../../../../images/banners/elements/topright.webp": [
-    "/assets/InnerHero-CiV9I6Tm.js"
+    "/assets/InnerHero-BdLwhY7-.js"
   ],
   "../../../../images/banners/industries.webp": [
-    "/assets/industries-WGJEoesp.js",
-    "/assets/industries-BpRjHeGu.css"
+    "/assets/industries-D6K_vedu.js",
+    "/assets/industries-B2SWRvtp.css"
   ],
   "../../../../images/banners/resources.webp": [
-    "/assets/index-CTl9mCLV.js",
+    "/assets/index-C2IFEMl7.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "../../../../images/hero/arrow.webp": [
@@ -95,22 +95,22 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/insidepages/elements/centermiddle.webp": [
-    "/assets/InsideBody-DztKHzfw.js"
+    "/assets/InsideBody-7zpX4iBD.js"
   ],
   "../../../../images/insidepages/elements/centertop.webp": [
-    "/assets/InsideBody-DztKHzfw.js"
+    "/assets/InsideBody-7zpX4iBD.js"
   ],
   "../../../../images/insidepages/elements/leftmiddle.webp": [
-    "/assets/InsideBody-DztKHzfw.js"
+    "/assets/InsideBody-7zpX4iBD.js"
   ],
   "../../../../images/insidepages/elements/rightbottom.webp": [
-    "/assets/InsideBody-DztKHzfw.js"
+    "/assets/InsideBody-7zpX4iBD.js"
   ],
   "../../../../images/insidepages/elements/rightmiddle.webp": [
-    "/assets/InsideBody-DztKHzfw.js"
+    "/assets/InsideBody-7zpX4iBD.js"
   ],
   "../../../../images/insidepages/elements/righttop.webp": [
-    "/assets/InsideBody-DztKHzfw.js"
+    "/assets/InsideBody-7zpX4iBD.js"
   ],
   "../../../../images/patterns/patternfooter.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -143,10 +143,10 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/testimonies/partners/aveva.webp": [
-    "/assets/about-BrfqN3Z7.js"
+    "/assets/about-BjWMedXE.js"
   ],
   "../../../../images/testimonies/partners/ic2.webp": [
-    "/assets/about-BrfqN3Z7.js"
+    "/assets/about-BjWMedXE.js"
   ],
   "index.html": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -188,151 +188,151 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "node_modules/axios/lib/adapters/adapters.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/adapters/fetch.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/adapters/xhr.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/axios.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/cancel/CancelToken.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/cancel/CanceledError.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/cancel/isCancel.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/core/Axios.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/core/AxiosError.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/core/AxiosHeaders.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/core/InterceptorManager.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/core/buildFullPath.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/core/dispatchRequest.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/core/mergeConfig.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/core/settle.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/core/transformData.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/defaults/index.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/defaults/transitional.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/env/data.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/AxiosURLSearchParams.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/HttpStatusCode.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/bind.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/buildURL.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/combineURLs.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/composeSignals.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/cookies.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/formDataToJSON.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/isAbsoluteURL.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/isAxiosError.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/isURLSameOrigin.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/null.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/parseHeaders.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/parseProtocol.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/progressEventReducer.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/resolveConfig.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/speedometer.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/spread.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/throttle.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/toFormData.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/toURLEncodedForm.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/trackStream.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/helpers/validator.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/platform/browser/classes/Blob.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/platform/browser/classes/FormData.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/platform/browser/classes/URLSearchParams.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/platform/browser/index.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/platform/common/utils.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/platform/index.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/axios/lib/utils.js": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "node_modules/defu/dist/defu.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -445,6 +445,33 @@
   "node_modules/style-value-types/dist/es/utils.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
+  "node_modules/swiper/modules/autoplay.less": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "node_modules/swiper/modules/autoplay.mjs": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "node_modules/swiper/shared/ssr-window.esm.mjs": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "node_modules/swiper/shared/swiper-core.mjs": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "node_modules/swiper/shared/update-on-virtual-data.mjs": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "node_modules/swiper/shared/update-swiper.mjs": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "node_modules/swiper/shared/utils.mjs": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "node_modules/swiper/swiper-vue.mjs": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
+  "node_modules/swiper/swiper.less": [
+    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
+  ],
   "node_modules/tslib/tslib.es6.js": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
@@ -472,12 +499,6 @@
   "node_modules/vue-router/dist/vue-router.mjs": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "node_modules/vue3-carousel/dist/carousel.css": [
-    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
-  ],
-  "node_modules/vue3-carousel/dist/carousel.es.js": [
-    "/assets/Aktifo-A-Book-BT1P3luM.woff2"
-  ],
   "src/App.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
@@ -485,13 +506,13 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/BenefitsFlexWithBlur.vue": [
-    "/assets/careers-CqMedHSA.js"
+    "/assets/careers-C0wCVs46.js"
   ],
   "src/components/Contact.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/ContactForm.vue": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "src/components/Hero.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -502,25 +523,25 @@
   "src/components/IndustriesCarousel.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "src/components/IndustriesCarousel.vue?vue&type=style&index=0&scoped=a5eeee6d&lang.css": [
+  "src/components/IndustriesCarousel.vue?vue&type=style&index=0&scoped=3cc04ab6&lang.css": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/IndustriesInsideCarousel.vue": [
-    "/assets/industries-WGJEoesp.js",
-    "/assets/industries-BpRjHeGu.css"
+    "/assets/industries-D6K_vedu.js",
+    "/assets/industries-B2SWRvtp.css"
   ],
-  "src/components/IndustriesInsideCarousel.vue?vue&type=style&index=0&scoped=457d6770&lang.css": [
-    "/assets/industries-WGJEoesp.js",
-    "/assets/industries-BpRjHeGu.css"
+  "src/components/IndustriesInsideCarousel.vue?vue&type=style&index=0&scoped=db399b36&lang.css": [
+    "/assets/industries-D6K_vedu.js",
+    "/assets/industries-B2SWRvtp.css"
   ],
   "src/components/InnerHero.vue": [
-    "/assets/InnerHero-CiV9I6Tm.js"
+    "/assets/InnerHero-BdLwhY7-.js"
   ],
   "src/components/InsideBody.vue": [
-    "/assets/InsideBody-DztKHzfw.js"
+    "/assets/InsideBody-7zpX4iBD.js"
   ],
   "src/components/JobsList.vue": [
-    "/assets/careers-CqMedHSA.js"
+    "/assets/careers-C0wCVs46.js"
   ],
   "src/components/OneImageTextFlex.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -532,18 +553,18 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/PostDetails.vue": [
-    "/assets/_...slug_-3-Llj8id.js"
+    "/assets/_...slug_-Djkov3Il.js"
   ],
   "src/components/PostsList.vue": [
-    "/assets/index-CTl9mCLV.js",
+    "/assets/index-C2IFEMl7.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/components/PostsList.vue?vue&type=style&index=0&lang.css": [
-    "/assets/index-CTl9mCLV.js",
+    "/assets/index-C2IFEMl7.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/components/TextGrid.vue": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "src/components/icons/aveva.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -561,26 +582,26 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/pages/about.vue": [
-    "/assets/about-BrfqN3Z7.js"
+    "/assets/about-BjWMedXE.js"
   ],
   "src/pages/careers.vue": [
-    "/assets/careers-CqMedHSA.js"
+    "/assets/careers-C0wCVs46.js"
   ],
   "src/pages/contact.vue": [
-    "/assets/contact-sbjshraw.js"
+    "/assets/contact-CWyfe6Nu.js"
   ],
   "src/pages/index.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/pages/industries.vue": [
-    "/assets/industries-WGJEoesp.js",
-    "/assets/industries-BpRjHeGu.css"
+    "/assets/industries-D6K_vedu.js",
+    "/assets/industries-B2SWRvtp.css"
   ],
   "src/pages/resource-center/[...publication_type]/[...slug].vue": [
-    "/assets/_...slug_-3-Llj8id.js"
+    "/assets/_...slug_-Djkov3Il.js"
   ],
   "src/pages/resource-center/index.vue": [
-    "/assets/index-CTl9mCLV.js",
+    "/assets/index-C2IFEMl7.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/utils/api.js": [
