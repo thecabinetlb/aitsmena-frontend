@@ -44,16 +44,16 @@ const onPageChange = (page) => {
 <template>
   <section class="w-11/12 mx-auto 2xl:w-8/12 lg:w-10/12">
     <!-- Filters -->
-    <div class="flex flex-wrap justify-end gap-6 mt-10">
+    <div class="flex flex-wrap justify-end gap-3 mt-10 sm:gap-6">
       <button @click="filterData('All')"
-      class="px-4 py-3 w-fit max-sm:text-[14px] backdrop-blur-[16px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 outline-none"
+      class="px-2 sm:px-4 py-3 w-fit max-sm:text-[14px] backdrop-blur-[16px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 outline-none"
       :class="{'border-b-2 border-accent1': isClicked === 'All', 'border-b-2 border-bg2' : isClicked != 'All'}">
       All</button>
       <button 
       v-for="(item, key) in props.uniqueIndustries" :key="key" 
       :id="item + (isClicked === item ? '-active' : '')" 
       :aria-label="'show ' + item"
-      class="px-4 py-3 w-fit max-sm:text-[14px] backdrop-blur-[16px]  transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 outline-none"
+      class="px-2 sm:px-4 py-3 w-fit max-sm:text-[14px] backdrop-blur-[16px]  transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 outline-none"
       :class="{'border-b-2 border-accent1': isClicked === item, 'border-b-2 border-bg2' : isClicked != item}"
       @click="filterData(item)">
       {{item}}</button>
