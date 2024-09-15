@@ -11,20 +11,6 @@ const showDes = (id) => {
 </script>
 
 
-<style scoped>
-/* we will explain what these classes do next! */
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.6s ease;
-  transform: none;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
-</style>
-
 <template>
 <section class="w-11/12 pt-40 mx-auto 2xl:w-8/12 sm:w-10/12">
     <!-- Desktop -->
