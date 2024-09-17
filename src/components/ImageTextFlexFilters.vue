@@ -58,9 +58,10 @@ const filterData = (key) => {
           <ul role="list" v-if="item.list" v-for="(listitem, key) in item.list" :key="key" class="list-disc ps-4">
             <li class="text-accent2 font-[200] max-sm:text-[14px]">{{ listitem }}</li>
           </ul>
-          <RouterLink v-if="item.cta" id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="w-fit block relative z-[2] cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">{{ item.cta }}</RouterLink>
         </div>
         <img :src="item.image" :alt="item.title" width="391" height="290" center cover responsive loading="lazy"/>    
       </div>
+      <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="mt-6 w-fit block relative z-[2] cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Contact Our Experts</RouterLink>
+
     </section>
 </template>

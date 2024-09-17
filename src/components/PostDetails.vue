@@ -8,7 +8,6 @@ defineProps({
     <section class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
         <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ item.title }}</h1>
         <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ item.summary }}</p>
-        <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="block w-fit ms-auto me-0 cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Contact</RouterLink>
         <div class="flex flex-col gap-3 mt-10">
             <div class="relative overflow-hidden aspect-video rounded-[16px]"
             :style="{ backgroundImage: 'url(' + item.image + ')', backgroundSize:'cover', backgroundPosition: 'center'}">

@@ -92,7 +92,6 @@ const csr = [
     image:gender,
     title: 'Human-centered',
     description: "Our dedication to ethical practices, open communication, and equal opportunity has created an inclusive environment where every voice is valued. We are committed to delivering effective solutions that align with our core values and support a diverse and equitable future for ourselves, our clients, and our partners.",
-    cta: 'Contact Our Experts'
   },
   {
     id: 2,

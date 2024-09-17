@@ -5,7 +5,7 @@
       <h1 class="text-accent1 uppercase 2xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-[30px] text-center font-[700]">Innovating for a<br class="max-sm:hidden"/> Smarter Future</h1>
       <p class="tracking-wide font-[200] max-sm:text-[14px] text-justify text-accent2 2xl:w-[675px] sm:w-2/3" style="text-align-last: center;">
         We combined our deep understanding of industrial challenges with our commitment to continuous innovation to deliver tailored software solutions that empower your business to thrive in an ever-evolving landscape. </p>
-      <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="relative z-[4] block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Contact Our Experts</RouterLink>
+      <!-- <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="relative z-[4] block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Contact Our Experts</RouterLink> -->
       <img src="/images/hero/arrow.webp" alt="AITS" width="178" height="145" center cover responsive  loading="eager" class="w-[100px] max-md:w-[50px]"
       v-motion  
         :initial="{

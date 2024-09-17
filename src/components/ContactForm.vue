@@ -74,14 +74,14 @@ const formData = reactive({
         },
         Industry : {
             name: 'Industry',
-            value : 'smart-cities',
+            value : '',
             isValid: true,
             validationMessage: "",
             required: false,            
         },
         Subject : {
             name: 'Subject',
-            value : 'general-inquiry',
+            value : '',
             isValid: true,
             validationMessage: "",
             required: false,            
@@ -205,7 +205,7 @@ const handleSubmit = () => {
             </div>
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="Email" name="Email" aria-label="Enter your email"
-                placeholder="Work Email: example@gmail.com" 
+                placeholder="Work Email" 
                 v-model="formData.data.Email.value" 
                 :required="formData.data.Email.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
@@ -239,14 +239,15 @@ const handleSubmit = () => {
                 :class="{'border-red-500 focus:border-red-500' : formData.data.City.isValid===false}">
                 <p v-show="!formData.data.City.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.City.validationMessage}}</p>
             </div>  
-            <div class="w-full col-span-2">
-                <select id="industry" name="industry" aria-label="Choose an Industry"
-                placeholder="Choose an industry"
+            <div class="relative w-full col-span-2 mb-3">
+                <select id="industry" name="industry" aria-label="Select an Industry"
+                placeholder="Select an industry"
                 v-model="formData.data.Industry.value"              
                 :required="formData.data.Industry.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Industry.isValid===false}">
-                <option value="smart-cities" class="text-black"selected>Smart Cities</option>
+                <option class="text-black"  value="" disabled selected>Select an industry</option>
+                <option value="smart-cities" class="text-black">Smart Cities</option>
                 <option value="food-and-beverage" class="text-black">Food and Beverage</option>
                 <option value="manufacturing" class="text-black">Manufacturing</option>
                 <option value="oil-and-gas" class="text-black">Oil and Gas</option>
@@ -254,22 +255,36 @@ const handleSubmit = () => {
                 <option value="utilities" class="text-black">Utilities</option>
                 <option value="metal-mining-and-minerals" class="text-black">Metal, Mining and Minerals</option>
                 </select>
-                <p v-show="!formData.data.Industry.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Industry.validationMessage}}</p>
+                  <!-- Arrow icon -->
+                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                    <svg class="w-5 h-5 text-accent1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+              <p v-show="!formData.data.Industry.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Industry.validationMessage}}</p>
             </div>
-            <div class="w-full col-span-2 mb-3">
-                <select id="Subject" name="Subject" aria-label="select a subject for your message"
+            <div class="relative w-full col-span-2 mb-3">
+                <select id="Subject" name="Subject" aria-label="Select an inquiry"
+                placeholder="Select an inquiry"
                 v-model="formData.data.Subject.value"
                 :required="formData.data.Subject.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Subject.isValid===false}">
-                    <option  class="text-black" value="general-inquiry" selected>General Inquiry</option>
+                <option class="text-black" value="" disabled selected>Select an inquiry</option>
+                <option class="text-black" value="general-inquiry">General Inquiry</option>
                     <option class="text-black" value="sales-and-support">Sales and Support</option>
                 </select>
+                  <!-- Arrow icon -->
+                  <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                    <svg class="w-5 h-5 text-accent1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
                 <p v-show="!formData.data.Subject.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Subject.validationMessage}}</p>
             </div>
             <div class="w-full col-span-2">
                 <textarea id="Message" name="Message" rows="5"  aria-label="Type out your message"
-                placeholder="Tell us about your project and your current goals. How can we help you?" 
+                placeholder="Tell us about your project, how can we help you?" 
                 v-model="formData.data.Message.value" 
                 :required="formData.data.Message.required" 
                 style="min-height: 60px;"
