@@ -19,7 +19,7 @@ const showDes = (id) => {
             <div v-for="(item, key) in data" :key="item.id"
             class="w-[160px] h-[160px] aspect-square rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
             :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === item.id}">
-            <a :aria-label="'click on' + item.title + 'to read the description'" :href="item.to || '/'" class="flex flex-col items-center justify-center w-full h-full p-2"
+            <a :aria-label="'click on' + item.title + 'to read the description'" :href="item?.to" target="_blank" class="flex flex-col items-center justify-center w-full h-full p-2"
             @mouseenter="showDes(item.id)">
                 <component :is="item.logo" />
             </a>
@@ -37,11 +37,12 @@ const showDes = (id) => {
         <div class="w-full mb-6 space-y-3">
             <h1 class="font-[200] text-accent1 md:text-4xl text-[30px] uppercase mb-6">Home of Two Divisions</h1>
             <div v-for="(item, key) in data" :key="item.id">
-                <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
+                <p v-show="isHovered === item.id" class="min-h-[96px] text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
             </div>  
             <div class="flex items-center justify-center gap-3">
-                <div class="flex flex-col items-center justify-center w-[160px] h-[160px] p-2 aspect-square rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
-                :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === 1}"
+                <div class="w-[160px] h-[160px] aspect-square rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
+                :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === 1}">
+                    <a aria-label="click on aveva to read the description" href="https://gulf.avevaselect.com" target="_blanck" class="flex flex-col items-center justify-center w-full h-full p-2"
                     @mouseenter="showDes(1)">
                     <svg width="168" height="168" viewBox="0 0 168 168" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <rect x="0.5" y="0.5" width="167" height="167" rx="3.5" fill="url(#pattern0_1214_290)"/>
@@ -56,13 +57,13 @@ const showDes = (id) => {
                     </linearGradient>
                     <image id="image0_1214_290" width="171" height="104" xlink:href="data:image/png;base64,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"/>
                     </defs>
-                    </svg>
-                </div>                
-                <div class="w-[160px] h-[160px] aspect-square rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
-                :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === 2}">
-                    <a aria-label="click on aveva to read the description" href="https://gulf.avevaselect.com" target="_blanck" class="flex flex-col items-center justify-center w-full h-full p-2"
+                    </svg>                 
+                    </a>
+                </div>
+                <div class="flex flex-col items-center justify-center w-[160px] h-[160px] p-2 aspect-square rounded-[16px] bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px]"
+                :class="{ 'border-2 border-accent1 transform duration-600 shadow-md shadow-accent1' : isHovered === 2}"
                     @mouseenter="showDes(2)">
-                        <svg width="80" height="112" viewBox="0 0 80 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="80" height="112" viewBox="0 0 80 112" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_662_617)">
                         <path d="M54.3746 75.4832C52.9287 75.0536 51.3834 74.8942 49.838 75.0027C47.0944 75.1953 44.3508 76.2272 42.1688 78.0651C41.9764 78.2356 41.7774 78.3995 41.5652 78.5744C38.7398 80.8486 35.3595 82.341 31.7205 82.7042C31.5481 82.7197 31.3778 82.733 31.2076 82.7441C31.0374 82.7551 30.8672 82.7662 30.6969 82.7751C28.8045 82.8503 26.9828 82.6134 25.2694 82.1041L29.6623 83.4106C31.3756 83.9199 33.1973 84.1568 35.0898 84.0815C35.26 84.0727 35.4302 84.0616 35.6005 84.0505C35.7707 84.0395 35.9409 84.024 36.1134 84.0107C39.7524 83.6475 43.1327 82.155 45.9581 79.8809C46.1725 79.7037 46.3693 79.5421 46.5616 79.3716C48.7437 77.5315 51.4873 76.5018 54.2309 76.3091C55.7762 76.2006 57.3216 76.3579 58.7674 76.7897L54.3746 75.4832Z" fill="url(#paint0_linear_662_617)"/>
                         <path d="M49.5881 37.4711L45.1953 36.1647C44.0678 35.8303 43 35.3276 42.0405 34.6567C41.8459 34.515 41.647 34.3777 41.4502 34.247C39.9999 33.2705 38.4877 32.5641 36.9446 32.1035L41.3374 33.41C42.8784 33.8684 44.3928 34.5747 45.843 35.5535C46.042 35.6841 46.2388 35.8236 46.4333 35.9631C47.3928 36.6341 48.4606 37.1368 49.5881 37.4711Z" fill="url(#paint1_linear_662_617)"/>
@@ -142,9 +143,8 @@ const showDes = (id) => {
                         <rect width="80" height="112" fill="white"/>
                         </clipPath>
                         </defs>
-                        </svg>                    
-                    </a>
-                </div>
+                        </svg>   
+                </div>                
             </div>          
         </div>
     </div>

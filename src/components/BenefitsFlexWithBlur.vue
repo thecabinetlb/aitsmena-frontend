@@ -7,7 +7,7 @@ defineProps({
 </script>
 <template>
     <section id="employee-benefits" class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
-      <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
+      <h1 class="font-[500] text-accent1 md:text-4xl text-[30px] uppercase mb-6">{{ sectiontitle }}</h1>
       <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ sectiondescription }}</p>
       <!-- <ul role="list" class="flex flex-col mt-10 flex-wrap gap-10 w-full h-full md:p-10 p-6 bg-gradient-to-r from-accent1/10 to-accent1/20 rounded-[16px] list-style-none">
         <li v-for="(item, key) in data" :key="key" class="flex items-center justify-between flex-grow w-full h-full gap-3 border-b lg:min-h-[108px] pb-3 max-sm:flex-wrap border-accent1"

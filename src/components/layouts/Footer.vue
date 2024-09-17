@@ -86,7 +86,7 @@ const sociallinks = [
       </div>
       <!-- pattern -->
       <img src="/images/patterns/patternfooter.svg" alt="AITS" width="446" height="643" center cover responsive loading="lazy"
-      class="absolute left-0 top-[100%] transform -translate-y-[100%] opacity-75"/>       
+      class="absolute left-0 top-[100%] transform -translate-y-[100%] opacity-75 z-[-1]"/>       
      
       <div class="text-center min-h-[50px] w-full flex flex-col items-center justify-center bg-footer-noise bg-cover bg-center">
       <p class="tracking-wide text-accent1 max-sm:text-[14px]">Copyright @ AITS All Rights Reserved.</p>

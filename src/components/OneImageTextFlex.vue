@@ -5,7 +5,6 @@ defineProps({
     sectiontitle: String,
     item: Object, 
     reverse: Boolean,
-    hyphen: Boolean
 })
 </script>
 <template>
