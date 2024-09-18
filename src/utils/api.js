@@ -3,10 +3,283 @@ export function getBlogPosts(){
       {
         id: 1,
         image: '/images/publications/blog/thumbnails/two-colleagues-factory.webp',
-        title: "Key Benefits of The Scada System in Industry 4.0",
-        slug: "key-benifits-of-the-scada-system-in-industry-4.0",
+        title: "Top 5 Challenges in Manufacturing Operations Transformation",
+        slug: "top-5-challenges-in-manufacturing-operations-transformation",
         summary: "Explore how industrial digitization is revolutionizing manufacturing processes and improving efficiency.",
-        published_at: "July 29, 24",
+        content: [
+          {
+            "insert": "Manufacturers are striving to modernize their operations and digitally transform their businesses, but this process is easier said than done. Several challenges can hinder digital transformation and prevent manufacturers from moving forward. Business leaders must recognize that reconstruction difficulties are not always technology-related; they may stem from human resistance to change and fear of the unfamiliar."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Key Challenges Facing Manufacturers"
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Many challenges can arise during digital transformation in manufacturing, hindering positive change. Here are the main challenges and their solutions:"
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "Integration Complexities"
+          },
+          {
+            "attributes": {
+              "align": "justify",
+              "list": "ordered"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Traditional manufacturers often struggle to integrate advanced technologies with outdated infrastructure, making it difficult for everything to function seamlessly."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Solution: "
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "Develop a comprehensive integration strategy prioritizing interoperability and data exchange between systems, utilizing scalable solutions that integrate easily with existing systems."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "Risk Assessment & Management"
+          },
+          {
+            "attributes": {
+              "align": "justify",
+              "list": "ordered"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Potential cybersecurity threats and vulnerabilities are a significant concern, with "
+          },
+          {
+            "attributes": {
+              "color": "#1155cc",
+              "link": "https://www.pwc.com/us/en/industries/industrial-products/library/manufacturing-coo-survey-highlights.html"
+            },
+            "insert": "49% of manufacturers"
+          },
+          {
+            "insert": " identifying cybersecurity as a major challenge in the coming years."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Solution: "
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "Conduct comprehensive risk assessments and mitigation strategies to address identified risks, while ensuring that security measures are integrated into the design and implementation of digital solutions to prevent data breaches and unauthorized access."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "Lack of Skills & Expertise"
+          },
+          {
+            "attributes": {
+              "align": "justify",
+              "list": "ordered"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Rapid technological change has created a skills gap, where employees lack the expertise needed to utilize new tools and technologies effectively."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Solution: "
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "Companies should invest in training programs tailored to their specific needs to help employees develop digital literacy and competencies, even for non-technical roles."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "Cultural Resistance"
+          },
+          {
+            "attributes": {
+              "align": "justify",
+              "list": "ordered"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Employees may resist changes to traditional processes, fearing job displacement and unfamiliar tools. Cultural resistance can occur at both the managerial and employee levels."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Solution: "
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "Promote a culture of innovation by involving employees in the digital transformation process from the outset, helping to ease fears and ensure smoother transitions."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "Data Privacy Compliance"
+          },
+          {
+            "attributes": {
+              "align": "justify",
+              "list": "ordered"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "With increasing data generation and sharing, safeguarding against breaches and cyberattacks is challenging."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Solution: "
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "Protect sensitive information through robust cybersecurity measures and ensure compliance with standards like GDPR or CCPA."
+          },
+          {
+            "insert": " Cisco’s "
+          },
+          {
+            "attributes": {
+              "color": "#1155cc",
+              "link": "https://blogs.cisco.com/security/from-privacy-to-profit"
+            },
+            "insert": "2020 Data Privacy Benchmark Study"
+          },
+          {
+            "insert": " showed that "
+          },
+          {
+            "attributes": {
+              "bold": true
+            },
+            "insert": "70% of organizations"
+          },
+          {
+            "insert": " benefited significantly from privacy measures beyond mere compliance."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Solutions for Successful Digital Transformation"
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "To ensure successful digital transformation, start by understanding business objectives through thorough assessments of current capabilities, market trends, and the competitive landscape. Involve key stakeholders in the planning process to gather insights and address concerns, ensuring alignment throughout the transformation."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          },
+          {
+            "insert": "Additionally, define KPIs to track progress, utilizing data-driven insights to optimize outcomes. Encourage a culture of continuous learning where employees welcome change and adapt to new technologies. If partnering with solution providers, evaluate their solutions for scalability and agility to prepare for future changes."
+          },
+          {
+            "attributes": {
+              "align": "justify"
+            },
+            "insert": "\n"
+          }
+        ],
+        published_at: "Septemper 18, 24",
         is_featured: true,
         is_arabic: false,
         industry: "Industrial Automation",
@@ -18,78 +291,78 @@ export function getBlogPosts(){
         title: "Challenges and Opportunities in Industrial Digitization",
         slug: "challenges-and-opportunities-in-industrial-digitization",
         summary: "Discover the key challenges faced and opportunities unlocked by the adoption of industrial digitization technologies.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
-        published_at: "Apr 25, 24",
+        content: "<p class='font-[200] max-sm:text-[14px] mb-3'>With today's rising manufacturing costs and uncertainty, it is essential for organizations to have digital solutions that significantly impact their daily operations. Investing in these advanced technologies will help reduce errors and costs and create efficient production processes.</p><p class='font-[200] max-sm:text-[14px] mb-3'>Digital twins are one of the drivers of manufacturing operations transformation that allow for simulations, testing, and optimization before real-world implementation.</p><h2 class='font-[700] md:text-4xl text-[30px]'>Benefits of Digital Twins in Manufacturing Operations</h2><ol class='list-decimal '><li class='font-[700] md:text-2xl text-[24px] ms-6 mb-3'>Increased Production Value</li><p class='font-[200] max-sm:text-[14px] mb-3'>Intelligent digital twins drive smarter factories and have tremendous effects on manufacturing operations, such as increased production volumes. Manufacturers can benefit from factory data to improve operations, leading to a <strong>10-15% increase in production volume</strong>, according to Future Bridge.</p><p class='font-[200] max-sm:text-[14px] mb-3'>This growth is because digital twins can <strong>optimize capacity, conserve energy, reduce errors, and scale use cases</strong>. They also encourage <strong>collaboration among workers as automation takes care of repetitive tasks</strong>, allowing workers to do more in less time.</p><li class='font-[700] md:text-2xl text-[24px] ms-6 mb-3'>Reduced Product Waste</li><p class='font-[200] max-sm:text-[14px] mb-3'>Digital twins can also reduce product waste. <strong>73 percent of CEOs are investing in digital twins to overcome sustainability challenges and decarbonize their processes</strong>. That high number is no shock, as digital twins can help <strong>reduce waste by 10-20 percent</strong> and <strong>lower greenhouse gas emissions</strong> by the same amount. How?</p><p class='font-[200] max-sm:text-[14px] mb-3'>Companies use <strong>intelligent/digital twins to test and develop connected products</strong>, which streamlines the product cycle and minimizes waste by identifying ways to reuse materials and reduce errors along the way.</p><li class='font-[700] md:text-2xl text-[24px] ms-6 mb-3'>Improved Asset Utilization</li><p class='font-[200] max-sm:text-[14px] mb-3'>Digital twins improve factory machines and assets’ utilization and reduce maintenance costs. They also help <strong>enhance production lines’ performance and increase the manufacturing product yield by 3-5 percent</strong>. Digital twins gather insights from factory machines to analyze their current state, predict the need for future maintenance, and enhance their functionality. This helps <strong>calculate the machines’ remaining useful life</strong> and run simulations in case of errors to find a solution that improves machine performance.</p></ol><h2 class='font-[700] md:text-4xl text-[30px]'><strong>In Conclusion</strong></h2><p class='font-[200] max-sm:text-[14px] mb-3'>Manufacturing businesses must take the step to study their operations and identify the pain points, needs, as well as trends their competitors are taking advantage of in the market. Implementing digital twins in manufacturing operations brings various benefits and drives sustainable business growth in the long term. By embracing digital innovation, manufacturers can thrive in a dynamic and competitive landscape.</p>",        
+        published_at: "Septemper 18, 24",
         is_featured: true,
         is_arabic: false,
         industry: "Digital Transformation",
         publication_type: "Blog"
       },
-      {
-        id: 3,
-       image:'/images/publications/blog/thumbnails/experienced-operator-hard-hat.webp',
-        title: "Implementing Industrial IoT for Smart Factories",
-        slug: "implementing-industrial-iot-for-smart-factories",
-        summary: "Learn how Industrial Internet of Things (IIoT) is transforming traditional factories into smart, connected environments.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
-        published_at: "Apr 24, 24",
-        is_featured: true,
-        is_arabic: false,
-        industry: "Smart Cities",
-        publication_type: "Blog"
-      },
-      {
-        id: 4,
-        image:'/images/publications/blog/thumbnails/top-view-modern-operational-plant-producing-fiberglass-heavy-industry-machinery-metalworking-workshop-concept.webp',
-        title: "Data Analytics in Industrial Digitization",
-        slug: "data-analytics-in-industrial-digitization",
-        summary: "Discover how data analytics is driving insights and optimizations in industrial processes through digitization initiatives.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
-        published_at: "Apr 23, 24",
-        is_featured: true,
-        is_arabic: false,
-        industry: "Sustainability",
-        publication_type: "Blog"
-      },
-      {
-        id: 5,
-        image:'/images/publications/blog/thumbnails/woman-engineer-posing-with-workers-metalworking-factory.webp',
-        title: "Cybersecurity Considerations for Industrial Digitization",
-        slug: "cybersecurity-considerations-for-industrial-digitization",
-        summary: "Explore the importance of cybersecurity measures in safeguarding industrial digitization systems and infrastructure.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
-        published_at: "Apr 22, 24",
-        is_featured: true,
-        is_arabic: false,
-        industry: "Food and Beverage",
-        publication_type: "Blog"
-      },
-      {
-        id: 6,
-        image:'/images/publications/blog/thumbnails/two-women-medical-suits-working-conveyor.webp',
-        title: "The Role of Artificial Intelligence in Industrial Automation",
-        slug: "the-role-of-artificial-intelligence-in-industrial-automation",
-        summary: "Learn how artificial intelligence technologies are powering automation and optimization in industrial processes.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
-        published_at: "Apr 21, 24",
-        is_featured: false,
-        is_arabic: false,
-        industry: "Industrial Automation",
-        publication_type: "Blog"
-      },
-      {
-        id: 7,
-        image:'/images/publications/blog/thumbnails/abandoned-textile-factory-soviet-armenia.webp',
-        title: "Digital Twin Technology in Industrial Applications",
-        slug: "digital-twin-technology-in-industrial-applications",
-        summary: "Discover how digital twin technology is enabling predictive maintenance and virtual simulations in industrial settings.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
-        published_at: "Apr 20, 24",
-        is_featured: false,
-        is_arabic: false,
-        industry: "Smart Cities",
-        publication_type: "Blog"
-      },
+      // {
+      //   id: 3,
+      //  image:'/images/publications/blog/thumbnails/experienced-operator-hard-hat.webp',
+      //   title: "Implementing Industrial IoT for Smart Factories",
+      //   slug: "implementing-industrial-iot-for-smart-factories",
+      //   summary: "Learn how Industrial Internet of Things (IIoT) is transforming traditional factories into smart, connected environments.",
+      //   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
+      //   published_at: "Apr 24, 24",
+      //   is_featured: true,
+      //   is_arabic: false,
+      //   industry: "Smart Cities",
+      //   publication_type: "Blog"
+      // },
+      // {
+      //   id: 4,
+      //   image:'/images/publications/blog/thumbnails/top-view-modern-operational-plant-producing-fiberglass-heavy-industry-machinery-metalworking-workshop-concept.webp',
+      //   title: "Data Analytics in Industrial Digitization",
+      //   slug: "data-analytics-in-industrial-digitization",
+      //   summary: "Discover how data analytics is driving insights and optimizations in industrial processes through digitization initiatives.",
+      //   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
+      //   published_at: "Apr 23, 24",
+      //   is_featured: true,
+      //   is_arabic: false,
+      //   industry: "Sustainability",
+      //   publication_type: "Blog"
+      // },
+      // {
+      //   id: 5,
+      //   image:'/images/publications/blog/thumbnails/woman-engineer-posing-with-workers-metalworking-factory.webp',
+      //   title: "Cybersecurity Considerations for Industrial Digitization",
+      //   slug: "cybersecurity-considerations-for-industrial-digitization",
+      //   summary: "Explore the importance of cybersecurity measures in safeguarding industrial digitization systems and infrastructure.",
+      //   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
+      //   published_at: "Apr 22, 24",
+      //   is_featured: true,
+      //   is_arabic: false,
+      //   industry: "Food and Beverage",
+      //   publication_type: "Blog"
+      // },
+      // {
+      //   id: 6,
+      //   image:'/images/publications/blog/thumbnails/two-women-medical-suits-working-conveyor.webp',
+      //   title: "The Role of Artificial Intelligence in Industrial Automation",
+      //   slug: "the-role-of-artificial-intelligence-in-industrial-automation",
+      //   summary: "Learn how artificial intelligence technologies are powering automation and optimization in industrial processes.",
+      //   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
+      //   published_at: "Apr 21, 24",
+      //   is_featured: false,
+      //   is_arabic: false,
+      //   industry: "Industrial Automation",
+      //   publication_type: "Blog"
+      // },
+      // {
+      //   id: 7,
+      //   image:'/images/publications/blog/thumbnails/abandoned-textile-factory-soviet-armenia.webp',
+      //   title: "Digital Twin Technology in Industrial Applications",
+      //   slug: "digital-twin-technology-in-industrial-applications",
+      //   summary: "Discover how digital twin technology is enabling predictive maintenance and virtual simulations in industrial settings.",
+      //   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu justo id libero tincidunt accumsan eget sed purus...",
+      //   published_at: "Apr 20, 24",
+      //   is_featured: false,
+      //   is_arabic: false,
+      //   industry: "Smart Cities",
+      //   publication_type: "Blog"
+      // },
       // {
       //   id: 8,
       //   image:'/images/publications/blog/c23-1.jpg',
@@ -284,14 +557,14 @@ export function getSuccessStories (){
 
 export function getAllResources() {
   const blogPosts = getBlogPosts();
-  const industryInsights = getIndustryInsights();
-  const successStories = getSuccessStories();
+  // const industryInsights = getIndustryInsights();
+  // const successStories = getSuccessStories();
 
   // Combine all resources into one array
   const allResources = [
-    ...industryInsights,
     ...blogPosts,
-    ...successStories,
+    // ...industryInsights,
+    // ...successStories,
   ];
 
   // Sort the resources by published date in descending order

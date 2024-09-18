@@ -16,8 +16,8 @@ defineProps({
               </div>
           </div>
             <h3 class="text-accent2 font-[200] max-sm:text-[14px] mb-6">{{ item.published_at }}</h3>
-            <p v-if="item.body" class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ item.body }}</p>
-            <div v-else class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">
+            <div class="space-y-6 tracking-wide text-accent2" v-html="item.content"></div>
+            <!-- <div v-else class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">
                 <h1 class="font-[200] md:text-4xl text-[30px] mb-2">Client Overview:</h1>
                 <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6">AITS specializes in empowering industries to thrive by providing innovative software solutions tailored to their unique needs, all while prioritizing sustainability and efficiency.
                 As the main company within the IBI family, AITS plays a pivotal role in driving positive transformation across various industrial sectors. With a keen focus on sustainability, AITS is committed to helping our clients achieve their objectives while minimizing environmental impact. 
@@ -32,7 +32,7 @@ defineProps({
                 <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6">
                 Industrial companies (Small, Medium, or Large) in the Gulf region that haven't implemented the Scada system yet. These companies could work in the F&B manufacturing, oil & gas, energy, utilities, or the metal, mining, & minerals industries.
                 </p>
-            </div>
+            </div> -->
         </div>
     </section>
 </template>
