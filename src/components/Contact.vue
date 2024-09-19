@@ -1,12 +1,16 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+defineProps({
+  sectioncta: String,
+  sectiondescription: String,
+})
 </script>
 <template>
    <section id="contact" class="relative mt-40 bg-gradient-to-r from-accent1/10 to-accent1/20 md:h-[50vh] flex flex-col items-center justify-center overflow-hidden max-md:py-40">
     <div class="relative text-center 2xl:w-8/12 lg:w-10/12 w-11/12 z-[1] px-6 space-y-6">
       <!-- <h1 class="text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase text-center font-[400] mb-10">Contact Us</h1> -->
-      <p class="tracking-wide font-[200] max-sm:text-[14px] text-accent2 2xl:w-5/12 sm:w-2/3 mx-auto text-justify" style="text-align-last: center">We empower Gulf-based companies to become future-ready,  more competitive, and sustainable at every stage of their operational lifecycle.</p>
-      <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="block w-fit mx-auto cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Speak With an Expert</RouterLink>
+      <p class="tracking-wide font-[200] max-sm:text-[14px] text-accent2 2xl:w-5/12 sm:w-2/3 mx-auto text-justify" style="text-align-last: center">{{ sectiondescription }}</p>
+      <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="block w-fit mx-auto cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">{{sectioncta}}</RouterLink>
     </div>    
     <!-- Highlights -->
     <!-- left -->

@@ -1,5 +1,4 @@
 <script setup>
-import Contact from '../../../components/Contact.vue';
 import PostDetails from '../../../components/PostDetails.vue';
 import { getResourceBySlug } from '../../../utils/api'
 import { useRoute } from 'vue-router'
@@ -14,5 +13,4 @@ const post = getResourceBySlug(route.params.slug)
       <meta name="description" :content="post.summary"/>
     </head>
     <PostDetails sectiontitle="Resource Details" :item="post"/>
-    <Contact/>
 </template>

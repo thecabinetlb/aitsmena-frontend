@@ -1,4 +1,6 @@
 <script setup>
+import Contact from './Contact.vue';
+
 defineProps({
     sectiontitle: String,
     item: Object
@@ -35,4 +37,5 @@ defineProps({
             </div> -->
         </div>
     </section>
+    <Contact :sectiondescription="item.cta_description" sectioncta="Contact Us"/>
 </template>

@@ -150,5 +150,5 @@ const valuesandcommitments =
       delay: 100,
     },
   }"/>
-  <Contact/>
+  <Contact sectiondescription="We empower Gulf-based companies to become future-ready,  more competitive, and sustainable at every stage of their operational lifecycle." sectioncta="Speak With an Expert"/>
 </template>
