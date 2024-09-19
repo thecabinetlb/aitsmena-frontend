@@ -1,15 +1,16 @@
 <script setup>
 import Contact from './Contact.vue';
+import RelatedPosts from './RelatedPosts.vue';
 
 defineProps({
     sectiontitle: String,
-    item: Object
+    item: Object,
+    data: Array
 })
 </script>
 <template>
     <section class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
         <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-6">{{ item.title }}</h1>
-        <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ item.summary }}</p>
         <div class="flex flex-col gap-3 mt-10">
             <div class="relative overflow-hidden aspect-video rounded-[16px]"
             :style="{ backgroundImage: 'url(' + item.image + ')', backgroundSize:'cover', backgroundPosition: 'center'}">
@@ -37,5 +38,6 @@ defineProps({
             </div> -->
         </div>
     </section>
+    <RelatedPosts :data="data" :currentId="item.id" :industry="item.industry"/>
     <Contact :sectiondescription="item.cta_description" sectioncta="Contact Us"/>
 </template>
