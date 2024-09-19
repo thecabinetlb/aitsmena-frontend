@@ -309,9 +309,9 @@ export function getAllResources() {
   return sortedResources;
 }
 
-export function getResourceBySlug(slug) {
+export async function getResourceBySlug(slug) {
   // Get all resources
-  const allResources = getAllResources();
+  const allResources = getBlogPosts();
 
   // Find the resource with the matching slug
   return allResources.find(item => item.slug === slug);

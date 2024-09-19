@@ -1,10 +1,6 @@
 <script setup>
-import RelatedPosts from './RelatedPosts.vue';
-
 defineProps({
-    sectiontitle: String,
     item: Object,
-    data: Array
 })
 </script>
 <template>
@@ -38,5 +34,4 @@ defineProps({
             </div> -->
         </div>
     </section>
-    <RelatedPosts :data="data" :currentId="item.id" :industry="item.industry"/>
 </template>

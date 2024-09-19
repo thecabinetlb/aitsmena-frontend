@@ -19,7 +19,7 @@ const formatPublicationType = (publicationType) => {
 <template>
     <section class="w-11/12 pt-20 mx-auto 2xl:w-8/12 lg:w-10/12">
       <h1 class="font-[500] text-accent1 md:text-4xl text-[30px] uppercase mb-6">Related Insights</h1>
-        <ul role="list"v-if="filteredData.length > 0" class="grid grid-cols-1 gap-3 mt-10 lg:grid-cols-3 sm:grid-cols-2 list-style-none">
+        <ul role="list" v-if="filteredData.length > 0" class="grid grid-cols-1 gap-3 mt-10 lg:grid-cols-3 sm:grid-cols-2 list-style-none">
         <li v-for="(item, key) in filteredData" :key="key" class="flex-grow group w-full relative group sm:min-h-[135px] rounded-[16px] border-2 border-bg2">
           <RouterLink 
             v-if="item.slug && item.publication_type"
@@ -41,13 +41,9 @@ const formatPublicationType = (publicationType) => {
               <h2 class="text-accent1 font-[400] sm:text-xl">{{ item.industry }}</h2>
               <h2 class="text-accent1 font-[200] sm:text-xl">{{ item.title }}</h2>
               <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ item.summary }}</p>
-              <RouterLink 
-              :id="'go-to-' + item.title + '-page'" 
-              :aria-label="'read more about ' + item.title" 
-              :to="`/resource-center/${item.publication_type.toLowerCase().replace(/\s+/g, '-')}/${item.slug}`" 
-              class="border-accent2 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center ms-auto me-0 border-2 transition-all duration-400 hover:text-bg2 hover:border-bg2 text-xl rounded-full"> 
-              🡥 
-              </RouterLink>
+              <span class="border-accent2 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center ms-auto me-0 border-2 transition-all duration-400 hover:text-bg2 hover:border-bg2 text-xl rounded-full">
+              🡥
+              </span>
             </div>
           </RouterLink> 
         </li>
