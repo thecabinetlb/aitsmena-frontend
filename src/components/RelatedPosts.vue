@@ -18,7 +18,7 @@ const formatPublicationType = (publicationType) => {
 
 <template>
     <section class="w-11/12 pt-20 mx-auto 2xl:w-8/12 lg:w-10/12">
-      <h1 class="font-[500] text-accent1 md:text-4xl text-[30px] uppercase mb-6">Related Posts</h1>
+      <h1 class="font-[500] text-accent1 md:text-4xl text-[30px] uppercase mb-6">Related Insights</h1>
         <ul role="list"v-if="filteredData.length > 0" class="grid grid-cols-1 gap-3 mt-10 lg:grid-cols-3 sm:grid-cols-2 list-style-none">
         <li v-for="(item, key) in filteredData" :key="key" class="flex-grow group w-full relative group sm:min-h-[135px] rounded-[16px] border-2 border-bg2">
           <RouterLink 
@@ -54,7 +54,7 @@ const formatPublicationType = (publicationType) => {
         </ul>
       <div v-else class="lg:w-full relative group bg-extended-noise bg-cover bg-center bg-opacity-50 rounded-[16px] mt-10 mx-auto">
         <div class="md:px-10 p-6 relative flex justify-between items-center gap-3 rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 border-2 border-bg2">
-            <h3 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[500]">No related posts.</h3>        
+            <h3 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[500]">No related insights.</h3>        
         </div>
       </div>
     </section>
