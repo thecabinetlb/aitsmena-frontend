@@ -24,8 +24,8 @@ watch(() => route.params.slug, (newSlug) => {
 
 <template>
     <head>
-      <title> Resource Center - {{ post.title }}</title>
-      <meta name="description" :content="post.summary"/>
+      <title> Resource Center - {{ post?.title }}</title>
+      <meta name="description" :content="post?.summary"/>
     </head>
     <PostDetails :item="post"/>
     <RelatedPosts :data="posts" :currentId="post.id" :industry="post.industry"/>
