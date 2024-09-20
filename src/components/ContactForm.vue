@@ -324,7 +324,7 @@ const handleSubmit = () => {
             <button aria-label="send your content" class="cursor-pointer w-fit relative z-[2] col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[20px] shadow-sm bg-bg2 hover:brightness-125 transition-all duration-400">
             {{loading === true ?  'Sending...' : 'Send Message'}}
             </button>            
-            <p v-if="loading === false" class="text-green-500">Thank you for your content, we'll get back to you soon.</p>                
+            <p v-if="loading === false" class="text-green-500">Thank you for your message, we'll get back to you soon.</p>                
             </div>
 
             <!-- Errors after submit -->
