@@ -29,7 +29,7 @@ const errors = {
   PhoneRequired: 'Phone Number is required.',
   PhoneInvalid: 'Phone Number should be numeric.',
   InquiryRequired: 'Inquiry is required.',
-  InquiryInvalid: 'Invalid inquiry. Please select either General Inquiries or Sales and Support.',
+  InquiryInvalid: 'Invalid inquiry. Please select either General Inquiry or Sales and Support.',
   MessageRequired: 'Please enter your content.'
 };
 
@@ -285,7 +285,7 @@ const handleSubmit = () => {
                     <option disabled value="" class="text-black">Select an inquiry</option>
                     
                     <!-- Inquiry options -->
-                    <option value="General Inquiry" class="text-black">General Inquiry</option>
+                    <option value="General Inquiries" class="text-black">General Inquiry</option>
                     <option value="Sales and Support" class="text-black">Sales and Support</option>
                 </select>
                   <!-- Arrow icon -->
@@ -328,7 +328,7 @@ const handleSubmit = () => {
             </div>
 
             <!-- Errors after submit -->
-            <ul v-if="hasErrorMessages === true" class="p-4 list-disc bg-red-200 border-b-red-600 border-b-s-4 marker:text-red-600" role="list">
+            <ul v-if="hasErrorMessages === true && ErrorMessages != null" class="p-4 list-disc bg-red-200 border-b-red-600 border-b-s-4 marker:text-red-600" role="list">
                 <li v-for="(item, key) in ErrorMessages" :key="key" class="mx-2 list-item">{{ item[0] }}</li>
             </ul>
         </form>
