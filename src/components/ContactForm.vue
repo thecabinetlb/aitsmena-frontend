@@ -250,7 +250,7 @@ const handleSubmit = () => {
                 <p v-show="!formData.data.City.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.City.validationMessage}}</p>
             </div>  
             <div class="relative w-full col-span-2 mb-3">
-                <select id="industry" name="industry" aria-label="Select an Industry"
+                <select id="industry" name="Industry" aria-label="Select an industry"
                     placeholder="Select an industry"
                     v-model="formData.data.Industry.value"              
                     :required="formData.data.Industry.required" 
