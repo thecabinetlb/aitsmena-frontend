@@ -23,7 +23,7 @@ const formatPublicationType = (publicationType) => {
 <template>
     <section class="w-11/12 pt-20 mx-auto 2xl:w-8/12 lg:w-10/12">
       <h1 class="font-[500] text-accent1 md:text-4xl text-[30px] uppercase mb-6">Related Insights</h1>
-        <ul role="list" v-if="filteredData.length > 0" class="grid grid-cols-1 gap-3 mt-10 lg:grid-cols-3 sm:grid-cols-2 list-style-none">
+      <ul v-if="filteredData.length > 0" role="list" class="grid grid-cols-1 gap-3 mt-10 lg:grid-cols-2 sm:grid-cols-2 list-style-none">
         <li v-for="(item, key) in filteredData" :key="key" class="flex-grow group w-full relative group sm:min-h-[135px] rounded-[16px] border-2 border-bg2">
           <RouterLink 
             v-if="item.slug && item.publication_type"
@@ -40,18 +40,20 @@ const formatPublicationType = (publicationType) => {
             <div class="flex flex-col gap-3 p-6">
               <h2 class="p-2 relative w-fit z-[3] bottom-10 -mb-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2">
                   {{ item.publication_type }}
-                </h2>
+              </h2>
+              <div class="flex flex-wrap justify-between gap-3 pb-3 border-b border-bg2">
+              <h2 class="text-accent1 font-[400] sm:text-xl">{{ item.industry }}</h2>              
               <h3 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.published_at }}</h3>
-              <h2 class="text-accent1 font-[400] sm:text-xl">{{ item.industry }}</h2>
-              <h2 class="text-accent1 font-[200] sm:text-xl">{{ item.title }}</h2>
-              <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ item.summary }}</p>
-              <span class="border-accent2 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center ms-auto me-0 border-2 transition-all duration-400 hover:text-bg2 hover:border-bg2 text-xl rounded-full">
-              🡥
+              </div>
+              <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px]">{{ item.title }}</h2>
+              <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] min-h-[120px]">{{ item.summary }}</p>
+              <span class="border-accent2 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center mt-auto mb-0 ms-auto me-0 border-2 transition-all duration-400 hover:text-bg2 hover:border-bg2 text-xl rounded-full">
+                🡥
               </span>
             </div>
           </RouterLink> 
         </li>
-        </ul>
+      </ul>
       <div v-else class="lg:w-full relative group bg-extended-noise bg-cover bg-center bg-opacity-50 rounded-[16px] mt-10 mx-auto">
         <div class="md:px-10 p-6 relative flex justify-between items-center gap-3 rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 border-2 border-bg2">
             <h3 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[500]">No related insights.</h3>        
