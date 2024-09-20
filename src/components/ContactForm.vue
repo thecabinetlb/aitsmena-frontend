@@ -249,7 +249,7 @@ const handleSubmit = () => {
                 :class="{'border-red-500 focus:border-red-500' : formData.data.City.isValid===false}">
                 <p v-show="!formData.data.City.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.City.validationMessage}}</p>
             </div>  
-            <div class="relative w-full col-span-2 mb-3">
+            <div class="relative w-full col-span-2">
                 <select id="industry" name="Industry" aria-label="Select an industry"
                     placeholder="Select an industry"
                     v-model="formData.data.Industry.value"              
@@ -273,18 +273,14 @@ const handleSubmit = () => {
                 </div>
               <p v-show="!formData.data.Industry.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Industry.validationMessage}}</p>
             </div>
-            <div class="relative w-full col-span-2 mb-3">
+            <div class="relative w-full col-span-2">
                 <select id="Inquiry" name="Inquiry" aria-label="Select an inquiry"
                     placeholder="Select an inquiry"
                     v-model="formData.data.Inquiry.value"
                     :required="formData.data.Inquiry.required" 
                     class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                     :class="{'border-red-500 focus:border-red-500' : formData.data.Inquiry.isValid === false}">
-                    
-                    <!-- Default option -->
                     <option disabled value="" class="text-black">Select an inquiry</option>
-                    
-                    <!-- Inquiry options -->
                     <option value="General Inquiry" class="text-black">General Inquiry</option>
                     <option value="Sales and Support" class="text-black">Sales and Support</option>
                 </select>
