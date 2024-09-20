@@ -18,9 +18,9 @@ const errors = {
   IndustryRequired: 'Industry is required.',
   PhoneRequired: 'Phone Number is required.',
   PhoneInvalid: 'Phone Number should be numeric.',
-  SubjectRequired: 'Subject is required.',
-  SubjectInvalid: 'Invalid subject. Please select either General Inquiries or Sales and Support.',
-  MessageRequired: 'Please enter your message.'
+  InquiryRequired: 'Inquiry is required.',
+  InquiryInvalid: 'Invalid inquiry. Please select either General Inquiries or Sales and Support.',
+  MessageRequired: 'Please enter your content.'
 };
 
 const ErrorMessages = ref({
@@ -30,8 +30,8 @@ const ErrorMessages = ref({
     country: '',
     city: '',
     industry: '',
-    subject: '',
-    message: ''
+    inquiry: '',
+    content: ''
 })
 console.log('ErrorMessages',ErrorMessages)
 
@@ -75,16 +75,16 @@ const formData = reactive({
         Industry : {
             name: 'Industry',
             value : '',
-            isValid: true,
+            isValid: null,
             validationMessage: "",
-            required: false,            
+            required: true,            
         },
-        Subject : {
-            name: 'Subject',
+        Inquiry : {
+            name: 'Inquiry',
             value : '',
-            isValid: true,
+            isValid: null,
             validationMessage: "",
-            required: false,            
+            required: true,            
         },
         Message : {
             name: 'Message',
@@ -153,9 +153,9 @@ const handleSubmit = () => {
             phone: formData.data.Phone.value,
             country: formData.data.Country.value,
             city: formData.data.City.value,
-            industry: formData.data.industry.value,
-            subject: formData.data.Subject.value,
-            message: formData.data.Message.value
+            industry: formData.data.Industry.value,
+            inquiry: formData.data.Inquiry.value,
+            content: formData.data.Message.value
         };
         // Submit the data
         axios.post('http://localhost:8000/api/v1/contact_submissions', data, {
@@ -172,7 +172,7 @@ const handleSubmit = () => {
                 Country: '',
                 City: '',
                 Industry: '',
-                Subject: '',
+                Inquiry: '',
                 Message: ''
             };
         loading.value = false;
@@ -246,13 +246,13 @@ const handleSubmit = () => {
                 :required="formData.data.Industry.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Industry.isValid===false}">
-                <option class="text-black"  value="" disabled selected>Select an industry</option>
-                <option value="smart-cities" class="text-black">Smart Cities</option>
-                <option value="food-and-beverage" class="text-black">Food and Beverage</option>
-                <option value="manufacturing" class="text-black">Manufacturing</option>
-                <option value="oil-and-gas" class="text-black">Oil and Gas</option>
-                <option value="energy" class="text-black">Energy</option>
-                <option value="utilities" class="text-black">Utilities</option>
+                <option class="text-black" disabled selected>Select an industry</option>
+                <option class="text-black">Smart Cities</option>
+                <option class="text-black">Food and Beverage</option>
+                <option class="text-black">Manufacturing</option>
+                <option class="text-black">Oil and Gas</option>
+                <option class="text-black">Energy</option>
+                <option class="text-black">Utilities</option>
                 <option value="metal-mining-and-minerals" class="text-black">Metal, Mining and Minerals</option>
                 </select>
                   <!-- Arrow icon -->
@@ -264,15 +264,15 @@ const handleSubmit = () => {
               <p v-show="!formData.data.Industry.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Industry.validationMessage}}</p>
             </div>
             <div class="relative w-full col-span-2 mb-3">
-                <select id="Subject" name="Subject" aria-label="Select an inquiry"
+                <select id="Inquiry" name="Inquiry" aria-label="Select an inquiry"
                 placeholder="Select an inquiry"
-                v-model="formData.data.Subject.value"
-                :required="formData.data.Subject.required" 
+                v-model="formData.data.Inquiry.value"
+                :required="formData.data.Inquiry.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
-                :class="{'border-red-500 focus:border-red-500' : formData.data.Subject.isValid===false}">
-                <option class="text-black" value="" disabled selected>Select an inquiry</option>
-                <option class="text-black" value="general-inquiry">General Inquiry</option>
-                    <option class="text-black" value="sales-and-support">Sales and Support</option>
+                :class="{'border-red-500 focus:border-red-500' : formData.data.Inquiry.isValid===false}">
+                <option class="text-black" disabled selected>Select an inquiry</option>
+                <option class="text-black">General Inquiry</option>
+                    <option class="text-black">Sales and Support</option>
                 </select>
                   <!-- Arrow icon -->
                   <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
@@ -280,10 +280,10 @@ const handleSubmit = () => {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </div>
-                <p v-show="!formData.data.Subject.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Subject.validationMessage}}</p>
+                <p v-show="!formData.data.Inquiry.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Inquiry.validationMessage}}</p>
             </div>
             <div class="w-full col-span-2">
-                <textarea id="Message" name="Message" rows="5"  aria-label="Type out your message"
+                <textarea id="Message" name="Message" rows="5"  aria-label="Type out your content"
                 placeholder="Tell us about your project, how can we help you?" 
                 v-model="formData.data.Message.value" 
                 :required="formData.data.Message.required" 
@@ -294,17 +294,17 @@ const handleSubmit = () => {
             </div>
             <!-- Recaptcha -->
             <div class="w-full col-span-2">
-                <vue-recaptcha ref="recaptcha" v-model="ReCaptchaValid" sitekey="6Ld4AMYpAAAAAEHy1RBcaHKU9T4bMG1OfQyRYajN"></vue-recaptcha>
+                <vue-recaptcha ref="recaptcha" v-model="ReCaptchaValid" sitekey="6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl"></vue-recaptcha>
 
                 <!-- <Checkbox v-model="ReCaptchaValid" theme="dark" /> -->
                 <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
             </div>
             <!-- Submit -->
             <div class="flex flex-wrap items-center w-full gap-2">
-            <button aria-label="send your message" class="cursor-pointer w-fit relative z-[2] col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[20px] shadow-sm bg-bg2 hover:brightness-125 transition-all duration-400">
+            <button aria-label="send your content" class="cursor-pointer w-fit relative z-[2] col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[20px] shadow-sm bg-bg2 hover:brightness-125 transition-all duration-400">
             {{loading === true ?  'Sending...' : 'Send Message'}}
             </button>            
-            <p v-if="loading === false" class="text-green-500">Thank you for your message, we'll get back to you soon.</p>                
+            <p v-if="loading === false" class="text-green-500">Thank you for your content, we'll get back to you soon.</p>                
             </div>
 
             <!-- Errors after submit -->
