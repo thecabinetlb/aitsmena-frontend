@@ -55,8 +55,6 @@ export const createApp = ViteSSG(
     const head = createHead()
 
     app.use(head)
-    // Use vue-router
-    app.use(router)
   }
 )
 

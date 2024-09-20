@@ -25,9 +25,7 @@ const filterData = (industry) => {
 
 // Initial filter
 filterData('All');
-const formatPublicationType = (publicationType) => {
-  return publicationType.toLowerCase().replace(/\s+/g, '-');
-}
+
 // Compute the paginated data
 const paginatedData = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage;
@@ -38,6 +36,13 @@ const paginatedData = computed(() => {
 // Watch for page changes
 const onPageChange = (page) => {
   currentPage.value = page;
+};
+
+const formatPublicationType = (publicationType) => {
+  if (publicationType === 'BlogPost') {
+    return 'blog';
+  }
+  return publicationType.toLowerCase().replace(/\s+/g, '-');
 };
 </script>
 
@@ -64,7 +69,7 @@ const onPageChange = (page) => {
           v-if="item.slug && item.publication_type"
           :id="'go-to-' + item.title + '-page'" 
           :aria-label="'read more about ' + item.title" 
-          :to="`/resource-center/${formatPublicationType(item.publication_type)}/${item.slug}`">                 
+          :to="{ path: `/resource-center/${formatPublicationType(item.publication_type)}/${item.slug}` }">
           <div class="relative overflow-hidden aspect-video bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]">
             <div class="absolute inset-0 z-[-1] duration-500 transform group-hover:scale-110"
             :style="{ backgroundImage: 'url(' + item.image + ')', backgroundSize:'cover', backgroundPosition: 'center'}"/>
