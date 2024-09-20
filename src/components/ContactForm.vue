@@ -285,7 +285,7 @@ const handleSubmit = () => {
                     <option disabled value="" class="text-black">Select an inquiry</option>
                     
                     <!-- Inquiry options -->
-                    <option value="General Inquiries" class="text-black">General Inquiry</option>
+                    <option value="General Inquiry" class="text-black">General Inquiry</option>
                     <option value="Sales and Support" class="text-black">Sales and Support</option>
                 </select>
                   <!-- Arrow icon -->
