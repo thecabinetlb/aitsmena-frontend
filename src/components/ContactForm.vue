@@ -294,7 +294,7 @@ const handleSubmit = () => {
             </div>
             <!-- Recaptcha -->
             <div class="w-full col-span-2">
-                <vue-recaptcha ref="recaptcha" v-model="ReCaptchaValid" sitekey="6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl"></vue-recaptcha>
+                <vue-recaptcha ref="recaptcha" v-model="ReCaptchaValid" sitekey="6Ld4AMYpAAAAAEHy1RBcaHKU9T4bMG1OfQyRYajN"></vue-recaptcha>
 
                 <!-- <Checkbox v-model="ReCaptchaValid" theme="dark" /> -->
                 <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
