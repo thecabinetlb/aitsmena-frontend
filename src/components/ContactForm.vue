@@ -3,12 +3,22 @@ import axios from 'axios';
 import { ref, reactive, watch } from 'vue'
 // import {Checkbox, useRecaptchaProvider} from 'vue-recaptcha'
 // useRecaptchaProvider() 
+import { VueRecaptcha } from 'vue-recaptcha';
 
-const ReCaptchaValid = ref(false)
+const recaptcha = ref()
+const reCaptchaValid = ref(false)
+console.log('reCaptchaValid', reCaptchaValid.value)
 const hasErrorMessages = ref(false)
 const loading = ref(null)
 console.log('hasErrorMessages', hasErrorMessages)
 
+const onVerify = (response) => {
+  reCaptchaValid.value = true; // Set to true when verified
+};
+
+const onExpired = () => {
+  reCaptchaValid.value = false; // Reset if expired
+};
 const errors = {
   NameRequired: 'Name is required.',
   EmailRequired: 'Email is required.',
@@ -77,7 +87,7 @@ const formData = reactive({
             value : '',
             isValid: null,
             validationMessage: "",
-            required: true,            
+            required: true,
         },
         Inquiry : {
             name: 'Inquiry',
@@ -140,7 +150,7 @@ watch(formData, (newFormData) => {
 }, { deep: true });
 
 const handleSubmit = () => {
-    if (!ReCaptchaValid.value) {
+    if (reCaptchaValid.value === false) {
         console.log('ReCaptcha is invalid');
         return; // Don't proceed with form submission
     }
@@ -201,7 +211,7 @@ const handleSubmit = () => {
                 :required="formData.data.Name.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2"               
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Name.isValid===false}">
-                <p v-show="!formData.data.Name.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Name.validationMessage}}</p>
+                <p v-show="!formData.data.Name.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Name.validationMessage}}</p>
             </div>
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="Email" name="Email" aria-label="Enter your email"
@@ -210,7 +220,7 @@ const handleSubmit = () => {
                 :required="formData.data.Email.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Email.isValid===false}">
-                <p v-show="!formData.data.Email.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Email.validationMessage}}</p>
+                <p v-show="!formData.data.Email.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Email.validationMessage}}</p>
             </div>      
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="Phone" name="Phone" aria-label="Enter your phone"
@@ -219,7 +229,7 @@ const handleSubmit = () => {
                 :required="formData.data.Phone.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Phone.isValid===false}">
-                <p v-show="!formData.data.Phone.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Phone.validationMessage}}</p>
+                <p v-show="!formData.data.Phone.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Phone.validationMessage}}</p>
             </div> 
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="Country" name="Country"  aria-label="Enter your Country"
@@ -228,7 +238,7 @@ const handleSubmit = () => {
                 :required="formData.data.Country.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Country.isValid===false}">
-                <p v-show="!formData.data.Country.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Country.validationMessage}}</p>
+                <p v-show="!formData.data.Country.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Country.validationMessage}}</p>
             </div>    
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="City" name="City"  aria-label="Enter your City"
@@ -237,42 +247,46 @@ const handleSubmit = () => {
                 :required="formData.data.City.required" 
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
                 :class="{'border-red-500 focus:border-red-500' : formData.data.City.isValid===false}">
-                <p v-show="!formData.data.City.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.City.validationMessage}}</p>
+                <p v-show="!formData.data.City.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.City.validationMessage}}</p>
             </div>  
             <div class="relative w-full col-span-2 mb-3">
                 <select id="industry" name="industry" aria-label="Select an Industry"
-                placeholder="Select an industry"
-                v-model="formData.data.Industry.value"              
-                :required="formData.data.Industry.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
-                :class="{'border-red-500 focus:border-red-500' : formData.data.Industry.isValid===false}">
-                <option class="text-black" disabled selected>Select an industry</option>
-                <option class="text-black">Smart Cities</option>
-                <option class="text-black">Food and Beverage</option>
-                <option class="text-black">Manufacturing</option>
-                <option class="text-black">Oil and Gas</option>
-                <option class="text-black">Energy</option>
-                <option class="text-black">Utilities</option>
-                <option value="metal-mining-and-minerals" class="text-black">Metal, Mining and Minerals</option>
+                    placeholder="Select an industry"
+                    v-model="formData.data.Industry.value"              
+                    :required="formData.data.Industry.required" 
+                    class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
+                    :class="{'border-red-500 focus:border-red-500' : formData.data.Industry.isValid === false}">
+                    <option disabled value="" class="text-black">Select an industry</option>
+                    <option value="Smart Cities" class="text-black">Smart Cities</option>
+                    <option value="Food and Beverage" class="text-black">Food and Beverage</option>
+                    <option value="Manufacturing" class="text-black">Manufacturing</option>
+                    <option value="Oil and Gas" class="text-black">Oil and Gas</option>
+                    <option value="Energy" class="text-black">Energy</option>
+                    <option value="Utilities" class="text-black">Utilities</option>
+                    <option value="metal-mining-and-minerals" class="text-black">Metal, Mining and Minerals</option>
                 </select>
-                  <!-- Arrow icon -->
+                <!-- Arrow icon -->
                 <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                     <svg class="w-5 h-5 text-accent1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </div>
-              <p v-show="!formData.data.Industry.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Industry.validationMessage}}</p>
+              <p v-show="!formData.data.Industry.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Industry.validationMessage}}</p>
             </div>
             <div class="relative w-full col-span-2 mb-3">
                 <select id="Inquiry" name="Inquiry" aria-label="Select an inquiry"
-                placeholder="Select an inquiry"
-                v-model="formData.data.Inquiry.value"
-                :required="formData.data.Inquiry.required" 
-                class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
-                :class="{'border-red-500 focus:border-red-500' : formData.data.Inquiry.isValid===false}">
-                <option class="text-black" disabled selected>Select an inquiry</option>
-                <option class="text-black">General Inquiry</option>
-                    <option class="text-black">Sales and Support</option>
+                    placeholder="Select an inquiry"
+                    v-model="formData.data.Inquiry.value"
+                    :required="formData.data.Inquiry.required" 
+                    class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1/50 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"                
+                    :class="{'border-red-500 focus:border-red-500' : formData.data.Inquiry.isValid === false}">
+                    
+                    <!-- Default option -->
+                    <option disabled value="" class="text-black">Select an inquiry</option>
+                    
+                    <!-- Inquiry options -->
+                    <option value="General Inquiry" class="text-black">General Inquiry</option>
+                    <option value="Sales and Support" class="text-black">Sales and Support</option>
                 </select>
                   <!-- Arrow icon -->
                   <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
@@ -280,7 +294,7 @@ const handleSubmit = () => {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </div>
-                <p v-show="!formData.data.Inquiry.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Inquiry.validationMessage}}</p>
+                <p v-show="!formData.data.Inquiry.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Inquiry.validationMessage}}</p>
             </div>
             <div class="w-full col-span-2">
                 <textarea id="Message" name="Message" rows="5"  aria-label="Type out your content"
@@ -290,14 +304,20 @@ const handleSubmit = () => {
                 style="min-height: 60px;"
                 class="block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] w-full rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2 peer"
                 :class="{'border-red-500 focus:border-red-500' : formData.data.Message.isValid===false}"></textarea>
-                <p v-show="!formData.data.Message.isValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Message.validationMessage}}</p>
+                <p v-show="!formData.data.Message.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Message.validationMessage}}</p>
             </div>
             <!-- Recaptcha -->
             <div class="w-full col-span-2">
-                <vue-recaptcha ref="recaptcha" v-model="ReCaptchaValid" sitekey="6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl"></vue-recaptcha>
+                <vue-recaptcha 
+                    ref="recaptcha" 
+                    :sitekey="'6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl'"
+                    @verify="onVerify"
+                    @expired="onExpired"
+                ></vue-recaptcha>
+                <!-- <Checkbox v-model="reCaptchaValid" theme="dark" /> -->
 
-                <!-- <Checkbox v-model="ReCaptchaValid" theme="dark" /> -->
-                <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
+                <!-- Error message if ReCaptcha isn't valid -->
+                <p v-if="reCaptchaValid === false" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
             </div>
             <!-- Submit -->
             <div class="flex flex-wrap items-center w-full gap-2">
@@ -309,7 +329,7 @@ const handleSubmit = () => {
 
             <!-- Errors after submit -->
             <ul v-if="hasErrorMessages === true" class="p-4 list-disc bg-red-200 border-b-red-600 border-b-s-4 marker:text-red-600" role="list">
-                <li v-for="(item, key) in ErrorMessages" :key="key" className="list-item mx-2">{{ item[0] }}</li>
+                <li v-for="(item, key) in ErrorMessages" :key="key" class="mx-2 list-item">{{ item[0] }}</li>
             </ul>
         </form>
     </div>

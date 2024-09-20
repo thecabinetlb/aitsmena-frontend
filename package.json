@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "swiper": "^11.1.14",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-recaptcha": "^2.0.3"
   },
   "devDependencies": {
     "@unhead/vue": "^1.9.12",
@@ -28,7 +29,6 @@
     "vite-ssg": "^0.23.7",
     "vite-ssg-sitemap": "^0.6.1",
     "vue-awesome-paginate": "^1.2.0",
-    "vue-recaptcha": "^2.0.3",
     "vue-router": "^4.4.4"
   }
 }

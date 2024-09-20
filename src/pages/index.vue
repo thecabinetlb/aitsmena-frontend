@@ -117,7 +117,21 @@ const valuesandcommitments =
 <template>
   <Hero/>
   <OneImageTextFlex :item="missionandvission"/>  
-  <IndustriesCarousel :data="industries"/>
+  <IndustriesCarousel :data="industries"
+  v-motion
+  :initial="{
+    opacity: 0,
+    y: 100,
+  }"
+  :visibleOnce="{
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: '100',
+      delay: 100,
+    },
+  }"/>
   <Partners :data="partners"
   v-motion
   :initial="{

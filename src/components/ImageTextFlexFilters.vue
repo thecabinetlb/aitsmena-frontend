@@ -22,8 +22,11 @@ const filterData = (key) => {
     <section :id="sectionid" class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
       <h1 class="text-accent1 font-[200] text-lg uppercase mb-3">{{ sectiontitle }}</h1>
       <hr class="w-full h-4 text-accent2"/>
-      <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mt-10">{{ sectiondescription }}</p>
-      <div class="flex justify-between w-full mt-6 md:gap-6 2xl:w-6/12">
+      <div class="mt-10 ">
+        <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ sectiondescription }}</p>
+        <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="mt-6 w-fit block relative z-[2] cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Contact Our Experts</RouterLink>
+      </div>
+     <div class="flex justify-between w-full mt-6 md:gap-6 2xl:w-6/12">
         <button @click="filterData(0)"
         class="px-2 sm:px-4 py-3 w-fit max-w-80 max-sm:text-[14px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 outline-none"
         :class="{'border-b-2 border-accent1': clicked === 0, 'border-b-2 border-bg2' : clicked !== 0}">
@@ -61,7 +64,5 @@ const filterData = (key) => {
         </div>
         <img :src="item.image" :alt="item.title" width="391" height="290" center cover responsive loading="lazy"/>    
       </div>
-      <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="mt-6 w-fit block relative z-[2] cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Contact Our Experts</RouterLink>
-
     </section>
 </template>
