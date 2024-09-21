@@ -168,7 +168,7 @@ const handleSubmit = () => {
             content: formData.data.Message.value
         };
         // Submit the data
-        axios.post('http://localhost:8000/api/v1/contact_submissions', data, {
+        axios.post('https://aitsmena.com/api/v1/contact_submissions', data, {
             headers: {
                 'Access-Control-Allow-Origin': '*', // Replace * with the specific origin if needed
             }
