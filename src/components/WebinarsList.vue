@@ -26,7 +26,7 @@ defineProps({
                         <!-- <RouterLink :id="'go-to-' + item.title + '-page'" :aria-label="'apply for' + item.title" :to="item.to" :target="item.target" class="ms-auto me-0 block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Secure Your Spot</RouterLink> -->
                     </div>
                     <RouterLink v-if="item.to" :id="'go-to-' + item.title + 'webinars-page'" :aria-label="'go to ' + item.title" :to="item.to" class="w-full cursor-pointer sm:w-2/12">
-                        <div class="hover:text-accent1 text-xl text-accent2 w-[34px] h-[34px] cursor-pointer aspect-square grid place-content-center mt-auto mb-auto sm:m-auto ms-auto me-0 border-2 border-accent2 hover:border-accent1 rounded-full"> 🡥 </div>             
+                        <div class="hover:text-accent1 text-xl text-accent2 w-[34px] h-[34px] cursor-pointer aspect-square grid place-content-center mt-auto mb-auto sm:m-auto ms-auto me-0 border-2 border-accent2 hover:border-accent1 rounded-full"> <svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg> </div>             
                     </RouterLink>
                 </div>
             </li>
