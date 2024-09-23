@@ -39,7 +39,7 @@ const onPageChange = (page) => {
 };
 
 const formatPublicationType = (publicationType) => {
-  if (publicationType === 'BlogPost') {
+  if (publicationType === 'Blogoost') {
     return 'blog';
   }
   return publicationType.toLowerCase().replace(/\s+/g, '-');
@@ -87,9 +87,16 @@ const formatPublicationType = (publicationType) => {
             </div>
             <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px]">{{ item.title }}</h2>
             <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] min-h-[120px]">{{ item.summary }}</p>
-            <span class="border-accent2 text-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center mt-auto mb-0 ms-auto me-0 border-2 transition-all duration-400 hover:text-bg2 hover:border-bg2 text-xl rounded-full">
-              <svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </span>
+            <span class="border-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center mt-auto mb-0 ms-auto me-0 border-2  hover:border-bg2 text-xl rounded-full">
+                <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" class="transition-all stroke-accent2 duration-400 hover:stroke-bg2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                <g id="SVGRepo_iconCarrier">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+                </g>
+                </svg>
+              </span>
           </div>
         </RouterLink> 
       </li>
