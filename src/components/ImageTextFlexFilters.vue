@@ -34,7 +34,7 @@ const filterData = (key) => {
         <button @click="filterData(1)" 
         class="px-2 sm:px-4 py-3 w-fit max-sm:text-[14px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 outline-none"
         :class="{'border-b-2 border-accent1': clicked === 1, 'border-b-2 border-bg2' : clicked !== 1}">
-        Passionate & Driven</button>      
+        Passionate and Driven</button>      
         <button @click="filterData(2)" 
         class="px-2 sm:px-4 py-3 w-fit max-sm:text-[14px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent border-b-2 hover:border-accent1 outline-none"
         :class="{'border-b-2 border-accent1': clicked === 2, 'border-b-2 border-bg2' : clicked !== 2}">
