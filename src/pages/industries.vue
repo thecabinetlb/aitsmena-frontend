@@ -13,7 +13,7 @@ import InsideBody from '../components/InsideBody.vue'
 
 const industries = [
 { id: 1, title: 'Smart Cities', icon:industriesiconC },
-{ id: 2, title: 'Food & Beverage', icon:industriesiconF },
+{ id: 2, title: 'Food and Beverage', icon:industriesiconF },
 { id: 3, title: 'Manufacturing', icon:industriesiconM },
 { id: 4, title: 'Oil & Gas', icon:industriesiconG },
 { id: 5, title: 'Energy', icon:industriesiconE },

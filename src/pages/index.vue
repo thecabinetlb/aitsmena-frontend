@@ -68,7 +68,7 @@ useSeoMeta({
 
 const industries = [
 { id: 1, title: 'Smart Cities', icon:industriesiconC },
-{ id: 2, title: 'Food & Beverage', icon:industriesiconF },
+{ id: 2, title: 'Food and Beverage', icon:industriesiconF },
 { id: 3, title: 'Manufacturing', icon:industriesiconM },
 { id: 4, title: 'Oil & Gas', icon:industriesiconG },
 { id: 5, title: 'Energy', icon:industriesiconE },
@@ -79,12 +79,12 @@ const industries = [
 const missionandvission =
   {
     title: "Leading the Region’s Industrial Digital Revolution",
-    description: "AITS aims to be the leading industrial software innovator in the Gulf region. We deliver comprehensive software solutions that enhance operational efficiency, support sustainability, and provide a competitive advantage in an evolving market.",
+    description: "We are leading the industrial software innovation in the Gulf. By delivering comprehensive software solutions we are enhancing operational efficiency, supporting sustainability, and providing a competitive advantage in an ever-evolving market.",
     image: "/images/hero/missionandvision/vision_v1.webp",
 }
 const partners = [
-    { id: 1, title: 'AVEVA Select Gulf', logo: avevaicons, to:'https://gulf.avevaselect.com', description:'AVEVA Select Gulf is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions. ' },
-    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is dedicated to driving industrial transformation in the Smart Cities and Food & Beverage/CPG sectors.  ' },
+    { id: 1, title: 'AVEVA Select Gulf', logo: avevaicons, to:'https://gulf.avevaselect.com', description:'AVEVA Select Gulf is a business line under AITS. It is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions. ' },
+    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is another AITS business line. It is dedicated to driving industrial transformation in the Smart Cities and Food & Beverage/CPG sectors.  ' },
 ];
 const csr = [
   {
@@ -96,7 +96,7 @@ const csr = [
   {
     id: 2,
     image:employee,
-    title: 'Passionate & Driven',
+    title: 'Passionate and Driven',
     description: "Our purpose-driven approach ensures that every employee understands their impact and contributes meaningfully to our shared goals. Whether it’s serving our customers, driving innovation, or making a positive impact in the world, purpose guides our actions and inspires excellence. Our attractive salary packages include performance-based annual increases, bonuses, and comprehensive benefits like health insurance, annual air tickets, and various paid leaves. Access training, professional development opportunities, and leadership programs for career growth, and enjoy flexible hours and remote work options to support work-life balance."
   },
   {
@@ -109,7 +109,7 @@ const csr = [
 const valuesandcommitments =
 {
   title: "Innovation with Integrity and Passion",
-  description: "By placing a strong emphasis on human-centered design, customer experience, and transparency, we strive to deliver solutions that meet industry specific needs while building trust and driving progress. Our dedication to innovation and integrity ensures that we approach every challenge with determination and passion, setting new standards for excellence in the industrial sector.",
+  description: "By placing a strong emphasis on human-centered design, customer experience, and transparency, we strive to deliver solutions that meet industry specific needs while building trust and driving progress. Our dedication to innovation and integrity ensures that we approach every challenge with determination and passion, setting new standards for excellence.",
   image: "/images/hero/values/values_v1.webp",
 }  
   

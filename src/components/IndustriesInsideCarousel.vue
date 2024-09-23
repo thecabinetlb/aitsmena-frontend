@@ -141,7 +141,7 @@ const stopAutoplay = (itemId) => {
             <li class="font-[200] max-sm:text-[14px]"><span class="font-[700]">Seamless connectivity between diverse systems, sites, people, and assets. </span>Our solutions ensure that various city components work harmoniously for effective urban management and reduced energy costs. </li>
             <li class="font-[200] max-sm:text-[14px]">Breaking down historical information silos and aggregating data from multiple sources is crucial. We <span class="font-[700]">provide actionable insights by consolidating data,</span> which helps in improving operational transparency and supporting data-driven decision-making.</li>
             <li class="font-[200] max-sm:text-[14px]">Our technology harmonizes data received from buildings, transportation networks, power systems, public utilities, security and communication infrastructures to offer a <span class="font-[700]">unified view of maintenance needs, predict downtimes, and schedule proactive maintenance.</span></li>
-            <li class="font-[200] max-sm:text-[14px]">The increasing complexity of urban environments drives the need for centralized Command and Control Centers. Our solutions facilitate the <span class="font-[700]">integration of disparate data sources and multi-vendor systems,</span> enabling efficient monitoring and management from a single control room. </LI>
+            <li class="font-[200] max-sm:text-[14px]">The increasing complexity of urban environments drives the need for centralized command and control centers. Our solutions facilitate the <span class="font-[700]">integration of disparate data sources and multi-vendor systems,</span> enabling efficient monitoring and management from a single control room. </LI>
             <li class="font-[200] max-sm:text-[14px]">Addressing challenges such as urbanization, overpopulation, and congestion requires sophisticated networks and efficient infrastructure management. Our software supports <span class="font-[700]">monitoring and managing multiple public operations,</span> ensuring smooth and effective urban infrastructure management. </li>
         </ul>
       </div>       
@@ -149,7 +149,7 @@ const stopAutoplay = (itemId) => {
   
   <Transition name="slide-fade">
       <div v-if="openDetails === 2" class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
-          <p class="font-[200] max-sm:text-[14px]">The food and beverage sector is facing unique hurdles, like a spike in product variations and the need for speedy new product launches. As brands expand globally, manufacturers must boost efficiency and cut costs to stay competitive. With consumers becoming pickier and less brand-loyal, it’s vital to avoid stock shortages, provide a reliable customer experience, and quickly roll out innovative products.</p>
+          <p class="font-[200] max-sm:text-[14px]">The food and beverage sector is facing unique challanges, like a spike in product variations and the need for speedy new product launches. As brands expand globally, manufacturers must boost efficiency and cut costs to stay competitive. With consumers becoming pickier and less brand-loyal, it’s vital to avoid stock shortages, provide a reliable customer experience, and quickly roll out innovative products.</p>
           <p class="font-[200] max-sm:text-[14px]">Our solutions tackle these issues with:</p>
           <ul role="list" class="list-disc ps-4">
               <li class="font-[200] max-sm:text-[14px]">Comprehensive tools for monitoring and controlling manufacturing processes.</li>
@@ -176,7 +176,7 @@ const stopAutoplay = (itemId) => {
           
           <h1 class="font-[700] text-lg">The Role of Technology</h1>
           <p class="font-[200] max-sm:text-[14px]">Across the industry, our approach helps identify "value-leaks" and implement operational improvements to close these gaps, driving greater efficiency and performance.</p>
-          <p class="font-[200] max-sm:text-[14px]">For upstream production, the Industrial Internet of Things (IIoT) now provides the critical connectivity needed to extend the life of wells and improve operational efficiency. In processing and refining, technology involves enhancing reliability and efficiency and gaining the flexibility to process a wider variety of crude oils. This adaptability, such as quickly switching between gasoline and diesel fuel production, can significantly impact profitability. </p>
+          <p class="font-[200] max-sm:text-[14px]">For upstream production, the Industrial Internet of Things (IIoT) now provides the critical connectivity needed to extend the life of wells and improve operational efficiency. In processing and refining, technology involves enhancing reliability and efficiency and gaining the flexibility to process a wider variety of crude oils.</p>
           
           <h1 class="font-[700] text-lg">Engineering and Operational Challenges</h1>
           <p class="font-[200] max-sm:text-[14px]">As the oil and gas sector navigates environmental and regulatory changes, companies must shift their focus from expansion and growth to reducing costs, improving operational efficiency, and safeguarding existing infrastructure. The key to achieving these goals lies in preventing failures and minimizing equipment and pipeline downtime, which are crucial for maintaining profitability.</p>
@@ -198,7 +198,6 @@ const stopAutoplay = (itemId) => {
           <p class="font-[200] max-sm:text-[14px]">The changes are driven by the need to better collect, analyze, and utilize vast amounts of data generated across the sector. Being able to make quick and informed decisions and meet regulatory standards is becoming increasingly important. </p>
           
           <h1 class="font-[700] text-lg">Water and Wastewater Management</h1>
-          <p class="font-[200] max-sm:text-[14px]">There is an increasing demand for optimizing existing assets in the Oil and Gas industry to safely boost output while adhering to environmental and regulatory standards.</p>
           <p class="font-[200] max-sm:text-[14px]">In developing regions, traditional technologies often fall short in delivering clean, affordable water. The complexity of maintaining and expanding water infrastructure requires innovative approaches that enable real-time data analysis and decision-making across multi-user operations.</p>
           
           <h1 class="font-[700] text-lg">Improving Operational Efficiency and Reducing Downtime </h1>
