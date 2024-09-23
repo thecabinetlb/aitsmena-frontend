@@ -29,7 +29,7 @@ defineProps({
                 </p>
                 <h1 class="font-[200] md:text-4xl text-[30px] mb-2">Target Audience</h1>
                 <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6">
-                Industrial companies (Small, Medium, or Large) in the Gulf region that haven't implemented the Scada system yet. These companies could work in the F&B manufacturing, oil & gas, energy, utilities, or the metal, mining, & minerals industries.
+                Industrial companies (Small, Medium, or Large) in the Gulf region that haven't implemented the Scada system yet. These companies could work in the F&B manufacturing, Oil and Gas, energy, utilities, or the Metal, Mining, and Minerals industries.
                 </p>
             </div> -->
         </div>

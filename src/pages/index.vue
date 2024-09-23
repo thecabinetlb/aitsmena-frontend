@@ -70,10 +70,10 @@ const industries = [
 { id: 1, title: 'Smart Cities', icon:industriesiconC },
 { id: 2, title: 'Food and Beverage', icon:industriesiconF },
 { id: 3, title: 'Manufacturing', icon:industriesiconM },
-{ id: 4, title: 'Oil & Gas', icon:industriesiconG },
+{ id: 4, title: 'Oil and Gas', icon:industriesiconG },
 { id: 5, title: 'Energy', icon:industriesiconE },
 { id: 6, title: 'Utilities', icon:industriesiconU },
-{ id: 7, title: 'Metal, Mining, & Minerals', icon:industriesiconMi },
+{ id: 7, title: 'Metal, Mining, and Minerals', icon:industriesiconMi },
 ];
 
 const missionandvission =
@@ -84,7 +84,7 @@ const missionandvission =
 }
 const partners = [
     { id: 1, title: 'AVEVA Select Gulf', logo: avevaicons, to:'https://gulf.avevaselect.com', description:'AVEVA Select Gulf is a business line under AITS. It is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions. ' },
-    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is another AITS business line. It is dedicated to driving industrial transformation in the Smart Cities and Food & Beverage/CPG sectors.  ' },
+    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is another AITS business line. It is dedicated to driving industrial transformation in the Smart Cities and Food and Beverage/CPG sectors.  ' },
 ];
 const csr = [
   {

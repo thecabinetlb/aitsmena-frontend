@@ -41,7 +41,7 @@ const footerlinks = [
     // { id: 1, name: "Food & Beverage" },
     // { id: 2, name: "Water & Wastewater" },
     // { id: 3, name: "Smart Cities" },
-    // { id: 4, name: "Oil & Gas" },
+    // { id: 4, name: "Oil and Gas" },
     // { id: 5, name: "Chemicals" },
     // { id: 6, name: "Power & Utilities" },
     // { id: 7, name: "Life Science" },
