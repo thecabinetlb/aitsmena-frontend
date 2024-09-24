@@ -169,7 +169,7 @@ const stopAutoplay = (itemId) => {
       </div>   
 </Transition>
   
-  <Transition name="slide-fade">
+  <!-- <Transition name="slide-fade">
       <div v-if="openDetails === 4"  class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
           <h1 class="font-[700] text-lg">Oil and Gas Production, Processing, and Refining </h1>
           <p class="font-[200] max-sm:text-[14px]">There is an increasing demand for optimizing existing assets in the Oil and Gas industry to safely boost output while adhering to environmental and regulatory standards.</p>
@@ -182,10 +182,10 @@ const stopAutoplay = (itemId) => {
           <p class="font-[200] max-sm:text-[14px]">As the oil and gas sector navigates environmental and regulatory changes, companies must shift their focus from expansion and growth to reducing costs, improving operational efficiency, and safeguarding existing infrastructure. The key to achieving these goals lies in preventing failures and minimizing equipment and pipeline downtime, which are crucial for maintaining profitability.</p>
           <p class="font-[200] max-sm:text-[14px]">By leveraging our advanced technologies, companies can enhance scalability, uptime, predictive maintenance, and overall efficiency. This proactive approach is essential in today’s economic environment, where maximizing the return on current assets is paramount. </p>
       </div>   
-</Transition>
+</Transition> -->
   
   <Transition name="slide-fade">    
-      <div v-if="openDetails === 5"  class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
+      <div v-if="openDetails === 4"  class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
           <p class="font-[200] max-sm:text-[14px]">In the energy sector, the focus is on revolutionizing the entire supply chain, from engineering and procurement to site material control and construction planning. By integrating advanced technologies, energy companies can streamline processes, reduce waste, and improve resource utilization, all while maintaining compliance with stringent regulatory standards.</p>
           <p class="font-[200] max-sm:text-[14px]">The digital transformation is an important step toward achieving net-zero targets. Our innovation supports the energy industry, from nuclear and fossil fuel to renewables. Through data-driven insights and our innovative solutions, energy companies are better equipped to meet climate commitments and become pioneers in the responsible use of resources. Collaboration with industry leaders across the sector is key.</p>
           <p class="font-[200] max-sm:text-[14px]">Our energy sector solutions enable organizations to tap into transformative benefits by harnessing data with greater precision. We bolster electric grid reliability and resilience, fine-tune the intricacies of generation, transmission, and distribution, and maximize asset utilization to elevate situational awareness while reducing carbon footprints. Our technologies empower workforce connectivity, driving agility and resilience.</p>
@@ -193,7 +193,7 @@ const stopAutoplay = (itemId) => {
 </Transition>
   
   <Transition name="slide-fade">
-      <div v-if="openDetails === 6"  class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
+      <div v-if="openDetails === 5"  class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
           <p class="font-[200] max-sm:text-[14px]">The utilities sector, including water and wastewater management, is facing unprecedented challenges as it adapts to the demands of a rapidly changing world: increasing demands from regulators, customers, and environmental concerns. Our comprehensive solutions are designed to help utility operators tackle these challenges head-on with the tools, expertise, and insights needed to streamline operations, cut costs, and stay ahead of the game.</p>
           <p class="font-[200] max-sm:text-[14px]">The changes are driven by the need to better collect, analyze, and utilize vast amounts of data generated across the sector. Being able to make quick and informed decisions and meet regulatory standards is becoming increasingly important. </p>
           
@@ -202,12 +202,12 @@ const stopAutoplay = (itemId) => {
           
           <h1 class="font-[700] text-lg">Improving Operational Efficiency and Reducing Downtime </h1>
           <p class="font-[200] max-sm:text-[14px]">To meet these challenges, water and wastewater utilities must transition from outdated engineering methods to more efficient, automated systems. Adopting online, template-based, and object-oriented solutions can greatly boost efficiency and cut costs. This shift helps ensure that utilities can meet the demanding regulatory standards.</p>
-          <p class="font-[200] max-sm:text-[14px]">Automation is important in modern utility but comes with its own challenges. Our solutions offer the reliability and simplicity needed to address these challenges, reducing complexity and risk while ensuring continuous availability. </p>
+          <p class="font-[200] max-sm:text-[14px]">Automation and digitalization is important in modern utility but comes with its own challenges. Our solutions offer the reliability and simplicity needed to address these challenges, reducing complexity and risk while ensuring continuous availability. </p>
       </div>  
 </Transition>
   
   <Transition name="slide-fade">
-      <div v-if="openDetails === 7"  class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
+      <div v-if="openDetails === 6"  class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
           <p class="font-[200] max-sm:text-[14px]">In the metals, mining, and minerals industry, the application of advanced engineering, operations, and management skills is essential to addressing the sector's complex challenges. Our solutions are designed to enhance your ability to navigate the challenges and help you contribute effectively to this demanding field.</p>
           
           <h1 class="font-[700] text-lg">Handling Market Fluctuations</h1>

@@ -25,7 +25,7 @@ defineProps({
                 </p>
                 <h1 class="font-[200] md:text-4xl text-[30px] mb-2">Objectives</h1>
                 <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6">
-                To inform the target audience about what the Scada system is and what industries mainly use it, a breakdown of its 3 main layers, and the benefits / the role that the Scada system plays in industrial automation (industry 4.0).                    
+                To inform the target audience about what the Scada system is and what industries mainly use it, a breakdown of its 3 main layers, and the benefits / the role that the Scada system plays in industrial automation and digitalization (industry 4.0).                    
                 </p>
                 <h1 class="font-[200] md:text-4xl text-[30px] mb-2">Target Audience</h1>
                 <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6">

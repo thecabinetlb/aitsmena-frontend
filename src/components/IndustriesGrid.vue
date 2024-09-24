@@ -81,7 +81,7 @@ const openDetails = ref(1)
                     
                     <h1 class="font-[700]">Improving Operational Efficiency and Reducing Downtime </h1>
                     <p class="font-[200]">To meet these challenges, water and wastewater utilities must transition from outdated engineering methods to more efficient, automated systems. Adopting online, template-based, and object-oriented solutions can greatly boost efficiency and cut costs. This shift helps ensure that utilities can meet the demanding regulatory standards.</p>
-                    <p class="font-[200]">Automation is important in modern utility but comes with its own challenges. Our solutions offer the reliability and simplicity needed to address these challenges, reducing complexity and risk while ensuring continuous availability. </p>
+                    <p class="font-[200]">Automation and digitalization is important in modern utility but comes with its own challenges. Our solutions offer the reliability and simplicity needed to address these challenges, reducing complexity and risk while ensuring continuous availability. </p>
                 </div>   
                 
                 <div v-show="openDetails === 7" class="traking-wide md:block absolute hidden 2xl:left-1/2 h-[396px] 2xl:transform 2xl:-translate-x-1/2 2xl:w-9/12 2xl:px-6 top-[100%] my-10 max-sm:text-[14px] text-accent2 space-y-3">
@@ -159,7 +159,7 @@ const openDetails = ref(1)
             
             <h1 class="font-[700]">Improving Operational Efficiency and Reducing Downtime </h1>
             <p class="font-[200]">To meet these challenges, water and wastewater utilities must transition from outdated engineering methods to more efficient, automated systems. Adopting online, template-based, and object-oriented solutions can greatly boost efficiency and cut costs. This shift helps ensure that utilities can meet the demanding regulatory standards.</p>
-            <p class="font-[200]">Automation is important in modern utility but comes with its own challenges. Our solutions offer the reliability and simplicity needed to address these challenges, reducing complexity and risk while ensuring continuous availability. </p>
+            <p class="font-[200]">Automation and digitalization is important in modern utility but comes with its own challenges. Our solutions offer the reliability and simplicity needed to address these challenges, reducing complexity and risk while ensuring continuous availability. </p>
                
         </div>  
 

@@ -13,7 +13,7 @@ console.log(uniqueIndustries);
 <template>
       <head>
       <title>AITS - Resource Center</title>
-      <meta name="description" content="Got a knack for reading? Gain access to free resources including whitepapers, industry insights, educational blogs, and specialized webinars."/>
+      <!-- <meta name="description" content="Got a knack for reading? Gain access to free resources including whitepapers, industry insights, educational blogs, and specialized webinars."/> -->
     </head>
     <InnerHero :pagebanner="banner" pagetitle="Innovation Insights Hub" pagedescription="Explore the latest resources designed to keep you informed and ahead in the fast-paced world of industrial digital transformation."/>
     <PostsList :uniqueIndustries="uniqueIndustries" :data='posts'/>

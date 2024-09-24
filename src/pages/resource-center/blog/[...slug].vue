@@ -36,7 +36,7 @@ watch(() => route.params.slug, (newSlug) => {
   </head>
   <head v-else>
       <title>AITS - Resource Center</title>
-      <meta name="description" content="Got a knack for reading? Gain access to free resources including whitepapers, industry insights, educational blogs, and specialized webinars."/>
+      <!-- <meta name="description" content="Got a knack for reading? Gain access to free resources including whitepapers, industry insights, educational blogs, and specialized webinars."/> -->
     </head>
   <section>
     <PostDetails v-if="post" :item="post"/>
