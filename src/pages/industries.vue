@@ -16,9 +16,9 @@ const industries = [
 { id: 2, title: 'Food and Beverage', icon:industriesiconF },
 { id: 3, title: 'Manufacturing', icon:industriesiconM },
 // { id: 4, title: 'Oil and Gas', icon:industriesiconG },
-{ id: 5, title: 'Energy', icon:industriesiconE },
-{ id: 6, title: 'Water and Waster-Water', icon:industriesiconU },
-{ id: 7, title: 'Metal, Mining, and Minerals', icon:industriesiconMi },
+{ id: 4, title: 'Energy', icon:industriesiconE },
+{ id: 5, title: 'Water and Wasterwater', icon:industriesiconU },
+{ id: 6, title: 'Metal, Mining, and Minerals', icon:industriesiconMi },
 ];
 
 </script>

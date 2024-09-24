@@ -185,7 +185,7 @@ const stopAutoplay = (itemId) => {
 </Transition> -->
   
   <Transition name="slide-fade">    
-      <div v-if="openDetails === 4"  class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
+      <div v-if="openDetails === 4" class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
           <p class="font-[200] max-sm:text-[14px]">In the energy sector, the focus is on revolutionizing the entire supply chain, from engineering and procurement to site material control and construction planning. By integrating advanced technologies, energy companies can streamline processes, reduce waste, and improve resource utilization, all while maintaining compliance with stringent regulatory standards.</p>
           <p class="font-[200] max-sm:text-[14px]">The digital transformation is an important step toward achieving net-zero targets. Our innovation supports the energy industry, from nuclear and fossil fuel to renewables. Through data-driven insights and our innovative solutions, energy companies are better equipped to meet climate commitments and become pioneers in the responsible use of resources. Collaboration with industry leaders across the sector is key.</p>
           <p class="font-[200] max-sm:text-[14px]">Our energy sector solutions enable organizations to tap into transformative benefits by harnessing data with greater precision. We bolster electric grid reliability and resilience, fine-tune the intricacies of generation, transmission, and distribution, and maximize asset utilization to elevate situational awareness while reducing carbon footprints. Our technologies empower workforce connectivity, driving agility and resilience.</p>
@@ -193,21 +193,25 @@ const stopAutoplay = (itemId) => {
 </Transition>
   
   <Transition name="slide-fade">
-      <div v-if="openDetails === 5"  class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
-          <p class="font-[200] max-sm:text-[14px]">The utilities sector, including water and wastewater management, is facing unprecedented challenges as it adapts to the demands of a rapidly changing world: increasing demands from regulators, customers, and environmental concerns. Our comprehensive solutions are designed to help utility operators tackle these challenges head-on with the tools, expertise, and insights needed to streamline operations, cut costs, and stay ahead of the game.</p>
-          <p class="font-[200] max-sm:text-[14px]">The changes are driven by the need to better collect, analyze, and utilize vast amounts of data generated across the sector. Being able to make quick and informed decisions and meet regulatory standards is becoming increasingly important. </p>
-          
+      <div v-if="openDetails === 5" class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
+          <p class="font-[200] max-sm:text-[14px]">The water and wastewater sector is facing unprecedented challenges as a result of the increasing regulatory pressures, consumers demands, and environmental threats.</p>
+          <p class="font-[200] max-sm:text-[14px]">With water becoming an increasingly scarce and priceless resource, the urgency of efficient management and conservation has never been more dire. </p>
+          <p class="font-[200] max-sm:text-[14px]">Our comprehensive solutions empower utility operators to overcome these challenges through advanced tools, digitalization, and insights to optimize operations, reduce costs, and ensure long-term sustainability.</p>
+          <p class="font-[200] max-sm:text-[14px]">The push for change is driven by the need to better collect, analyze, and utilize large amounts of data generated across the sector.</p>
+          <p class="font-[200] max-sm:text-[14px]">In an age where every drop matters, quick, informed decision-making and regulatory compliance are essential to achieving sustainable water management practices aligned with the global Sustainable Developemnt Goals (SDGs).</p>
+     
           <h1 class="font-[700] text-lg">Water and Wastewater Management</h1>
-          <p class="font-[200] max-sm:text-[14px]">In developing regions, traditional technologies often fall short in delivering clean, affordable water. The complexity of maintaining and expanding water infrastructure requires innovative approaches that enable real-time data analysis and decision-making across multi-user operations.</p>
-          
-          <h1 class="font-[700] text-lg">Improving Operational Efficiency and Reducing Downtime </h1>
-          <p class="font-[200] max-sm:text-[14px]">To meet these challenges, water and wastewater utilities must transition from outdated engineering methods to more efficient, automated systems. Adopting online, template-based, and object-oriented solutions can greatly boost efficiency and cut costs. This shift helps ensure that utilities can meet the demanding regulatory standards.</p>
-          <p class="font-[200] max-sm:text-[14px]">Automation and digitalization is important in modern utility but comes with its own challenges. Our solutions offer the reliability and simplicity needed to address these challenges, reducing complexity and risk while ensuring continuous availability. </p>
-      </div>  
+          <p class="font-[200] max-sm:text-[14px]">Water and wastewater utilities are under immense pressure to deliver reliable, affordable services while adhering to stringent regulations. Balancing energy-intensive processes, such as water reclamation and desalination, with the need to maintain water quality and expand access to clean water, remains a key challenge. Effective water conservation, energy optimization, and stringent compliance monitoring are fundamental to achieving these goals.</p>
+          <p class="font-[200] max-sm:text-[14px]">In many regions, traditional technologies are no longer sufficient to meet the growing demand for clean, affordable water. The complexity of maintaining and expanding water infrastructure necessitates innovative approaches, such as real-time data analysis and decision-making capabilities, to enhance multi-user operations. </p>
+   
+          <h1 class="font-[700] text-lg">Benefits</h1>
+          <p class="font-[200] max-sm:text-[14px]">Water and wastewater utilities need to move away from outdated methods and embrace smarter, more automated and digitalized systems. Shifting to online, template-based, and object-oriented solutions won’t just boost efficiency, it cuts costs too. This shift helps utilities stay on top of strict regulations while getting the most out of their resources.</p>
+          <p class="font-[200] max-sm:text-[14px]">Automation and digitalization are game changers for modern water utilities, but they bring their own challenges. Our solutions offer the simplicity, reliability, and scalability to tackle these issues head-on, cutting down complexity and risk. With this, we ensure continuous service—crucial for long-term sustainability and resilience.</p>
+        </div>  
 </Transition>
   
   <Transition name="slide-fade">
-      <div v-if="openDetails === 6"  class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
+      <div v-if="openDetails === 6" class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
           <p class="font-[200] max-sm:text-[14px]">In the metals, mining, and minerals industry, the application of advanced engineering, operations, and management skills is essential to addressing the sector's complex challenges. Our solutions are designed to enhance your ability to navigate the challenges and help you contribute effectively to this demanding field.</p>
           
           <h1 class="font-[700] text-lg">Handling Market Fluctuations</h1>
