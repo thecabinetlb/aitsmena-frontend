@@ -42,7 +42,7 @@
             delay: 800,
             duration: 600
           },
-        }" class="absolute top-0 z-1 left-1/2 max-sm:top-10 max-sm:-translate-y-1/4 max-sm:h-[400px]" />
+        }" class="absolute top-0 left-1/2 max-sm:top-1/4 max-sm:-translate-y-1/4 max-sm:h-[400px]" />
       
       <!-- left layer -->
       <img src="/images/hero/elements/lefttop_small.webp" alt="AITS" width="712" height="964" center cover responsive loading="eager"
@@ -61,14 +61,14 @@
             delay: 900,
             duration: 600
           },
-        }" class="absolute top-0 left-0 z-3 max-sm:top-20 max-sm:h-[400px] overflow-hidden" />
+        }" class="absolute top-0 left-0 max-sm:top-20 max-sm:h-[400px] overflow-hidden z-[-1]" />
 
       <img src="/images/hero/elements/leftmiddle_small.webp" alt="AITS" width="824" height="1096" center cover responsive loading="eager"
-      class="absolute left-0 transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3  max-sm:h-[400px]"/>
+      class="absolute left-0 z-[-1] transform md:-translate-y-1/2 md:top-1/2 top-2/3 -translate-y-2/3  max-sm:h-[400px]"/>
       <img src="/images/hero/elements/leftmiddleoposite_small.webp" alt="AITS" width="962" height="1753" center cover responsive loading="eager"
-      class="absolute left-0 transform md:-translate-y-1/2 z-1 md:top-1/2 top-2/3 -translate-y-2/3 max-sm:h-[400px]"/>    
+      class="absolute left-0 z-[-1] transform md:-translate-y-1/2 md:top-1/2 top-2/3 -translate-y-2/3 max-sm:h-[400px]"/>    
       <img src="/images/hero/elements/leftbottom_small.webp" alt="AITS" width="616" height="1104" center cover responsive loading="eager"
-      class="absolute left-0 z-3 top-[100%]"/>
+      class="absolute left-0 top-[100%] z-[-1]"/>
  
       <!-- right layer -->
       <img src="/images/hero/elements/righttop_small.webp" alt="AITS" width="720" height="749" 
@@ -96,11 +96,7 @@
       <img src="/images/hero/elements/rightmiddle_small.webp" alt="AITS" width="720" height="1151" center cover responsive loading="eager"
       v-motion  
         :initial="{
-          position: 'absolute',
-          top: '35%',
-          right: '0',
           transform: 'translate(0%)',
-          zIndex: 2,
           x:0,
           y:0,
         }"
@@ -113,7 +109,8 @@
             delay: 100,
             duration: 600
           },
-        }"/>    
+        }"
+        class="absolute top-[35%] right-0 w-screen z-[-1]"/>    
       
       <!-- pattern -->
       <img src="/images/patterns/patternhero.webp" alt="AITS" width="626" height="1394" center cover responsive loading="eager"
