@@ -260,10 +260,10 @@ const handleSubmit = () => {
                     <option value="Smart Cities" class="text-black">Smart Cities</option>
                     <option value="Food and Beverage" class="text-black">Food and Beverage</option>
                     <option value="Manufacturing" class="text-black">Manufacturing</option>
-                    <option value="Oil and Gas" class="text-black">Oil and Gas</option>
+                    <!-- <option value="Oil and Gas" class="text-black">Oil and Gas</option> -->
                     <option value="Energy" class="text-black">Energy</option>
-                    <option value="Utilities" class="text-black">Utilities</option>
-                    <option value="metal-mining-and-minerals" class="text-black">Metal, Mining and Minerals</option>
+                    <option value="Water and Wasterwater" class="text-black">Water and Wasterwater</option>
+                    <option value="Metal, Mining and Minerals" class="text-black">Metal, Mining and Minerals</option>
                 </select>
                 <!-- Arrow icon -->
                 <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
