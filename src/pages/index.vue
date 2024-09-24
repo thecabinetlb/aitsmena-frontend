@@ -72,7 +72,7 @@ const valuesandcommitments =
 <template>
   <head>
     <title>AITS - Industrial Software Solutions And Digital Services Tailored To Your Business</title>
-    <!-- <meta name="description" content="Browse through our available job openings to join the team and make an impact at AITS! We welcome diverse experts from all parts of the world."/> -->
+    <meta name="description" content="Browse through our available job openings to join the team and make an impact at AITS! We welcome diverse experts from all parts of the world."/>
   </head>
   <Hero/>
   <OneImageTextFlex :item="missionandvission"/>  
