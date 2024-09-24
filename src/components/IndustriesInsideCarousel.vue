@@ -136,27 +136,30 @@ const stopAutoplay = (itemId) => {
     
   <Transition name="slide-fade">
     <div v-if="openDetails === 1" class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
-        <p class="font-[200] max-sm:text-[14px]">Navigating the complex landscape of urban development requires a holistic approach to integrating and optimizing systems. With rapid urbanization, cost pressures, and a growing demand for enhanced quality of life, smart cities must address several key challenges: </p>
+        <p class="font-[200] max-sm:text-[14px]">Navigating the complex landscape of urban development requires a holistic approach to integrating and optimizing systems. With rapid urbanization, cost pressures, and a growing demand for enhanced quality of life, smart cities must address several key challenges while aligning with the Sustainable Development Goals (SDGs):</p>
         <ul role="list" class="list-disc ps-4">
-            <li class="font-[200] max-sm:text-[14px]"><span class="font-[700]">Seamless connectivity between diverse systems, sites, people, and assets. </span>Our solutions ensure that various city components work harmoniously for effective urban management and reduced energy costs. </li>
-            <li class="font-[200] max-sm:text-[14px]">Breaking down historical information silos and aggregating data from multiple sources is crucial. We <span class="font-[700]">provide actionable insights by consolidating data,</span> which helps in improving operational transparency and supporting data-driven decision-making.</li>
-            <li class="font-[200] max-sm:text-[14px]">Our technology harmonizes data received from buildings, transportation networks, power systems, public utilities, security and communication infrastructures to offer a <span class="font-[700]">unified view of maintenance needs, predict downtimes, and schedule proactive maintenance.</span></li>
-            <li class="font-[200] max-sm:text-[14px]">The increasing complexity of urban environments drives the need for centralized command and control centers. Our solutions facilitate the <span class="font-[700]">integration of disparate data sources and multi-vendor systems,</span> enabling efficient monitoring and management from a single control room. </LI>
-            <li class="font-[200] max-sm:text-[14px]">Addressing challenges such as urbanization, overpopulation, and congestion requires sophisticated networks and efficient infrastructure management. Our software supports <span class="font-[700]">monitoring and managing multiple public operations,</span> ensuring smooth and effective urban infrastructure management. </li>
+            <li class="font-[200] max-sm:text-[14px]"><span class="font-[700]">Seamless connectivity between diverse systems, sites, people, and assets.</span> Our solutions ensure that various city components work harmoniously for effective urban management and reduced energy costs. This connectivity supports the SDG goal of building resilient cities.</li>
+            <li class="font-[200] max-sm:text-[14px]">Breaking down historical information silos and aggregating data from multiple sources is crucial. <span class="font-[700]">We provide actionable insights by consolidating data,</span> which helps in improving operational transparency and supporting data-driven decision-making. This pillar aligns with the SDG goal of sustainable consumption.</li>
+            <li class="font-[200] max-sm:text-[14px]">Our technology harmonizes data received from buildings, transportation networks, power systems, public utilities, security and communication infrastructures to offer a <span class="font-[700]">unified view of maintenance needs, predict downtimes, and schedule proactive maintenance.</span> Eventually, your city would be contributing to sustainable urban communities.</li>
+            <li class="font-[200] max-sm:text-[14px]">The increasing complexity of urban environments drives the need for centralized Command and Control Centers. Our solutions facilitate the <span class="font-[700]">integration of disparate data sources and multi-vendor systems,</span> enabling efficient monitoring and management from a single control room.</LI>
+            <li class="font-[200] max-sm:text-[14px]">Addressing challenges such as urbanization, overpopulation, and congestion requires sophisticated networks and efficient infrastructure management. Our software supports <span class="font-[700]">monitoring and managing multiple public operations,</span> ensuring smooth and effective urban infrastructure management.</li>
         </ul>
+        <p class="font-[200] max-sm:text-[14px]">By combining smart technologies with sustainable practices, we pave the way for a connected urban future.</p>
       </div>       
 </Transition>
   
   <Transition name="slide-fade">
       <div v-if="openDetails === 2" class="pb-10 mt-10 space-y-6 traking-wide text-accent2">
-          <p class="font-[200] max-sm:text-[14px]">The food and beverage sector is facing unique challanges, like a spike in product variations and the need for speedy new product launches. As brands expand globally, manufacturers must boost efficiency and cut costs to stay competitive. With consumers becoming pickier and less brand-loyal, it’s vital to avoid stock shortages, provide a reliable customer experience, and quickly roll out innovative products.</p>
-          <p class="font-[200] max-sm:text-[14px]">Our solutions tackle these issues with:</p>
+          <p class="font-[200] max-sm:text-[14px]">The food and beverage sector is facing growing challenges, from increasing product variations to the urgent need for fast product launches.            </p>
+          <p class="font-[200] max-sm:text-[14px]">As brands scale globally, manufacturers need to enhance efficiency and lower costs to stay competitive. With consumers becoming more selective and less brand-loyal, it's crucial to avoid stock shortages, ensure a seamless customer experience, and quickly introduce new, innovative products.</p>
+          <p class="font-[200] max-sm:text-[14px]">Adding to these challenges, sustainability is now a top priority. The push for <span class="font-[700]">zero waste</span> and <span class="font-[700]">responsible consumption and production</span> aligns with the global Sustainable Development Goals (SDGs). Food and beverage manufacturers must not only focus on operational efficiency but also on reducing waste, conserving resources, and adopting responsible practices across the entire supply chain.</p>
+          <p class="font-[200] max-sm:text-[14px]">Our solutions address these issues by offering:</p>
           <ul role="list" class="list-disc ps-4">
-              <li class="font-[200] max-sm:text-[14px]">Comprehensive tools for monitoring and controlling manufacturing processes.</li>
-              <li class="font-[200] max-sm:text-[14px]">Systems for quality management, automated workflows, and precise data reporting.</li>
-              <li class="font-[200] max-sm:text-[14px]">Solutions to enhance line and equipment performance, along with overall equipment effectiveness (OEE).</li>
+              <li class="font-[200] max-sm:text-[14px]">Easy-to-use tools for monitoring and controlling production to boost efficiency and reduce waste.</li>
+              <li class="font-[200] max-sm:text-[14px]">Quality management systems, automated workflows, and precise data reporting to support responsible production.</li>
+              <li class="font-[200] max-sm:text-[14px]">Solutions to improve equipment performance, maximize overall equipment effectiveness (OEE), and reduce resource use.</li>
           </ul>
-          <p class="font-[200] max-sm:text-[14px]">Regulatory standards, such as the U.S. Food Safety Modernization Act (FSMA), Hazard Analysis and Critical Control Points (HACCP), and Global Food Safety Initiative (GFSI), require stringent food safety measures. Our solutions are designed to meet these standards and keep your operations running smoothly. </p>
+          <p class="font-[200] max-sm:text-[14px]">Food safety is non-negotiable. Our solutions help F&B/CPG manufacturers adhere to the strict regulations like the U.S. Food Safety Modernization Act (FSMA), Hazard Analysis and Critical Control Points (HACCP), and the Global Food Safety Initiative (GFSI). We ensure smooth and sustainable operations, driving zero waste, and supporting responsible production every step of the way. </p>
       </div>  
 </Transition>         
   
