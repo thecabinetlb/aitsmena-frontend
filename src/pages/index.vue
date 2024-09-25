@@ -38,8 +38,8 @@ const missionandvission =
     image: "/images/hero/missionandvision/vision_v1.webp",
 }
 const partners = [
-    { id: 1, title: 'AVEVA Select Gulf', logo: avevaicons, description:'AVEVA Select Gulf is a business line under AITS. It is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions.' },
-    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is another AITS business line. It is dedicated to driving industrial transformation in the Smart Cities and Food and Beverage/CPG sectors.' },
+    { id: 1, title: 'AVEVA Select Gulf', logo: avevaicons, description:'AVEVA Select Gulf is a business division under AITS. It is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions.' },
+    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is another AITS business division. It is dedicated to driving industrial transformation in the Smart Cities and Food and Beverage/CPG sectors.' },
 ];
 const csr = [
   {
