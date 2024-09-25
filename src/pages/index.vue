@@ -108,7 +108,7 @@ const valuesandcommitments =
   }"/>
   <ImageTextFlexFilters sectiontitle="Our culture" :data="csr"
   sectiondescription="This planet has already been through enough. We are committed to making a positive impact on society and the environment. Our commitment to sustainability is guided by three core values:"/>
-  <OneImageTextFlex :item="valuesandcommitments" reverse
+  <OneImageTextFlex :item="valuesandcommitments" reverse width
   v-motion
   :initial="{
     opacity: 0,
