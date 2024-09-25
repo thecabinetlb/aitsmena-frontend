@@ -34,12 +34,12 @@ const industries = [
 const missionandvission =
   {
     title: "Leading the Region’s Industrial Digital Revolution",
-    description: "We are leading the industrial software innovation in the Gulf. By delivering comprehensive software solutions we are enhancing operational efficiency, supporting sustainability, and providing a competitive advantage in an ever-evolving market.",
+    description: "We are leading the industrial software innovation. By delivering comprehensive software solutions we are enhancing operational efficiency, supporting sustainability, and providing a competitive advantage in an ever-evolving market.",
     image: "/images/hero/missionandvision/vision_v1.webp",
 }
 const partners = [
-    { id: 1, title: 'AVEVA Select Gulf', logo: avevaicons, to:'https://gulf.avevaselect.com', description:'AVEVA Select Gulf is a business line under AITS. It is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions. ' },
-    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is another AITS business line. It is dedicated to driving industrial transformation in the Smart Cities and Food and Beverage/CPG sectors.  ' },
+    { id: 1, title: 'AVEVA Select Gulf', logo: avevaicons, description:'AVEVA Select Gulf is a business line under AITS. It is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions.' },
+    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is another AITS business line. It is dedicated to driving industrial transformation in the Smart Cities and Food and Beverage/CPG sectors.' },
 ];
 const csr = [
   {
@@ -108,7 +108,7 @@ const valuesandcommitments =
   }"/>
   <ImageTextFlexFilters sectiontitle="Our culture" :data="csr"
   sectiondescription="This planet has already been through enough. We are committed to making a positive impact on society and the environment. Our commitment to sustainability is guided by three core values:"/>
-  <OneImageTextFlex :item="valuesandcommitments" reverse width
+  <!-- <OneImageTextFlex :item="valuesandcommitments" reverse width
   v-motion
   :initial="{
     opacity: 0,
@@ -122,6 +122,6 @@ const valuesandcommitments =
       stiffness: '100',
       delay: 100,
     },
-  }"/>
-  <Contact sectiondescription="We empower Gulf-based companies to become future-ready,  more competitive, and sustainable at every stage of their operational lifecycle." sectioncta="Speak With an Expert"/>
+  }"/> -->
+  <Contact sectiondescription="We empower companies to become future-ready, more competitive, and sustainable at every stage of their operational lifecycle." sectioncta="Speak With an Expert"/>
 </template>

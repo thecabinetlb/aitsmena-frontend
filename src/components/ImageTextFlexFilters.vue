@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const props = defineProps({
     sectionid: String,
@@ -22,9 +23,9 @@ const filterData = (key) => {
     <section :id="sectionid" class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
       <h1 class="text-accent1 font-[200] text-lg uppercase mb-3">{{ sectiontitle }}</h1>
       <hr class="w-full h-4 text-accent2"/>
-      <div class="mt-10 ">
-        <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">{{ sectiondescription }}</p>
-        <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="mt-6 w-fit block relative z-[2] cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Contact Our Experts</RouterLink>
+      <div class="mt-10">
+        <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6">{{ sectiondescription }}</p>
+        <RouterLink id="go-to-contact-page" aria-label="go to contact page" to="/contact" class="relative w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Contact Our Experts</RouterLink>
       </div>
      <div class="flex justify-between w-full mt-6 md:gap-6 2xl:w-6/12">
         <button @click="filterData(0)"
