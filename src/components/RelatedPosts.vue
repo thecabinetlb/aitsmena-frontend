@@ -12,7 +12,7 @@ const filteredData = computed(() => {
   return props.data.filter(item => item.industry === props.industry && item.id !== props.currentId);
 });
 const formatPublicationType = (publicationType) => {
-  if (publicationType === 'Blogoost') {
+  if (publicationType === 'Blogpost') {
     return 'blog';
   }
   return publicationType.toLowerCase().replace(/\s+/g, '-');

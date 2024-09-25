@@ -39,7 +39,7 @@ const onPageChange = (page) => {
 };
 
 const formatPublicationType = (publicationType) => {
-  if (publicationType === 'Blogoost') {
+  if (publicationType === 'Blogpost') {
     return 'blog';
   }
   return publicationType.toLowerCase().replace(/\s+/g, '-');

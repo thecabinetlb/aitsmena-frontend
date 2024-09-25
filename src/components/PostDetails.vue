@@ -16,22 +16,6 @@ defineProps({
             <h3 class="text-accent2 font-[200] max-sm:text-[14px] mb-6">{{ item.published_at }}</h3>
             <div class="space-y-6 tracking-wide text-accent2" v-html="item.content"></div>
             <div class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]" v-html="item.cta_description"></div>
-            <!-- <div v-else class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]">
-                <h1 class="font-[200] md:text-4xl text-[30px] mb-2">Client Overview:</h1>
-                <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6">AITS specializes in empowering industries to thrive by providing innovative software solutions tailored to their unique needs, all while prioritizing sustainability and efficiency.
-                As the main company within the IBI family, AITS plays a pivotal role in driving positive transformation across various industrial sectors. With a keen focus on sustainability, AITS is committed to helping our clients achieve their objectives while minimizing environmental impact. 
-                AITS is the holder of two distinguished sub-companies: AVEVA Select Gulf and IC2. Together these companies offer a comprehensive suite of solutions designed to address the diverse challenges faced by today's industries.
-                AITS’s mission is to become the leading industrial software innovator in the Gulf by delivering cutting-edge software solutions and exceptional customer experiences.
-                </p>
-                <h1 class="font-[200] md:text-4xl text-[30px] mb-2">Objectives</h1>
-                <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6">
-                To inform the target audience about what the Scada system is and what industries mainly use it, a breakdown of its 3 main layers, and the benefits / the role that the Scada system plays in industrial automation and digitalization (industry 4.0).                    
-                </p>
-                <h1 class="font-[200] md:text-4xl text-[30px] mb-2">Target Audience</h1>
-                <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] mb-6">
-                Industrial companies (Small, Medium, or Large) in the Gulf region that haven't implemented the Scada system yet. These companies could work in the F&B manufacturing, Oil and Gas, energy, utilities, or the Metal, Mining, and Minerals industries.
-                </p>
-            </div> -->
         </div>
     </section>
 </template>
