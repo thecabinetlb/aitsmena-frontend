@@ -19,19 +19,19 @@ const onVerify = (response) => {
 const onExpired = () => {
   reCaptchaValid.value = false; // Reset if expired
 };
-const errors = {
-  NameRequired: 'Name is required.',
-  EmailRequired: 'Email is required.',
-  EmailInvalid: 'Please specify a real email.',
-  CountryRequired: 'Country Name is required.',
-  CityRequired: 'City Name is required.',
-  IndustryRequired: 'Industry is required.',
-  PhoneRequired: 'Phone Number is required.',
-  PhoneInvalid: 'Phone Number should be numeric.',
-  InquiryRequired: 'Inquiry is required.',
-  InquiryInvalid: 'Invalid inquiry. Please select either General Inquiry or Sales and Support.',
-  MessageRequired: 'Please enter your content.'
-};
+// const errors = {
+//   NameRequired: 'Name is required.',
+//   EmailRequired: 'Email is required.',
+//   EmailInvalid: 'Please specify a real email.',
+//   CountryRequired: 'Country Name is required.',
+//   CityRequired: 'City Name is required.',
+//   IndustryRequired: 'Industry is required.',
+//   PhoneRequired: 'Phone Number is required.',
+//   PhoneInvalid: 'Phone Number should be numeric.',
+//   InquiryRequired: 'Inquiry is required.',
+//   InquiryInvalid: 'Invalid inquiry. Please select either General Inquiry or Sales and Support.',
+//   MessageRequired: 'Please enter your content.'
+// };
 
 const ErrorMessages = ref({
     name: '',
@@ -194,7 +194,7 @@ const handleSubmit = () => {
         });
     } 
 };
-
+const sitekey = import.meta.env.VITE_RECAPTCHAV2_SITEKEY;
 </script>
 
 <template>
@@ -306,17 +306,18 @@ const handleSubmit = () => {
             <div class="w-full col-span-2">
                 <vue-recaptcha 
                     ref="recaptcha" 
-                    :sitekey="'6LdrDcYpAAAAAAKprMmCkM5ESKdgGcLAwmr016wl'"
+                    :sitekey="sitekey"
                     @verify="onVerify"
                     @expired="onExpired"
-                ></vue-recaptcha>
+                    theme="dark"
+                    ></vue-recaptcha>
                 <!-- <Checkbox v-model="reCaptchaValid" theme="dark" /> -->
 
                 <!-- Error message if ReCaptcha isn't valid -->
                 <p v-if="reCaptchaValid === false" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
             </div>
             <!-- Submit -->
-            <div class="flex flex-wrap items-center w-full gap-2">
+            <div class="flex flex-col w-full gap-2">
             <button aria-label="send your content" class="cursor-pointer w-fit relative z-[2] col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[20px] shadow-sm bg-bg2 hover:brightness-125 transition-all duration-400">
             {{loading === true ?  'Sending...' : 'Send Message'}}
             </button>            
