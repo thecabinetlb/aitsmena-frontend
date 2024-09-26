@@ -9,35 +9,35 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../AITSLogoWithSlogan.webp": [
-    "/assets/InnerHero-BQzhpdwS.js"
+    "/assets/InnerHero-7xU0Zjkx.js"
   ],
   "../../../../AITS_v1.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/banners/about.webp": [
-    "/assets/about-Cbfc9O1R.js"
+    "/assets/about-CK8KH17T.js"
   ],
   "../../../../images/banners/careers.webp": [
-    "/assets/careers-CdlfEUSm.js"
+    "/assets/careers-D6CG7nMm.js"
   ],
   "../../../../images/banners/contact.webp": [
-    "/assets/contact-Dj67C3pt.js"
+    "/assets/contact-a75sM--I.js"
   ],
   "../../../../images/banners/elements/bottomright.webp": [
-    "/assets/InnerHero-BQzhpdwS.js"
+    "/assets/InnerHero-7xU0Zjkx.js"
   ],
   "../../../../images/banners/elements/topleft.webp": [
-    "/assets/InnerHero-BQzhpdwS.js"
+    "/assets/InnerHero-7xU0Zjkx.js"
   ],
   "../../../../images/banners/elements/topright.webp": [
-    "/assets/InnerHero-BQzhpdwS.js"
+    "/assets/InnerHero-7xU0Zjkx.js"
   ],
   "../../../../images/banners/industries.webp": [
-    "/assets/industries-D2l3_rzO.js",
-    "/assets/industries-DbLyT49d.css"
+    "/assets/industries-D3C3hTTM.js",
+    "/assets/industries-BUswAF1I.css"
   ],
   "../../../../images/banners/resources.webp": [
-    "/assets/index-U9DJ_r_p.js",
+    "/assets/index-C-VeZHjP.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "../../../../images/hero/arrow.webp": [
@@ -92,22 +92,22 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/insidepages/elements/centermiddle.webp": [
-    "/assets/InsideBody-BtYKhZPV.js"
+    "/assets/InsideBody-BlbbbjVT.js"
   ],
   "../../../../images/insidepages/elements/centertop.webp": [
-    "/assets/InsideBody-BtYKhZPV.js"
+    "/assets/InsideBody-BlbbbjVT.js"
   ],
   "../../../../images/insidepages/elements/leftmiddle.webp": [
-    "/assets/InsideBody-BtYKhZPV.js"
+    "/assets/InsideBody-BlbbbjVT.js"
   ],
   "../../../../images/insidepages/elements/rightbottom.webp": [
-    "/assets/InsideBody-BtYKhZPV.js"
+    "/assets/InsideBody-BlbbbjVT.js"
   ],
   "../../../../images/insidepages/elements/rightmiddle.webp": [
-    "/assets/InsideBody-BtYKhZPV.js"
+    "/assets/InsideBody-BlbbbjVT.js"
   ],
   "../../../../images/insidepages/elements/righttop.webp": [
-    "/assets/InsideBody-BtYKhZPV.js"
+    "/assets/InsideBody-BlbbbjVT.js"
   ],
   "../../../../images/patterns/patternfooter.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -140,10 +140,10 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/testimonies/partners/aveva.webp": [
-    "/assets/about-Cbfc9O1R.js"
+    "/assets/about-CK8KH17T.js"
   ],
   "../../../../images/testimonies/partners/ic2.webp": [
-    "/assets/about-Cbfc9O1R.js"
+    "/assets/about-CK8KH17T.js"
   ],
   "index.html": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -496,14 +496,11 @@
   "src/assets/css/index.css": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
-  "src/components/BenefitsFlexWithBlur.vue": [
-    "/assets/careers-CdlfEUSm.js"
-  ],
   "src/components/Contact.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/ContactForm.vue": [
-    "/assets/contact-Dj67C3pt.js"
+    "/assets/contact-a75sM--I.js"
   ],
   "src/components/Hero.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -518,21 +515,21 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/IndustriesInsideCarousel.vue": [
-    "/assets/industries-D2l3_rzO.js",
-    "/assets/industries-DbLyT49d.css"
+    "/assets/industries-D3C3hTTM.js",
+    "/assets/industries-BUswAF1I.css"
   ],
-  "src/components/IndustriesInsideCarousel.vue?vue&type=style&index=0&scoped=18776d59&lang.css": [
-    "/assets/industries-D2l3_rzO.js",
-    "/assets/industries-DbLyT49d.css"
+  "src/components/IndustriesInsideCarousel.vue?vue&type=style&index=0&scoped=2ee9836f&lang.css": [
+    "/assets/industries-D3C3hTTM.js",
+    "/assets/industries-BUswAF1I.css"
   ],
   "src/components/InnerHero.vue": [
-    "/assets/InnerHero-BQzhpdwS.js"
+    "/assets/InnerHero-7xU0Zjkx.js"
   ],
   "src/components/InsideBody.vue": [
-    "/assets/InsideBody-BtYKhZPV.js"
+    "/assets/InsideBody-BlbbbjVT.js"
   ],
   "src/components/JobsList.vue": [
-    "/assets/careers-CdlfEUSm.js"
+    "/assets/careers-D6CG7nMm.js"
   ],
   "src/components/Newsletter.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -544,21 +541,24 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/PostDetails.vue": [
-    "/assets/_...slug_-Bj2v0W5d.js"
+    "/assets/_...slug_-BDGU_F0u.js"
   ],
   "src/components/PostsList.vue": [
-    "/assets/index-U9DJ_r_p.js",
+    "/assets/index-C-VeZHjP.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/components/PostsList.vue?vue&type=style&index=0&lang.css": [
-    "/assets/index-U9DJ_r_p.js",
+    "/assets/index-C-VeZHjP.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/components/RelatedPosts.vue": [
-    "/assets/_...slug_-Bj2v0W5d.js"
+    "/assets/_...slug_-BDGU_F0u.js"
   ],
   "src/components/TextGrid.vue": [
-    "/assets/contact-Dj67C3pt.js"
+    "/assets/contact-a75sM--I.js"
+  ],
+  "src/components/Why.vue": [
+    "/assets/careers-D6CG7nMm.js"
   ],
   "src/components/icons/aveva.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -576,26 +576,26 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/pages/about.vue": [
-    "/assets/about-Cbfc9O1R.js"
+    "/assets/about-CK8KH17T.js"
   ],
   "src/pages/careers.vue": [
-    "/assets/careers-CdlfEUSm.js"
+    "/assets/careers-D6CG7nMm.js"
   ],
   "src/pages/contact.vue": [
-    "/assets/contact-Dj67C3pt.js"
+    "/assets/contact-a75sM--I.js"
   ],
   "src/pages/index.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/pages/industries.vue": [
-    "/assets/industries-D2l3_rzO.js",
-    "/assets/industries-DbLyT49d.css"
+    "/assets/industries-D3C3hTTM.js",
+    "/assets/industries-BUswAF1I.css"
   ],
   "src/pages/resource-center/blog/[...slug].vue": [
-    "/assets/_...slug_-Bj2v0W5d.js"
+    "/assets/_...slug_-BDGU_F0u.js"
   ],
   "src/pages/resource-center/index.vue": [
-    "/assets/index-U9DJ_r_p.js",
+    "/assets/index-C-VeZHjP.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/utils/api.js": [

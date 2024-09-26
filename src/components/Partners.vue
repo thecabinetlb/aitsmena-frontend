@@ -26,7 +26,7 @@ const showDes = (id) => {
             </div>
         </div>
         <div class="w-6/12">
-            <h1 class="font-[200] text-accent1 md:text-4xl text-[30px] uppercase mb-6 lg:w-[70.666667%]">Leading Two Business Divisions</h1>
+            <h1 class="font-[200] text-accent1 md:text-4xl text-[30px] uppercase mb-6">Two Divisions, One Vision: Innovation and Excellence</h1>
             <div v-for="(item, key) in data" :key="item.id">
                 <p v-show="isHovered === item.id" class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
             </div>
@@ -35,7 +35,7 @@ const showDes = (id) => {
     <!-- Mobile -->
     <div class="relative lg:hidden">
         <div class="w-full mb-6 space-y-3">
-            <h1 class="font-[200] text-accent1 md:text-4xl text-[30px] uppercase mb-6">Leading Two Business Divisions</h1>
+            <h1 class="font-[200] text-accent1 md:text-4xl text-[30px] uppercase mb-6">Two Divisions, One Vision: Innovation and Excellence</h1>
             <div v-for="(item, key) in data" :key="item.id">
                 <p v-show="isHovered === item.id" class="min-h-[96px] text-accent2 font-[200] max-sm:text-[14px]">{{ item.description }}</p>
             </div>  

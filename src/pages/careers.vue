@@ -3,8 +3,15 @@ import banner from '/images/banners/careers.webp'
 import JobsList from '../components/JobsList.vue';
 import InnerHero from '../components/InnerHero.vue';
 import InsideBody from '../components/InsideBody.vue';
-import BenefitsFlexWithBlur from '../components/BenefitsFlexWithBlur.vue';
-
+import Why from '../components/Why.vue';
+const why = [
+'Thrive personally and professionally',
+'Inclusive culture that celebrates diversity',
+'Purpose-driven approach',
+'Attractive salary packages',
+'Performance-based annual increases',  
+'Work-life balance',  
+]
 // const jobs =[
 //   { id: 1, title: 'Software Engineer', type: 'Full-time', to: 'https://example.com/job1', target: '_blank', location: 'San Francisco, CA' },
 //   { id: 2, title: 'Data Analyst', type: 'Contract', to: 'https://example.com/job2', target: '_blank', location: 'New York, NY' },
@@ -62,11 +69,11 @@ import BenefitsFlexWithBlur from '../components/BenefitsFlexWithBlur.vue';
     </head>      
     <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the family."/>
     <section class="relative -mt-40">
+      <Why sectiontitle="Why AITS?" :data="why"/>
       <JobsList sectionid="jobs-openings" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation and digitalization.
       Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
       your business stay ahead of the curve."/>
-      <JobsList sectionid="internship-opportunities" sectiontitle="Internship Opportunities" sectiondescription="Got a knack for learning? Join our team as an intern and develop your skills while exploring the mystical world of software solutions and digital services."/>
-      <BenefitsFlexWithBlur sectiontitle="Employees Benefits" />
+      <JobsList sectionid="internship-opportunities" sectiontitle="Graduate Program and Internship Opportunities" sectiondescription="Kickstart your career with real-world challenges and mentorship from industry leaders. Join our Graduate Program or explore an internship opportunity with us to develop your skills and dive into the fascinating world of software solutions and digital services."/>
       <InsideBody/>
     </section>    
 </template>

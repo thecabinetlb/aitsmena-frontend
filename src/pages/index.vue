@@ -39,7 +39,7 @@ const missionandvission =
 }
 const partners = [
     { id: 1, title: 'AVEVA Select Gulf', logo: avevaicons, description:'AVEVA Select Gulf is a business division under AITS. It is dedicated to the distribution and support of AVEVA’s software portfolio. It manages licensing, offers expert support, and collaborates with system integrators to deliver top-tier software solutions.' },
-    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is another AITS business division. It is dedicated to driving industrial transformation in the Smart Cities and Food and Beverage/CPG sectors.' },
+    { id: 2, title: 'IC2', logo: ic2icons, description:'IC2 is another AITS business division. It operates as an Integrated Competencies Center to provide a comprehensive, end-to-end solutions for clients. IC2 combines three core pillars: industrial software expertise, consulting practices, and deep industry knowledge.'},
 ];
 const csr = [
   {
