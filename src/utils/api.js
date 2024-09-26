@@ -13,7 +13,7 @@ export function getBlogPosts(){
         is_featured: true,
         is_arabic: false,
         industry: "Manufacturing",
-        publication_type: "Blogpost"
+        publication_type: "Blog post"
       },
       {
         id: 2,
@@ -28,7 +28,7 @@ export function getBlogPosts(){
         is_featured: true,
         is_arabic: false,
         industry: "Manufacturing",
-        publication_type: "Blogpost"
+        publication_type: "Blog post"
       },
       // {
       //   id: 3,
