@@ -63,7 +63,7 @@ const formatPublicationType = (publicationType) => {
       @click="filterData(item)">
       {{item}}</button>
     </div>        
-    <ul role="list" class="grid grid-cols-1 gap-3 mt-10 lg:grid-cols-2 sm:grid-cols-2 list-style-none">
+    <ul role="list" class="grid grid-cols-1 gap-3 mt-10 lg:grid-cols-2 md:grid-cols-2 list-style-none">
       <li v-for="(item, key) in paginatedData" :key="key" class="flex-grow group w-full relative group sm:min-h-[135px] rounded-[16px] border-2 border-bg2">
         <RouterLink 
           v-if="item.slug && item.publication_type"
@@ -86,7 +86,7 @@ const formatPublicationType = (publicationType) => {
             <h3 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.published_at }}</h3>
             </div>
             <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px]">{{ item.title }}</h2>
-            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] min-h-[120px]">{{ item.summary }}</p>
+            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] lg:min-h-[120px] md:min-h-[144px]">{{ item.summary }}</p>
             <span class="border-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center mt-auto mb-0 ms-auto me-0 border-2  hover:border-bg2 text-xl rounded-full">
                 <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" class="transition-all stroke-accent2 duration-400 hover:stroke-bg2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
