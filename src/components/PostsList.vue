@@ -58,13 +58,13 @@ const formatPublicationType = (publicationType) => {
       v-for="(item, key) in props.uniqueIndustries" :key="key" 
       :id="item + (isClicked === item ? '-active' : '')" 
       :aria-label="'show ' + item"
-      class="px-2 sm:px-4 py-3 w-fit max-sm:text-[14px] backdrop-blur-[16px]  transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 outline-none"
+      class="px-2 sm:px-4 py-3 w-fit max-sm:text-[14px] backdrop-blur-[16px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 outline-none"
       :class="{'border-b-2 border-accent1': isClicked === item, 'border-b-2 border-bg2' : isClicked != item}"
       @click="filterData(item)">
       {{item}}</button>
     </div>        
-    <ul role="list" class="grid grid-cols-1 gap-3 mt-10 lg:grid-cols-2 md:grid-cols-2 list-style-none">
-      <li v-for="(item, key) in paginatedData" :key="key" class="flex-grow group w-full relative group sm:min-h-[135px] rounded-[16px] border-2 border-bg2">
+    <ul role="list" class="grid grid-cols-1 gap-3 mt-10 xl:grid-cols-3 md:grid-cols-2 list-style-none">
+      <li v-for="(item, key) in paginatedData" :key="key" class="flex-grow group w-full relative group rounded-[16px] border-2 border-bg2">
         <RouterLink 
           v-if="item.slug && item.publication_type"
           :id="'go-to-' + item.title + '-page'" 
@@ -82,11 +82,11 @@ const formatPublicationType = (publicationType) => {
                 {{ item.publication_type }}
             </h2>
             <div class="flex flex-wrap justify-between gap-3 pb-3 border-b border-bg2">
-            <h2 class="text-accent1 font-[400] sm:text-xl">{{ item.industry }}</h2>              
-            <h3 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.published_at }}</h3>
+            <h2 class="text-accent1 font-[400] max-sm:text-[14px]">{{ item.industry }}</h2>              
+            <h2 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.published_at }}</h2>
             </div>
-            <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px]">{{ item.title }}</h2>
-            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] lg:min-h-[120px] md:min-h-[144px]">{{ item.summary }}</p>
+            <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px] 2xl:min-h-full md:min-h-[98px]">{{ item.title }}</h2>
+            <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] xl:min-h-[192px] md:min-h-[169px]">{{ item.summary }}</p>
             <span class="border-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center mt-auto mb-0 ms-auto me-0 border-2  hover:border-bg2 text-xl rounded-full">
                 <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" class="transition-all stroke-accent2 duration-400 hover:stroke-bg2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"/>

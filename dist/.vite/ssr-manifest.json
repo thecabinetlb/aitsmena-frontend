@@ -9,35 +9,35 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../AITSLogoWithSlogan.webp": [
-    "/assets/InnerHero-9UjDDSOT.js"
+    "/assets/InnerHero-CET3xURC.js"
   ],
   "../../../../AITS_v1.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/banners/about.webp": [
-    "/assets/about-CxmFbSEG.js"
+    "/assets/about-CuFA8a73.js"
   ],
   "../../../../images/banners/careers.webp": [
-    "/assets/careers-Ck5cCZBi.js"
+    "/assets/careers-CZSC731r.js"
   ],
   "../../../../images/banners/contact.webp": [
-    "/assets/contact-C7v9mwCM.js"
+    "/assets/contact-QrHNJFFi.js"
   ],
   "../../../../images/banners/elements/bottomright.webp": [
-    "/assets/InnerHero-9UjDDSOT.js"
+    "/assets/InnerHero-CET3xURC.js"
   ],
   "../../../../images/banners/elements/topleft.webp": [
-    "/assets/InnerHero-9UjDDSOT.js"
+    "/assets/InnerHero-CET3xURC.js"
   ],
   "../../../../images/banners/elements/topright.webp": [
-    "/assets/InnerHero-9UjDDSOT.js"
+    "/assets/InnerHero-CET3xURC.js"
   ],
   "../../../../images/banners/industries.webp": [
-    "/assets/industries-DbR_Z8vZ.js",
-    "/assets/industries-BUswAF1I.css"
+    "/assets/industries-COf9ucuj.js",
+    "/assets/industries-AaUAGCw0.css"
   ],
   "../../../../images/banners/resources.webp": [
-    "/assets/index-ClfqfZ_W.js",
+    "/assets/index-C2TMoyBc.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "../../../../images/hero/arrow.webp": [
@@ -92,22 +92,22 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/insidepages/elements/centermiddle.webp": [
-    "/assets/InsideBody-rM4aZ1wy.js"
+    "/assets/InsideBody-Jdxua9Th.js"
   ],
   "../../../../images/insidepages/elements/centertop.webp": [
-    "/assets/InsideBody-rM4aZ1wy.js"
+    "/assets/InsideBody-Jdxua9Th.js"
   ],
   "../../../../images/insidepages/elements/leftmiddle.webp": [
-    "/assets/InsideBody-rM4aZ1wy.js"
+    "/assets/InsideBody-Jdxua9Th.js"
   ],
   "../../../../images/insidepages/elements/rightbottom.webp": [
-    "/assets/InsideBody-rM4aZ1wy.js"
+    "/assets/InsideBody-Jdxua9Th.js"
   ],
   "../../../../images/insidepages/elements/rightmiddle.webp": [
-    "/assets/InsideBody-rM4aZ1wy.js"
+    "/assets/InsideBody-Jdxua9Th.js"
   ],
   "../../../../images/insidepages/elements/righttop.webp": [
-    "/assets/InsideBody-rM4aZ1wy.js"
+    "/assets/InsideBody-Jdxua9Th.js"
   ],
   "../../../../images/patterns/patternfooter.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -140,10 +140,10 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/testimonies/partners/aveva.webp": [
-    "/assets/about-CxmFbSEG.js"
+    "/assets/about-CuFA8a73.js"
   ],
   "../../../../images/testimonies/partners/ic2.webp": [
-    "/assets/about-CxmFbSEG.js"
+    "/assets/about-CuFA8a73.js"
   ],
   "index.html": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -500,7 +500,7 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/ContactForm.vue": [
-    "/assets/contact-C7v9mwCM.js"
+    "/assets/contact-QrHNJFFi.js"
   ],
   "src/components/Hero.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -515,21 +515,21 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/IndustriesInsideCarousel.vue": [
-    "/assets/industries-DbR_Z8vZ.js",
-    "/assets/industries-BUswAF1I.css"
+    "/assets/industries-COf9ucuj.js",
+    "/assets/industries-AaUAGCw0.css"
   ],
-  "src/components/IndustriesInsideCarousel.vue?vue&type=style&index=0&scoped=2ee9836f&lang.css": [
-    "/assets/industries-DbR_Z8vZ.js",
-    "/assets/industries-BUswAF1I.css"
+  "src/components/IndustriesInsideCarousel.vue?vue&type=style&index=0&scoped=b6622ce9&lang.css": [
+    "/assets/industries-COf9ucuj.js",
+    "/assets/industries-AaUAGCw0.css"
   ],
   "src/components/InnerHero.vue": [
-    "/assets/InnerHero-9UjDDSOT.js"
+    "/assets/InnerHero-CET3xURC.js"
   ],
   "src/components/InsideBody.vue": [
-    "/assets/InsideBody-rM4aZ1wy.js"
+    "/assets/InsideBody-Jdxua9Th.js"
   ],
   "src/components/JobsList.vue": [
-    "/assets/careers-Ck5cCZBi.js"
+    "/assets/careers-CZSC731r.js"
   ],
   "src/components/Newsletter.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -541,24 +541,24 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/PostDetails.vue": [
-    "/assets/_...slug_-0L76BbQm.js"
+    "/assets/_...slug_-BrdLExQ_.js"
   ],
   "src/components/PostsList.vue": [
-    "/assets/index-ClfqfZ_W.js",
+    "/assets/index-C2TMoyBc.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/components/PostsList.vue?vue&type=style&index=0&lang.css": [
-    "/assets/index-ClfqfZ_W.js",
+    "/assets/index-C2TMoyBc.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/components/RelatedPosts.vue": [
-    "/assets/_...slug_-0L76BbQm.js"
+    "/assets/_...slug_-BrdLExQ_.js"
   ],
   "src/components/TextGrid.vue": [
-    "/assets/contact-C7v9mwCM.js"
+    "/assets/contact-QrHNJFFi.js"
   ],
   "src/components/Why.vue": [
-    "/assets/careers-Ck5cCZBi.js"
+    "/assets/careers-CZSC731r.js"
   ],
   "src/components/icons/aveva.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -576,30 +576,30 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/pages/about.vue": [
-    "/assets/about-CxmFbSEG.js"
+    "/assets/about-CuFA8a73.js"
   ],
   "src/pages/careers.vue": [
-    "/assets/careers-Ck5cCZBi.js"
+    "/assets/careers-CZSC731r.js"
   ],
   "src/pages/contact.vue": [
-    "/assets/contact-C7v9mwCM.js"
+    "/assets/contact-QrHNJFFi.js"
   ],
   "src/pages/index.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/pages/industries.vue": [
-    "/assets/industries-DbR_Z8vZ.js",
-    "/assets/industries-BUswAF1I.css"
+    "/assets/industries-COf9ucuj.js",
+    "/assets/industries-AaUAGCw0.css"
   ],
   "src/pages/resource-center/blog/[...slug].vue": [
-    "/assets/_...slug_-0L76BbQm.js"
+    "/assets/_...slug_-BrdLExQ_.js"
   ],
   "src/pages/resource-center/index.vue": [
-    "/assets/index-ClfqfZ_W.js",
+    "/assets/index-C2TMoyBc.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/utils/api.js": [
-    "/assets/api-HRY4cavj.js"
+    "/assets/api-BZBK_TVB.js"
   ],
   "virtual:vite-plugin-pages/generated-pages?id=~pages": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
