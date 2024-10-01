@@ -9,35 +9,35 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../AITSLogoWithSlogan.webp": [
-    "/assets/InnerHero-DWjw5bSj.js"
+    "/assets/InnerHero-DUbXX3KG.js"
   ],
   "../../../../AITS_v1.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/banners/about.webp": [
-    "/assets/about-MgmI0uXf.js"
+    "/assets/about-Dnb2_ThR.js"
   ],
   "../../../../images/banners/careers.webp": [
-    "/assets/careers-3vBG4NMb.js"
+    "/assets/careers-BhCjpLI0.js"
   ],
   "../../../../images/banners/contact.webp": [
-    "/assets/contact-C2MI_URA.js"
+    "/assets/contact-DiC3K5VS.js"
   ],
   "../../../../images/banners/elements/bottomright.webp": [
-    "/assets/InnerHero-DWjw5bSj.js"
+    "/assets/InnerHero-DUbXX3KG.js"
   ],
   "../../../../images/banners/elements/topleft.webp": [
-    "/assets/InnerHero-DWjw5bSj.js"
+    "/assets/InnerHero-DUbXX3KG.js"
   ],
   "../../../../images/banners/elements/topright.webp": [
-    "/assets/InnerHero-DWjw5bSj.js"
+    "/assets/InnerHero-DUbXX3KG.js"
   ],
   "../../../../images/banners/industries.webp": [
-    "/assets/industries-BQ5grVZH.js",
+    "/assets/industries-CNYVqS9r.js",
     "/assets/industries-AaUAGCw0.css"
   ],
   "../../../../images/banners/resources.webp": [
-    "/assets/index-BRNLLClC.js",
+    "/assets/index-vvtmWYfC.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "../../../../images/hero/arrow.webp": [
@@ -92,22 +92,22 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/insidepages/elements/centermiddle.webp": [
-    "/assets/InsideBody-DUkIRYTB.js"
+    "/assets/InsideBody-6nG9f8qM.js"
   ],
   "../../../../images/insidepages/elements/centertop.webp": [
-    "/assets/InsideBody-DUkIRYTB.js"
+    "/assets/InsideBody-6nG9f8qM.js"
   ],
   "../../../../images/insidepages/elements/leftmiddle.webp": [
-    "/assets/InsideBody-DUkIRYTB.js"
+    "/assets/InsideBody-6nG9f8qM.js"
   ],
   "../../../../images/insidepages/elements/rightbottom.webp": [
-    "/assets/InsideBody-DUkIRYTB.js"
+    "/assets/InsideBody-6nG9f8qM.js"
   ],
   "../../../../images/insidepages/elements/rightmiddle.webp": [
-    "/assets/InsideBody-DUkIRYTB.js"
+    "/assets/InsideBody-6nG9f8qM.js"
   ],
   "../../../../images/insidepages/elements/righttop.webp": [
-    "/assets/InsideBody-DUkIRYTB.js"
+    "/assets/InsideBody-6nG9f8qM.js"
   ],
   "../../../../images/patterns/patternfooter.svg": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -140,10 +140,10 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "../../../../images/testimonies/partners/aveva.webp": [
-    "/assets/about-MgmI0uXf.js"
+    "/assets/about-Dnb2_ThR.js"
   ],
   "../../../../images/testimonies/partners/ic2.webp": [
-    "/assets/about-MgmI0uXf.js"
+    "/assets/about-Dnb2_ThR.js"
   ],
   "index.html": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -500,7 +500,7 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/ContactForm.vue": [
-    "/assets/contact-C2MI_URA.js"
+    "/assets/contact-DiC3K5VS.js"
   ],
   "src/components/Hero.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -515,21 +515,21 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/IndustriesInsideCarousel.vue": [
-    "/assets/industries-BQ5grVZH.js",
+    "/assets/industries-CNYVqS9r.js",
     "/assets/industries-AaUAGCw0.css"
   ],
   "src/components/IndustriesInsideCarousel.vue?vue&type=style&index=0&scoped=b6622ce9&lang.css": [
-    "/assets/industries-BQ5grVZH.js",
+    "/assets/industries-CNYVqS9r.js",
     "/assets/industries-AaUAGCw0.css"
   ],
   "src/components/InnerHero.vue": [
-    "/assets/InnerHero-DWjw5bSj.js"
+    "/assets/InnerHero-DUbXX3KG.js"
   ],
   "src/components/InsideBody.vue": [
-    "/assets/InsideBody-DUkIRYTB.js"
+    "/assets/InsideBody-6nG9f8qM.js"
   ],
   "src/components/JobsList.vue": [
-    "/assets/careers-3vBG4NMb.js"
+    "/assets/careers-BhCjpLI0.js"
   ],
   "src/components/Newsletter.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -541,24 +541,24 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/components/PostDetails.vue": [
-    "/assets/_...slug_-CNVoOsPj.js"
+    "/assets/_...slug_-3Es25B6-.js"
   ],
   "src/components/PostsList.vue": [
-    "/assets/index-BRNLLClC.js",
+    "/assets/index-vvtmWYfC.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/components/PostsList.vue?vue&type=style&index=0&lang.css": [
-    "/assets/index-BRNLLClC.js",
+    "/assets/index-vvtmWYfC.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/components/RelatedPosts.vue": [
-    "/assets/_...slug_-CNVoOsPj.js"
+    "/assets/_...slug_-3Es25B6-.js"
   ],
   "src/components/TextGrid.vue": [
-    "/assets/contact-C2MI_URA.js"
+    "/assets/contact-DiC3K5VS.js"
   ],
   "src/components/Why.vue": [
-    "/assets/careers-3vBG4NMb.js"
+    "/assets/careers-BhCjpLI0.js"
   ],
   "src/components/icons/aveva.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
@@ -576,30 +576,30 @@
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/pages/about.vue": [
-    "/assets/about-MgmI0uXf.js"
+    "/assets/about-Dnb2_ThR.js"
   ],
   "src/pages/careers.vue": [
-    "/assets/careers-3vBG4NMb.js"
+    "/assets/careers-BhCjpLI0.js"
   ],
   "src/pages/contact.vue": [
-    "/assets/contact-C2MI_URA.js"
+    "/assets/contact-DiC3K5VS.js"
   ],
   "src/pages/index.vue": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"
   ],
   "src/pages/industries.vue": [
-    "/assets/industries-BQ5grVZH.js",
+    "/assets/industries-CNYVqS9r.js",
     "/assets/industries-AaUAGCw0.css"
   ],
   "src/pages/resource-center/blog/[...slug].vue": [
-    "/assets/_...slug_-CNVoOsPj.js"
+    "/assets/_...slug_-3Es25B6-.js"
   ],
   "src/pages/resource-center/index.vue": [
-    "/assets/index-BRNLLClC.js",
+    "/assets/index-vvtmWYfC.js",
     "/assets/index-MT7ebSgJ.css"
   ],
   "src/utils/api.js": [
-    "/assets/api-C2W9yKAx.js"
+    "/assets/api-BYSORtJO.js"
   ],
   "virtual:vite-plugin-pages/generated-pages?id=~pages": [
     "/assets/Aktifo-A-Book-BT1P3luM.woff2"

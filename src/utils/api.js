@@ -32,7 +32,7 @@ export function getBlogPosts(){
       },
       {
         id: 3,
-        image: '/images/publications/blog/thumbnails/growing-challenges-modern-cities.png',
+        image: '/images/publications/blog/thumbnails/growing-challenges-modern-cities.webp',
         title: "Building Smart Cities: Addressing the Challenges of Urban Living",
         slug: "growing-challenges-modern-cities",
         summary: "Explore the growing challenges facing modern cities, from aging infrastructure and budget constraints to climate change and rapid urbanization. Discover how digital transformation can reshape urban management and pave the way for sustainable, resilient cities.",
