@@ -13,22 +13,16 @@ const navlinks = [
     id: 3, 
     name: 'Resource Center', 
     to: '/resource-center',
-    // submenu: [
-    //   { id: 4, name: 'Blog', to:'#blog' },
-    //   { id: 5, name: 'Whitepapers', to:'#whitepapers' },
-    //   // { id: 6, name: 'Webinars', to:'#webinars' },
-    //   { id: 7, name: 'Industry Insights', to:'#industry-insights' }
-    // ]
   },
   { 
     id: 4, 
     name: 'Careers', 
     to: '/careers',
-    submenu: [
-      { id: 8, name: 'Job Openings', to:'#jobs-openings' },
-      { id: 9, name: 'Internship Opportunities', to:'#internship-opportunities' },
-      { id: 10, name: 'Employee Benefits', to:'#employee-benefits' }
-    ]
+    // submenu: [
+    //   { id: 8, name: 'Job Openings', to:'#jobs-openings' },
+    //   { id: 9, name: 'Internship Opportunities', to:'#internship-opportunities' },
+    //   { id: 10, name: 'Employee Benefits', to:'#employee-benefits' }
+    // ]
   },
   { id: 5, name: 'Contact', to: '/contact' },
 ]
