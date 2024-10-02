@@ -42,3 +42,4 @@
 
 <p class='font-[200] max-sm:text-[14px] mb-3'>By leveraging cutting-edge software and infrastructure management tools, cities optimize operations across various service lines. This includes ensuring secure, scalable operations that enhance resilience, sustainability, and citizen engagement.</p>
 </template>
+

@@ -4,6 +4,9 @@ import JobsList from '../components/JobsList.vue';
 import InnerHero from '../components/InnerHero.vue';
 import InsideBody from '../components/InsideBody.vue';
 import Why from '../components/Why.vue';
+import Job from '../components/Job.vue';
+import Graduate from '../components/Graduate.vue';
+
 const why = [
 'Thrive personally and professionally',
 'Inclusive culture that celebrates diversity',
@@ -12,55 +15,24 @@ const why = [
 'Performance-based annual increases',  
 'Work-life balance',  
 ]
-// const jobs =[
-//   { id: 1, title: 'Software Engineer', type: 'Full-time', to: 'https://example.com/job1', target: '_blank', location: 'San Francisco, CA' },
-//   { id: 2, title: 'Data Analyst', type: 'Contract', to: 'https://example.com/job2', target: '_blank', location: 'New York, NY' },
-//   { id: 3, title: 'Marketing Specialist', type: 'Part-time', to: 'https://example.com/job3', target: '_blank', location: 'Los Angeles, CA' },
-//   { id: 4, title: 'Graphic Designer', type: 'Freelance', to: 'https://example.com/job4', target: '_blank', location: 'Chicago, IL' },
-//   { id: 5, title: 'Project Manager', type: 'Full-time', to: 'https://example.com/job5', target: '_blank', location: 'Seattle, WA' },
-//   { id: 6, title: 'HR Coordinator', type: 'Full-time', to: 'https://example.com/job6', target: '_blank', location: 'Boston, MA' },
-//   { id: 7, title: 'Financial Analyst', type: 'Full-time', to: 'https://example.com/job7', target: '_blank', location: 'Austin, TX' },
-//   { id: 8, title: 'Customer Service Representative', type: 'Part-time', to: 'https://example.com/job8', target: '_blank', location: 'Denver, CO' },
-// ];
+
+const jobs = [
+  { id: 1, title: 'Project Manager', location: 'Al Khobar, Saudi Arabia', 
+  summary: 'The Project Manager will be responsible for managing and ensuring the successful execution of projects related to AVEVA software, from initial planning to completion. This role involves coordinating with cross-functional teams, managing timelines, budgets, and resources, and ensuring that projects meet the specified objectives, deadlines, and quality standards.',
+  description: Job}
+]
+
 // const internships = [
-//   { id: 1, title: 'Marketing Intern', type: 'Internship', to: 'https://example.com/internship1', target: '_blank', location: 'San Francisco, CA' },
-//   { id: 2, title: 'Software Development Intern', type: 'Internship', to: 'https://example.com/internship2', target: '_blank', location: 'New York, NY' },
-//   { id: 3, title: 'Data Analysis Intern', type: 'Internship', to: 'https://example.com/internship3', target: '_blank', location: 'Los Angeles, CA' },
-//   { id: 4, title: 'Graphic Design Intern', type: 'Internship', to: 'https://example.com/internship4', target: '_blank', location: 'Chicago, IL' },
-//   { id: 5, title: 'Project Management Intern', type: 'Internship', to: 'https://example.com/internship5', target: '_blank', location: 'Seattle, WA' },
-// ];
-// const benefits = [
-//   { 
-//     id: 1, 
-//     title: 'Competitive compensation and rewards packages tailored to recognize and appreciate individual contributions.', 
-//     // description: 'Comprehensive health insurance coverage for employees and their dependents, including medical, dental, and vision benefits.'
-//   },
-//   { 
-//     id: 2, 
-//     title: 'Robust opportunities for professional development and career advancement, including access to cutting-edge training programs and mentorship initiatives.', 
-//     // description: 'Competitive salaries and performance-based bonuses or incentives to reward employees for their contributions and achievements.'
-//   },
-//   { 
-//     id: 3, 
-//     title: 'A collaborative and supportive workplace culture that champions innovation, diversity, and work-life balance, ensuring every team member feels empowered and valued.', 
-//     // description: 'Support for ongoing learning and skill development through training programs, workshops, conferences, and tuition reimbursement.'
-//   },
-//   // { 
-//   //   id: 5, 
-//   //   title: 'Parental Leave', 
-//   //   description: 'Paid parental leave policies for new parents, including maternity, paternity, and adoption leave, to support employees during significant life transitions.'
-//   // },
-//   // { 
-//   //   id: 6, 
-//   //   title: 'Employee Recognition Programs', 
-//   //   description: 'Recognition programs to acknowledge and reward employees for their contributions, milestones, and achievements, fostering a culture of appreciation and recognition.'
-//   // },
-//   // { 
-//   //   id: 7, 
-//   //   title: 'Employee Referral Program', 
-//   //   description: 'Incentives for employees who refer qualified candidates to open positions within the company, helping to attract top talent through employee networks.'
-//   // }
-// ];
+// { id: 1, title: 'Project Manager', location: 'Al Khobar, Saudi Arabia', 
+//   summary: 'The Project Manager will be responsible for managing and ensuring the successful execution of projects related to AVEVA software, from initial planning to completion. This role involves coordinating with cross-functional teams, managing timelines, budgets, and resources, and ensuring that projects meet the specified objectives, deadlines, and quality standards.',
+//   description:'' }
+// ]
+
+const graduateprogram = [
+{ id: 1, title: 'Graduate Engineer', location: 'Al Khobar, Eastern, Saudi Arabia', summarytitle:"AITS Graduate Program",
+  summary:"Are you a fresh graduate with a passion for software engineering? Our Graduate Program offers a unique opportunity to build your career with us!",
+  description: Graduate }
+]
 </script>
 <template>
     <head>
@@ -70,10 +42,10 @@ const why = [
     <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the family."/>
     <section class="relative -mt-40">
       <Why sectiontitle="Why AITS?" :data="why"/>
-      <JobsList sectionType="job openings" sectiontitle="Job Openings" 
+      <JobsList sectionType="job openings" sectiontitle="Job Openings" :data="jobs"
       sectiondescription1="We’re looking for makers, innovators, and problem solvers who are driven by the passion to innovate. Join a team that brings together the power of technology to build a more intelligent, connected, and productive world. We offer a dynamic environment where you can grow your career while solving complex, real-world challenges that push the boundaries of human potential."
       sectiondescription2="Explore our job openings, if you’re ready to make an impact and take the next step in your career journey with us."/>
-      <JobsList sectionType="internship opportunities" sectiontitle="Graduate Program and Internship Opportunities" 
+      <JobsList sectionType="graduate program and internship opportunities" sectiontitle="Graduate Program and Internship Opportunities"  :data="graduateprogram"
       sectiondescription1="Kickstart your career with our Internship and Graduate Program at AITS!"
       sectiondescription2="Our program is designed for curious minds, eager to explore the future of software solutions and digital services."
       sectiondescription3="Whether you’re looking to gain experience or receive mentorship from industry leaders, our program provides the perfect platform to develop your skills, solve real-world problems, and grow in a supportive environment."
