@@ -70,10 +70,10 @@ const why = [
     <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the family."/>
     <section class="relative -mt-40">
       <Why sectiontitle="Why AITS?" :data="why"/>
-      <JobsList sectionid="jobs-openings" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation and digitalization.
+      <JobsList sectionType="job openings" sectiontitle="Job Openings" sectiondescription="Stay informed with the latest insights, trends, and developments in industrial automation and digitalization.
       Explore our blog for thought-provoking articles, expert opinions, and practical tips to help
       your business stay ahead of the curve."/>
-      <JobsList sectionid="internship-opportunities" sectiontitle="Graduate Program and Internship Opportunities" sectiondescription="Kickstart your career with real-world challenges and mentorship from industry leaders. Join our Graduate Program or explore an internship opportunity with us to develop your skills and dive into the fascinating world of software solutions and digital services."/>
+      <JobsList sectionType="internship opportunities" sectiontitle="Graduate Program and Internship Opportunities" sectiondescription="Kickstart your career with real-world challenges and mentorship from industry leaders. Join our Graduate Program or explore an internship opportunity with us to develop your skills and dive into the fascinating world of software solutions and digital services."/>
       <InsideBody/>
     </section>    
 </template>
