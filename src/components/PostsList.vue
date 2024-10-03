@@ -85,7 +85,7 @@ const formatPublicationType = (publicationType) => {
             <h2 class="text-accent1 font-[400] max-sm:text-[14px]">{{ item.industry }}</h2>              
             <h2 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.published_at }}</h2>
             </div>
-            <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px] 2xl:min-h-full md:min-h-[98px]">{{ item.title }}</h2>
+            <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px] 2xl:min-h-full md:min-h-[98px]">{{ item.title }} {{ item?.subtitle }}</h2>
             <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] xl:min-h-[192px] md:min-h-[169px]">{{ item.summary }}</p>
             <span class="border-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center mt-auto mb-0 ms-auto me-0 border-2  hover:border-bg2 text-xl rounded-full">
                 <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" class="transition-all stroke-accent2 duration-400 hover:stroke-bg2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
