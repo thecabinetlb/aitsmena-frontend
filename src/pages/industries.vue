@@ -24,8 +24,8 @@ const industries = [
 </script>
 <template>
     <head>
-      <title>AITS - The Various Industries We Serve</title>
-      <!-- <meta name="description" content="We provide solutions to Smart Cities, Food and Beverage, Manufacturing, Oil and Gas, Energy, and Utilities. Interested? Let's get started!"/> -->
+      <title>Industries We Serve | AITS - Driving Digital Transformation in Energy, Water, Smart Cities, F&B, and More.</title>
+      <meta name="description" content="AITS delivers tailored solutions across key industries Energy, Water, Smart Cities, Metals & Mining, F&B, and Manufacturing. Our innovations boost efficiency, sustainability, and compliance while driving digital transformation to meet today's global challenges."/>
     </head>        
     <InnerHero :pagebanner="banner" pagetitle="Innovative Solutions for Every Industry"
         pagedescription="Whether you’re in an emerging sector or a traditional industry, AITS can help you enhance operational efficiency and future-proof your business with the most innovative industrial software solutions."/>

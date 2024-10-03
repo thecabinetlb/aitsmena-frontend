@@ -36,8 +36,8 @@ const graduateprogram = [
 </script>
 <template>
     <head>
-      <title>AITS - Join the AITS Team</title>
-      <!-- <meta name="description" content="Browse through our available job openings to join the team and make an impact at AITS! We welcome diverse experts from all parts of the world."/> -->
+      <title>Careers at AITS | Join Our Team of Innovators and Problem Solvers</title>
+      <meta name="description" content="Explore exciting career opportunities at AITS. Join a dynamic team driving innovation in industrial software solutions. Apply now to thrive in a diverse, purpose-driven environment with competitive benefits."/>
     </head>      
     <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the family."/>
     <section class="relative -mt-40">

@@ -71,8 +71,8 @@ const valuesandcommitments =
 </script>
 <template>
   <head>
-    <title>AITS - Industrial Software Solutions And Digital Services Tailored To Your Business</title>
-    <meta name="description" content="Browse through our available job openings to join the team and make an impact at AITS! We welcome diverse experts from all parts of the world."/>
+    <title>Industrial Software Innovation | AITS - Leading Digital Transformation</title>
+    <meta name="description" content="AITS is leading the industrial digital revolution with custom software solutions across various industries. We are committed to innovation, sustainability, and operational efficiency. "/>
   </head>
   <Hero/>
   <OneImageTextFlex :item="missionandvission"/>  

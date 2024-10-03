@@ -37,8 +37,8 @@ const locations = [
 
 <template>
     <head>
-      <title>AITS - Contact Us Today</title>
-      <!-- <meta name="description" content="Would you like to get in touch? Fill out the contact form with any inquiries you have and one of our AITS experts will respond as soon as possible."/> -->
+      <title>Contact Us - AITS | Future-Proof Your Business with Innovative Software Solutions</title>
+      <meta name="description" content="Have questions about our software solutions and digital services? Contact AITS today! Our expert team is here to assist you in transforming your business for the future."/>
     </head>
     <InnerHero :pagebanner="banner" pagetitle="Get in Touch" pagedescription="Learn how our solutions future-proof your business."/>
     <div class="relative">

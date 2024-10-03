@@ -35,8 +35,8 @@ watch(() => route.params.slug, (newSlug) => {
       <meta name="description" :content="post.summary"/>
   </head>
   <head v-else>
-      <title>AITS - Resource Center</title>
-      <!-- <meta name="description" content="Got a knack for reading? Gain access to free resources including whitepapers, industry insights, educational blogs, and specialized webinars."/> -->
+      <title>Resource Center | Industry Insights, Whitepapers, Case Studies & Blogs | AITS</title>
+      <meta name="description" content="Explore the AITS Resource Center for the latest industry insights, in-depth whitepapers, real-world case studies, and expert blogs. Stay informed on industrial innovations, digital transformation, and best practices across Energy, Smart Cities, Water Management, Manufacturing, and more."/>
     </head>
   <section>
     <PostDetails v-if="post" :item="post"/>
