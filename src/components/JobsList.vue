@@ -55,11 +55,9 @@ const showDetails = ref(false)
                     {{showDetails === false ? 'View Details' : 'Close Details'}}</button>
             </li>
         </ul>
-        <div v-else class="lg:w-full relative group bg-extended-noise bg-cover bg-center bg-opacity-50 rounded-[16px] mt-10 mx-auto">
-        <div class="md:px-10 p-6 relative flex justify-between items-center gap-3 rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 border-2 border-bg2">
-            <h3 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[500]">No posted {{ sectionType }}.</h3>        
+        <div v-else class="mt-10 p-6 relative flex justify-between items-center gap-3 rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 border-2 border-bg2">
+            <h3 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[700]">No posted {{ sectionType }}.</h3>        
         </div>
-        </div>        
     </section>
 <!-- <iframe src='https://widgets.sociablekit.com/linkedin-page-jobs/iframe/25415756' frameborder='0' width='100%' height='1000'></iframe></section> -->
 </template>

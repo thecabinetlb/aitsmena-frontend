@@ -16,11 +16,11 @@ const why = [
 'Work-life balance',  
 ]
 
-const jobs = [
-  { id: 1, title: 'Project Manager', location: 'Al Khobar, Saudi Arabia', 
-  summary: 'The Project Manager will be responsible for managing and ensuring the successful execution of projects related to AVEVA software, from initial planning to completion. This role involves coordinating with cross-functional teams, managing timelines, budgets, and resources, and ensuring that projects meet the specified objectives, deadlines, and quality standards.',
-  description: Job}
-]
+// const jobs = [
+//   { id: 1, title: 'Project Manager', location: 'Al Khobar, Saudi Arabia', 
+//   summary: 'The Project Manager will be responsible for managing and ensuring the successful execution of projects related to AVEVA software, from initial planning to completion. This role involves coordinating with cross-functional teams, managing timelines, budgets, and resources, and ensuring that projects meet the specified objectives, deadlines, and quality standards.',
+//   description: Job}
+// ]
 
 // const internships = [
 // { id: 1, title: 'Project Manager', location: 'Al Khobar, Saudi Arabia', 
@@ -42,7 +42,7 @@ const graduateprogram = [
     <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the family."/>
     <section class="relative -mt-40">
       <Why sectiontitle="Why AITS?" :data="why"/>
-      <JobsList sectionType="job openings" sectiontitle="Job Openings" :data="jobs"
+      <JobsList sectionType="job openings" sectiontitle="Job Openings"
       sectiondescription1="We’re looking for makers, innovators, and problem solvers who are driven by the passion to innovate. Join a team that brings together the power of technology to build a more intelligent, connected, and productive world. We offer a dynamic environment where you can grow your career while solving complex, real-world challenges that push the boundaries of human potential."
       sectiondescription2="Explore our job openings, if you’re ready to make an impact and take the next step in your career journey with us."/>
       <JobsList sectionType="graduate program and internship opportunities" sectiontitle="Graduate Program and Internship Opportunities"  :data="graduateprogram"
