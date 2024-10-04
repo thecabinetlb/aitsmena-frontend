@@ -61,10 +61,8 @@ const formatPublicationType = (publicationType) => {
           </RouterLink> 
         </li>
       </ul>
-      <div v-else class="lg:w-full relative group bg-extended-noise bg-cover bg-center bg-opacity-50 rounded-[16px] mt-10 mx-auto">
-        <div class="md:px-10 p-6 relative flex justify-between items-center gap-3 rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 border-2 border-bg2">
-            <h3 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[500]">No related insights.</h3>        
-        </div>
+      <div v-else class="mt-10 p-6 relative flex justify-between items-center gap-3 rounded-[16px] bg-gradient-to-br from-accent1/10 to-accent1/30 border-2 border-bg2">
+        <h3 class="2xl:text-2xl lg:text-xl sm:text-lg text-accent1 font-[500]">No related insights.</h3>        
       </div>
     </section>
 </template>

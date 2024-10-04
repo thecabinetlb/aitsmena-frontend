@@ -21,7 +21,7 @@ const showDetails = ref(false)
 </script>
 
 <template>
-    <section :id="sectionid" class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
+    <section class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
         <!-- <h1 class="text-accent1 font-[200] text-lg uppercase">New Opportunities</h1>
         <hr class="w-full h-4 mt-3 text-accent2"/>-->
         <!-- <button @click="filterJobs" class="px-4 py-3 w-fit h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border border-accent2 outline-none focus:ring-0 focus:border-bg2 peer">

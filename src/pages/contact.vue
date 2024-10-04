@@ -39,7 +39,12 @@ const locations = [
     <head>
       <title>Contact Us - AITS | Future-Proof Your Business with Innovative Software Solutions</title>
       <meta name="description" content="Have questions about our software solutions and digital services? Contact AITS today! Our expert team is here to assist you in transforming your business for the future."/>
-    </head>
+      <meta name="keywords" content="Contact AITS, software solutions, digital services, business inquiries, innovative technology, future-proof business, customer support, AITS contact information"/>
+      <meta property="og:title" content="Contact Us - AITS | Future-Proof Your Business with Innovative Software Solutions">
+      <meta property="og:description" content="Have questions about our software solutions and digital services? Contact AITS today! Our expert team is here to assist you in transforming your business for the future.">
+      <meta name="twitter:title" content="Contact Us - AITS | Future-Proof Your Business with Innovative Software Solutions">
+      <meta name="twitter:description" content="Have questions about our software solutions and digital services? Contact AITS today! Our expert team is here to assist you in transforming your business for the future.">
+    </head>     
     <InnerHero :pagebanner="banner" pagetitle="Get in Touch" pagedescription="Learn how our solutions future-proof your business."/>
     <div class="relative">
         <ContactForm/>

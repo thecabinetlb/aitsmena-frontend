@@ -38,7 +38,12 @@ const graduateprogram = [
     <head>
       <title>Careers at AITS | Join Our Team of Innovators and Problem Solvers</title>
       <meta name="description" content="Explore exciting career opportunities at AITS. Join a dynamic team driving innovation in industrial software solutions. Apply now to thrive in a diverse, purpose-driven environment with competitive benefits."/>
-    </head>      
+      <meta name="keywords" content="AITS careers, job openings at AITS, industrial software jobs, AITS graduate program, project manager jobs Saudi Arabia, internships at AITS, careers in digital transformation, software engineering careers, technology careers"/>
+      <meta property="og:title" content="Careers at AITS | Join Our Team of Innovators and Problem Solvers">
+      <meta property="og:description" content="Explore exciting career opportunities at AITS. Join a dynamic team driving innovation in industrial software solutions. Apply now to thrive in a diverse, purpose-driven environment with competitive benefits.">
+      <meta name="twitter:title" content="Careers at AITS | Join Our Team of Innovators and Problem Solvers">
+      <meta name="twitter:description" content="AExplore exciting career opportunities at AITS. Join a dynamic team driving innovation in industrial software solutions. Apply now to thrive in a diverse, purpose-driven environment with competitive benefits.">
+    </head>        
     <InnerHero :pagebanner="banner" pagetitle="Careers" pagedescription="You might just be the employee we’ve been looking for! Browse through our selection of job vacancies and apply to be part of the family."/>
     <section class="relative -mt-40">
       <Why sectiontitle="Why AITS?" :data="why"/>

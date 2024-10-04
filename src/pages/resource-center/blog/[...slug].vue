@@ -33,10 +33,20 @@ watch(() => route.params.slug, (newSlug) => {
   <head v-if="post">
       <title>{{post.title}}</title>
       <meta name="description" :content="post.summary"/>
-  </head>
-  <head v-else>
+      <meta name="keywords" content="industrial software insights, whitepapers, case studies, industry blogs, industrial innovation, digital transformation resources, industry reports, AITS resource center, technology in energy, smart cities, water management, mining solutions, F&B manufacturing trends"/>
+      <meta property="og:title" :content="post.title">
+      <meta property="og:description" :content="post.summary">
+      <meta name="twitter:title" :content="post.title">
+      <meta name="twitter:description" :content="post.summary">
+    </head>   
+    <head v-else>
       <title>Resource Center | Industry Insights, Whitepapers, Case Studies & Blogs | AITS</title>
       <meta name="description" content="Explore the AITS Resource Center for the latest industry insights, in-depth whitepapers, real-world case studies, and expert blogs. Stay informed on industrial innovations, digital transformation, and best practices across Energy, Smart Cities, Water Management, Manufacturing, and more."/>
+      <meta name="keywords" content="industrial software insights, whitepapers, case studies, industry blogs, industrial innovation, digital transformation resources, industry reports, AITS resource center, technology in energy, smart cities, water management, mining solutions, F&B manufacturing trends"/>
+      <meta property="og:title" content="Resource Center | Industry Insights, Whitepapers, Case Studies & Blogs | AITS">
+      <meta property="og:description" content="Explore the AITS Resource Center for the latest industry insights, in-depth whitepapers, real-world case studies, and expert blogs. Stay informed on industrial innovations, digital transformation, and best practices across Energy, Smart Cities, Water Management, Manufacturing, and more.">
+      <meta name="twitter:title" content="Resource Center | Industry Insights, Whitepapers, Case Studies & Blogs | AITS">
+      <meta name="twitter:description" content="Explore the AITS Resource Center for the latest industry insights, in-depth whitepapers, real-world case studies, and expert blogs. Stay informed on industrial innovations, digital transformation, and best practices across Energy, Smart Cities, Water Management, Manufacturing, and more.">
     </head>
   <section>
     <PostDetails v-if="post" :item="post"/>

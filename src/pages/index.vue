@@ -72,7 +72,12 @@ const valuesandcommitments =
 <template>
   <head>
     <title>Industrial Software Innovation | AITS - Leading Digital Transformation</title>
-    <meta name="description" content="AITS is leading the industrial digital revolution with custom software solutions across various industries. We are committed to innovation, sustainability, and operational efficiency. "/>
+    <meta name="description" content="AITS is leading the industrial digital revolution with custom software solutions across various industries. We are committed to innovation, sustainability, and operational efficiency."/>
+    <meta name="keywords" content="AITS, industrial software, industrial automation, digital transformation, GCC industries, Smart Cities, energy solutions, manufacturing, sustainability, AVEVA Select Gulf, water manageemnt, mining, tailored digital solutions, operational efficiency"/>
+    <meta property="og:title" content="Industrial Software Innovation | AITS - Leading Digital Transformation">
+    <meta property="og:description" content="AITS is leading the industrial digital revolution with custom software solutions across various industries. We are committed to innovation, sustainability, and operational efficiency.">
+    <meta name="twitter:title" content="Industrial Software Innovation | AITS - Leading Digital Transformation">
+    <meta name="twitter:description" content="AITS is leading the industrial digital revolution with custom software solutions across various industries. We are committed to innovation, sustainability, and operational efficiency.">
   </head>
   <Hero/>
   <OneImageTextFlex :item="missionandvission"/>  
