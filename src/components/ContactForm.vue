@@ -19,19 +19,19 @@ const onVerify = (response) => {
 const onExpired = () => {
   reCaptchaValid.value = false; // Reset if expired
 };
-// const errors = {
-//   NameRequired: 'Name is required.',
-//   EmailRequired: 'Email is required.',
-//   EmailInvalid: 'Please specify a real email.',
-//   CountryRequired: 'Country Name is required.',
-//   CityRequired: 'City Name is required.',
-//   IndustryRequired: 'Industry is required.',
-//   PhoneRequired: 'Phone Number is required.',
-//   PhoneInvalid: 'Phone Number should be numeric.',
-//   InquiryRequired: 'Inquiry is required.',
-//   InquiryInvalid: 'Invalid inquiry. Please select either General Inquiry or Sales and Support.',
-//   MessageRequired: 'Please enter your content.'
-// };
+const errors = {
+  NameRequired: 'Name is required.',
+  EmailRequired: 'Email is required.',
+  EmailInvalid: 'Please specify a real email.',
+  CountryRequired: 'Country Name is required.',
+  CityRequired: 'City Name is required.',
+  IndustryRequired: 'Industry is required.',
+  PhoneRequired: 'Phone Number is required.',
+  PhoneInvalid: 'Phone Number should be numeric.',
+  InquiryRequired: 'Inquiry is required.',
+  InquiryInvalid: 'Invalid inquiry. Please select either General Inquiry or Sales and Support.',
+  MessageRequired: 'Please enter your content.'
+};
 
 const ErrorMessages = ref({
     name: '',

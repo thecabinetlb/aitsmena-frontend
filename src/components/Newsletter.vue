@@ -19,7 +19,10 @@ console.log('hasErrorMessages', hasErrorMessages)
 // const onExpired = () => {
 //   reCaptchaValid.value = false; // Reset if expired
 // };
-
+const errors = {
+  EmailRequired: 'Email is required.',
+  EmailInvalid: 'Please specify a real email.',
+};
 
 const ErrorMessages = ref({
     email: ''
@@ -110,13 +113,15 @@ const handleSubmit = () => {
 <template>
     <form class="w-11/12 mx-auto space-y-3 2xl:w-8/12 lg:w-10/12" @submit.prevent="handleSubmit">
         <div class="flex items-center justify-center gap-3 max-sm:flex-wrap">
-        <input type="text" id="Email" name="Email" aria-label="Enter your email to subscribe to our newsletter"
-        placeholder="Subscribe to our newsletter" 
-        v-model="formData.data.Email.value" 
-        :required="formData.data.Email.required" 
-        class="md:w-6/12 w-full block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2"
-        :class="{'border-red-500 focus:border-red-500' : formData.data.Email.isValid===false}">
-        <p v-show="!formData.data.Email.isValid" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">{{formData.data.Email.validationMessage}}</p>
+        <div class="relative w-full md:w-6/12">
+            <input type="text" id="Email" name="Email" aria-label="Enter your email to subscribe to our newsletter"
+            placeholder="Subscribe to our newsletter" 
+            v-model="formData.data.Email.value" 
+            :required="formData.data.Email.required" 
+            class="w-full block px-4 py-3 bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[16px] text-accent1 bg-transparent border border-accent2 appearance-none outline-none focus:ring-0 focus:border-bg2"
+            :class="{'border-red-500 focus:border-red-500' : formData.data.Email.isValid===false}">
+            <p v-show="!formData.data.Email.isValid" class="ms-2 absolute -bottom-5 font-[700] text-[12px] text-red-500">{{formData.data.Email.validationMessage}}</p>
+        </div>
         <button aria-label="subscribe to our newsletter" 
         class="block w-fit cursor-pointer px-4 py-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">
         {{loading === true ?  'Sending...' : 'Subscribe'}}</button>
