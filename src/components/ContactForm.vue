@@ -317,11 +317,11 @@ const sitekey = import.meta.env.VITE_RECAPTCHAV2_SITEKEY;
                 <p v-if="reCaptchaValid === false" class="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
             </div>
             <!-- Submit -->
-            <div class="flex flex-col w-full gap-2">
-            <button aria-label="send your content" class="cursor-pointer w-fit relative z-[2] col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[20px] shadow-sm bg-bg2 hover:brightness-125 transition-all duration-400">
-            {{loading === true ?  'Sending...' : 'Send Message'}}
-            </button>            
-            <p v-if="loading === false" class="text-green-500">Thank you for your message, we'll get back to you soon.</p>                
+            <div class="flex flex-col w-full col-span-2 gap-2">
+                <button aria-label="send your content" class="cursor-pointer w-fit text-nowrap relative z-[2] col-span-2 px-4 py-3 text-accent1 font-[400] text-center rounded-[8px] shadow-sm bg-bg2 hover:brightness-125 transition-all duration-400">
+                {{loading === true ?  'Sending...' : 'Send Message'}}
+                </button>            
+                <p v-if="loading === false" class="w-full text-green-500">Thank you for your message, we'll get back to you soon.</p>                
             </div>
 
             <!-- Errors after submit -->

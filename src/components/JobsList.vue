@@ -46,7 +46,7 @@ const showDetails = ref(false)
                     <Transition>
                         <div v-if="showDetails === true" class="space-y-6">
                             <component :is="item.description"></component>
-                            <a :id="'apply-for-' + item.title" :aria-label="'apply for' + item.title" href="mailto:careers@aitsmena.com" class="cursor-pointer px-4 py-3 w-fit block max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Apply Now</a>
+                            <a :id="'apply-for-' + item.title" :aria-label="'apply for' + item.title" href="mailto:careers@aitsmena.com" class="cursor-pointer px-4 py-3 w-fit block text-nowrap max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2 hover:brightness-125 transition-all duration-400">Apply Now</a>
                         </div>
                     </Transition>
                     <button @click="showDetails = !showDetails"
