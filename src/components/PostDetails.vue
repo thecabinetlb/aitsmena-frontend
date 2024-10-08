@@ -6,17 +6,15 @@ defineProps({
 <template>
     <section class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
       <h1 class="font-[500] text-accent1 2xl:text-6xl lg:text-5xl md:text-4xl text-[30px] uppercase mb-3">{{ item.title }}</h1>
-      <h2 v-if="item.subtitle" class="font-[500] text-accent1 2xl:text-5xl lg:text-4xl md:text-3xl text-2xl mb-6">{{ item.subtitle }}</h2>
       <div class="flex flex-col gap-6 mt-10">
             <div class="relative overflow-hidden aspect-video rounded-[16px]"
-            :style="{ backgroundImage: 'url(' + item.image + ')', backgroundSize:'cover', backgroundPosition: 'center'}">
+            :style="{ backgroundImage: 'url(' + item.cover + ')', backgroundSize:'cover', backgroundPosition: 'center'}">
               <div v-if="item.customer_logo" class="p-2 absolute top-3 right-3 w-1/4 h-fit bg-gradient-to-r from-accent1/10 to-accent1/20 backdrop-blur-[16px] rounded-[8px]">
                 <img :src="item.customer_logo" :alt="item.title" width="100%" height="100%" center cover responsive loading="lazy" class="mx-auto aspect-1.72/1 scale-125"/>
               </div>
             </div>
             <h3 class="text-accent2 font-[200] max-sm:text-[14px] mb-6">{{ item.published_at }}</h3>
-            <div class="space-y-6 tracking-wide text-accent2" v-html="item.content"></div>
-            <div class="tracking-wide text-accent2 font-[200] max-sm:text-[14px]" v-html="item.cta_description"></div>
+            <div class="space-y-6 tracking-wide text-accent2" v-html="item.body"></div>
         </div>
     </section>
 </template>

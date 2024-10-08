@@ -16,6 +16,7 @@ export async function getIndustries(){
       })
     return data;
 }
+
 // Resources APIS
 export async function getBlogs(){
   let data = []
@@ -107,6 +108,30 @@ export async function getIndustryInsights(){
     })
   return data;
 }
+
+export async function getAllResources() {
+  try {
+    const allResources = await Promise.all([
+      getBlogs(),
+      getIndustryInsights(),
+      getSuccessStories(),
+      getPressReleases()
+    ]);
+
+    // Flatten the array of arrays into a single array
+    const flatResources = allResources.flat();
+    console.log("res", flatResources)
+
+    // Sort resources by 'published_at' date
+    return flatResources.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+  } catch (error) {
+    console.error("Error fetching resources:", error);
+    return [];
+  }
+}
+
+
+
 // Careers APIS
 export async function getJobs(){
   let data = []

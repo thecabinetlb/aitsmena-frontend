@@ -1,14 +1,25 @@
 <script setup>
 import PostsList from '../../components/PostsList.vue';
-import { getAllResources } from '../../utils/api'
+import { getAllResources } from '../../utils/laravel_api_functions'
 import banner from '/images/banners/resources.webp'
 import InnerHero from '../../components/InnerHero.vue';
-const posts = getAllResources();
+import { onMounted, ref } from 'vue';
 
-// Extract the industries from the posts and then create a Set to get unique categories
-let uniqueIndustries = [...new Set(posts.map(post => post.industry))];
+const posts = ref([]);
+const uniqueIndustries = ref([]);
 
-console.log(uniqueIndustries);
+const fetchData = async () => {
+  posts.value = await getAllResources(); // Fetching posts
+  if (posts.value.length > 0) {
+    uniqueIndustries.value = [...new Set(posts.value.map(post => post.industry_id))];
+  }
+  console.log(posts.value);
+  console.log(uniqueIndustries.value);
+};
+onMounted(() => {
+  fetchData();
+});
+
 </script>
 <template>
       <head>
@@ -21,5 +32,7 @@ console.log(uniqueIndustries);
       <meta name="twitter:description" content="Explore the AITS Resource Center for the latest industry insights, in-depth whitepapers, real-world case studies, and expert blogs. Stay informed on industrial innovations, digital transformation, and best practices across Energy, Smart Cities, Water Management, Manufacturing, and more.">
     </head>     
     <InnerHero :pagebanner="banner" pagetitle="Innovation Insights Hub" pagedescription="Explore the latest resources designed to keep you informed and ahead in the fast-paced world of industrial digital transformation."/>
+   <div v-if="posts.length > 0">
     <PostsList :uniqueIndustries="uniqueIndustries" :data='posts'/>
+   </div>
 </template>

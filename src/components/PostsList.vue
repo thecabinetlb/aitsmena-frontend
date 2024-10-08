@@ -15,16 +15,16 @@ const itemsPerPage = 6;
 // Function to filter data based on the selected industry
 const filterData = (industry) => {
   isClicked.value = industry;
-  if (industry === 'All') {
+  if (industry === 0) {
     filteredData.value = props.data;
   } else {
-    filteredData.value = props.data.filter(item => item.industry === industry);
+    filteredData.value = props.data.filter(item => item.industry_id === industry);
   }
   currentPage.value = 1;
 };
 
 // Initial filter
-filterData('All');
+filterData(0);
 
 // Compute the paginated data
 const paginatedData = computed(() => {
@@ -39,7 +39,7 @@ const onPageChange = (page) => {
 };
 
 const formatPublicationType = (publicationType) => {
-  if (publicationType === 'Blog post') {
+  if (publicationType === 1) {
     return 'blog';
   }
   return publicationType.toLowerCase().replace(/\s+/g, '-');
@@ -50,7 +50,7 @@ const formatPublicationType = (publicationType) => {
   <section class="w-11/12 mx-auto 2xl:w-8/12 lg:w-10/12">
     <!-- Filters -->
     <div class="flex flex-wrap justify-end gap-3 mt-10 sm:gap-6">
-      <button @click="filterData('All')"
+      <button @click="filterData(0)"
       class="px-2 sm:px-4 py-3 w-fit max-sm:text-[14px] backdrop-blur-[16px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 outline-none"
       :class="{'border-b-2 border-accent1': isClicked === 'All', 'border-b-2 border-bg2' : isClicked != 'All'}">
       All</button>
@@ -66,26 +66,26 @@ const formatPublicationType = (publicationType) => {
     <ul role="list" class="grid grid-cols-1 gap-3 mt-10 xl:grid-cols-3 md:grid-cols-2 list-style-none">
       <li v-for="(item, key) in paginatedData" :key="key" class="flex-grow group w-full relative group rounded-[16px] border-2 border-bg2">
         <RouterLink 
-          v-if="item.slug && item.publication_type"
+          v-if="item.slug && item.publication_type_id"
           :id="'go-to-' + item.title + '-page'" 
           :aria-label="'read more about ' + item.title" 
-          :to="{ path: `/resource-center/${formatPublicationType(item.publication_type)}/${item.slug}` }">
+          :to="{ path: `/resource-center/${formatPublicationType(item.publication_type_id)}/${item.slug}` }">
           <div class="relative overflow-hidden aspect-video bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]">
             <div class="absolute inset-0 z-[-1] duration-500 transform group-hover:scale-110"
-            :style="{ backgroundImage: 'url(' + item.image + ')', backgroundSize:'cover', backgroundPosition: 'center'}"/>
+            :style="{ backgroundImage: 'url(' + item.cover + ')', backgroundSize:'cover', backgroundPosition: 'center'}"/>
               <div v-if="item.customer_logo" class="p-2 absolute top-3 right-3 w-1/4 h-fit backdrop-blur-[16px] rounded-[8px]">
                 <img :src="item.customer_logo" :alt="item.title" width="100%" height="100%" center cover responsive loading="lazy" class="mx-auto aspect-1.72/1 scale-125"/>
               </div>
           </div>
           <div class="flex flex-col gap-3 p-6">
             <h2 class="p-2 relative w-fit z-[3] bottom-10 -mb-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2">
-                {{ item.publication_type }}
+                {{ item.publication_type_id }}
             </h2>
             <div class="flex flex-wrap justify-between gap-3 pb-3 border-b border-bg2">
-            <h2 class="text-accent1 font-[400] max-sm:text-[14px]">{{ item.industry }}</h2>              
+            <h2 class="text-accent1 font-[400] max-sm:text-[14px]">{{ item.industry_id }}</h2>              
             <h2 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.published_at }}</h2>
             </div>
-            <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px] 2xl:min-h-full md:min-h-[98px]">{{ item.title }} {{ item?.subtitle }}</h2>
+            <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px] 2xl:min-h-full md:min-h-[98px]">{{ item.title }}</h2>
             <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] xl:min-h-[192px] md:min-h-[169px]">{{ item.summary }}</p>
             <span class="border-accent2 w-[34px] h-[34px] cursor-pointer grid place-content-center ms-auto me-0 border-2 hover:border-bg2 text-xl rounded-full">
                 <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" class="transition-all stroke-accent2 duration-400 hover:stroke-bg2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
