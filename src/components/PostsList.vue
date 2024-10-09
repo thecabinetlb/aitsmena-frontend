@@ -40,7 +40,10 @@ const onPageChange = (page) => {
 
 const formattedDate = (dateString) => {
     const dateObject = new Date(dateString);
-
+    // Check if the date object is valid
+    if (isNaN(dateObject)) {
+        return ''; // Return a default message for invalid dates
+    }
     return new Intl.DateTimeFormat('en-US', {
         year: 'numeric',
         month: 'long',

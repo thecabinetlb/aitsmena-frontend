@@ -4,7 +4,10 @@ defineProps({
 })
 const formattedDate = (dateString) => {
     const dateObject = new Date(dateString);
-
+    // Check if the date object is valid
+    if (isNaN(dateObject)) {
+        return ''; // Return a default message for invalid dates
+    }
     return new Intl.DateTimeFormat('en-US', {
         year: 'numeric',
         month: 'long',
@@ -23,7 +26,7 @@ const formattedDate = (dateString) => {
               </div>
             </div>
             <h3 class="text-accent2 font-[200] max-sm:text-[14px] mb-6">{{ formattedDate(item.published_at) }}</h3>
-            <div class="space-y-6 tracking-wide text-accent2" v-html="item.body"></div>
+            <div class="space-y-6 tracking-wide font-[200]" v-html="item.body"></div>
         </div>
     </section>
 </template>
