@@ -2,6 +2,15 @@
 defineProps({
     item: Object,
 })
+const formattedDate = (dateString) => {
+    const dateObject = new Date(dateString);
+
+    return new Intl.DateTimeFormat('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    }).format(dateObject);
+};
 </script>
 <template>
     <section class="w-11/12 pt-40 mx-auto 2xl:w-8/12 lg:w-10/12">
@@ -13,7 +22,7 @@ defineProps({
                 <img :src="item.customer_logo" :alt="item.title" width="100%" height="100%" center cover responsive loading="lazy" class="mx-auto aspect-1.72/1 scale-125"/>
               </div>
             </div>
-            <h3 class="text-accent2 font-[200] max-sm:text-[14px] mb-6">{{ item.published_at }}</h3>
+            <h3 class="text-accent2 font-[200] max-sm:text-[14px] mb-6">{{ formattedDate(item.published_at) }}</h3>
             <div class="space-y-6 tracking-wide text-accent2" v-html="item.body"></div>
         </div>
     </section>

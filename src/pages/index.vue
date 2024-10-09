@@ -7,29 +7,24 @@ import Partners from '../components/Partners.vue'
 import avevaicons from '../components/icons/aveva.vue'
 import ic2icons from '../components/icons/ic2.vue'
 
-import IndustriesCarousel from '../components/IndustriesCarousel.vue'
-import industriesiconF from '/images/industries/F&B.svg'
-import industriesiconM from '/images/industries/manufactoring.svg'
-import industriesiconC from '/images/industries/City.svg'
-// import industriesiconG from '/images/industries/Gas.svg'
-import industriesiconU from '/images/industries/utilities.svg'
-import industriesiconE from '/images/industries/energy.svg'
-import industriesiconMi from '/images/industries/Mining.svg'
-
 import ImageTextFlexFilters from '../components/ImageTextFlexFilters.vue'
 import improvement from '/images/insidepages/about/csr/improvement_v1.webp'
 import employee from '/images/insidepages/about/csr/employee_v1.webp'
 import gender from '/images/insidepages/about/csr/gender_v1.webp'
 
-const industries = [
-{ id: 1, title: 'Smart Cities', icon:industriesiconC },
-{ id: 2, title: 'Food and Beverage', icon:industriesiconF },
-{ id: 3, title: 'Manufacturing', icon:industriesiconM },
-// { id: 4, title: 'Oil and Gas', icon:industriesiconG },
-{ id: 4, title: 'Energy', icon:industriesiconE },
-{ id: 5, title: 'Water and Wasterwater', icon:industriesiconU },
-{ id: 6, title: 'Metal, Mining, and Minerals', icon:industriesiconMi },
-];
+import IndustriesCarousel from '../components/IndustriesCarousel.vue'
+import { getIndustries } from '../utils/laravel_api_functions'
+import { onMounted, ref } from 'vue';
+
+const industries = ref([]);
+
+const fetchData = async () => {
+  industries.value = await getIndustries();
+  console.log(industries.value);
+};
+onMounted(() => {
+  fetchData();
+});
 
 const missionandvission =
   {
@@ -81,7 +76,7 @@ const valuesandcommitments =
   </head>
   <Hero/>
   <OneImageTextFlex :item="missionandvission"/>  
-  <IndustriesCarousel :data="industries"
+  <IndustriesCarousel v-if="industries.length > 0" :data="industries"
   v-motion
   :initial="{
     opacity: 0,

@@ -1,29 +1,28 @@
 <script setup>
 import RelatedPosts from '../../../components/RelatedPosts.vue';
 import PostDetails from '../../../components/PostDetails.vue';
-import { getBlogPosts, getBlogPostBySlug } from '../../../utils/api';
+import { getAllResources, getBlogBySlug } from '../../../utils/laravel_api_functions';
 import { useRoute } from 'vue-router';
-import { watch, ref } from 'vue';
+import { watch, ref, onMounted } from 'vue';
 
 const route = useRoute();
-const posts = getBlogPosts();
-const post = ref(null);
-console.log("post",post.value)
+const posts = ref([]);
+const post = ref([]);
 
-const fetchPost = (slug) => {
-  try {
-    post.value = getBlogPostBySlug(slug)
-  } catch (error) {
-    console.error('Failed to fetch post:', error);
-  }
+const fetchData = async (slug) => {
+  posts.value = await getAllResources();
+  post.value = await getBlogBySlug(slug);
+  console.log(posts.value);
+  console.log(post.value);
 };
-
-fetchPost(route.params.slug);
+onMounted(() => {
+  fetchData(route.params.slug);
+});
 
 // Watch for route changes and fetch new post
 watch(() => route.params.slug, (newSlug) => {
   if (newSlug) {
-   fetchPost(newSlug);
+    fetchData(newSlug);
    console.log("newSlug",newSlug)
   }
 });

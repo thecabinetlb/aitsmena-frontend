@@ -130,6 +130,11 @@ export async function getAllResources() {
   }
 }
 
+// Get resources by slug
+export async function getBlogBySlug(slug) {
+  const blogPosts = await getBlogs();
+  return blogPosts.find(item => item.slug === slug);
+}
 
 
 // Careers APIS
