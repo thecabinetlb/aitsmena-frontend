@@ -11,7 +11,7 @@ const uniqueIndustries = ref([]);
 const fetchData = async () => {
   posts.value = await getAllResources(); // Fetching posts
   if (posts.value.length > 0) {
-    uniqueIndustries.value = [...new Set(posts.value.map(post => post.industry_id))];
+    uniqueIndustries.value = [...new Set(posts.value.map(post => post.industry.title))];
   }
   console.log(posts.value);
   console.log(uniqueIndustries.value);

@@ -11,11 +11,20 @@ const props = defineProps({
 const filteredData = computed(() => {
   return props.data.filter(item => item.industry === props.industry && item.id !== props.currentId);
 });
-const formatPublicationType = (publicationType) => {
-  if (publicationType === 'Blog post') {
-    return 'blog';
-  }
-  return publicationType.toLowerCase().replace(/\s+/g, '-');
+
+const formattedDate = (dateString) => {
+    const dateObject = new Date(dateString);
+    
+    // Check if the date object is valid
+    if (isNaN(dateObject)) {
+        return 'Invalid Date'; // Return a default message for invalid dates
+    }
+
+    return new Intl.DateTimeFormat('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    }).format(dateObject);
 };
 
 </script>
@@ -26,10 +35,10 @@ const formatPublicationType = (publicationType) => {
       <ul v-if="filteredData.length > 0" role="list" class="grid grid-cols-1 gap-3 mt-10 xl:grid-cols-3 md:grid-cols-2 list-style-none">
         <li v-for="(item, key) in filteredData" :key="key" class="flex-grow group w-full relative group rounded-[16px] border-2 border-bg2">
           <RouterLink 
-            v-if="item.slug && item.publication_type"
+            v-if="item.slug && item.publicationtype"
             :id="'go-to-' + item.title + '-page'" 
             :aria-label="'read more about ' + item.title" 
-            :to="{ path: `/resource-center/${formatPublicationType(item.publication_type)}/${item.slug}` }">
+            :to="{ path: `/resource-center/${item.publicationtype.slug}/${item.slug}` }">
             <div class="relative overflow-hidden aspect-video bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]">
               <div class="absolute inset-0 z-[-1] duration-500 transform group-hover:scale-110"
               :style="{ backgroundImage: 'url(' + item.image + ')', backgroundSize:'cover', backgroundPosition: 'center'}"/>
@@ -39,11 +48,11 @@ const formatPublicationType = (publicationType) => {
             </div>
             <div class="flex flex-col gap-3 p-6">
             <h2 class="p-2 relative w-fit z-[3] bottom-10 -mb-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2">
-                {{ item.publication_type }}
+                {{ item.publicationtype.title }}
             </h2>
             <div class="flex flex-wrap justify-between gap-3 pb-3 border-b border-bg2">
-            <h2 class="text-accent1 font-[400] max-sm:text-[14px]">{{ item.industry }}</h2>              
-            <h2 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.published_at }}</h2>
+            <h2 class="text-accent1 font-[400] max-sm:text-[14px]">{{ item.industry.title }}</h2>              
+            <h2 class="text-accent2 font-[200] max-sm:text-[14px]">{{ formattedDate(item.published_at) }}</h2>
             </div>
             <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px] 2xl:min-h-full md:min-h-[98px]">{{ item.title }}</h2>
             <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] xl:min-h-[192px] md:min-h-[169px]">{{ item.summary }}</p>

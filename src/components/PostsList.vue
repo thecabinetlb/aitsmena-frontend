@@ -15,16 +15,16 @@ const itemsPerPage = 6;
 // Function to filter data based on the selected industry
 const filterData = (industry) => {
   isClicked.value = industry;
-  if (industry === 0) {
+  if (industry === 'All') {
     filteredData.value = props.data;
   } else {
-    filteredData.value = props.data.filter(item => item.industry_id === industry);
+    filteredData.value = props.data.filter(item => item.industry.title === industry);
   }
   currentPage.value = 1;
 };
 
 // Initial filter
-filterData(0);
+filterData('All');
 
 // Compute the paginated data
 const paginatedData = computed(() => {
@@ -38,19 +38,28 @@ const onPageChange = (page) => {
   currentPage.value = page;
 };
 
-const formatPublicationType = (publicationType) => {
-  if (publicationType === 1) {
-    return 'blog';
-  }
-  return publicationType.toLowerCase().replace(/\s+/g, '-');
+const formattedDate = (dateString) => {
+    const dateObject = new Date(dateString);
+    
+    // Check if the date object is valid
+    if (isNaN(dateObject)) {
+        return 'Invalid Date'; // Return a default message for invalid dates
+    }
+
+    return new Intl.DateTimeFormat('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    }).format(dateObject);
 };
+
 </script>
 
 <template>
   <section class="w-11/12 mx-auto 2xl:w-8/12 lg:w-10/12">
     <!-- Filters -->
     <div class="flex flex-wrap justify-end gap-3 mt-10 sm:gap-6">
-      <button @click="filterData(0)"
+      <button @click="filterData('All')"
       class="px-2 sm:px-4 py-3 w-fit max-sm:text-[14px] backdrop-blur-[16px] transition-all duration-400 rounded-[16px] text-accent1 bg-transparent hover:border-accent1 outline-none"
       :class="{'border-b-2 border-accent1': isClicked === 'All', 'border-b-2 border-bg2' : isClicked != 'All'}">
       All</button>
@@ -66,10 +75,10 @@ const formatPublicationType = (publicationType) => {
     <ul role="list" class="grid grid-cols-1 gap-3 mt-10 xl:grid-cols-3 md:grid-cols-2 list-style-none">
       <li v-for="(item, key) in paginatedData" :key="key" class="flex-grow group w-full relative group rounded-[16px] border-2 border-bg2">
         <RouterLink 
-          v-if="item.slug && item.publication_type_id"
+          v-if="item.slug && item.publicationtype"
           :id="'go-to-' + item.title + '-page'" 
           :aria-label="'read more about ' + item.title" 
-          :to="{ path: `/resource-center/${formatPublicationType(item.publication_type_id)}/${item.slug}` }">
+          :to="{ path: `/resource-center/${item.publicationtype.slug}/${item.slug}` }">
           <div class="relative overflow-hidden aspect-video bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]">
             <div class="absolute inset-0 z-[-1] duration-500 transform group-hover:scale-110"
             :style="{ backgroundImage: 'url(' + item.cover + ')', backgroundSize:'cover', backgroundPosition: 'center'}"/>
@@ -79,11 +88,11 @@ const formatPublicationType = (publicationType) => {
           </div>
           <div class="flex flex-col gap-3 p-6">
             <h2 class="p-2 relative w-fit z-[3] bottom-10 -mb-3 max-sm:text-[14px] font-[200] text-center rounded-[8px] text-accent1 bg-bg2">
-                {{ item.publication_type_id }}
+                {{ item.publicationtype.title }}
             </h2>
             <div class="flex flex-wrap justify-between gap-3 pb-3 border-b border-bg2">
-            <h2 class="text-accent1 font-[400] max-sm:text-[14px]">{{ item.industry_id }}</h2>              
-            <h2 class="text-accent2 font-[200] max-sm:text-[14px]">{{ item.published_at }}</h2>
+            <h2 class="text-accent1 font-[400] max-sm:text-[14px]">{{ item.industry.title }}</h2>              
+            <h2 class="text-accent2 font-[200] max-sm:text-[14px]">{{ formattedDate(item.published_at) }}</h2>
             </div>
             <h2 class="text-accent1 font-[700] 2xl:text-3xl lg:text-2xl md:text-xl text-[30px] 2xl:min-h-full md:min-h-[98px]">{{ item.title }}</h2>
             <p class="tracking-wide text-accent2 font-[200] max-sm:text-[14px] xl:min-h-[192px] md:min-h-[169px]">{{ item.summary }}</p>
