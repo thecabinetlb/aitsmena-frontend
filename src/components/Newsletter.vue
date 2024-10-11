@@ -4,6 +4,7 @@ import { ref, reactive, watch } from 'vue'
 // import {Checkbox, useRecaptchaProvider} from 'vue-recaptcha'
 // useRecaptchaProvider() 
 // import { VueRecaptcha } from 'vue-recaptcha';
+const baseurl = import.meta.env.VITE_BASE_URL;
 
 // const recaptcha = ref()
 // const reCaptchaValid = ref(false)
@@ -89,7 +90,7 @@ const handleSubmit = () => {
             email: formData.data.Email.value,
         };
         // Submit the data
-        axios.post('https://aitsmena.com/api/v1/newsletter_subscriptions', data, {
+        axios.post(`${baseurl}/api/v1/newsletter_subscriptions`, data, {
             headers: {
                 'Access-Control-Allow-Origin': '*', // Replace * with the specific origin if needed
             }
@@ -108,7 +109,6 @@ const handleSubmit = () => {
         });
     } 
 };
-// const sitekey = import.meta.env.VITE_RECAPTCHAV2_SITEKEY;
 </script>
 <template>
     <form class="w-11/12 mx-auto space-y-3 2xl:w-8/12 lg:w-10/12" @submit.prevent="handleSubmit">
