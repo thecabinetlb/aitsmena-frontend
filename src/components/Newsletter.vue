@@ -1,24 +1,11 @@
 <script setup>
 import axios from 'axios';
 import { ref, reactive, watch } from 'vue'
-// import {Checkbox, useRecaptchaProvider} from 'vue-recaptcha'
-// useRecaptchaProvider() 
-// import { VueRecaptcha } from 'vue-recaptcha';
+const baseurl = import.meta.env.VITE_BASE_URL;
 
-// const recaptcha = ref()
-// const reCaptchaValid = ref(false)
-// console.log('reCaptchaValid', reCaptchaValid.value)
 const hasErrorMessages = ref(false)
 const loading = ref(null)
 console.log('hasErrorMessages', hasErrorMessages)
-
-// const onVerify = (response) => {
-//   reCaptchaValid.value = true; // Set to true when verified
-// };
-
-// const onExpired = () => {
-//   reCaptchaValid.value = false; // Reset if expired
-// };
 const errors = {
   EmailRequired: 'Email is required.',
   EmailInvalid: 'Please specify a real email.',
@@ -78,10 +65,6 @@ watch(formData, (newFormData) => {
 }, { deep: true });
 
 const handleSubmit = () => {
-    // if (reCaptchaValid.value === false) {
-    //     console.log('ReCaptcha is invalid');
-    //     return; // Don't proceed with form submission
-    // }
     loading.value = true;
     if (formData.isValid) {
         // Create a new data object with the data to be sent
@@ -89,7 +72,7 @@ const handleSubmit = () => {
             email: formData.data.Email.value,
         };
         // Submit the data
-        axios.post('https://aitsmena.com/api/v1/newsletter_subscriptions', data, {
+        axios.post(`${baseurl}/api/v1/newsletter_subscriptions`, data, {
             headers: {
                 'Access-Control-Allow-Origin': '*', // Replace * with the specific origin if needed
             }
