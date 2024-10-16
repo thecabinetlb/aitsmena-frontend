@@ -54,6 +54,8 @@ const stopAutoplay = (itemId) => {
     swiperRef.value.autoplay.stop();
   }
 };
+const baseurl_storage = import.meta.env.VITE_BASE_URL_STORAGE;
+
 </script>
 
 <template>
@@ -81,7 +83,7 @@ const stopAutoplay = (itemId) => {
         <div class="absolute inset-0 w-full h-full rounded-[16px] bg-gradient-to-br transform duration-300 z-[-1] border-2 group-hover:from-bg2/50 group-hover:to-bg2 group-hover:bg-opacity-75 border-bg2"
           :class="{'from-bg2/50 to-bg2 bg-opacity-75': openDetails === key, 'from-accent1/10 to-accent1/30 bg-opacity-50': openDetails != key}">
         </div>
-        <img :src="item.icon" :alt="item.title" width="94" height="94" class="mx-auto"/>
+        <img :src="`${baseurl_storage}/${item.icon}`" :alt="item.title" width="94" height="94" class="mx-auto"/>
         <h2 class="text-center max-sm:text-[14px] text-accent1 font-[400] h-[48px]">{{ item.title }}</h2>
       </SwiperSlide>
     </Swiper>

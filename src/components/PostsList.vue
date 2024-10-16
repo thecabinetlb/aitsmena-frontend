@@ -50,6 +50,7 @@ const formattedDate = (dateString) => {
         day: 'numeric',
     }).format(dateObject);
 };
+const baseurl_storage = import.meta.env.VITE_BASE_URL_STORAGE;
 
 </script>
 
@@ -79,9 +80,9 @@ const formattedDate = (dateString) => {
           :to="{ path: `/resource-center/${item.publicationtype.slug}/${item.slug}` }">
           <div class="relative overflow-hidden aspect-video bg-gradient-to-t from-[#1E364D] to-[#1E364D]/10 rounded-t-[16px]">
             <div class="absolute inset-0 z-[-1] duration-500 transform group-hover:scale-110"
-            :style="{ backgroundImage: 'url(' + item.cover + ')', backgroundSize:'cover', backgroundPosition: 'center'}"/>
+            :style="{ backgroundImage: 'url(' + baseurl_storage + '/' + item.cover + ')', backgroundSize:'cover', backgroundPosition: 'center'}"/>
               <div v-if="item.customer_logo" class="p-2 absolute top-3 right-3 w-1/4 h-fit backdrop-blur-[16px] rounded-[8px]">
-                <img :src="item.customer_logo" :alt="item.title" width="100%" height="100%" center cover responsive loading="lazy" class="mx-auto aspect-1.72/1 scale-125"/>
+                <img :src="`${baseurl_storage}/${item.customer_logo}`" :alt="item.title" width="100%" height="100%" center cover responsive loading="lazy" class="mx-auto aspect-1.72/1 scale-125"/>
               </div>
           </div>
           <div class="flex flex-col gap-3 p-6">
